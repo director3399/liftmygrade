@@ -90,7 +90,7 @@ export default function Pricing() {
                 <ul className="space-y-4 mb-8">
                   {pkg.features.map((feature, fIdx) => (
                     <li key={fIdx} className="flex items-start gap-3">
-                      <div className="mt-1 flex-shrink-0 text-blue-600">
+                      <div className="mt-1 shrink-0 text-blue-600">
                         <Check className="w-4 h-4" />
                       </div>
                       <span className="text-sm text-neutral-700 leading-tight">{feature}</span>

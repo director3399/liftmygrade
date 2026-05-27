@@ -33,7 +33,7 @@ export default function BlogSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col md:flex-row bg-[#EBEFEA] rounded-[2rem] overflow-hidden mb-8 shadow-sm cursor-pointer group"
+          className="flex flex-col md:flex-row bg-[#EBEFEA] rounded-4xl overflow-hidden mb-8 shadow-sm cursor-pointer group"
         >
           {/* Left Image */}
           <div className="relative w-full md:w-[45%] h-[300px] md:h-auto min-h-[350px]">
@@ -90,7 +90,7 @@ export default function BlogSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="flex flex-col group cursor-pointer"
           >
-            <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden mb-5 bg-neutral-100">
+            <div className="relative w-full aspect-4/3 rounded-3xl overflow-hidden mb-5 bg-neutral-100">
               <Image 
                 src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=600" 
                 alt="Writing SOP" 
@@ -115,7 +115,7 @@ export default function BlogSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex flex-col group cursor-pointer"
           >
-            <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden mb-5 bg-neutral-100">
+            <div className="relative w-full aspect-4/3 rounded-3xl overflow-hidden mb-5 bg-neutral-100">
               <Image 
                 src="https://images.unsplash.com/photo-1723987135977-ae935608939e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
                 alt="Undergrad Prep" 
@@ -140,7 +140,7 @@ export default function BlogSection() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col group cursor-pointer"
           >
-            <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden mb-5 bg-neutral-100">
+            <div className="relative w-full aspect-4/3 rounded-3xl overflow-hidden mb-5 bg-neutral-100">
               <Image 
                 src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600" 
                 alt="Networking" 
