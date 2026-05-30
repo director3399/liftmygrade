@@ -12,6 +12,7 @@ import Footer from "@/components/Footer";
 import Pathways from "@/components/Pathways";
 import Pricing from "@/components/Pricing";
 import BlogSection from "@/components/BlogSection";
+import MeetOurTeam from "@/components/MeetOurTeam";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
       {/* <ResearchHub /> */}
       <Milestones />
       {/* <Philosophy /> */}
+      <MeetOurTeam />
       <SuccessStories />
       {/* <Assessment /> */}
       <BlogSection />
