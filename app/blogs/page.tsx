@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { blogs } from "@/data/blogs";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 export const metadata = {
   title: "Blog - LiftmyGrade",
@@ -10,7 +12,9 @@ export const metadata = {
 
 export default function BlogsPage() {
   return (
-    <main className="min-h-screen bg-white pt-32 pb-24 px-6 md:px-12 lg:px-16">
+    <>
+      <Navbar hideLinks theme="light" />
+      <main className="min-h-screen bg-white pt-32 pb-24 px-6 md:px-12 lg:px-16">
       <div className="max-w-6xl mx-auto">
         <div className="mb-16 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-[#171717] tracking-tight leading-tight">
@@ -43,24 +47,15 @@ export default function BlogsPage() {
                 {blog.excerpt}
               </p>
               
-              <div className="flex items-center gap-3 px-2 mt-auto pt-4 border-t border-black/5">
-                <div className="w-8 h-8 rounded-full overflow-hidden relative">
-                  <Image
-                    src={blog.authorImage}
-                    alt={blog.author}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="flex flex-col">
-                  <span className="font-bold text-[13px] text-[#1C362B] leading-tight">{blog.author}</span>
-                  <span className="text-[11px] text-neutral-500">{blog.date}</span>
-                </div>
+              <div className="flex items-center px-2 mt-auto pt-4 border-t border-black/5">
+                <span className="text-[12px] font-medium text-neutral-500">{blog.date}</span>
               </div>
             </Link>
           ))}
         </div>
       </div>
-    </main>
+      </main>
+      <Footer />
+    </>
   );
 }

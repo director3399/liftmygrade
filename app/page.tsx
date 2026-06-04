@@ -1,13 +1,10 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import WhyStudentsGetStuck from "@/components/WhyStudentsGetStuck";
 import Mentorship from "@/components/Mentorship";
 import AcademicJourney from "@/components/AcademicJourney";
-import Workshops from "@/components/Workshops";
-import ResearchHub from "@/components/ResearchHub";
 import Milestones from "@/components/Milestones";
-import Philosophy from "@/components/Philosophy";
-import SuccessStories from "@/components/SuccessStories";
-import Assessment from "@/components/Assessment";
+import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
 import Pathways from "@/components/Pathways";
 import Pricing from "@/components/Pricing";
@@ -19,18 +16,15 @@ export default function Home() {
     <main className="bg-white selection:bg-blue-100 selection:text-blue-900">
       <Navbar />
       <Hero />
+      <WhyStudentsGetStuck />
       <Mentorship />
       <Pathways />
       <AcademicJourney />
-      {/* <Workshops /> */}
-      {/* <ResearchHub /> */}
       <Milestones />
-      {/* <Philosophy /> */}
       <MeetOurTeam />
-      <SuccessStories />
-      {/* <Assessment /> */}
-      <BlogSection />
       <Pricing />
+      <Testimonials />
+      <BlogSection />
       <Footer />
     </main>
   );

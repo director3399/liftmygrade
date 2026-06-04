@@ -22,7 +22,7 @@ export default function Footer() {
             href="#assessment"
             className="inline-flex items-center gap-3 bg-white text-[#050B1D]! px-8 py-4 rounded-full text-base font-semibold hover:bg-neutral-100 transition-all group"
           >
-            Get Your Personalized Roadmap
+            Get Free Readiness Report
             <ArrowRight className="w-4 h-4 text-[#050B1D]! transition-transform group-hover:translate-x-1" />
           </a>
         </div>
@@ -60,9 +60,16 @@ export default function Footer() {
           <div className="lg:col-span-7 grid md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-8 h-full">
             {/* Links Stack */}
             <div className="lg:col-span-3 flex flex-wrap gap-x-8 gap-y-4 mb-16">
-              {["Bachelor's Abroad", "Master's Abroad", "PhD Guidance", "Research Guidance", "Workshops", "Contact"].map((link) => (
-                <a key={link} href={`#${link.toLowerCase().replace(/\s+/g, '-')}`} className="text-base font-medium text-white/70 hover:text-white transition-colors">
-                  {link}
+              {[
+                { name: "Programs", href: "#pricing" },
+                { name: "PhD Advantage", href: "#research-excellence" },
+                { name: "Student Success", href: "#testimonial" },
+                { name: "Advisors", href: "#advisors" },
+                { name: "Insights & Resources", href: "#blog" },
+                { name: "Privacy Policy", href: "#" },
+              ].map((link) => (
+                <a key={link.name} href={link.href} className="text-base font-medium text-white/70 hover:text-white transition-colors">
+                  {link.name}
                 </a>
               ))}
             </div>

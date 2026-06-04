@@ -8,43 +8,43 @@ export default function AcademicJourney() {
   const stages = [
     {
       id: "01",
-      title: "Class 10 Foundation",
-      desc: "Early profile building and comprehensive academic roadmap planning.",
+      title: "Readiness Assessment",
+      desc: "Detailed profile score, country fit, and long-term roadmap generation.",
     },
     {
       id: "02",
-      title: "Class 11–12 Prep",
-      desc: "Standardized testing, extracurriculars, and university shortlisting.",
+      title: "Academic Strategy",
+      desc: "Structured planning to map your long-term academic trajectory.",
     },
     {
       id: "03",
-      title: "Bachelor's Abroad",
-      desc: "Application execution, personal essays, and admission strategy.",
+      title: "Admission Support",
+      desc: "SOP development, academic CV, and university shortlisting execution.",
     },
     {
       id: "04",
-      title: "IELTS / GRE Prep",
-      desc: "Targeted coaching to achieve required test scores for top universities.",
+      title: "Research Positioning",
+      desc: "Building a research profile that proves your academic potential.",
     },
     {
       id: "05",
-      title: "Master's Abroad",
-      desc: "Specialized positioning and statement of purpose for advanced degrees.",
+      title: "Publication Support",
+      desc: "End-to-end guidance for publishing in international peer-reviewed journals.",
     },
     {
       id: "06",
-      title: "Research & Pubs",
-      desc: "End-to-end guidance for publishing in international journals.",
+      title: "Professor Outreach",
+      desc: "Strategic networking and communication with prospective supervisors.",
     },
     {
       id: "07",
-      title: "Fully Funded PhD",
-      desc: "Research proposal refinement and professor outreach strategy.",
+      title: "PhD Applications",
+      desc: "Refining your research proposal for fully funded programs.",
     },
     {
       id: "08",
-      title: "Global Career",
-      desc: "Post-study work strategies, networking, and professional growth.",
+      title: "Career Readiness",
+      desc: "Post-study global career branding and professional identity building.",
     },
   ];
 
@@ -62,7 +62,7 @@ export default function AcademicJourney() {
             viewport={{ once: true }}
             className="flex justify-between items-start mb-4"
           >
-            <SectionLabel>Journey</SectionLabel>
+            <SectionLabel>System Roadmap</SectionLabel>
           </motion.div>
 
           <motion.h2
@@ -72,7 +72,7 @@ export default function AcademicJourney() {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-5xl font-bold text-[#171717] leading-[1.2] tracking-tight max-w-3xl"
           >
-            Know What To Do At Every Stage Of Your Study Abroad Journey
+            How Our System Works
           </motion.h2>
 
           <motion.p
@@ -82,7 +82,7 @@ export default function AcademicJourney() {
             transition={{ delay: 0.2 }}
             className="text-base text-neutral-700 leading-relaxed max-w-xl mt-6"
           >
-            Navigate every stage of your academic growth with our comprehensive mentorship roadmap, designed for long-term success.
+            Navigate every stage of your academic growth with our comprehensive ecosystem, designed for long-term global success.
           </motion.p>
         </div>
 

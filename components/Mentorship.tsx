@@ -7,7 +7,7 @@ export default function Mentorship() {
   return (
     <section className="py-24 px-6 md:px-12 lg:px-16 bg-white" id="about">
       <div className="max-w-7xl mx-auto">
-        <SectionLabel>Mentorship</SectionLabel>
+        <SectionLabel>Why LiftMyGrade</SectionLabel>
 
         <div className="grid md:grid-cols-2 gap-12 items-end mb-12">
           <h2 className="text-4xl md:text-5xl font-bold leading-tight text-[#171717]">
@@ -33,7 +33,7 @@ export default function Mentorship() {
           </h2>
           <div className="flex flex-col items-start">
             <p className="text-lg text-neutral-700 leading-relaxed mb-8">
-              Most students struggle because they don’t know what to prioritize, when to prepare, or how to build a strong profile. LiftmyGrade provides structured mentorship to help students move step-by-step with clarity and confidence.
+              Most students start thinking about studying abroad only when applications open. By then, they often realize they lack research experience, strong extracurriculars, publications, or a clear strategy. LiftMyGrade helps students prepare years in advance through structured mentorship, profile building, research guidance, and admission planning.
             </p>
             <a href="#assessment" className="inline-flex items-center gap-2 text-sm font-semibold border-b-2 border-black hover:opacity-70 transition-all pb-1">
               Start Your Journey <DiagonalArrow className="w-3.5 h-3.5 ml-1" />
@@ -53,19 +53,19 @@ export default function Mentorship() {
 
           <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 flex flex-col md:flex-row gap-8 md:gap-12 items-start md:items-end z-20">
             <div className="flex-1 border-l border-white/30 pl-8 first:border-none first:pl-0">
-              <span className="block text-4xl md:text-5xl font-bold text-white mb-2 tracking-tight">1000+</span>
-              <span className="block text-[10px] md:text-xs uppercase tracking-widest text-white mb-3 font-medium">Students Guided</span>
-              <p className="text-sm text-white/90 leading-relaxed max-w-[280px]">We have guided hundreds of students through successful global academic admissions and research pathways.</p>
+              <span className="block text-4xl md:text-5xl font-bold text-white mb-2 tracking-tight">Long-Term</span>
+              <span className="block text-[10px] md:text-xs uppercase tracking-widest text-white mb-3 font-medium">Academic Planning</span>
+              <p className="text-sm text-white/90 leading-relaxed max-w-[280px]">From Class 10 to PhD, every stage is connected through a structured roadmap designed for long-term academic success.</p>
             </div>
             <div className="flex-1 border-l border-white/30 pl-8">
-              <span className="block text-4xl md:text-5xl font-bold text-white mb-2 tracking-tight">Expert</span>
-              <span className="block text-[10px] md:text-xs uppercase tracking-widest text-white mb-3 font-medium">Academic Mentorship</span>
-              <p className="text-sm text-white/90 leading-relaxed max-w-[280px]">Our ecosystem provides deep mentorship for research, publication support, and PhD readiness.</p>
+              <span className="block text-4xl md:text-5xl font-bold text-white mb-2 tracking-tight">Research &</span>
+              <span className="block text-[10px] md:text-xs uppercase tracking-widest text-white mb-3 font-medium">Profile Building</span>
+              <p className="text-sm text-white/90 leading-relaxed max-w-[280px]">Build a stronger academic profile through research projects, publications, competitions, and strategic positioning.</p>
             </div>
             <div className="flex-1 border-l border-white/30 pl-8">
-              <span className="block text-4xl md:text-5xl font-bold text-white mb-2 tracking-tight">Structured</span>
-              <span className="block text-[10px] md:text-xs uppercase tracking-widest text-white mb-3 font-medium">Long-Term Guidance</span>
-              <p className="text-sm text-white/90 leading-relaxed max-w-[280px]">A long-term academic growth platform designed to ensure your admission leads to career success.</p>
+              <span className="block text-4xl md:text-5xl font-bold text-white mb-2 tracking-tight">Beyond</span>
+              <span className="block text-[10px] md:text-xs uppercase tracking-widest text-white mb-3 font-medium">Admissions</span>
+              <p className="text-sm text-white/90 leading-relaxed max-w-[280px]">We focus on admissions, research development, career readiness, and long-term academic growth—not just university applications.</p>
             </div>
           </div>
         </div>

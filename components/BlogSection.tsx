@@ -14,7 +14,7 @@ export default function BlogSection() {
   return (
     <section className="py-24 px-6 md:px-12 lg:px-16 bg-white" id="blog">
       <div className="max-w-6xl mx-auto">
-        
+
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-16">
           <motion.div
@@ -35,7 +35,7 @@ export default function BlogSection() {
         {/* Featured Post */}
         {featuredBlog && (
           <Link href={`/blogs/${featuredBlog.slug}`}>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -51,7 +51,7 @@ export default function BlogSection() {
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
-              
+
               {/* Right Content */}
               <div className="p-8 md:p-12 flex flex-col justify-center w-full md:w-[55%] relative">
                 <h3 className="text-3xl md:text-4xl font-serif text-[#1C362B] mb-4 leading-[1.2] tracking-tight group-hover:text-black transition-colors">
@@ -60,24 +60,8 @@ export default function BlogSection() {
                 <p className="text-sm text-neutral-700 mb-10 max-w-md leading-relaxed">
                   {featuredBlog.excerpt}
                 </p>
-                
-                <div className="flex justify-between items-end mt-auto pt-4 border-t border-black/5">
-                  {/* Author */}
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full overflow-hidden relative">
-                      <Image
-                        src={featuredBlog.authorImage}
-                        alt={featuredBlog.author}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="font-bold text-[15px] text-[#1C362B] leading-tight">{featuredBlog.author}</span>
-                      <span className="text-[12px] text-neutral-600">{featuredBlog.authorRole}</span>
-                    </div>
-                  </div>
-                  
+
+                <div className="flex items-center mt-auto pt-4 border-t border-black/5">
                   {/* Category Badge */}
                   <div className="bg-[#1C362B] text-white px-4 py-1.5 rounded-full text-[11px] font-medium tracking-wide">
                     {featuredBlog.category}
@@ -92,19 +76,19 @@ export default function BlogSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           {otherBlogs.map((blog, idx) => (
             <Link href={`/blogs/${blog.slug}`} key={blog.id}>
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 * (idx + 1) }}
                 className="flex flex-col group cursor-pointer h-full"
               >
-                <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden mb-5 bg-neutral-100">
-                  <Image 
-                    src={blog.coverImage} 
-                    alt={blog.title} 
-                    fill 
-                    className="object-cover group-hover:scale-105 transition-transform duration-700" 
+                <div className="relative w-full aspect-4/3 rounded-3xl overflow-hidden mb-5 bg-neutral-100">
+                  <Image
+                    src={blog.coverImage}
+                    alt={blog.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
                   <div className="absolute bottom-4 left-4 bg-[#EBEFEA] text-[#1C362B] px-4 py-1 rounded-full text-[11px] font-medium shadow-sm">
@@ -122,7 +106,7 @@ export default function BlogSection() {
         {/* See All Button */}
         <div className="flex justify-center">
           <Link href="/blogs">
-            <motion.button 
+            <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="bg-[#1C362B] text-white px-8 py-4 rounded-full font-semibold text-[15px] flex items-center gap-2 hover:bg-[#12241C] transition-colors"

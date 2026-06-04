@@ -21,7 +21,7 @@ export const blogs: BlogPost[] = [
     author: "Dr. Ananya Sharma",
     authorRole: "Admissions Mentor & Researcher",
     authorImage: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200",
-    category: "PhD Admissions",
+    category: "PhD Preparation",
     coverImage: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1000",
     date: "May 30, 2026",
     content: `
@@ -124,7 +124,7 @@ export const blogs: BlogPost[] = [
     author: "Rahul Menon",
     authorRole: "Career Strategist",
     authorImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200",
-    category: "Master's Preparation",
+    category: "Research Strategy",
     coverImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600",
     date: "May 25, 2026",
     content: `
@@ -295,7 +295,7 @@ export const blogs: BlogPost[] = [
     author: "Neha Kapoor",
     authorRole: "Lead Essay Editor",
     authorImage: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200",
-    category: "Application Tips",
+    category: "Academic Branding",
     coverImage: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=600",
     date: "May 20, 2026",
     content: `
@@ -372,7 +372,7 @@ export const blogs: BlogPost[] = [
     author: "Vikram Desai",
     authorRole: "Strategy Director",
     authorImage: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200",
-    category: "Planning",
+    category: "Funding Opportunities",
     coverImage: "https://images.unsplash.com/photo-1723987135977-ae935608939e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     date: "May 15, 2026",
     content: `
@@ -640,7 +640,7 @@ export const blogs: BlogPost[] = [
     author: "Dr. Rohan Mehta",
     authorRole: "Research Mentor",
     authorImage: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200",
-    category: "Profile Building",
+    category: "Research Strategy",
     coverImage: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?q=80&w=1000",
     date: "May 5, 2026",
     content: `
@@ -709,7 +709,7 @@ export const blogs: BlogPost[] = [
     author: "Sarah Khan",
     authorRole: "Admissions Strategist",
     authorImage: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200",
-    category: "Profile Building",
+    category: "Research Strategy",
     coverImage: "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?q=80&w=1000",
     date: "April 28, 2026",
     content: `

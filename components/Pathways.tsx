@@ -11,27 +11,33 @@ export default function Pathways() {
   const pathways = [
     {
       id: "01",
-      title: "Bachelor's Abroad",
-      desc: "Strategic guidance for high school students aiming for premium global universities. Build a profile that stands out in the competitive admission landscape.",
+      title: "Global Study Readiness Report",
+      desc: "Understand where you stand today through profile evaluation, country alignment, gap analysis, and a personalized academic roadmap.",
       image: "https://images.unsplash.com/photo-1627556704302-624286467c65?w=1000&q=90",
     },
     {
       id: "02",
-      title: "Master's Abroad",
-      desc: "Specialized positioning for graduates seeking advanced degrees at top-tier research institutions. We focus on statement of purpose, research alignment, and funding.",
+      title: "Admission Strategy & Execution",
+      desc: "Build stronger applications through SOP development, academic CV creation, university shortlisting, and end-to-end application planning.",
       image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1000&q=90",
     },
     {
       id: "03",
-      title: "PhD Guidance",
-      desc: "Deep mentorship for research fellows. We help you secure fully funded positions by refining your research proposal and professor outreach strategy.",
+      title: "PhD Specialization",
+      desc: "Secure fully funded PhD opportunities through professor outreach strategy, research proposal development, funding guidance, and supervisor targeting.",
       image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1000&q=90",
     },
     {
       id: "04",
-      title: "Research Support",
-      desc: "End-to-end guidance for publishing in international journals. Master technical writing, peer review navigation, and academic branding.",
+      title: "Research & Publication Support",
+      desc: "Develop a stronger academic profile through publication support, journal guidance, research mentorship, and academic positioning.",
       image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1000&q=90",
+    },
+    {
+      id: "05",
+      title: "Global Career Branding Program",
+      desc: "Build a global professional presence through LinkedIn optimization, resume development, interview preparation, and career positioning.",
+      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1000&q=90",
     },
   ];
 
@@ -57,7 +63,7 @@ export default function Pathways() {
                 viewport={{ once: true }}
                 className="flex justify-between items-start mb-4"
               >
-                <SectionLabel>Pathways</SectionLabel>
+                <SectionLabel>Programs & Support Systems</SectionLabel>
               </motion.div>
               
               <motion.h2 
@@ -67,9 +73,9 @@ export default function Pathways() {
                 transition={{ delay: 0.1 }}
                 className="text-4xl md:text-5xl font-bold text-[#171717] leading-[1.2] mb-6 tracking-tight"
               >
-                Choose The Academic Pathways That Fits
+                Our Academic
                 <br />
-                Your <span className="relative inline-block whitespace-nowrap px-1">
+                <span className="relative inline-block whitespace-nowrap px-1">
                   {/* Place SVG first in DOM so it renders underneath */}
                   <svg 
                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[125%] h-[140%] text-blue-500" 
@@ -84,7 +90,7 @@ export default function Pathways() {
                       strokeLinecap="round" 
                     />
                   </svg>
-                  <span className="relative">Goals</span>
+                  <span className="relative">Ecosystem</span>
                 </span>
               </motion.h2>
               
@@ -95,7 +101,7 @@ export default function Pathways() {
                 transition={{ delay: 0.2 }}
                 className="text-base text-neutral-700 leading-relaxed max-w-md mb-12"
               >
-                Structured guidance designed to help you navigate every stage of your global academic journey.
+                Explore the programs, systems, and support services designed to help students move from academic planning to admissions, research opportunities, and long-term career growth.
               </motion.p>
             </div>
 
@@ -109,7 +115,7 @@ export default function Pathways() {
                   transition={{ duration: 0.5, ease: "easeInOut" }}
                 >
                   <div className="text-sm font-semibold text-neutral-400 mb-4 tracking-widest uppercase">
-                    {current.id} / 04
+                    {current.id} / 05
                   </div>
                   <h3 className="text-2xl md:text-4xl font-bold text-[#171717] mb-6 tracking-tight">
                     {current.title}
@@ -142,27 +148,15 @@ export default function Pathways() {
             </div>
           </div>
 
-          {/* Right Column: Rounded Image */}
-          <div className="relative aspect-4/5 lg:aspect-auto lg:h-[520px] rounded-[2.5rem] overflow-hidden shadow-sm">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeIndex}
-                initial={{ opacity: 0, scale: 1.05 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                className="absolute inset-0"
-              >
-                <Image
-                  src={current.image}
-                  alt={current.title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  priority
-                />
-              </motion.div>
-            </AnimatePresence>
+          <div className="relative aspect-4/5 lg:aspect-auto h-full rounded-[2.5rem] overflow-hidden">
+            <Image
+              src="/program1.png"
+              alt="LiftMyGrade Programs"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              priority
+            />
           </div>
         </div>
       </div>
