@@ -26,9 +26,6 @@ export default function BlogSection() {
               Explore Our Latest Insights &<br />
               Academic Journeys
             </h2>
-            <p className="mt-6 text-[15px] text-neutral-600 max-w-2xl leading-relaxed mx-auto">
-              Dive into expert tips, personal success stories, and educational resources to support your global study goals. We share content designed to nurture your academic profile and application strategy one post at a time.
-            </p>
           </motion.div>
         </div>
 
