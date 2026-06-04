@@ -20,7 +20,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-linear-to-b from-black/60 via-transparent to-transparent z-10" />
       </div>
 
-      <div className="relative z-20 max-w-7xl mx-auto w-full grid lg:grid-cols-[1.7fr_0.9fr] gap-12 items-end">
+      <div className="relative z-20 max-w-7xl mx-auto w-full flex flex-col items-start justify-end">
         {/* Left Content Stack */}
         <div className="hero-text-left relative flex flex-col items-start">
           <motion.h1
@@ -48,7 +48,7 @@ export default function Hero() {
                 />
               </svg>
             </span>-
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 via-blue-200 to-white">Not Just An Application</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-200 to-white">Not Just An Application</span>
           </motion.h1>
 
           <motion.div
@@ -81,60 +81,12 @@ export default function Hero() {
             </motion.a>
             <a
               href="#services"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-white/80! hover:text-white transition-all border-b border-white/20 hover:border-white pb-1"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white transition-all border-b border-white/20 hover:border-white pb-1"
             >
               Explore Programs
             </a>
           </motion.div>
         </div>
-
-        {/* Right Content Area: Card anchored to the bottom of the grid row */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9, x: 20 }}
-          animate={{ opacity: 1, scale: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
-          className="relative self-stretch hidden lg:block"
-        >
-          <div className="absolute bottom-0 right-0 w-[340px]">
-            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-2xl">
-              <div className="flex items-center gap-2 text-[13px] text-white/70 mb-3.5 before:content-[''] before:w-1.5 before:h-1.5 before:bg-blue-500 before:rounded-full font-bold uppercase tracking-wider">
-                Student Readiness Report
-              </div>
-              <div className="relative rounded-xl overflow-hidden h-[180px] group cursor-pointer">
-                <Image
-                  src="https://images.unsplash.com/photo-1522881193457-37ae97c905bf?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="Student Readiness Report"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
-                  sizes="340px"
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent opacity-80" />
-                <div className="absolute bottom-0 left-0 right-0 p-5 z-20">
-                  <h3 className="text-xl font-semibold text-white mb-2 leading-tight tracking-tight">
-                    <div className="space-y-1">
-                      <p className="text-sm text-white/90">
-                        Readiness Score: <span className="font-semibold">82/100</span>
-                      </p>
-
-                      <p className="text-sm text-white/90">
-                        Best-Fit Countries: Canada, Germany
-                      </p>
-
-                      <p className="text-sm text-white/90">
-                        Next Focus: Research Positioning
-                      </p>
-
-                      <p className="text-sm text-white/90">
-                        Personalized Roadmap Ready
-                      </p>
-                    </div>
-                  </h3>
-                  <span className="text-[11px] text-white/60 font-bold tracking-widest uppercase">Free Assessment Available</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
       </div>
 
       {/* Blue glow at bottom of hero */}

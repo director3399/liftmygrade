@@ -56,7 +56,7 @@ export default function Milestones() {
 
           {/* Right Column: Description and Button Left-Aligned with each other */}
           <div className="flex flex-col items-start justify-end">
-            <p className="text-base text-neutral-700 leading-relaxed max-w-[320px] mb-8">
+            <p className="text-base text-neutral-700 leading-relaxed mb-8">
               These are the transformations our students experience through our structured academic ecosystem.
             </p>
             <a
