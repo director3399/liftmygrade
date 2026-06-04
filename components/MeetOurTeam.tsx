@@ -15,7 +15,6 @@ export default function MeetOurTeam() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-[#1C362B] tracking-tight">The Team Behind Your Application</h2>
-            <p className="mt-4 text-neutral-600 max-w-2xl mb-4">Your statement of purpose, recommendations, and research writing are handled by qualified specialists and editors — each focused on the part of your application they know best.</p>
             
           </motion.div>
         </div>

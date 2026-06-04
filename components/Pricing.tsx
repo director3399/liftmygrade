@@ -108,12 +108,9 @@ export default function Pricing() {
           >
             <SectionLabel>Programs & Support Systems</SectionLabel>
             <h2 className="text-4xl md:text-5xl font-bold leading-tight text-[#171717] mt-6 mb-6 tracking-tight">
-              Structured Academic <br className="hidden md:block" />
-              Growth Programs
+              Structured Academic Growth<br className="hidden md:block" />
+              Programs
             </h2>
-            <p className="text-lg text-neutral-600 max-w-2xl">
-              Explore the programs, systems, and support services designed to help students move from academic planning to admissions, research opportunities, and long-term career growth.
-            </p>
           </motion.div>
         </div>
 
