@@ -57,7 +57,7 @@ export default function TableOfContents({ headings }: { headings: Heading[] }) {
                   behavior: "smooth",
                 });
               }}
-              className={`block text-[14px] leading-tight transition-colors pl-4 -ml-[2px] border-l-2 ${
+              className={`block text-[14px] leading-tight transition-colors pl-4 ml-[-2px] border-l-2 ${
                 activeId === heading.id
                   ? "border-[#1C362B] text-[#1C362B] font-semibold"
                   : "border-transparent text-neutral-500 hover:text-neutral-900 hover:border-neutral-300"

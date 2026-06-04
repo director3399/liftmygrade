@@ -48,7 +48,7 @@ export default function Hero() {
                 />
               </svg>
             </span>-
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-200 to-white">Not Just An Application</span>
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 via-blue-200 to-white">Not Just An Application</span>
           </motion.h1>
 
           <motion.div
