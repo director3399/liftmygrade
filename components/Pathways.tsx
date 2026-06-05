@@ -51,11 +51,11 @@ export default function Pathways() {
   const current = pathways[activeIndex];
 
   return (
-    <section className="py-24 px-6 md:px-12 lg:px-16 bg-white" id="services">
+    <section className="py-16 sm:py-24 px-6 md:px-12 lg:px-16 bg-white" id="services">
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 md:gap-16 lg:items-stretch items-start">
+        <div className="grid lg:grid-cols-2 gap-10 sm:gap-12 md:gap-16 lg:items-stretch items-start">
           {/* Left Column: Text Content */}
-          <div className="flex flex-col lg:justify-between lg:h-full pt-4">
+          <div className="flex flex-col lg:justify-between lg:h-full pt-2 sm:pt-4">
             <div>
               <motion.div 
                 initial={{ opacity: 0, y: 10 }}
@@ -71,7 +71,7 @@ export default function Pathways() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="text-4xl md:text-5xl font-bold text-[#171717] leading-[1.2] mb-6 tracking-tight"
+                className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] leading-[1.2] mb-6 tracking-tight"
               >
                 Our Academic
                 <br />
@@ -99,7 +99,7 @@ export default function Pathways() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="text-base text-neutral-700 leading-relaxed max-w-md mb-12"
+                className="text-sm sm:text-base text-neutral-700 leading-relaxed max-w-md mb-10 sm:mb-12"
               >
                 Explore the programs, systems, and support services designed to help students move from academic planning to admissions, research opportunities, and long-term career growth.
               </motion.p>
@@ -114,31 +114,31 @@ export default function Pathways() {
                   exit={{ opacity: 0, x: -20 }}
                   transition={{ duration: 0.5, ease: "easeInOut" }}
                 >
-                  <div className="text-sm font-semibold text-neutral-400 mb-4 tracking-widest uppercase">
+                  <div className="text-xs sm:text-sm font-semibold text-neutral-400 mb-3 sm:mb-4 tracking-widest uppercase">
                     {current.id} / 05
                   </div>
-                  <h3 className="text-2xl md:text-4xl font-bold text-[#171717] mb-6 tracking-tight">
+                  <h3 className="text-xl sm:text-2xl md:text-4xl font-bold text-[#171717] mb-4 sm:mb-6 tracking-tight">
                     {current.title}
                   </h3>
-                  <p className="text-base text-neutral-700 leading-relaxed max-w-md mb-8 min-h-[80px]">
+                  <p className="text-sm sm:text-base text-neutral-700 leading-relaxed max-w-md mb-6 sm:mb-8 min-h-[100px] sm:min-h-[80px]">
                     {current.desc}
                   </p>
                 </motion.div>
               </AnimatePresence>
 
               {/* Thick Progress Bars */}
-              <div className="flex gap-4 mt-6">
+              <div className="flex gap-3 sm:gap-4 mt-4 sm:mt-6">
                 {pathways.map((_, i) => (
                   <button 
                     key={i} 
                     onClick={() => setActiveIndex(i)}
-                    className="group relative h-4 w-16 flex items-end"
+                    className="group relative h-4 w-12 sm:w-16 flex items-end"
                   >
-                    <div className="h-1.5 w-full rounded-full bg-neutral-100 group-hover:bg-neutral-200 transition-colors" />
+                    <div className="h-1 sm:h-1.5 w-full rounded-full bg-neutral-100 group-hover:bg-neutral-200 transition-colors" />
                     {i === activeIndex && (
                       <motion.div 
                         layoutId="activeBar"
-                        className="absolute left-0 right-0 bottom-0 h-1.5 bg-blue-600 rounded-full"
+                        className="absolute left-0 right-0 bottom-0 h-1 sm:h-1.5 bg-blue-600 rounded-full"
                         transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                       />
                     )}
@@ -148,7 +148,7 @@ export default function Pathways() {
             </div>
           </div>
 
-          <div className="relative aspect-4/5 lg:aspect-auto h-full rounded-[2.5rem] overflow-hidden">
+          <div className="relative aspect-square sm:aspect-4/5 lg:aspect-auto lg:h-full rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden mt-8 lg:mt-0">
             <Image
               src="/program1.png"
               alt="LiftMyGrade Programs"

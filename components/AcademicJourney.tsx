@@ -53,9 +53,9 @@ export default function AcademicJourney() {
 
 
   return (
-    <section className="py-24 bg-white w-full overflow-hidden relative" id="journey">
+    <section className="py-16 sm:py-24 bg-white w-full overflow-hidden relative" id="journey">
       <div className="px-6 md:px-12 lg:px-16">
-        <div className="max-w-7xl mx-auto mb-16">
+        <div className="max-w-7xl mx-auto mb-12 sm:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -70,7 +70,7 @@ export default function AcademicJourney() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-bold text-[#171717] leading-[1.2] tracking-tight max-w-3xl"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] leading-[1.2] tracking-tight max-w-3xl mt-4 sm:mt-0"
           >
             How Our System Works
           </motion.h2>
@@ -80,7 +80,7 @@ export default function AcademicJourney() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-base text-neutral-700 leading-relaxed max-w-xl mt-6"
+            className="text-sm sm:text-base text-neutral-700 leading-relaxed max-w-xl mt-4 sm:mt-6"
           >
             Navigate every stage of your academic growth with our comprehensive ecosystem, designed for long-term global success.
           </motion.p>

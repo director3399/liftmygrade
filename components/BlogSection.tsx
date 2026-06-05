@@ -12,18 +12,18 @@ export default function BlogSection() {
   const otherBlogs = blogs.slice(1, 4);
 
   return (
-    <section className="py-24 px-6 md:px-12 lg:px-16 bg-white" id="blog">
+    <section className="py-16 sm:py-24 px-6 md:px-12 lg:px-16 bg-white" id="blog">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}
-        <div className="flex flex-col items-center text-center mb-16">
+        <div className="flex flex-col items-center text-center mb-12 sm:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-[#171717] tracking-tight leading-tight">
-              Explore Our Latest Insights &<br />
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] tracking-tight leading-tight mt-4 sm:mt-0">
+              Explore Our Latest Insights &<br className="hidden sm:block" />
               Academic Journeys
             </h2>
           </motion.div>
@@ -37,10 +37,10 @@ export default function BlogSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="flex flex-col md:flex-row bg-[#EBEFEA] rounded-4xl overflow-hidden mb-8 shadow-sm cursor-pointer group"
+              className="flex flex-col md:flex-row bg-[#EBEFEA] rounded-[2rem] sm:rounded-4xl overflow-hidden mb-8 shadow-sm cursor-pointer group"
             >
               {/* Left Image */}
-              <div className="relative w-full md:w-[45%] h-[300px] md:h-auto min-h-[350px]">
+              <div className="relative w-full md:w-[45%] h-[250px] sm:h-[300px] md:h-auto min-h-[250px] sm:min-h-[350px]">
                 <Image
                   src={featuredBlog.coverImage}
                   alt={featuredBlog.title}
@@ -50,17 +50,17 @@ export default function BlogSection() {
               </div>
 
               {/* Right Content */}
-              <div className="p-8 md:p-12 flex flex-col justify-center w-full md:w-[55%] relative">
-                <h3 className="text-3xl md:text-4xl font-serif text-[#1C362B] mb-4 leading-[1.2] tracking-tight group-hover:text-black transition-colors">
+              <div className="p-6 sm:p-8 md:p-12 flex flex-col justify-center w-full md:w-[55%] relative">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif text-[#1C362B] mb-4 leading-[1.2] tracking-tight group-hover:text-black transition-colors">
                   {featuredBlog.title}
                 </h3>
-                <p className="text-sm text-neutral-700 mb-10 max-w-md leading-relaxed">
+                <p className="text-sm text-neutral-700 mb-8 sm:mb-10 max-w-md leading-relaxed">
                   {featuredBlog.excerpt}
                 </p>
 
                 <div className="flex items-center mt-auto pt-4 border-t border-black/5">
                   {/* Category Badge */}
-                  <div className="bg-[#1C362B] text-white px-4 py-1.5 rounded-full text-[11px] font-medium tracking-wide">
+                  <div className="bg-[#1C362B] text-white px-3 sm:px-4 py-1.5 rounded-full text-[10px] sm:text-[11px] font-medium tracking-wide">
                     {featuredBlog.category}
                   </div>
                 </div>

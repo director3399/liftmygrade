@@ -11,8 +11,8 @@ export default function  SectionLabel({ children, light = false }: SectionLabelP
   const textColor = light ? "text-white/80" : "text-neutral-600";
 
   return (
-    <div className={`flex items-center gap-2.5 text-[13px] font-semibold mb-8 tracking-wide ${textColor}`}>
-      <span className={`w-1.5 h-1.5 rounded-full ${dotColor}`} />
+    <div className={`flex items-center gap-2.5 text-[11px] sm:text-[13px] font-semibold mb-4 sm:mb-8 tracking-wide ${textColor}`}>
+      <span className={`w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full ${dotColor}`} />
       {children}
     </div>
   );

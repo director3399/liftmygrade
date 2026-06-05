@@ -10,17 +10,17 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Footer CTA Section */}
         <div className="flex flex-col items-center text-center mb-24">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight leading-[1.1]">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 tracking-tight leading-[1.1]">
             Ready To Build Your Global
             <br />
             Academic Journey?
           </h2>
-          <p className="text-lg text-white/60 mb-10 font-light max-w-xl">
+          <p className="text-base sm:text-lg text-white/60 mb-10 font-light max-w-xl">
             Start with a structured roadmap designed around your academic goals.
           </p>
           <a
             href="#assessment"
-            className="inline-flex items-center gap-3 bg-white text-[#050B1D]! px-8 py-4 rounded-full text-base font-semibold hover:bg-neutral-100 transition-all group"
+            className="inline-flex items-center gap-3 bg-white text-[#050B1D]! px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:bg-neutral-100 transition-all group"
           >
             Get Free Readiness Report
             <ArrowRight className="w-4 h-4 text-[#050B1D]! transition-transform group-hover:translate-x-1" />
@@ -28,38 +28,38 @@ export default function Footer() {
         </div>
 
         {/* Separator Line */}
-        <div className="w-full h-px bg-white/10 mb-20" />
+        <div className="w-full h-px bg-white/10 mb-16 sm:mb-20" />
 
         {/* Bottom Footer Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-12 gap-16 lg:gap-24 items-start mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 md:gap-16 lg:gap-24 items-start mb-16 sm:mb-24">
           {/* Left Column: Branding and Newsletter */}
           <div className="lg:col-span-5 flex flex-col h-full">
-            <h3 className="text-2xl md:text-3xl font-semibold mb-10 tracking-tight leading-tight">
+            <h3 className="text-2xl md:text-3xl font-semibold mb-8 sm:mb-10 tracking-tight leading-tight">
               Let&apos;s Build the Future
               <br />
               You&apos;re Meant to Lead
             </h3>
 
-            <div className="relative max-w-md group mb-20">
+            <div className="relative max-w-md group mb-16 sm:mb-20">
               <input
                 type="email"
                 placeholder="Enter Email"
-                className="w-full bg-white/5 border border-white/10 rounded-full px-8 py-4.5 text-sm focus:outline-none focus:border-white/30 transition-colors"
+                className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 sm:px-8 sm:py-4.5 text-sm focus:outline-none focus:border-white/30 transition-colors"
               />
-              <button className="absolute right-1.5 top-1.5 bottom-1.5 w-[46px] h-[46px] bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
+              <button className="absolute right-1.5 top-1.5 bottom-1.5 w-[40px] h-[40px] sm:w-[46px] sm:h-[46px] bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
                 <ArrowRight className="w-4 h-4 text-white" />
               </button>
             </div>
 
-            <div className="mt-auto">
+            <div className="mt-auto hidden lg:block">
               <div className="text-2xl md:text-3xl font-extrabold tracking-tighter uppercase">LIFT<span className="font-light opacity-50">MYGRADE</span></div>
             </div>
           </div>
 
           {/* Right Column: Nav and Contact */}
-          <div className="lg:col-span-7 grid md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-8 h-full">
+          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 lg:gap-8 h-full">
             {/* Links Stack */}
-            <div className="lg:col-span-3 flex flex-wrap gap-x-8 gap-y-4 mb-16">
+            <div className="sm:col-span-2 lg:col-span-3 flex flex-wrap gap-x-6 gap-y-4 mb-8 sm:mb-16">
               {[
                 { name: "Programs", href: "#pricing" },
                 { name: "PhD Advantage", href: "#research-excellence" },
@@ -68,16 +68,16 @@ export default function Footer() {
                 { name: "Insights & Resources", href: "#blog" },
                 { name: "Privacy Policy", href: "#" },
               ].map((link) => (
-                <a key={link.name} href={link.href} className="text-base font-medium text-white/70 hover:text-white transition-colors">
+                <a key={link.name} href={link.href} className="text-sm sm:text-base font-medium text-white/70 hover:text-white transition-colors">
                   {link.name}
                 </a>
               ))}
             </div>
 
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-6 sm:gap-10">
               <div>
-                <div className="text-sm font-semibold text-white/40 mb-4 uppercase tracking-widest">Connect</div>
-                <div className="text-base font-light text-white/80">
+                <div className="text-xs sm:text-sm font-semibold text-white/40 mb-2 sm:mb-4 uppercase tracking-widest">Connect</div>
+                <div className="text-sm sm:text-base font-light text-white/80">
                   Global Mentorship Hub
                   <br />
                   Academic Support
@@ -85,10 +85,10 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-6 sm:gap-10">
               <div>
-                <div className="text-sm font-semibold text-white/40 mb-4 uppercase tracking-widest">Support</div>
-                <div className="text-base font-light text-white/80">
+                <div className="text-xs sm:text-sm font-semibold text-white/40 mb-2 sm:mb-4 uppercase tracking-widest">Support</div>
+                <div className="text-sm sm:text-base font-light text-white/80">
                   +91 (800) 555-4832
                   <br />
                   hello@liftmygrade.com
@@ -96,12 +96,17 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="md:col-span-2 lg:col-span-1 flex items-end justify-end md:justify-start lg:justify-end gap-3 mt-auto">
+            <div className="sm:col-span-2 lg:col-span-1 flex items-center sm:items-end justify-start sm:justify-start lg:justify-end gap-3 mt-6 sm:mt-auto">
               {[Facebook, Instagram, Linkedin, Youtube].map((Icon, i) => (
                 <a key={i} href="#" className="w-10 h-10 rounded-full bg-white text-[#050B1D]! flex items-center justify-center hover:bg-blue-600 hover:text-white! transition-all transform hover:-translate-y-1">
                   <Icon className="w-5 h-5" />
                 </a>
               ))}
+            </div>
+            
+            {/* Mobile Branding (only visible on mobile/tablet) */}
+            <div className="mt-12 sm:col-span-2 lg:hidden">
+              <div className="text-2xl md:text-3xl font-extrabold tracking-tighter uppercase">LIFT<span className="font-light opacity-50">MYGRADE</span></div>
             </div>
           </div>
         </div>

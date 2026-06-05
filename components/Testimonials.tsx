@@ -44,43 +44,43 @@ export default function Testimonials() {
     <section className="py-24 px-6 md:px-12 bg-white" id="testimonial">
       <div className="max-w-7xl mx-auto">
         {/* Header with Navigation */}
-        <div className="flex justify-between items-end mb-16">
+        <div className="flex flex-col md:flex-row md:justify-between items-start md:items-end gap-6 mb-12 sm:mb-16">
           <div>
             <SectionLabel>Student Success</SectionLabel>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#171717] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] tracking-tight mt-4 sm:mt-0">
               Trusted By Ambitious Students
             </h2>
           </div>
-          <div className="flex gap-3 mb-2">
+          <div className="flex gap-3 mb-2 w-full md:w-auto justify-start md:justify-end">
             <button 
               onClick={handlePrev}
               disabled={index === 0}
-              className={`w-12 h-12 rounded-full border flex items-center justify-center transition-colors ${
+              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full border flex items-center justify-center transition-colors ${
                 index === 0 
                   ? "border-neutral-200 text-neutral-300 cursor-not-allowed" 
                   : "border-neutral-200 text-[#171717] hover:border-[#171717]"
               }`}
             >
-              <ArrowRight className="w-5 h-5 rotate-180" />
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 rotate-180" />
             </button>
             <button 
               onClick={handleNext}
               disabled={index === testimonials.length - 1}
-              className={`w-12 h-12 rounded-full border flex items-center justify-center transition-colors ${
+              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full border flex items-center justify-center transition-colors ${
                 index === testimonials.length - 1 
                   ? "border-neutral-200 text-neutral-300 cursor-not-allowed bg-transparent" 
                   : "border-transparent bg-[#333333] text-white hover:bg-black"
               }`}
             >
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
           </div>
         </div>
 
         {/* Featured Testimonial Card */}
-        <div className="grid md:grid-cols-2 gap-8 items-stretch">
+        <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-stretch">
           {/* Left Side: Portrait Image */}
-          <div className="relative aspect-square md:aspect-auto h-full rounded-[3rem] overflow-hidden shadow-sm">
+          <div className="relative aspect-square md:aspect-auto h-[250px] sm:h-[300px] md:h-full min-h-[250px] rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-sm">
             <Image
               src="/testmonial.png"
               alt="LiftMyGrade Testimonial"
@@ -91,7 +91,7 @@ export default function Testimonials() {
           </div>
 
           {/* Right Side: Content Card */}
-          <div className="bg-[#F9F9F9] h-full rounded-[3rem] p-10 md:p-14 lg:p-16 flex flex-col justify-center border border-neutral-100 relative overflow-hidden">
+          <div className="bg-[#F9F9F9] h-full rounded-[2rem] md:rounded-[3rem] p-8 sm:p-10 md:p-14 lg:p-16 flex flex-col justify-center border border-neutral-100 relative overflow-hidden min-h-[300px]">
             <div className="grid">
               {testimonials.map((item, i) => (
                 <motion.div
@@ -105,13 +105,13 @@ export default function Testimonials() {
                   }}
                   transition={{ duration: 0.5 }}
                 >
-                  <p className="text-xl md:text-2xl lg:text-3xl font-medium text-[#171717] leading-relaxed mb-8 md:mb-10 tracking-tight">
+                  <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium text-[#171717] leading-relaxed mb-8 md:mb-10 tracking-tight">
                     &ldquo;{item.quote}&rdquo;
                   </p>
                   
-                  <div className="mt-auto">
-                    <div className="text-2xl font-bold text-[#171717] mb-2 tracking-tight">{item.name}</div>
-                    <div className="text-[11px] text-blue-600 font-bold uppercase tracking-widest">{item.role}</div>
+                  <div className="mt-auto pt-4 border-t border-neutral-200 md:border-none md:pt-0">
+                    <div className="text-xl sm:text-2xl font-bold text-[#171717] mb-1 sm:mb-2 tracking-tight">{item.name}</div>
+                    <div className="text-[10px] sm:text-[11px] text-blue-600 font-bold uppercase tracking-widest">{item.role}</div>
                   </div>
                 </motion.div>
               ))}
