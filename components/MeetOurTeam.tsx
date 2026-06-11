@@ -25,9 +25,9 @@ export default function MeetOurTeam() {
             <div 
               className="rounded-[2rem] sm:rounded-[32px] bg-white p-6 sm:p-8 flex flex-col min-h-[200px] md:h-[220px]"
             >
-               <span className="text-[10px] sm:text-[11px] tracking-wider font-semibold text-neutral-400 mb-3 sm:mb-4 uppercase">[ POSTGRADUATE, FOREIGN UNIVERSITY ]</span>
-               <h3 className="text-[15px] font-bold text-[#171717] mb-2 tracking-tight">Admissions Writing Mentors</h3>
-               <p className="text-[13px] sm:text-[14px] text-neutral-500 leading-relaxed">Help you articulate your motivation and research interests, structure a compelling SOP, and draft strong recommendation letters.</p>
+               <span className="text-[11px] sm:text-[12px] tracking-wider font-semibold text-neutral-500 mb-3 sm:mb-4 uppercase">[ POSTGRADUATE, FOREIGN UNIVERSITY ]</span>
+               <h3 className="text-[17px] sm:text-[18px] font-bold text-[#171717] mb-2 tracking-tight">Admissions Writing Mentors</h3>
+               <p className="text-[15px] sm:text-[16px] text-neutral-600 leading-relaxed">Help you articulate your motivation and research interests, structure a compelling SOP, and draft strong recommendation letters.</p>
             </div>
           </div>
 
@@ -36,9 +36,9 @@ export default function MeetOurTeam() {
             <div 
               className="order-2 md:order-1 rounded-[2rem] sm:rounded-[32px] bg-white p-6 sm:p-8 flex flex-col min-h-[200px] md:h-[220px]"
             >
-               <span className="text-[10px] sm:text-[11px] tracking-wider font-semibold text-neutral-400 mb-3 sm:mb-4 uppercase">[ PHD-LEVEL EDITORS ]</span>
-               <h3 className="text-[15px] font-bold text-[#171717] mb-2 tracking-tight">Research Editors</h3>
-               <p className="text-[13px] sm:text-[14px] text-neutral-500 leading-relaxed">Edit your research proposals and papers for clarity, academic rigour, and tone so your work reads at the standard reviewers expect.</p>
+               <span className="text-[11px] sm:text-[12px] tracking-wider font-semibold text-neutral-500 mb-3 sm:mb-4 uppercase">[ PHD-LEVEL EDITORS ]</span>
+               <h3 className="text-[17px] sm:text-[18px] font-bold text-[#171717] mb-2 tracking-tight">Research Editors</h3>
+               <p className="text-[15px] sm:text-[16px] text-neutral-600 leading-relaxed">Edit your research proposals and papers for clarity, academic rigour, and tone so your work reads at the standard reviewers expect.</p>
             </div>
             <div 
               className="order-1 md:order-2 relative rounded-[2rem] sm:rounded-[32px] overflow-hidden h-[250px] sm:h-[300px] md:h-[340px] w-full"
@@ -57,9 +57,9 @@ export default function MeetOurTeam() {
             <div 
               className="rounded-[2rem] sm:rounded-[32px] bg-white p-6 sm:p-8 flex flex-col min-h-[200px] md:h-[220px]"
             >
-               <span className="text-[10px] sm:text-[11px] tracking-wider font-semibold text-neutral-400 mb-3 sm:mb-4 uppercase">[ ENGLISH-LANGUAGE SPECIALISTS ]</span>
-               <h3 className="text-[15px] font-bold text-[#171717] mb-2 tracking-tight">Language & Clarity Specialists</h3>
-               <p className="text-[13px] sm:text-[14px] text-neutral-500 leading-relaxed">Refine grammar, flow, and word choice across every document so your application reads naturally and confidently in English.</p>
+               <span className="text-[11px] sm:text-[12px] tracking-wider font-semibold text-neutral-500 mb-3 sm:mb-4 uppercase">[ ENGLISH-LANGUAGE SPECIALISTS ]</span>
+               <h3 className="text-[17px] sm:text-[18px] font-bold text-[#171717] mb-2 tracking-tight">Language & Clarity Specialists</h3>
+               <p className="text-[15px] sm:text-[16px] text-neutral-600 leading-relaxed">Refine grammar, flow, and word choice across every document so your application reads naturally and confidently in English.</p>
             </div>
           </div>
         </div>
