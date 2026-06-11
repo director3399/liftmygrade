@@ -7,33 +7,33 @@ export default function Milestones() {
   const items = [
     {
       id: "01",
-      title: "Clarity Before You Invest",
-      desc: "Know exactly where you stand and what steps matter most.",
-      tags: ["Profile", "Roadmap", "Planning", "Strategy"],
+      title: "Value Built In — At No Cost",
+      desc: "The groundwork is on us. From free readiness reports to detailed country roadmaps, you decide with confidence.",
+      tags: ["Readiness", "Roadmap", "Shortlisting", "Consultation"],
       image: "/outcome/outcome1.png",
       reverse: false,
     },
     {
       id: "02",
-      title: "Build A Strong Academic Profile",
-      desc: "Strengthen your research positioning and publication readiness.",
-      tags: ["Research", "Publication", "Profile", "PhD"],
+      title: "End-to-End Dedicated Support",
+      desc: "From your first enquiry to final submission, your dedicated mentor stays with you across the entire journey.",
+      tags: ["Mentor", "Timelines", "Responsive", "Secure"],
       image: "/outcome/outcome2.webp",
       reverse: true,
     },
     {
       id: "03",
-      title: "Improve Admission Success",
-      desc: "Submit stronger applications backed by structured planning.",
-      tags: ["Admissions", "SOP", "CV", "Universities"],
+      title: "Original & Next-Edge Documents",
+      desc: "Plagiarism-free, non-templated professional documents crafted from scratch to get your profile noticed.",
+      tags: ["SOP", "Resume", "Authentic", "Publication"],
       image: "/outcome/outcome3.webp",
       reverse: false,
     },
     {
       id: "04",
-      title: "Career Ready Beyond Admission",
-      desc: "Build a professional identity that supports long-term growth.",
-      tags: ["Resume", "LinkedIn", "Career", "Branding"],
+      title: "Guidance Through the Whole Journey",
+      desc: "You're never left guessing what comes next. We track every deadline and guide you through exams and visas.",
+      tags: ["Step-by-Step", "Visas", "Deadlines", "Advice"],
       image: "/outcome/outcome4.webp",
       reverse: true,
     },
@@ -46,7 +46,7 @@ export default function Milestones() {
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 mb-12 sm:mb-16">
           {/* Left Column: Label and Title */}
           <div className="flex flex-col">
-            <SectionLabel>Outcomes</SectionLabel>
+            <SectionLabel>Why Choose Us</SectionLabel>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] leading-[1.1] tracking-tight mt-4 md:mt-auto">
               What You Can Expect
               <br />
@@ -57,13 +57,13 @@ export default function Milestones() {
           {/* Right Column: Description and Button Left-Aligned with each other */}
           <div className="flex flex-col items-start justify-end">
             <p className="text-sm sm:text-base text-neutral-700 leading-relaxed mb-6 sm:mb-8">
-              These are the transformations our students experience through our structured academic ecosystem.
+              When you join LiftmyGrade, you're not buying a one-off document — you're stepping into a support system built around you.
             </p>
             <a
-              href="#assessment"
+              href="/what-to-expect"
               className="inline-flex items-center gap-3 bg-blue-600 text-white! px-5 sm:px-6 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:bg-blue-700 transition-colors"
             >
-              See the Ecosystem
+              Read Our Full Commitment
               <span className="inline-flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 bg-white rounded-full text-blue-600">
                 <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </span>
@@ -122,6 +122,13 @@ export default function Milestones() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-16 sm:mt-20 flex justify-center">
+          <a href="/what-to-expect" className="inline-flex items-center gap-3 bg-white border border-neutral-200 text-[#171717] px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-bold hover:border-neutral-300 hover:bg-neutral-50 shadow-sm transition-all">
+            View What to Expect
+            <ArrowRight className="w-4 h-4" />
+          </a>
         </div>
       </div>
     </section>

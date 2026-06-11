@@ -3,7 +3,6 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { blogs } from "@/data/blogs";
 
@@ -17,28 +16,16 @@ export default function BlogSection() {
 
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-12 sm:mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] tracking-tight leading-tight mt-4 sm:mt-0">
-              Explore Our Latest Insights &<br className="hidden sm:block" />
-              Academic Journeys
-            </h2>
-          </motion.div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] tracking-tight leading-tight mt-4 sm:mt-0">
+            Explore Our Latest Insights &<br className="hidden sm:block" />
+            Academic Journeys
+          </h2>
         </div>
 
         {/* Featured Post */}
         {featuredBlog && (
           <Link href={`/blogs/${featuredBlog.slug}`}>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="flex flex-col md:flex-row bg-[#EBEFEA] rounded-[2rem] sm:rounded-4xl overflow-hidden mb-8 shadow-sm cursor-pointer group"
-            >
+            <div className="flex flex-col md:flex-row bg-[#EBEFEA] rounded-[2rem] sm:rounded-4xl overflow-hidden mb-8 shadow-sm cursor-pointer group">
               {/* Left Image */}
               <div className="relative w-full md:w-[45%] h-[250px] sm:h-[300px] md:h-auto min-h-[250px] sm:min-h-[350px]">
                 <Image
@@ -65,7 +52,7 @@ export default function BlogSection() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </Link>
         )}
 
@@ -73,13 +60,7 @@ export default function BlogSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           {otherBlogs.map((blog, idx) => (
             <Link href={`/blogs/${blog.slug}`} key={blog.id}>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 * (idx + 1) }}
-                className="flex flex-col group cursor-pointer h-full"
-              >
+              <div className="flex flex-col group cursor-pointer h-full">
                 <div className="relative w-full aspect-4/3 rounded-3xl overflow-hidden mb-5 bg-neutral-100">
                   <Image
                     src={blog.coverImage}
@@ -95,7 +76,7 @@ export default function BlogSection() {
                 <h3 className="text-[17px] font-serif text-[#1C362B] text-center leading-snug px-4 group-hover:text-black transition-colors">
                   {blog.title}
                 </h3>
-              </motion.div>
+              </div>
             </Link>
           ))}
         </div>
@@ -103,14 +84,10 @@ export default function BlogSection() {
         {/* See All Button */}
         <div className="flex justify-center">
           <Link href="/blogs">
-            <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="bg-[#1C362B] text-white px-8 py-4 rounded-full font-semibold text-[15px] flex items-center gap-2 hover:bg-[#12241C] transition-colors"
-            >
+            <button className="bg-[#1C362B] text-white px-8 py-4 rounded-full font-semibold text-[15px] flex items-center gap-2 hover:bg-[#12241C] transition-colors">
               See All Blogs
               <ArrowRight className="w-4 h-4" />
-            </motion.button>
+            </button>
           </Link>
         </div>
 

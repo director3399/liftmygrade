@@ -35,7 +35,7 @@ export default function Mentorship() {
             <p className="text-base sm:text-lg text-neutral-700 leading-relaxed mb-6 sm:mb-8">
               Most students start thinking about studying abroad only when applications open. By then, they often realize they lack research experience, strong extracurriculars, publications, or a clear strategy. LiftMyGrade helps students prepare years in advance through structured mentorship, profile building, research guidance, and admission planning.
             </p>
-            <a href="#assessment" className="inline-flex items-center gap-2 text-sm font-semibold border-b-2 border-black hover:opacity-70 transition-all pb-1">
+            <a href="/readiness-assessment" className="inline-flex items-center gap-2 text-sm font-semibold border-b-2 border-black hover:opacity-70 transition-all pb-1">
               Start Your Journey <DiagonalArrow className="w-3.5 h-3.5 ml-1" />
             </a>
           </div>

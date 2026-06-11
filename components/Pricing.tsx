@@ -3,7 +3,6 @@
 import React from "react";
 import SectionLabel from "./SectionLabel";
 import { ArrowRight, Check } from "./Icons";
-import { motion } from "framer-motion";
 
 const programs = [
   {
@@ -100,28 +99,19 @@ export default function Pricing() {
     <section className="py-16 sm:py-24 px-6 md:px-12 lg:px-16 bg-[#F6F8F7]" id="pricing">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center text-center mb-12 sm:mb-20">
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="flex flex-col items-center"
-          >
-            <SectionLabel>Programs & Support Systems</SectionLabel>
+          <div className="flex flex-col items-center">
+            <SectionLabel>Pricing & Plans</SectionLabel>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-[#171717] mt-4 sm:mt-6 mb-4 sm:mb-6 tracking-tight">
-              Structured Academic Growth<br className="hidden md:block" />
-              Programs
+              Clear Programs,<br className="hidden md:block" />
+              Transparent Pricing
             </h2>
-          </motion.div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
           {programs.map((pkg, idx) => (
-            <motion.div 
+            <div 
               key={idx}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.1, duration: 0.6, ease: "easeOut" }}
               className={`relative flex flex-col p-6 sm:p-8 lg:p-10 rounded-[2rem] sm:rounded-[32px] transition-all duration-500 bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.1)] ${
                 pkg.highlight ? "border-2 border-blue-500 transform lg:-translate-y-4" : "border border-neutral-100"
               }`}
@@ -181,8 +171,15 @@ export default function Pricing() {
                 {pkg.price === "Consultation Based" ? "Book Consultation" : "Get Started"} 
                 <ArrowRight className="w-4 h-4" />
               </button>
-            </motion.div>
+            </div>
           ))}
+        </div>
+
+        <div className="mt-16 flex justify-center">
+          <a href="/pricing" className="inline-flex items-center gap-3 bg-white border border-neutral-200 text-[#171717] px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-bold hover:border-neutral-300 hover:bg-neutral-50 shadow-sm transition-all">
+            View All Pricing Plans & Individual Services
+            <ArrowRight className="w-4 h-4" />
+          </a>
         </div>
       </div>
     </section>

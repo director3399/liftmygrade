@@ -23,11 +23,8 @@ export default function Hero() {
       <div className="relative z-20 max-w-7xl mx-auto w-full flex flex-col items-start justify-end">
         {/* Left Content Stack */}
         <div className="hero-text-left relative flex flex-col items-start w-full">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] sm:leading-[1.1] mb-6 sm:mb-8 tracking-tighter max-w-4xl"
+          <h1
+            className="animate-fade-in-up text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] sm:leading-[1.1] mb-6 sm:mb-8 tracking-tighter max-w-4xl"
           >
             Build A Global Academic<br className="sm:hidden" /><span className="relative inline-block whitespace-nowrap z-10 px-1">
               <span className="relative z-10">Profile</span>
@@ -49,29 +46,23 @@ export default function Hero() {
               </svg>
             </span>-<br className="sm:hidden" />
             <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 via-blue-200 to-white">Not Just An Application</span>
-          </motion.h1>
+          </h1>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="text-base sm:text-lg md:text-xl text-white/70 leading-relaxed mb-8 sm:mb-10 max-w-2xl font-light"
+          <div
+            className="animate-fade-in-up delay-200 text-base sm:text-lg md:text-xl text-white/70 leading-relaxed mb-8 sm:mb-10 max-w-2xl font-light"
           >
             <p>
-              LiftmyGrade combines AI-powered readiness systems, structured mentorship, and research-focused guidance to help students navigate global education pathways with clarity.
+              LiftmyGrade combines comprehensive readiness systems, structured mentorship, and research-focused guidance to help students navigate global education pathways with clarity.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 items-start sm:items-center w-full sm:w-auto"
+          <div
+            className="animate-fade-in-up delay-400 flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 items-start sm:items-center w-full sm:w-auto"
           >
             <motion.a
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              href="#assessment"
+              href="/readiness-assessment"
               className="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-4 bg-white text-neutral-800 pl-6 sm:pl-8 pr-2 py-2 rounded-full text-sm sm:text-base font-medium hover:bg-neutral-50 transition-all group"
             >
               Get Free Readiness Report
@@ -80,12 +71,12 @@ export default function Hero() {
               </span>
             </motion.a>
             <a
-              href="#services"
+              href="/services"
               className="inline-flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white transition-all border-b border-white/20 hover:border-white pb-1 ml-2 sm:ml-0"
             >
-              Explore Programs
+              Explore Our Services
             </a>
-          </motion.div>
+          </div>
         </div>
       </div>
 

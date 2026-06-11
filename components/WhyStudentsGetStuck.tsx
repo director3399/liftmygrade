@@ -24,13 +24,7 @@ const cards = [
     title: "Weak Research Profile",
     desc: "A lack of research projects, publications, and academic positioning reduces opportunities for scholarships, funding, and top universities.",
     actionText: "Start Publishing Research",
-  },
-  {
-    id: "04",
-    title: "No Career Alignment",
-    desc: "Students frequently choose countries and programs without considering future employability, PR pathways, or long-term career goals.",
-    actionText: "Align Career & Education",
-  },
+  }
 ];
 
 const StickyCard = ({ card, index }: any) => {
@@ -53,7 +47,7 @@ const StickyCard = ({ card, index }: any) => {
         <p className="text-base sm:text-lg text-neutral-600 leading-relaxed mb-6 sm:mb-8">
           {card.desc}
         </p>
-        <a href="#assessment" className="inline-flex items-center gap-3 bg-white border border-neutral-200 text-[#171717] px-5 py-3 sm:px-6 sm:py-3.5 rounded-full text-xs sm:text-sm font-semibold hover:border-neutral-300 transition-colors shadow-sm w-full sm:w-auto justify-center">
+        <a href="/readiness-assessment" className="inline-flex items-center gap-3 bg-white border border-neutral-200 text-[#171717] px-5 py-3 sm:px-6 sm:py-3.5 rounded-full text-xs sm:text-sm font-semibold hover:border-neutral-300 transition-colors shadow-sm w-full sm:w-auto justify-center">
           {card.actionText}
           <span className="text-blue-600">
             <ArrowRight className="w-4 h-4" />

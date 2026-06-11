@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import ScrollRestorationFix from "./ScrollRestorationFix";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
@@ -31,7 +32,10 @@ export default function RootLayout({
       className={`${plusJakartaSans.variable} ${geistMono.variable} antialiased`}
       suppressHydrationWarning
     >
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        <ScrollRestorationFix />
+        {children}
+      </body>
     </html>
   );
 }

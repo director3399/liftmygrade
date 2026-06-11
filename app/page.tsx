@@ -10,14 +10,15 @@ import Pathways from "@/components/Pathways";
 import Pricing from "@/components/Pricing";
 import BlogSection from "@/components/BlogSection";
 import MeetOurTeam from "@/components/MeetOurTeam";
+import ContactUs from "@/components/ContactUs";
 
 export default function Home() {
   return (
     <main className="bg-white selection:bg-blue-100 selection:text-blue-900">
       <Navbar />
       <Hero />
-      <WhyStudentsGetStuck />
       <Mentorship />
+      <WhyStudentsGetStuck />
       <Pathways />
       <AcademicJourney />
       <Milestones />
@@ -25,6 +26,7 @@ export default function Home() {
       <Pricing />
       <Testimonials />
       <BlogSection />
+      <ContactUs />
       <Footer />
     </main>
   );

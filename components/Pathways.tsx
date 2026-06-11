@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import SectionLabel from "./SectionLabel";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function Pathways() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -39,6 +39,12 @@ export default function Pathways() {
       desc: "Build a global professional presence through LinkedIn optimization, resume development, interview preparation, and career positioning.",
       image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1000&q=90",
     },
+    {
+      id: "06",
+      title: "Professional & Career Services",
+      desc: "Specialized project-based document writing for professionals and corporate clients. Standalone support for Resumes, SOPs, Grants, and PR.",
+      image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1000&q=90",
+    },
   ];
 
   useEffect(() => {
@@ -57,23 +63,12 @@ export default function Pathways() {
           {/* Left Column: Text Content */}
           <div className="flex flex-col lg:justify-between lg:h-full pt-2 sm:pt-4">
             <div>
-              <motion.div 
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="flex justify-between items-start mb-4"
-              >
-                <SectionLabel>Programs & Support Systems</SectionLabel>
-              </motion.div>
+              <div className="flex justify-between items-start mb-4">
+                <SectionLabel>Our Services</SectionLabel>
+              </div>
               
-              <motion.h2 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] leading-[1.2] mb-6 tracking-tight"
-              >
-                Our Academic
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] leading-[1.2] mb-6 tracking-tight">
+                Our
                 <br />
                 <span className="relative inline-block whitespace-nowrap px-1">
                   {/* Place SVG first in DOM so it renders underneath */}
@@ -90,41 +85,43 @@ export default function Pathways() {
                       strokeLinecap="round" 
                     />
                   </svg>
-                  <span className="relative">Ecosystem</span>
+                  <span className="relative">Services</span>
                 </span>
-              </motion.h2>
+              </h2>
               
-              <motion.p 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="text-sm sm:text-base text-neutral-700 leading-relaxed max-w-md mb-10 sm:mb-12"
-              >
+              <p className="text-sm sm:text-base text-neutral-700 leading-relaxed max-w-md mb-8">
                 Explore the programs, systems, and support services designed to help students move from academic planning to admissions, research opportunities, and long-term career growth.
-              </motion.p>
+              </p>
+
+              <div className="mb-10 sm:mb-12 flex flex-col sm:flex-row gap-4">
+                <a href="/services" className="inline-flex items-center justify-center gap-3 bg-blue-600 text-white! px-5 sm:px-6 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:bg-blue-700 transition-colors w-full sm:w-auto">
+                  Explore All Services
+                  <span className="inline-flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 bg-white rounded-full text-blue-600">
+                    <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                  </span>
+                </a>
+                <a href="/career-services" className="inline-flex items-center justify-center gap-3 bg-white border border-neutral-200 text-[#171717]! px-5 sm:px-6 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:border-neutral-300 hover:bg-neutral-50 shadow-sm transition-colors w-full sm:w-auto">
+                  Career Services
+                  <svg className="w-4 h-4 text-neutral-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </a>
+              </div>
             </div>
 
             <div className="mt-8 lg:mt-auto overflow-hidden">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={activeIndex}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.5, ease: "easeInOut" }}
-                >
-                  <div className="text-xs sm:text-sm font-semibold text-neutral-400 mb-3 sm:mb-4 tracking-widest uppercase">
-                    {current.id} / 05
-                  </div>
-                  <h3 className="text-xl sm:text-2xl md:text-4xl font-bold text-[#171717] mb-4 sm:mb-6 tracking-tight">
-                    {current.title}
-                  </h3>
-                  <p className="text-sm sm:text-base text-neutral-700 leading-relaxed max-w-md mb-6 sm:mb-8 min-h-[100px] sm:min-h-[80px]">
-                    {current.desc}
-                  </p>
-                </motion.div>
-              </AnimatePresence>
+              <div
+                key={activeIndex}
+                className="animate-fade-in-up"
+              >
+                <div className="text-xs sm:text-sm font-semibold text-neutral-400 mb-3 sm:mb-4 tracking-widest uppercase">
+                  {current.id} / 06
+                </div>
+                <h3 className="text-xl sm:text-2xl md:text-4xl font-bold text-[#171717] mb-4 sm:mb-6 tracking-tight">
+                  {current.title}
+                </h3>
+                <p className="text-sm sm:text-base text-neutral-700 leading-relaxed max-w-md mb-6 sm:mb-8 min-h-[100px] sm:min-h-[80px]">
+                  {current.desc}
+                </p>
+              </div>
 
               {/* Thick Progress Bars */}
               <div className="flex gap-3 sm:gap-4 mt-4 sm:mt-6">

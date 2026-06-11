@@ -8,43 +8,43 @@ export default function AcademicJourney() {
   const stages = [
     {
       id: "01",
-      title: "Readiness Assessment",
-      desc: "Detailed profile score, country fit, and long-term roadmap generation.",
+      title: "Readiness Report",
+      desc: "An honest snapshot of your eligibility, early strengths, and visible gaps.",
     },
     {
       id: "02",
-      title: "Academic Strategy",
-      desc: "Structured planning to map your long-term academic trajectory.",
+      title: "Consultation Call",
+      desc: "Discuss aspirations, budget, timeline, and understand the person behind the profile.",
     },
     {
       id: "03",
-      title: "Admission Support",
-      desc: "SOP development, academic CV, and university shortlisting execution.",
+      title: "Country Shortlisting",
+      desc: "Filter down to the top 1–3 countries that best fit your goal, budget, and profile.",
     },
     {
       id: "04",
-      title: "Research Positioning",
-      desc: "Building a research profile that proves your academic potential.",
+      title: "Detailed Roadmap",
+      desc: "A country-specific plan with timelines, intakes, test requirements, and budget.",
     },
     {
       id: "05",
-      title: "Publication Support",
-      desc: "End-to-end guidance for publishing in international peer-reviewed journals.",
+      title: "Document Drafting",
+      desc: "Tailoring SOPs, LORs, and CVs precisely to your chosen target programs.",
     },
     {
       id: "06",
-      title: "Professor Outreach",
-      desc: "Strategic networking and communication with prospective supervisors.",
+      title: "Exam & Visa Support",
+      desc: "Guidance on language/admission tests and complete visa formality support.",
     },
     {
       id: "07",
-      title: "PhD Applications",
-      desc: "Refining your research proposal for fully funded programs.",
+      title: "Research Strategy",
+      desc: "For PhDs: Proposal drafting, supervisor mapping, and personalized professor outreach.",
     },
     {
       id: "08",
-      title: "Career Readiness",
-      desc: "Post-study global career branding and professional identity building.",
+      title: "Submission & Tracking",
+      desc: "Application assembly, deadline tracking, and follow-through to final enrollment.",
     },
   ];
 
@@ -56,34 +56,32 @@ export default function AcademicJourney() {
     <section className="py-16 sm:py-24 bg-white w-full overflow-hidden relative" id="journey">
       <div className="px-6 md:px-12 lg:px-16">
         <div className="max-w-7xl mx-auto mb-12 sm:mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="flex justify-between items-start mb-4"
-          >
-            <SectionLabel>System Roadmap</SectionLabel>
-          </motion.div>
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+            <div
+              className="flex flex-col"
+            >
+              <div>
+                <SectionLabel>Process</SectionLabel>
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] leading-[1.1] tracking-tight mt-4 md:mt-auto">
+                How Our System Works
+              </h2>
+            </div>
 
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] leading-[1.2] tracking-tight max-w-3xl mt-4 sm:mt-0"
-          >
-            How Our System Works
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-sm sm:text-base text-neutral-700 leading-relaxed max-w-xl mt-4 sm:mt-6"
-          >
-            Navigate every stage of your academic growth with our comprehensive ecosystem, designed for long-term global success.
-          </motion.p>
+            <div
+              className="flex flex-col items-start justify-end"
+            >
+              <p className="text-sm sm:text-base text-neutral-700 leading-relaxed mb-6 sm:mb-8">
+                Navigate every stage of your academic growth with our comprehensive ecosystem, designed for long-term global success.
+              </p>
+              <a href="/how-we-work" className="inline-flex items-center gap-3 bg-blue-600 text-white! px-5 sm:px-6 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:bg-blue-700 transition-colors">
+                View Detailed Process
+                <span className="inline-flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 bg-white rounded-full text-blue-600">
+                  <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* Desktop Single Line Alternating Layout */}
@@ -110,11 +108,7 @@ export default function AcademicJourney() {
                   <div className={`absolute left-1/2 -translate-x-1/2 w-[2px] h-[30px] bg-neutral-200 transition-colors duration-300 group-hover:bg-blue-500/40 ${isTop ? 'bottom-1/2' : 'top-1/2'}`} />
                   
                   {/* Card */}
-                  <motion.div
-                    initial={{ opacity: 0, y: isTop ? 15 : -15 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: i * 0.1 }}
+                  <div
                     className={`absolute left-1/2 -translate-x-1/2 w-[220px] bg-white rounded-2xl p-5 border border-neutral-100 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] transition-all duration-300 z-10 group-hover:border-blue-500/30 group-hover:shadow-[0_8px_30px_-6px_rgba(59,130,246,0.12)] ${
                       isTop ? 'bottom-[calc(50%+30px)]' : 'top-[calc(50%+30px)]'
                     }`}
@@ -130,7 +124,7 @@ export default function AcademicJourney() {
                         {stage.desc}
                       </p>
                     </div>
-                  </motion.div>
+                  </div>
                 </div>
               );
             })}
@@ -151,11 +145,7 @@ export default function AcademicJourney() {
                 )}
 
                 {/* Card */}
-                <motion.div
-                  initial={{ opacity: 0, y: 15 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                <div
                   className="relative z-10 w-full bg-white rounded-2xl p-5 border border-neutral-100 shadow-sm"
                 >
                   <div className="flex flex-col gap-2">
@@ -169,7 +159,7 @@ export default function AcademicJourney() {
                       {stage.desc}
                     </p>
                   </div>
-                </motion.div>
+                </div>
               </div>
             ))}
           </div>

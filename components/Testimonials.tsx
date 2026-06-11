@@ -46,9 +46,9 @@ export default function Testimonials() {
         {/* Header with Navigation */}
         <div className="flex flex-col md:flex-row md:justify-between items-start md:items-end gap-6 mb-12 sm:mb-16">
           <div>
-            <SectionLabel>Student Success</SectionLabel>
+            <SectionLabel>Testimonials</SectionLabel>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] tracking-tight mt-4 sm:mt-0">
-              Trusted By Ambitious Students
+              What People Say About Us
             </h2>
           </div>
           <div className="flex gap-3 mb-2 w-full md:w-auto justify-start md:justify-end">
