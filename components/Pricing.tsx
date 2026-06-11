@@ -111,7 +111,7 @@ export default function Pricing() {
           {programs.map((pkg, idx) => (
             <div 
               key={idx}
-              className={`relative flex flex-col p-6 sm:p-8 lg:p-10 rounded-[2rem] sm:rounded-[32px] transition-all duration-500 bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.1)] ${
+              className={`relative flex flex-col p-6 sm:p-8 lg:p-10 rounded-4xl sm:rounded-[32px] transition-all duration-500 bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.1)] ${
                 pkg.highlight ? "border-2 border-blue-500 transform lg:-translate-y-4" : "border border-neutral-100"
               }`}
             >

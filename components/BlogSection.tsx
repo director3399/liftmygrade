@@ -24,7 +24,7 @@ export default function BlogSection() {
         {/* Featured Post */}
         {featuredBlog && (
           <Link href={`/blogs/${featuredBlog.slug}`}>
-            <div className="flex flex-col md:flex-row bg-[#EBEFEA] rounded-[2rem] sm:rounded-4xl overflow-hidden mb-8 shadow-sm cursor-pointer group">
+            <div className="flex flex-col md:flex-row bg-[#EBEFEA] rounded-4xl sm:rounded-4xl overflow-hidden mb-8 shadow-sm cursor-pointer group">
               {/* Left Image */}
               <div className="relative w-full md:w-[45%] h-[250px] sm:h-[300px] md:h-auto min-h-[250px] sm:min-h-[350px]">
                 <Image

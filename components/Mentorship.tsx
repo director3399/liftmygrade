@@ -41,7 +41,7 @@ export default function Mentorship() {
           </div>
         </div>
 
-        <div className="relative rounded-[2rem] sm:rounded-4xl overflow-hidden flex flex-col justify-end min-h-[400px] sm:min-h-[300px] sm:aspect-[2.8/1]">
+        <div className="relative rounded-4xl sm:rounded-4xl overflow-hidden flex flex-col justify-end min-h-[400px] sm:min-h-[300px] sm:aspect-[2.8/1]">
           <Image
             src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1200&q=80"
             alt="International Academic Environment"

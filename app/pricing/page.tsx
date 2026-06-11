@@ -47,7 +47,7 @@ export default function PricingPage() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Starter */}
-          <div className="relative flex flex-col p-8 lg:p-10 rounded-[2rem] bg-white border-2 border-blue-500 shadow-[0_20px_40px_-10px_rgba(0,0,0,0.1)] lg:-translate-y-4">
+          <div className="relative flex flex-col p-8 lg:p-10 rounded-4xl bg-white border-2 border-blue-500 shadow-[0_20px_40px_-10px_rgba(0,0,0,0.1)] lg:-translate-y-4">
             <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-[11px] font-bold uppercase tracking-widest py-1.5 px-4 rounded-full shadow-md whitespace-nowrap">
               Most Recommended
             </div>
@@ -82,7 +82,7 @@ export default function PricingPage() {
           </div>
 
           {/* Core */}
-          <div className="relative flex flex-col p-8 lg:p-10 rounded-[2rem] bg-white border border-neutral-100 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)]">
+          <div className="relative flex flex-col p-8 lg:p-10 rounded-4xl bg-white border border-neutral-100 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)]">
             <div className="mb-6 flex flex-col gap-2">
               <span className="text-[11px] font-bold uppercase tracking-widest text-neutral-400">[ CORE ]</span>
               <h3 className="text-2xl font-bold text-[#171717] leading-tight mt-2">Admission Strategy & Execution</h3>
@@ -105,7 +105,7 @@ export default function PricingPage() {
           </div>
 
           {/* Tailored */}
-          <div className="relative flex flex-col p-8 lg:p-10 rounded-[2rem] bg-white border border-neutral-100 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)]">
+          <div className="relative flex flex-col p-8 lg:p-10 rounded-4xl bg-white border border-neutral-100 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)]">
             <div className="mb-6 flex flex-col gap-2">
               <span className="text-[11px] font-bold uppercase tracking-widest text-neutral-400">[ TAILORED ]</span>
               <h3 className="text-2xl font-bold text-[#171717] leading-tight mt-2">Customized Admission Program</h3>
@@ -138,7 +138,7 @@ export default function PricingPage() {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {/* Research */}
-          <div className="relative flex flex-col p-8 lg:p-10 rounded-[2rem] bg-white border border-neutral-100 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)]">
+          <div className="relative flex flex-col p-8 lg:p-10 rounded-4xl bg-white border border-neutral-100 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)]">
             <div className="mb-6 flex flex-col gap-2">
               <span className="text-[11px] font-bold uppercase tracking-widest text-neutral-400">[ ACADEMIC ]</span>
               <h3 className="text-2xl font-bold text-[#171717] leading-tight mt-2">Research & Publication Support</h3>
@@ -161,7 +161,7 @@ export default function PricingPage() {
           </div>
 
           {/* Career */}
-          <div className="relative flex flex-col p-8 lg:p-10 rounded-[2rem] bg-white border border-neutral-100 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)]">
+          <div className="relative flex flex-col p-8 lg:p-10 rounded-4xl bg-white border border-neutral-100 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)]">
             <div className="mb-6 flex flex-col gap-2">
               <span className="text-[11px] font-bold uppercase tracking-widest text-neutral-400">[ CAREER ]</span>
               <h3 className="text-2xl font-bold text-[#171717] leading-tight mt-2">Global Career Branding Program</h3>
@@ -194,7 +194,7 @@ export default function PricingPage() {
           </h2>
         </div>
 
-        <div className="max-w-4xl mx-auto bg-white border border-neutral-200 rounded-[2rem] overflow-hidden shadow-sm">
+        <div className="max-w-4xl mx-auto bg-white border border-neutral-200 rounded-4xl overflow-hidden shadow-sm">
           {prWritingServices.map((service, idx) => (
             <div key={idx} className={`flex flex-col sm:flex-row items-start sm:items-center justify-between p-6 md:p-8 ${idx !== prWritingServices.length - 1 ? 'border-b border-neutral-100' : ''} ${idx % 2 === 1 ? 'bg-neutral-50/50' : 'bg-white'}`}>
               <div className="flex items-start gap-4 mb-4 sm:mb-0">

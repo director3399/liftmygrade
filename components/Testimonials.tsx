@@ -80,7 +80,7 @@ export default function Testimonials() {
         {/* Featured Testimonial Card */}
         <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-stretch">
           {/* Left Side: Portrait Image */}
-          <div className="relative aspect-square md:aspect-auto h-[250px] sm:h-[300px] md:h-full min-h-[250px] rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-sm">
+          <div className="relative aspect-square md:aspect-auto h-[250px] sm:h-[300px] md:h-full min-h-[250px] rounded-4xl md:rounded-[3rem] overflow-hidden shadow-sm">
             <Image
               src="/testmonial.png"
               alt="LiftMyGrade Testimonial"
@@ -92,7 +92,7 @@ export default function Testimonials() {
           </div>
 
           {/* Right Side: Content Card */}
-          <div className="bg-[#F9F9F9] h-full rounded-[2rem] md:rounded-[3rem] p-8 sm:p-10 md:p-14 lg:p-16 flex flex-col justify-center border border-neutral-100 relative overflow-hidden min-h-[300px]">
+          <div className="bg-[#F9F9F9] h-full rounded-4xl md:rounded-[3rem] p-8 sm:p-10 md:p-14 lg:p-16 flex flex-col justify-center border border-neutral-100 relative overflow-hidden min-h-[300px]">
             <div className="grid">
               {testimonials.map((item, i) => (
                 <motion.div

@@ -138,8 +138,8 @@ export default function ContactUs() {
   return (
     <section className="py-24 md:py-32 px-6 md:px-12 lg:px-16 bg-[#F6F8F7] relative" id="contact">
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute -top-[20%] -right-[10%] w-[50%] h-[50%] rounded-full bg-blue-500/5 blur-[120px]" />
-        <div className="absolute top-[40%] -left-[10%] w-[40%] h-[40%] rounded-full bg-blue-600/5 blur-[120px]" />
+        <div className="absolute top-[-20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-blue-500/5 blur-[120px]" />
+        <div className="absolute top-[40%] left-[-10%] w-[40%] h-[40%] rounded-full bg-blue-600/5 blur-[120px]" />
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -152,7 +152,7 @@ export default function ContactUs() {
           </p>
         </div>
 
-        <div className="bg-white rounded-[2rem] sm:rounded-[3rem] p-2 sm:p-3 shadow-[0_8px_40px_rgb(0,0,0,0.04)] border border-neutral-100 flex flex-col lg:flex-row max-w-6xl mx-auto">
+        <div className="bg-white rounded-4xl sm:rounded-[3rem] p-2 sm:p-3 shadow-[0_8px_40px_rgb(0,0,0,0.04)] border border-neutral-100 flex flex-col lg:flex-row max-w-6xl mx-auto">
           
           {/* Left Column: Contact Details */}
           <div className="bg-[#050B1D] text-white p-10 md:p-14 lg:p-16 rounded-[1.8rem] sm:rounded-[2.5rem] lg:w-5/12 flex flex-col relative overflow-hidden shrink-0">

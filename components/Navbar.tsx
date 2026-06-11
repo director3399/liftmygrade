@@ -39,7 +39,7 @@ export default function Navbar({
 
   return (
     <>
-      <header className={`absolute top-0 left-0 right-0 z-[60] transition-colors duration-300 ${isMobileMenuOpen ? 'bg-white' : 'bg-transparent'}`}>
+      <header className={`absolute top-0 left-0 right-0 z-60 transition-colors duration-300 ${isMobileMenuOpen ? 'bg-white' : 'bg-transparent'}`}>
 
         {/* Topbar */}
         <div className={`hidden md:flex justify-between items-center py-2.5 px-6 md:px-12 transition-colors duration-300 ${isMobileMenuOpen ? 'bg-neutral-100 text-neutral-800' : (isLight ? 'bg-neutral-100 text-neutral-800' : 'bg-white/5 backdrop-blur-sm text-white/90 border-b border-white/10')}`}>
@@ -61,7 +61,7 @@ export default function Navbar({
 
         <div className="py-4 md:py-5 px-6 md:px-12">
           <div className="max-w-7xl mx-auto flex items-center justify-between">
-            <a href="/" className={`flex items-center gap-2.5 text-xl font-extrabold ${textColor} tracking-tighter uppercase relative z-[60]`}>
+            <a href="/" className={`flex items-center gap-2.5 text-xl font-extrabold ${textColor} tracking-tighter uppercase relative z-60`}>
               <img src="/logo-3.png" alt="LiftmyGrade" className="h-7 sm:h-8 w-auto object-contain" />
               <span>LIFT<span className="font-light opacity-80">MYGRADE</span></span>
             </a>
@@ -79,7 +79,7 @@ export default function Navbar({
             <div className="flex items-center gap-4">
               <a
                 href="/#contact"
-                className="hidden sm:inline-flex items-center gap-2.5 bg-blue-600 text-white! px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-blue-700 transition-colors group relative z-[60]"
+                className="hidden sm:inline-flex items-center gap-2.5 bg-blue-600 text-white! px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-blue-700 transition-colors group relative z-60"
               >
                 Free Consultation
                 <span className="inline-flex items-center justify-center w-7 h-7 bg-white rounded-full text-blue-600">
@@ -90,7 +90,7 @@ export default function Navbar({
               {/* Mobile Menu Toggle Button */}
               {!hideLinks && (
                 <button
-                  className={`lg:hidden relative z-[60] p-2 -mr-2 ${textColor}`}
+                  className={`lg:hidden relative z-60 p-2 -mr-2 ${textColor}`}
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                   aria-label="Toggle Menu"
                 >
@@ -109,7 +109,7 @@ export default function Navbar({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[55] bg-white pt-24 px-6 pb-6 overflow-y-auto"
+            className="fixed inset-0 z-55 bg-white pt-24 px-6 pb-6 overflow-y-auto"
           >
             <div className="flex flex-col gap-5 sm:gap-6 items-center text-center">
               {navLinks.map((link, idx) => (

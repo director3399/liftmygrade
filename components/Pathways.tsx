@@ -145,7 +145,7 @@ export default function Pathways() {
             </div>
           </div>
 
-          <div className="relative aspect-square sm:aspect-4/5 lg:aspect-auto lg:h-full rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden mt-8 lg:mt-0">
+          <div className="relative aspect-square sm:aspect-4/5 lg:aspect-auto lg:h-full rounded-4xl sm:rounded-[2.5rem] overflow-hidden mt-8 lg:mt-0">
             <Image
               src="/program1.png"
               alt="LiftMyGrade Programs"

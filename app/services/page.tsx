@@ -26,7 +26,7 @@ const ServiceSection = ({ id, label, title, subtitle, items, theme = "default" }
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {items.map((item: any, i: number) => (
-            <div key={i} className="bg-white border border-neutral-100 rounded-[1.5rem] overflow-hidden shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_12px_30px_-10px_rgba(0,0,0,0.1)] transition-all flex flex-col">
+            <div key={i} className="bg-white border border-neutral-100 rounded-3xl overflow-hidden shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_12px_30px_-10px_rgba(0,0,0,0.1)] transition-all flex flex-col">
               {item.image && (
                 <div className="w-full h-48 relative bg-neutral-100">
                   <Image src={item.image} alt={item.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
