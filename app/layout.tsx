@@ -31,6 +31,7 @@ export default function RootLayout({
       lang="en"
       className={`${plusJakartaSans.variable} ${geistMono.variable} antialiased`}
       suppressHydrationWarning
+      data-scroll-behavior="smooth"
     >
       <body suppressHydrationWarning>
         <ScrollRestorationFix />

@@ -46,8 +46,8 @@ export default function Mentorship() {
             src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1200&q=80"
             alt="International Academic Environment"
             fill
+            sizes="(max-width: 1024px) 100vw, 1200px"
             className="object-cover grayscale-[0.2]"
-            sizes="100vw"
           />
           <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/70 to-black/30 z-10" />
 

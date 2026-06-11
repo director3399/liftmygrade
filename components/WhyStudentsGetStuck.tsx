@@ -1,10 +1,8 @@
-"use client";
-
-import React, { useRef } from "react";
+import React from "react";
 import Image from "next/image";
 import SectionLabel from "./SectionLabel";
 
-import { ArrowRight } from "./Icons";
+import { ArrowRight, DiagonalArrow } from "./Icons";
 
 const cards = [
   {
@@ -47,11 +45,8 @@ const StickyCard = ({ card, index }: any) => {
         <p className="text-base sm:text-lg text-neutral-600 leading-relaxed mb-6 sm:mb-8">
           {card.desc}
         </p>
-        <a href="/readiness-assessment" className="inline-flex items-center gap-3 bg-white border border-neutral-200 text-[#171717] px-5 py-3 sm:px-6 sm:py-3.5 rounded-full text-xs sm:text-sm font-semibold hover:border-neutral-300 transition-colors shadow-sm w-full sm:w-auto justify-center">
-          {card.actionText}
-          <span className="text-blue-600">
-            <ArrowRight className="w-4 h-4" />
-          </span>
+        <a href="/readiness-assessment" className="inline-flex items-center gap-2 text-sm font-semibold border-b-2 border-black hover:opacity-70 transition-all pb-1 w-max">
+          {card.actionText} <DiagonalArrow className="w-3.5 h-3.5 ml-1" />
         </a>
       </div>
     </div>
@@ -88,14 +83,17 @@ export default function WhyStudentsGetStuck() {
           </div>
 
           {/* Right Image (Sticky) */}
-          <div className="relative w-full lg:w-1/2 lg:sticky lg:top-[15vh] h-[300px] sm:h-[400px] lg:h-[70vh] rounded-4xl lg:rounded-[3rem] overflow-hidden order-first lg:order-last mb-8 sm:mb-12 lg:mb-0">
-            <Image
-              src="/wasg.png"
-              alt="Student planning future"
-              fill
-              className="object-cover"
-              priority
-            />
+          <div className="w-full lg:w-1/2 lg:sticky lg:top-[15vh] h-[300px] sm:h-[400px] lg:h-[70vh] rounded-4xl lg:rounded-[3rem] overflow-hidden order-first lg:order-last mb-8 sm:mb-12 lg:mb-0">
+            <div className="relative w-full h-full">
+              <Image
+                src="/wasg.png"
+                alt="Student planning future"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+                priority
+              />
+            </div>
           </div>
 
         </div>

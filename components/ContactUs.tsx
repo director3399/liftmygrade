@@ -1,12 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { ArrowRight, CheckCircle2, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import SectionLabel from "./SectionLabel";
+import { useSearchParams } from "next/navigation";
 
 const schema = z.object({
   fullName: z.string().min(2, "Please enter your full name"),
@@ -62,6 +63,15 @@ export default function ContactUs() {
       prDeliverables: [],
     },
   });
+
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const serviceParam = searchParams.get("service");
+    if (serviceParam) {
+      setValue("services", [serviceParam], { shouldValidate: true });
+    }
+  }, [searchParams, setValue]);
 
   const watchServices = watch("services") || [];
   const watchPrDeliverables = watch("prDeliverables") || [];
@@ -134,7 +144,6 @@ export default function ContactUs() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16 md:mb-24">
-          <SectionLabel>Get In Touch</SectionLabel>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#171717] tracking-tight mt-6 mb-6 leading-[1.1]">
             Let's Build Your <br className="hidden sm:block" />Global Future.
           </h2>

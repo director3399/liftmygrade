@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import WhyStudentsGetStuck from "@/components/WhyStudentsGetStuck";
@@ -26,7 +27,9 @@ export default function Home() {
       <Pricing />
       <Testimonials />
       <BlogSection />
-      <ContactUs />
+      <Suspense fallback={<div>Loading...</div>}>
+        <ContactUs />
+      </Suspense>
       <Footer />
     </main>
   );

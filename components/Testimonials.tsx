@@ -87,6 +87,7 @@ export default function Testimonials() {
               fill
               className="object-cover grayscale-[0.2]"
               sizes="(max-width: 768px) 100vw, 50vw"
+              priority
             />
           </div>
 

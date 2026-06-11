@@ -14,6 +14,7 @@ export default function Hero() {
           alt="Premium Academic Environment"
           fill
           priority
+          sizes="100vw"
           className="object-cover opacity-60 grayscale-[0.2]"
         />
         <div className="absolute inset-0 bg-linear-to-r from-black via-black/40 to-transparent z-10" />

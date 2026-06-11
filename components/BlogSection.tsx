@@ -1,4 +1,3 @@
-"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -32,6 +31,7 @@ export default function BlogSection() {
                   src={featuredBlog.coverImage}
                   alt={featuredBlog.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -66,6 +66,7 @@ export default function BlogSection() {
                     src={blog.coverImage}
                     alt={blog.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />

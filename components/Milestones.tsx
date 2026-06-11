@@ -63,7 +63,7 @@ export default function Milestones() {
               href="/what-to-expect"
               className="inline-flex items-center gap-3 bg-blue-600 text-white! px-5 sm:px-6 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:bg-blue-700 transition-colors"
             >
-              Read Our Full Commitment
+              Read Commitment
               <span className="inline-flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 bg-white rounded-full text-blue-600">
                 <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </span>

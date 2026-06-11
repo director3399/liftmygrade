@@ -79,9 +79,6 @@ export default function PricingPage() {
                 ))}
               </ul>
             </div>
-            <Link href="/readiness-assessment" className="w-full py-4 rounded-full font-bold text-sm bg-blue-600 text-white hover:bg-blue-700 shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 mt-auto">
-              Get Started <ArrowRight className="w-4 h-4" />
-            </Link>
           </div>
 
           {/* Core */}
@@ -105,9 +102,6 @@ export default function PricingPage() {
                 ))}
               </ul>
             </div>
-            <Link href="/readiness-assessment" className="w-full py-4 rounded-full font-bold text-sm bg-[#171717] text-white hover:bg-black transition-all flex items-center justify-center gap-2 mt-auto">
-              Get Started <ArrowRight className="w-4 h-4" />
-            </Link>
           </div>
 
           {/* Tailored */}
@@ -131,9 +125,6 @@ export default function PricingPage() {
                 ))}
               </ul>
             </div>
-            <Link href="/readiness-assessment" className="w-full py-4 rounded-full font-bold text-sm bg-white border border-neutral-200 text-[#171717] hover:border-neutral-300 transition-all flex items-center justify-center gap-2 mt-auto">
-              Book Consultation <ArrowRight className="w-4 h-4" />
-            </Link>
           </div>
         </div>
 
@@ -167,9 +158,6 @@ export default function PricingPage() {
                 ))}
               </ul>
             </div>
-            <Link href="/readiness-assessment" className="w-full py-4 rounded-full font-bold text-sm bg-white border border-neutral-200 text-[#171717] hover:border-neutral-300 transition-all flex items-center justify-center gap-2 mt-auto">
-              Book Consultation <ArrowRight className="w-4 h-4" />
-            </Link>
           </div>
 
           {/* Career */}
@@ -193,9 +181,6 @@ export default function PricingPage() {
                 ))}
               </ul>
             </div>
-            <Link href="/readiness-assessment" className="w-full py-4 rounded-full font-bold text-sm bg-blue-600 text-white hover:bg-blue-700 shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 mt-auto">
-              Get Started <ArrowRight className="w-4 h-4" />
-            </Link>
           </div>
         </div>
       </section>

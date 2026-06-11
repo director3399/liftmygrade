@@ -34,13 +34,16 @@ export default function ReadinessAssessmentPage() {
           {/* Right Side: Sticky Image (approx 42%) */}
           <div className="hidden lg:block lg:w-5/12 relative">
             <div className="sticky top-[120px] w-full h-[calc(100vh-160px)] min-h-[600px] rounded-4xl overflow-hidden">
-              <Image
-                src="/program1.png"
-                alt="Premium Academic Environment"
-                fill
-                priority
-                className="object-cover"
-              />
+              <div className="relative w-full h-full">
+                <Image
+                  src="/program1.png"
+                  alt="Premium Academic Environment"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
 

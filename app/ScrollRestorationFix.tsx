@@ -7,22 +7,18 @@ export default function ScrollRestorationFix() {
   const pathname = usePathname();
 
   useEffect(() => {
-    // When navigating back via bfcache, Framer Motion's IntersectionObservers 
-    // sometimes fail to trigger because the scroll position is restored instantly.
-    // Dispatching a resize and scroll event forces them to recalculate.
-    const t1 = setTimeout(() => {
+    if (typeof window === "undefined") return;
+
+    const handleScrollFix = (event?: PageTransitionEvent) => {
+      if (event && !event.persisted) return;
       window.dispatchEvent(new Event("resize"));
       window.dispatchEvent(new Event("scroll"));
-    }, 50);
-    
-    const t2 = setTimeout(() => {
-      window.dispatchEvent(new Event("resize"));
-      window.dispatchEvent(new Event("scroll"));
-    }, 300);
+    };
+
+    window.addEventListener("pageshow", handleScrollFix);
 
     return () => {
-      clearTimeout(t1);
-      clearTimeout(t2);
+      window.removeEventListener("pageshow", handleScrollFix);
     };
   }, [pathname]);
 

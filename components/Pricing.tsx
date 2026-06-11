@@ -1,6 +1,5 @@
-"use client";
-
 import React from "react";
+import Link from "next/link";
 import SectionLabel from "./SectionLabel";
 import { ArrowRight, Check } from "./Icons";
 
@@ -160,24 +159,13 @@ export default function Pricing() {
                   ))}
                 </ul>
               </div>
-              
-              <button 
-                className={`w-full py-4 rounded-full font-bold text-sm transition-all duration-300 flex items-center justify-center gap-2 mt-auto ${
-                  pkg.highlight 
-                    ? "bg-blue-600 text-white hover:bg-blue-700 shadow-md hover:shadow-lg" 
-                    : "bg-neutral-100 text-[#171717] hover:bg-neutral-200"
-                }`}
-              >
-                {pkg.price === "Consultation Based" ? "Book Consultation" : "Get Started"} 
-                <ArrowRight className="w-4 h-4" />
-              </button>
             </div>
           ))}
         </div>
 
         <div className="mt-16 flex justify-center">
           <a href="/pricing" className="inline-flex items-center gap-3 bg-white border border-neutral-200 text-[#171717] px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-bold hover:border-neutral-300 hover:bg-neutral-50 shadow-sm transition-all">
-            View All Pricing Plans & Individual Services
+            View All Packages
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>

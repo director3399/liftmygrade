@@ -1,4 +1,3 @@
-"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -20,7 +19,7 @@ export default function MeetOurTeam() {
             <div 
               className="relative rounded-[2rem] sm:rounded-[32px] overflow-hidden h-[250px] sm:h-[300px] md:h-[340px] w-full"
             >
-              <Image src="https://images.unsplash.com/photo-1574966390692-5140d4310743?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Admissions Writing Mentor" fill className="object-cover" />
+              <Image src="https://images.unsplash.com/photo-1574966390692-5140d4310743?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Admissions Writing Mentor" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
             </div>
             <div 
               className="rounded-[2rem] sm:rounded-[32px] bg-white p-6 sm:p-8 flex flex-col min-h-[200px] md:h-[220px]"
@@ -43,7 +42,7 @@ export default function MeetOurTeam() {
             <div 
               className="order-1 md:order-2 relative rounded-[2rem] sm:rounded-[32px] overflow-hidden h-[250px] sm:h-[300px] md:h-[340px] w-full"
             >
-              <Image src="https://images.unsplash.com/photo-1671774635688-e02ae66974df?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Research Editor" fill className="object-cover" />
+              <Image src="https://images.unsplash.com/photo-1671774635688-e02ae66974df?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Research Editor" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
             </div>
           </div>
 
@@ -52,7 +51,7 @@ export default function MeetOurTeam() {
             <div 
               className="relative rounded-[2rem] sm:rounded-[32px] overflow-hidden h-[250px] sm:h-[300px] md:h-[340px] w-full"
             >
-              <Image src="https://images.unsplash.com/photo-1610890912968-63526299424e?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Language Specialist" fill className="object-cover" />
+              <Image src="https://images.unsplash.com/photo-1610890912968-63526299424e?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Language Specialist" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
             </div>
             <div 
               className="rounded-[2rem] sm:rounded-[32px] bg-white p-6 sm:p-8 flex flex-col min-h-[200px] md:h-[220px]"

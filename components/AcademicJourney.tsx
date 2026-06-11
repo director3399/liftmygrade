@@ -1,7 +1,4 @@
-"use client";
-
 import React from "react";
-import { motion } from "framer-motion";
 import SectionLabel from "./SectionLabel";
 
 export default function AcademicJourney() {
@@ -75,7 +72,7 @@ export default function AcademicJourney() {
                 Navigate every stage of your academic growth with our comprehensive ecosystem, designed for long-term global success.
               </p>
               <a href="/how-we-work" className="inline-flex items-center gap-3 bg-blue-600 text-white! px-5 sm:px-6 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:bg-blue-700 transition-colors">
-                View Detailed Process
+                View Process
                 <span className="inline-flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 bg-white rounded-full text-blue-600">
                   <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
                 </span>
