@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import SectionLabel from "@/components/SectionLabel";
 import { ArrowRight } from "@/components/Icons";
 import Link from "next/link";
+import Highlighter from "@/components/Highlighter";
 
 export const metadata = {
   title: "Career & Professional Services | LiftmyGrade",
@@ -24,7 +25,7 @@ export default function CareerServicesPage() {
             Career & Professional Support.
           </h1>
           <p className="text-lg md:text-xl text-neutral-600 max-w-2xl leading-relaxed">
-            Our career services are project-based and shaped entirely by your brief — there's no country to choose or admissions cycle to follow. You bring the goal; we build the document. Every engagement starts with a free consultation.
+            As your <Highlighter>Academic, Research, Career & Strategic Communication Ecosystem</Highlighter>, our career services are project-based and shaped entirely by your brief — there's no country to choose or admissions cycle to follow. You bring the goal; we build the document. Every engagement starts with a free consultation.
           </p>
         </div>
       </section>

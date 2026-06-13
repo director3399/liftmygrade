@@ -4,6 +4,7 @@ import SectionLabel from "@/components/SectionLabel";
 import { ArrowRight, Check } from "@/components/Icons";
 import Link from "next/link";
 import Image from "next/image";
+import Highlighter from "@/components/Highlighter";
 
 export const metadata = {
   title: "Our Services & Products | LiftmyGrade",
@@ -115,7 +116,7 @@ export default function ServicesPage() {
             Everything We Offer, <br className="hidden md:block" />In One Place.
           </h1>
           <p className="text-lg md:text-xl text-neutral-600 max-w-3xl leading-relaxed mb-12">
-            From a <Link href="/readiness-assessment" className="text-blue-600 hover:underline">free readiness assessment</Link> to fully drafted applications, research support, publication assistance, and <Link href="/career-services" className="text-blue-600 hover:underline">career documents</Link> — here's the complete range of what we do, organised so you can find exactly what you need.
+            As your <Highlighter>Academic, Research, Career & Strategic Communication Ecosystem</Highlighter>, we cover everything from a <Link href="/readiness-assessment" className="text-blue-600 hover:underline">free readiness assessment</Link> to fully drafted applications, research support, publication assistance, and <Link href="/career-services" className="text-blue-600 hover:underline">career branding</Link> — here's the complete range of what we do, organised so you can find exactly what you need.
           </p>
 
           <div className="flex flex-wrap gap-3">

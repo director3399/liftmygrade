@@ -24,6 +24,15 @@ export default function Hero() {
       <div className="relative z-20 max-w-7xl mx-auto w-full flex flex-col items-start justify-end">
         {/* Left Content Stack */}
         <div className="hero-text-left relative flex flex-col items-start w-full">
+          <div className="animate-fade-in-up inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-2 sm:mb-3 shadow-[0_0_15px_rgba(37,99,235,0.15)]">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+            </span>
+            <span className="text-xs sm:text-sm font-medium tracking-wide text-white/90">
+              Academic, Research, Career & Strategic Communication Ecosystem
+            </span>
+          </div>
           <h1
             className="animate-fade-in-up text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] sm:leading-[1.1] mb-6 sm:mb-8 tracking-tighter max-w-4xl"
           >
@@ -53,7 +62,7 @@ export default function Hero() {
             className="animate-fade-in-up delay-200 text-base sm:text-lg md:text-xl text-white/70 leading-relaxed mb-8 sm:mb-10 max-w-2xl font-light"
           >
             <p>
-              LiftmyGrade combines comprehensive readiness systems, structured mentorship, and research-focused guidance to help students navigate global education pathways with clarity.
+              More than a consultancy, we are a premium academic ecosystem. From Bachelor’s and Master’s abroad to fully funded PhDs, research support, and career branding—we guide your journey with structured mentorship.
             </p>
           </div>
 

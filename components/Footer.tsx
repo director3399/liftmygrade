@@ -1,6 +1,5 @@
 import React from "react";
 import { ArrowRight, Instagram, Youtube } from "./Icons";
-
 export default function Footer() {
   return (
     <footer className="relative bg-[#050B1D] text-white pt-24 pb-12 px-6 md:px-12 lg:px-16 overflow-hidden">
@@ -42,11 +41,11 @@ export default function Footer() {
 
             <div className="mb-16 sm:mb-20 text-white/80 font-light max-w-sm leading-relaxed space-y-4">
               <p>
-                <strong className="font-semibold text-white">LiftmyGrade</strong> is a premium global academic ecosystem and mentorship platform.
+                <strong className="font-semibold text-white">LiftmyGrade</strong> is your Academic, Research, Career & Strategic Communication Ecosystem.
               </p>
-              {/* <p>
-                We provide research-focused guidance, profile building, and structured application support for Bachelor&apos;s, Master&apos;s, and Fully Funded PhD programs worldwide.
-              </p> */}
+              <p>
+                A modern global academic brand focusing on Bachelor’s Abroad, Master’s Abroad, Fully Funded PhDs, Research Support, and Career Branding.
+              </p>
             </div>
 
             <div className="mt-auto hidden lg:block">

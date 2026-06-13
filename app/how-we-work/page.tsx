@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import SectionLabel from "@/components/SectionLabel";
 import { ArrowRight } from "@/components/Icons";
 import Link from "next/link";
+import Highlighter from "@/components/Highlighter";
 
 export const metadata = {
   title: "How We Work | LiftmyGrade",
@@ -22,7 +23,7 @@ export default function HowWeWorkPage() {
             How We Work.
           </h1>
           <p className="text-lg md:text-xl text-neutral-600 max-w-2xl leading-relaxed">
-            Every journey begins with a free, honest assessment — no commitment. We help you decide <em className="text-[#171717] font-semibold not-italic">where</em> and <em className="text-[#171717] font-semibold not-italic">whether</em> to apply before any paid work starts. The path then adapts to your goal: undergraduate, postgraduate, or doctoral research.
+            As your <Highlighter>Academic, Research, Career & Strategic Communication Ecosystem</Highlighter>, every journey begins with a free, honest assessment. We help you decide <em className="text-[#171717] font-semibold not-italic">where</em> and <em className="text-[#171717] font-semibold not-italic">whether</em> to apply before any paid work starts, adapting the path for Bachelor's, Master's, Fully Funded PhDs, Research Support, and Career Branding.
           </p>
         </div>
       </section>
