@@ -42,7 +42,7 @@ export default function Mentorship() {
           </div>
         </div>
 
-        <div className="relative rounded-4xl sm:rounded-4xl overflow-hidden flex flex-col justify-end min-h-[400px] sm:min-h-[300px] sm:aspect-[2.8/1]">
+        <div className="relative rounded-[2rem] sm:rounded-[3rem] overflow-hidden flex flex-col justify-end min-h-[480px] sm:min-h-[300px] sm:aspect-[2.8/1]">
           <Image
             src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1200&q=80"
             alt="International Academic Environment"
@@ -52,21 +52,21 @@ export default function Mentorship() {
           />
           <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/70 to-black/30 z-10" />
 
-          <div className="relative z-20 p-8 sm:p-8 flex flex-col md:flex-row gap-6 sm:gap-8 md:gap-12 items-start md:items-end mt-16 sm:mt-auto">
-            <div className="flex-1 border-l-2 border-blue-500/50 md:border-white/30 pl-6 sm:pl-8 md:first:border-none md:first:pl-0">
+          <div className="relative z-20 p-6 sm:p-8 flex flex-col md:flex-row gap-6 sm:gap-8 md:gap-12 items-start md:items-end mt-16 sm:mt-auto">
+            <div className="flex-1 border-l-2 border-blue-500/50 md:border-white/30 pl-5 sm:pl-8 md:first:border-none md:first:pl-0 w-full">
               <span className="block text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-1 sm:mb-2 tracking-tight">Free</span>
               <span className="block text-[10px] md:text-xs uppercase tracking-widest text-white mb-2 sm:mb-3 font-medium">Discovery Journey</span>
-              <p className="text-xs sm:text-sm text-white/90 leading-relaxed max-w-[280px]">Every journey begins with a free, honest assessment. We map out your readiness, shortlist countries, and build a detailed roadmap at no cost.</p>
+              <p className="text-[13px] sm:text-sm text-white/90 leading-relaxed w-full md:max-w-[280px]">Every journey begins with a free, honest assessment. We map out your readiness, shortlist countries, and build a detailed roadmap at no cost.</p>
             </div>
-            <div className="flex-1 border-l-2 border-blue-500/50 md:border-l md:border-white/30 pl-6 sm:pl-8">
+            <div className="flex-1 border-l-2 border-blue-500/50 md:border-l md:border-white/30 pl-5 sm:pl-8 w-full">
               <span className="block text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-1 sm:mb-2 tracking-tight">Tailored</span>
               <span className="block text-[10px] md:text-xs uppercase tracking-widest text-white mb-2 sm:mb-3 font-medium">Academic Pathways</span>
-              <p className="text-xs sm:text-sm text-white/90 leading-relaxed max-w-[280px]">From Bachelor's & Master's admissions to rigorous PhD & Research support, our guidance adapts entirely to your chosen program and goals.</p>
+              <p className="text-[13px] sm:text-sm text-white/90 leading-relaxed w-full md:max-w-[280px]">From Bachelor's & Master's admissions to rigorous PhD & Research support, our guidance adapts entirely to your chosen program and goals.</p>
             </div>
-            <div className="flex-1 border-l-2 border-blue-500/50 md:border-l md:border-white/30 pl-6 sm:pl-8">
+            <div className="flex-1 border-l-2 border-blue-500/50 md:border-l md:border-white/30 pl-5 sm:pl-8 w-full">
               <span className="block text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-1 sm:mb-2 tracking-tight">Complete</span>
               <span className="block text-[10px] md:text-xs uppercase tracking-widest text-white mb-2 sm:mb-3 font-medium">Support System</span>
-              <p className="text-xs sm:text-sm text-white/90 leading-relaxed max-w-[280px]">You're not buying a one-off document. Step into an end-to-end ecosystem with dedicated mentors, publication help, and career support.</p>
+              <p className="text-[13px] sm:text-sm text-white/90 leading-relaxed w-full md:max-w-[280px]">You're not buying a one-off document. Step into an end-to-end ecosystem with dedicated mentors, publication help, and career support.</p>
             </div>
           </div>
         </div>

@@ -7,36 +7,36 @@ export default function Milestones() {
   const items = [
     {
       id: "01",
-      title: "Value Built In — At No Cost",
-      desc: "The groundwork is on us. From free readiness reports to detailed country roadmaps, you decide with confidence.",
-      tags: ["Readiness", "Roadmap", "Shortlisting", "Consultation"],
+      title: "Readiness Report",
+      desc: "An honest assessment of where you stand, generated from your profile — no cost, no commitment.",
+      tags: ["Assessment", "Strengths", "Gaps", "Free"],
       image: "/outcome/outcome1.png",
       reverse: false,
     },
     {
       id: "02",
-      title: "End-to-End Dedicated Support",
-      desc: "From your first enquiry to final submission, your dedicated mentor stays with you across the entire journey.",
-      tags: ["Mentor", "Timelines", "Responsive", "Secure"],
+      title: "Country Shortlisting",
+      desc: "We narrow down your best-fit top 1–3 countries together, matched to your goals and budget.",
+      tags: ["Global", "Fit", "Budget", "Strategy"],
       image: "/outcome/outcome2.webp",
       reverse: true,
     },
     {
       id: "03",
-      title: "Original & Next-Edge Documents",
-      desc: "Plagiarism-free, non-templated professional documents crafted from scratch to get your profile noticed.",
-      tags: ["SOP", "Resume", "Authentic", "Publication"],
+      title: "Detailed Roadmap",
+      desc: "A complete, country-specific plan — timelines, tests, intakes, funding outlook, and document checklist.",
+      tags: ["Timelines", "Intakes", "Tests", "Checklist"],
       image: "/outcome/outcome3.webp",
       reverse: false,
     },
     {
       id: "04",
-      title: "Guidance Through the Whole Journey",
-      desc: "You're never left guessing what comes next. We track every deadline and guide you through exams and visas.",
-      tags: ["Step-by-Step", "Visas", "Deadlines", "Advice"],
+      title: "2 Consultation Calls",
+      desc: "Two no-cost one-to-one sessions with our team to discuss your goals and direction.",
+      tags: ["1-on-1", "Goals", "Direction", "Free"],
       image: "/outcome/outcome4.webp",
       reverse: true,
-    },
+    }
   ];
 
   return (

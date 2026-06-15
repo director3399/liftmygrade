@@ -152,10 +152,10 @@ export default function ContactUs() {
           </p>
         </div>
 
-        <div className="bg-white rounded-4xl sm:rounded-[3rem] p-2 sm:p-3 shadow-[0_8px_40px_rgb(0,0,0,0.04)] border border-neutral-100 flex flex-col lg:flex-row max-w-6xl mx-auto">
+        <div className="bg-transparent sm:bg-white rounded-none sm:rounded-[3rem] p-0 sm:p-4 sm:shadow-[0_8px_40px_rgb(0,0,0,0.04)] sm:border border-transparent sm:border-neutral-100 flex flex-col-reverse lg:flex-row max-w-6xl mx-auto gap-8 sm:gap-0">
           
-          {/* Left Column: Contact Details */}
-          <div className="bg-[#050B1D] text-white p-10 md:p-14 lg:p-16 rounded-[1.8rem] sm:rounded-[2.5rem] lg:w-5/12 flex flex-col relative overflow-hidden shrink-0">
+          {/* Left Column: Contact Details (Appears on right/bottom) */}
+          <div className="bg-[#050B1D] text-white p-8 md:p-14 lg:p-16 rounded-[1.5rem] sm:rounded-[2.5rem] lg:w-5/12 flex flex-col relative overflow-hidden shrink-0 mt-4 lg:mt-0 shadow-xl sm:shadow-none">
             <div className="absolute -top-32 -right-32 w-64 h-64 bg-blue-600 rounded-full mix-blend-screen filter blur-[100px] opacity-60" />
             <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-indigo-600 rounded-full mix-blend-screen filter blur-[100px] opacity-40" />
 
@@ -166,41 +166,41 @@ export default function ContactUs() {
               </p>
               
               <div className="space-y-10 flex-1">
-                <div className="flex items-start gap-5 group">
-                  <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-blue-600 transition-colors duration-300">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-white/80 group-hover:text-white transition-colors">
+                <div className="flex items-start gap-4 sm:gap-5 group">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-blue-600 transition-colors duration-300">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-white/80 group-hover:text-white transition-colors sm:w-5 sm:h-5">
                       <rect width="20" height="16" x="2" y="4" rx="2"/>
                       <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
                     </svg>
                   </div>
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-1">Email Us</p>
-                    <a href="mailto:info@liftmygrade.com" className="text-lg font-medium text-white/90 hover:text-white transition-colors">info@liftmygrade.com</a>
+                  <div className="min-w-0">
+                    <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-white/40 mb-1">Email Us</p>
+                    <a href="mailto:info@liftmygrade.com" className="text-base sm:text-lg font-medium text-white/90 hover:text-white transition-colors break-words">info@liftmygrade.com</a>
                   </div>
                 </div>
                 
-                <div className="flex items-start gap-5 group">
-                  <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-green-500 transition-colors duration-300">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-white/80 group-hover:text-white transition-colors">
+                <div className="flex items-start gap-4 sm:gap-5 group">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-green-500 transition-colors duration-300">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-white/80 group-hover:text-white transition-colors sm:w-5 sm:h-5">
                       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                     </svg>
                   </div>
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-1">WhatsApp / Phone</p>
-                    <a href="https://wa.me/919051384241" target="_blank" rel="noopener noreferrer" className="text-lg font-medium text-white/90 hover:text-white transition-colors">+91 90513 84241</a>
+                  <div className="min-w-0">
+                    <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-white/40 mb-1">WhatsApp / Phone</p>
+                    <a href="https://wa.me/919051384241" target="_blank" rel="noopener noreferrer" className="text-base sm:text-lg font-medium text-white/90 hover:text-white transition-colors">+91 90513 84241</a>
                   </div>
                 </div>
                 
-                <div className="flex items-start gap-5 group">
-                  <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-indigo-500 transition-colors duration-300">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-white/80 group-hover:text-white transition-colors">
+                <div className="flex items-start gap-4 sm:gap-5 group">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-indigo-500 transition-colors duration-300">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-white/80 group-hover:text-white transition-colors sm:w-5 sm:h-5">
                       <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
                       <circle cx="12" cy="10" r="3"/>
                     </svg>
                   </div>
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-1">HQ Address</p>
-                    <p className="text-base font-light text-white/80 leading-relaxed">
+                  <div className="min-w-0">
+                    <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-white/40 mb-1">HQ Address</p>
+                    <p className="text-sm sm:text-base font-light text-white/80 leading-relaxed">
                       LiftmyGrade HQ<br />
                       Salt Lake Sector 5<br />
                       Kolkata, India
@@ -212,7 +212,7 @@ export default function ContactUs() {
           </div>
           
           {/* Right Column: Multi-Step Form */}
-          <div className="p-10 md:p-14 lg:p-16 lg:w-7/12 flex flex-col justify-center min-h-[600px]">
+          <div className="p-0 sm:p-14 lg:p-16 lg:w-7/12 flex flex-col justify-center min-h-[400px] sm:min-h-[600px]">
             {isSubmitted && submitData ? (
               <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 flex flex-col items-center text-center h-full justify-center">
                 <div className="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mb-6">
@@ -258,33 +258,33 @@ export default function ContactUs() {
                     {currentStep === 1 && (
                       <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-300">
                         <div className="group">
-                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2 group-focus-within:text-blue-600 transition-colors">Full Name *</label>
+                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-500 mb-2 group-focus-within:text-blue-600 transition-colors">Full Name *</label>
                           <input 
                             {...register("fullName")}
                             type="text" 
-                            className="w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all placeholder:text-neutral-300 placeholder:font-normal"
+                            className="w-full bg-white sm:bg-neutral-50 border border-neutral-200 rounded-xl px-4 py-3.5 text-[#171717] font-medium focus:outline-none focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all placeholder:text-neutral-400 placeholder:font-normal shadow-sm sm:shadow-none"
                             placeholder="John Doe"
                           />
                           {errors.fullName && <p className="text-red-500 text-xs mt-2 font-medium">{errors.fullName.message}</p>}
                         </div>
                         
                         <div className="group">
-                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2 group-focus-within:text-blue-600 transition-colors">Email Address *</label>
+                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-500 mb-2 group-focus-within:text-blue-600 transition-colors">Email Address *</label>
                           <input 
                             {...register("email")}
                             type="email" 
-                            className="w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all placeholder:text-neutral-300 placeholder:font-normal"
+                            className="w-full bg-white sm:bg-neutral-50 border border-neutral-200 rounded-xl px-4 py-3.5 text-[#171717] font-medium focus:outline-none focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all placeholder:text-neutral-400 placeholder:font-normal shadow-sm sm:shadow-none"
                             placeholder="you@example.com"
                           />
                           {errors.email && <p className="text-red-500 text-xs mt-2 font-medium">{errors.email.message}</p>}
                         </div>
                         
                         <div className="group">
-                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2 group-focus-within:text-blue-600 transition-colors">Phone Number *</label>
-                          <div className="flex gap-4">
+                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-500 mb-2 group-focus-within:text-blue-600 transition-colors">Phone Number *</label>
+                          <div className="flex gap-2 sm:gap-3">
                             <select
                               {...register("dialCode")}
-                              className="w-24 bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all appearance-none cursor-pointer"
+                              className="w-20 sm:w-28 bg-white sm:bg-neutral-50 border border-neutral-200 rounded-xl px-1 sm:px-3 py-3.5 text-[#171717] font-medium focus:outline-none focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all appearance-none cursor-pointer text-center shadow-sm sm:shadow-none text-sm sm:text-base"
                             >
                               <option value="+91">🇮🇳 +91</option>
                               <option value="+1">🇺🇸 +1</option>
@@ -297,7 +297,7 @@ export default function ContactUs() {
                             <input 
                               {...register("phone")}
                               type="tel" 
-                              className="flex-1 bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all placeholder:text-neutral-300 placeholder:font-normal"
+                              className="flex-1 w-full min-w-0 bg-white sm:bg-neutral-50 border border-neutral-200 rounded-xl px-3 sm:px-4 py-3.5 text-[#171717] font-medium focus:outline-none focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all placeholder:text-neutral-400 placeholder:font-normal shadow-sm sm:shadow-none text-sm sm:text-base"
                               placeholder="98XXXXXXXX"
                             />
                           </div>
@@ -310,11 +310,11 @@ export default function ContactUs() {
                     {currentStep === 2 && (
                       <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-300">
                         <div className="group">
-                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2 group-focus-within:text-blue-600 transition-colors">You are a... *</label>
+                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-500 mb-2 group-focus-within:text-blue-600 transition-colors">You are a... *</label>
                           <select 
                             {...register("status")}
                             defaultValue=""
-                            className="w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all appearance-none cursor-pointer"
+                            className="w-full bg-white sm:bg-neutral-50 border border-neutral-200 rounded-xl px-4 py-3.5 text-[#171717] font-medium focus:outline-none focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all appearance-none cursor-pointer shadow-sm sm:shadow-none"
                           >
                             <option value="" disabled>Select</option>
                             <option value="Student / Recent graduate">Student / Recent graduate</option>
@@ -329,11 +329,11 @@ export default function ContactUs() {
                         </div>
 
                         <div className="group">
-                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2 group-focus-within:text-blue-600 transition-colors">Industry / Field (Optional)</label>
+                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-500 mb-2 group-focus-within:text-blue-600 transition-colors">Industry / Field (Optional)</label>
                           <select 
                             {...register("industry")}
                             defaultValue=""
-                            className="w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all appearance-none cursor-pointer"
+                            className="w-full bg-white sm:bg-neutral-50 border border-neutral-200 rounded-xl px-4 py-3.5 text-[#171717] font-medium focus:outline-none focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all appearance-none cursor-pointer shadow-sm sm:shadow-none"
                           >
                             <option value="" disabled>Select (optional)</option>
                             <option value="Technology / IT">Technology / IT</option>
@@ -364,7 +364,7 @@ export default function ContactUs() {
                             <div 
                               key={svc.id}
                               onClick={() => toggleService(svc.id)}
-                              className={`p-4 rounded-2xl border-2 cursor-pointer transition-all ${watchServices.includes(svc.id) ? 'border-blue-600 bg-blue-50/50' : 'border-neutral-100 hover:border-blue-200'}`}
+                              className={`p-4 rounded-2xl border-2 cursor-pointer transition-all ${watchServices.includes(svc.id) ? 'border-blue-600 bg-blue-50/50' : 'border-neutral-100 hover:border-blue-200 bg-white sm:bg-transparent shadow-sm sm:shadow-none'}`}
                             >
                               <p className="font-semibold text-sm text-[#171717]">{svc.id}</p>
                               <p className="text-xs text-neutral-500 mt-1 leading-relaxed">{svc.desc}</p>
@@ -383,14 +383,14 @@ export default function ContactUs() {
                               transition={{ duration: 0.3 }}
                               className="mb-4"
                             >
-                              <div className="p-5 bg-neutral-50 rounded-2xl space-y-4">
+                              <div className="p-5 bg-white sm:bg-neutral-50 rounded-2xl space-y-4 shadow-sm sm:shadow-none">
                                 <p className="text-xs font-bold uppercase text-neutral-500">Résumé Details</p>
-                                <select {...register("resumeType")} defaultValue="" className="w-full bg-transparent border-b-2 border-neutral-200 py-2 text-sm focus:border-blue-600 outline-none">
+                                <select {...register("resumeType")} defaultValue="" className="w-full bg-white border border-neutral-200 rounded-lg px-3 py-2.5 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/10 outline-none">
                                   <option value="" disabled>Do you have an existing résumé?</option>
                                   <option value="Build a new one from scratch">Build a new one from scratch</option>
                                   <option value="Edit & optimise my existing one">Edit & optimise my existing one</option>
                                 </select>
-                                <input {...register("resumeTarget")} type="text" placeholder="Target role / industry" className="w-full bg-transparent border-b-2 border-neutral-200 py-2 text-sm focus:border-blue-600 outline-none placeholder:text-neutral-400" />
+                                <input {...register("resumeTarget")} type="text" placeholder="Target role / industry" className="w-full bg-white border border-neutral-200 rounded-lg px-3 py-2.5 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/10 outline-none placeholder:text-neutral-400" />
                               </div>
                             </motion.div>
                           )}
@@ -403,10 +403,10 @@ export default function ContactUs() {
                               transition={{ duration: 0.3 }}
                               className="mb-4"
                             >
-                              <div className="p-5 bg-neutral-50 rounded-2xl space-y-4">
+                              <div className="p-5 bg-white sm:bg-neutral-50 rounded-2xl space-y-4 shadow-sm sm:shadow-none">
                                 <p className="text-xs font-bold uppercase text-neutral-500">LinkedIn Details</p>
-                                <input {...register("liUrl")} type="text" placeholder="Current LinkedIn URL (optional)" className="w-full bg-transparent border-b-2 border-neutral-200 py-2 text-sm focus:border-blue-600 outline-none placeholder:text-neutral-400" />
-                                <select {...register("liGoal")} defaultValue="" className="w-full bg-transparent border-b-2 border-neutral-200 py-2 text-sm focus:border-blue-600 outline-none">
+                                <input {...register("liUrl")} type="text" placeholder="Current LinkedIn URL (optional)" className="w-full bg-white border border-neutral-200 rounded-lg px-3 py-2.5 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/10 outline-none placeholder:text-neutral-400" />
+                                <select {...register("liGoal")} defaultValue="" className="w-full bg-white border border-neutral-200 rounded-lg px-3 py-2.5 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/10 outline-none">
                                   <option value="" disabled>Primary objective</option>
                                   <option value="Job search / recruiter visibility">Job search / recruiter visibility</option>
                                   <option value="Personal branding">Personal branding</option>
@@ -423,7 +423,7 @@ export default function ContactUs() {
                               exit={{ height: 0, opacity: 0 }}
                               transition={{ duration: 0.3 }}
                             >
-                              <div className="p-5 bg-neutral-50 rounded-2xl space-y-4">
+                              <div className="p-5 bg-white sm:bg-neutral-50 rounded-2xl space-y-4 shadow-sm sm:shadow-none">
                                 <p className="text-xs font-bold uppercase text-neutral-500 mb-2">PR Deliverables</p>
                                 <div className="flex flex-wrap gap-2">
                                   {["Press release", "Media advisory", "Fact sheet", "White paper", "Case study", "Social media posts"].map(pr => (
@@ -447,22 +447,22 @@ export default function ContactUs() {
                     {currentStep === 4 && (
                       <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-300">
                         <div className="group">
-                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2 group-focus-within:text-blue-600 transition-colors">What are you aiming to achieve? *</label>
+                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-500 mb-2 group-focus-within:text-blue-600 transition-colors">What are you aiming to achieve? *</label>
                           <textarea 
                             {...register("brief")}
                             rows={3}
-                            className="w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all resize-none placeholder:text-neutral-300 placeholder:font-normal"
+                            className="w-full bg-white sm:bg-neutral-50 border border-neutral-200 rounded-xl px-4 py-3.5 text-[#171717] font-medium focus:outline-none focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all resize-none placeholder:text-neutral-400 placeholder:font-normal shadow-sm sm:shadow-none"
                             placeholder="A few lines about your goal, context, and anything we should know."
                           ></textarea>
                           {errors.brief && <p className="text-red-500 text-xs mt-2 font-medium">{errors.brief.message}</p>}
                         </div>
 
                         <div className="group">
-                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2 group-focus-within:text-blue-600 transition-colors">Timeline (Optional)</label>
+                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-500 mb-2 group-focus-within:text-blue-600 transition-colors">Timeline (Optional)</label>
                           <select 
                             {...register("timeline")}
                             defaultValue=""
-                            className="w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all appearance-none cursor-pointer"
+                            className="w-full bg-white sm:bg-neutral-50 border border-neutral-200 rounded-xl px-4 py-3.5 text-[#171717] font-medium focus:outline-none focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all appearance-none cursor-pointer shadow-sm sm:shadow-none"
                           >
                             <option value="" disabled>Select</option>
                             <option value="As soon as possible">As soon as possible</option>

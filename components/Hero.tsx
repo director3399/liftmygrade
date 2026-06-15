@@ -24,17 +24,17 @@ export default function Hero() {
       <div className="relative z-20 max-w-7xl mx-auto w-full flex flex-col items-start justify-end">
         {/* Left Content Stack */}
         <div className="hero-text-left relative flex flex-col items-start w-full">
-          <div className="animate-fade-in-up inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-2 sm:mb-3 shadow-[0_0_15px_rgba(37,99,235,0.15)]">
+          <div className="animate-fade-in-up inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-3 shadow-[0_0_15px_rgba(37,99,235,0.15)]">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
             </span>
-            <span className="text-xs sm:text-sm font-medium tracking-wide text-white/90">
+            <span className="text-[10px] sm:text-[13px] font-medium tracking-wide text-white/90">
               Academic, Research, Career & Strategic Communication Ecosystem
             </span>
           </div>
           <h1
-            className="animate-fade-in-up text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] sm:leading-[1.1] mb-6 sm:mb-8 tracking-tighter max-w-4xl"
+            className="animate-fade-in-up text-4xl sm:text-4xl md:text-[42px] lg:text-5xl font-bold text-white leading-[1.15] sm:leading-[1.15] mb-5 tracking-tighter max-w-3xl"
           >
             Build A Global Academic<br className="sm:hidden" /><span className="relative inline-block whitespace-nowrap z-10 px-1">
               <span className="relative z-10">Profile</span>
@@ -59,30 +59,30 @@ export default function Hero() {
           </h1>
 
           <div
-            className="animate-fade-in-up delay-200 text-base sm:text-lg md:text-xl text-white/70 leading-relaxed mb-8 sm:mb-10 max-w-2xl font-light"
+            className="animate-fade-in-up delay-200 text-[14px] sm:text-base md:text-lg text-white/70 leading-relaxed mb-8 sm:mb-10 max-w-xl font-light"
           >
             <p>
-              More than a consultancy, we are a premium academic ecosystem. From Bachelor’s and Master’s abroad to fully funded PhDs, research support, and career branding—we guide your journey with structured mentorship.
+              A premium academic ecosystem. We guide your journey—from global admissions and fully funded PhDs to research support and strategic career branding.
             </p>
           </div>
 
           <div
-            className="animate-fade-in-up delay-400 flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 items-start sm:items-center w-full sm:w-auto"
+            className="animate-fade-in-up delay-400 flex flex-col sm:flex-row flex-wrap gap-5 sm:gap-4 items-center sm:items-center w-full sm:w-auto"
           >
             <motion.a
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               href="/readiness-assessment"
-              className="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-4 bg-white text-neutral-800 pl-6 sm:pl-8 pr-2 py-2 rounded-full text-sm sm:text-base font-medium hover:bg-neutral-50 transition-all group"
+              className="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-3 bg-white text-neutral-800 pl-6 sm:pl-6 pr-1.5 py-1.5 rounded-full text-[14px] sm:text-sm font-medium hover:bg-neutral-50 transition-all group"
             >
               Get Free Readiness Report
-              <span className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-blue-600 rounded-full text-white group-hover:bg-blue-700 transition-colors shrink-0">
-                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="inline-flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 bg-blue-600 rounded-full text-white group-hover:bg-blue-700 transition-colors shrink-0">
+                <ArrowRight className="w-4 h-4" />
               </span>
             </motion.a>
             <a
               href="/services"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white transition-all border-b border-white/20 hover:border-white pb-1 ml-2 sm:ml-0"
+              className="inline-flex items-center gap-2 text-[14px] sm:text-sm font-semibold text-white/80 hover:text-white transition-all border-b border-white/20 hover:border-white pb-1"
             >
               Explore Our Services
             </a>

@@ -94,8 +94,8 @@ export default function Pathways() {
                 Explore the programs, systems, and support services designed to help students move from academic planning to admissions, research opportunities, and long-term career growth.
               </p>
 
-              <div className="mb-10 sm:mb-12 flex flex-col sm:flex-row gap-4 sm:items-center">
-                <a href="/services" className="inline-flex items-center justify-center gap-3 bg-blue-600 text-white! px-5 sm:px-6 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:bg-blue-700 transition-colors w-full sm:w-auto">
+              <div className="mb-10 sm:mb-12 flex flex-row gap-4 items-center">
+                <a href="/services" className="inline-flex items-center justify-center gap-3 bg-blue-600 text-white! px-5 sm:px-6 py-3 sm:py-3.5 rounded-full text-[13px] sm:text-sm font-semibold hover:bg-blue-700 transition-colors w-auto">
                   Explore All Services
                   <span className="inline-flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 bg-white rounded-full text-blue-600">
                     <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -121,12 +121,12 @@ export default function Pathways() {
               </div>
 
               {/* Thick Progress Bars */}
-              <div className="flex gap-3 sm:gap-4 mt-4 sm:mt-6">
+              <div className="flex gap-2 sm:gap-4 mt-4 sm:mt-6 w-full max-w-sm sm:max-w-none">
                 {pathways.map((_, i) => (
                   <button 
                     key={i} 
                     onClick={() => setActiveIndex(i)}
-                    className="group relative h-4 w-12 sm:w-16 flex items-end"
+                    className="group relative h-4 flex-1 sm:flex-none sm:w-16 flex items-end"
                   >
                     <div className="h-1 sm:h-1.5 w-full rounded-full bg-neutral-100 group-hover:bg-neutral-200 transition-colors" />
                     {i === activeIndex && (
