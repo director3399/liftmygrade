@@ -101,9 +101,6 @@ export default function Pathways() {
                     <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
                   </span>
                 </a>
-                <a href="/career-services" className="inline-flex items-center gap-2 text-sm font-semibold border-b-2 border-black hover:opacity-70 transition-all pb-1 mt-4 sm:mt-0">
-                  Career Services <DiagonalArrow className="w-3.5 h-3.5 ml-1" />
-                </a>
               </div>
             </div>
 

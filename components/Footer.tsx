@@ -32,19 +32,19 @@ export default function Footer() {
         {/* Bottom Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 md:gap-16 lg:gap-24 items-start mb-16 sm:mb-24">
           {/* Left Column: Branding and Company Details */}
-          <div className="lg:col-span-5 flex flex-col h-full">
+          <div className="lg:col-span-6 flex flex-col h-full">
             <h3 className="text-2xl md:text-3xl font-semibold mb-6 sm:mb-8 tracking-tight leading-tight">
               Let&apos;s Build the Future
               <br />
               You&apos;re Meant to Lead
             </h3>
 
-            <div className="mb-16 sm:mb-20 text-white/80 font-light max-w-sm leading-relaxed space-y-4">
+            <div className="mb-16 sm:mb-20 text-white/80 font-light max-w-lg leading-relaxed space-y-4">
               <p>
                 <strong className="font-semibold text-white">LiftmyGrade</strong> is your Academic, Research, Career & Strategic Communication Ecosystem.
               </p>
               <p>
-                A modern global academic brand focusing on Bachelor’s Abroad, Master’s Abroad, Fully Funded PhDs, Research Support, and Career Branding.
+                We empower students, researchers, professionals, startups, and institutions through global education pathways, PhD admissions support, research and publication guidance, career branding, grant writing, company documentation, and strategic communication services that drive meaningful growth and long-term impact.
               </p>
             </div>
 
@@ -57,7 +57,7 @@ export default function Footer() {
           </div>
 
           {/* Right Column: Nav and Contact */}
-          <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-10 md:gap-12 lg:gap-8 w-full">
+          <div className="lg:col-span-6 grid grid-cols-2 sm:grid-cols-3 gap-10 md:gap-12 lg:gap-8 w-full">
             
             {/* Column 1: Company Links */}
             <div className="flex flex-col gap-4">

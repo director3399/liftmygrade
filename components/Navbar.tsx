@@ -12,6 +12,8 @@ export default function Navbar({
   theme?: "dark" | "light";
 }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [navState, setNavState] = useState<'top' | 'hidden' | 'sticky'>('top');
+  const [isTransitionReady, setIsTransitionReady] = useState(false);
   const isLight = theme === "light";
 
   // Only apply custom text colors if mobile menu is closed, otherwise force dark text on white bg
@@ -28,6 +30,51 @@ export default function Navbar({
     return () => { document.body.style.overflow = 'unset'; };
   }, [isMobileMenuOpen]);
 
+  // Handle scroll to add background to navbar
+  useEffect(() => {
+    const handleScroll = () => {
+      const aboutSection = document.getElementById('about');
+      const footerSection = document.querySelector('footer');
+      const scrollY = window.scrollY;
+
+      // Enable transition only when safely out of the top zone
+      setIsTransitionReady(scrollY > 400);
+
+      let isAtFooter = false;
+      if (footerSection) {
+        const footerRect = footerSection.getBoundingClientRect();
+        // Hide navbar when the footer comes into view
+        isAtFooter = footerRect.top < window.innerHeight - 50;
+      }
+
+      if (aboutSection) {
+        // Reveal navbar smoothly slightly before the section
+        const threshold = aboutSection.offsetTop - 80;
+        
+        if (scrollY < 200) {
+          setNavState('top');
+        } else if ((scrollY >= 200 && scrollY < threshold) || isAtFooter) {
+          setNavState('hidden');
+        } else {
+          setNavState('sticky');
+        }
+      } else {
+        // Fallback for pages without the Mentorship section
+        if (scrollY < 200) {
+          setNavState('top');
+        } else if (isAtFooter) {
+          setNavState('hidden');
+        } else {
+          setNavState('sticky');
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Initial check
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const navLinks = [
     { name: "About", href: "/#about" },
     { name: "Services", href: "/#services" },
@@ -39,7 +86,7 @@ export default function Navbar({
 
   return (
     <>
-      <header className={`absolute top-0 left-0 right-0 z-60 transition-colors duration-300 ${isMobileMenuOpen ? 'bg-white' : 'bg-transparent'}`}>
+      <header className="absolute top-0 left-0 right-0 z-60">
 
         {/* Topbar */}
         <div className={`hidden md:flex justify-between items-center py-2.5 px-6 md:px-12 transition-colors duration-300 ${isMobileMenuOpen ? 'bg-neutral-100 text-neutral-800' : (isLight ? 'bg-neutral-100 text-neutral-800' : 'bg-white/5 backdrop-blur-sm text-white/90 border-b border-white/10')}`}>
@@ -59,7 +106,17 @@ export default function Navbar({
           </div>
         </div>
 
-        <div className="py-4 md:py-5 px-6 md:px-12">
+        {/* Main Navbar */}
+        <div className={`w-full ${isTransitionReady || isMobileMenuOpen ? 'transition-transform duration-500' : ''} ${
+          isMobileMenuOpen
+            ? 'fixed top-0 z-60 translate-y-0 bg-white'
+            : navState === 'top'
+              ? 'relative z-60 translate-y-0 bg-transparent'
+              : navState === 'hidden'
+                ? 'fixed top-0 z-60 -translate-y-full bg-transparent'
+                : `fixed top-0 z-60 translate-y-0 ${isLight ? 'bg-white/70 backdrop-blur-lg' : 'bg-black/40 backdrop-blur-lg'}`
+        }`}>
+          <div className="py-4 md:py-5 px-6 md:px-12">
           <div className="max-w-7xl mx-auto flex items-center justify-between">
             <a href="/" className={`flex items-center gap-2.5 text-xl font-extrabold ${textColor} tracking-tighter uppercase relative z-60`}>
               <img src="/logo-3.png" alt="LiftmyGrade" className="h-7 sm:h-8 w-auto object-contain" />
@@ -97,6 +154,7 @@ export default function Navbar({
                   {isMobileMenuOpen ? <Close className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                 </button>
               )}
+            </div>
             </div>
           </div>
         </div>
