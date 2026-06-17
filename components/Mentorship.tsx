@@ -1,10 +1,31 @@
-import React from "react";
+"use client";
+
+import React, { useRef, useEffect } from "react";
 import Image from "next/image";
 import { ArrowRight, DiagonalArrow } from "./Icons";
 import SectionLabel from "./SectionLabel";
 import Highlighter from "./Highlighter";
 
 export default function Mentorship() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (scrollRef.current && window.innerWidth < 640) {
+        const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+        // If we reached the end, scroll back to the start
+        if (scrollLeft + clientWidth >= scrollWidth - 10) {
+          scrollRef.current.scrollTo({ left: 0, behavior: "smooth" });
+        } else {
+          // Scroll by one card width (85% of screen width)
+          scrollRef.current.scrollBy({ left: clientWidth * 0.85, behavior: "smooth" });
+        }
+      }
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="py-16 sm:py-24 px-6 md:px-12 lg:px-16 bg-white" id="about">
       <div className="max-w-7xl mx-auto">
@@ -42,9 +63,9 @@ export default function Mentorship() {
           </div>
         </div>
 
-        <div className="relative rounded-[2rem] sm:rounded-[3rem] overflow-hidden flex flex-col justify-end min-h-[480px] sm:min-h-[300px] sm:aspect-[2.8/1]">
+        <div className="relative rounded-4xl sm:rounded-[3rem] overflow-hidden flex flex-col justify-end min-h-[360px] sm:min-h-[300px] sm:aspect-[2.8/1]">
           <Image
-            src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1200&q=80"
+            src="/mentorship.png"
             alt="International Academic Environment"
             fill
             sizes="(max-width: 1024px) 100vw, 1200px"
@@ -52,18 +73,18 @@ export default function Mentorship() {
           />
           <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/70 to-black/30 z-10" />
 
-          <div className="relative z-20 p-6 sm:p-8 flex flex-col md:flex-row gap-6 sm:gap-8 md:gap-12 items-start md:items-end mt-16 sm:mt-auto">
-            <div className="flex-1 border-l-2 border-blue-500/50 md:border-white/30 pl-5 sm:pl-8 md:first:border-none md:first:pl-0 w-full">
+          <div ref={scrollRef} className="relative z-20 p-6 sm:p-8 flex flex-row overflow-x-auto snap-x snap-mandatory gap-6 sm:gap-8 md:gap-12 items-start md:items-end mt-16 sm:mt-auto scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] scrollbar-none">
+            <div className="min-w-[85%] sm:min-w-0 shrink-0 snap-center sm:flex-1 border-l-2 border-blue-500/50 md:border-white/30 pl-5 sm:pl-8 md:first:border-none md:first:pl-0 w-full">
               <span className="block text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-1 sm:mb-2 tracking-tight">Free</span>
               <span className="block text-[10px] md:text-xs uppercase tracking-widest text-white mb-2 sm:mb-3 font-medium">Discovery Journey</span>
               <p className="text-[13px] sm:text-sm text-white/90 leading-relaxed w-full md:max-w-[280px]">Every journey begins with a free, honest assessment. We map out your readiness, shortlist countries, and build a detailed roadmap at no cost.</p>
             </div>
-            <div className="flex-1 border-l-2 border-blue-500/50 md:border-l md:border-white/30 pl-5 sm:pl-8 w-full">
+            <div className="min-w-[85%] sm:min-w-0 shrink-0 snap-center sm:flex-1 border-l-2 border-blue-500/50 md:border-l md:border-white/30 pl-5 sm:pl-8 w-full">
               <span className="block text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-1 sm:mb-2 tracking-tight">Tailored</span>
               <span className="block text-[10px] md:text-xs uppercase tracking-widest text-white mb-2 sm:mb-3 font-medium">Academic Pathways</span>
               <p className="text-[13px] sm:text-sm text-white/90 leading-relaxed w-full md:max-w-[280px]">From Bachelor's & Master's admissions to rigorous PhD & Research support, our guidance adapts entirely to your chosen program and goals.</p>
             </div>
-            <div className="flex-1 border-l-2 border-blue-500/50 md:border-l md:border-white/30 pl-5 sm:pl-8 w-full">
+            <div className="min-w-[85%] sm:min-w-0 shrink-0 snap-center sm:flex-1 border-l-2 border-blue-500/50 md:border-l md:border-white/30 pl-5 sm:pl-8 w-full">
               <span className="block text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-1 sm:mb-2 tracking-tight">Complete</span>
               <span className="block text-[10px] md:text-xs uppercase tracking-widest text-white mb-2 sm:mb-3 font-medium">Support System</span>
               <p className="text-[13px] sm:text-sm text-white/90 leading-relaxed w-full md:max-w-[280px]">You're not buying a one-off document. Step into an end-to-end ecosystem with dedicated mentors, publication help, and career support.</p>

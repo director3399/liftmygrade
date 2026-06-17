@@ -8,6 +8,7 @@ const programs = [
     name: "Global Study Readiness Report",
     price: "FREE",
     tag: "STARTER",
+    highlight: true,
     outcome: "Lead Qualification + Personalized Direction",
     idealFor: "Bachelor's, Master's, PhD early planning",
     includes: [
@@ -37,6 +38,7 @@ const programs = [
     name: "Customized Admission Program",
     price: "Consultation Based",
     tag: "TAILORED",
+    highlight: true,
     outcome: "Customized admission roadmap.",
     idealFor: "Complex profiles & niche programs",
     includes: [
@@ -52,7 +54,6 @@ const programs = [
     name: "PhD Specialization",
     price: "$450",
     tag: "FLAGSHIP",
-    highlight: true,
     outcome: "Secured funding and aligned supervision.",
     idealFor: "Research-focused Master's and PhD students.",
     includes: [
@@ -68,6 +69,7 @@ const programs = [
     name: "Research & Publication Support",
     price: "Consultation Based",
     tag: "ACADEMIC",
+    highlight: true,
     outcome: "Stronger research portfolio.",
     idealFor: "Students building a research-heavy profile",
     includes: [
@@ -117,7 +119,7 @@ export default function Pricing() {
             >
               {pkg.highlight && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-[10px] sm:text-[11px] font-bold uppercase tracking-widest py-1.5 px-4 rounded-full shadow-md z-10 whitespace-nowrap">
-                  Most Recommended
+                  Recommended
                 </div>
               )}
               

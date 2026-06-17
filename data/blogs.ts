@@ -22,7 +22,7 @@ export const blogs: BlogPost[] = [
     authorRole: "Admissions Mentor & Researcher",
     authorImage: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200",
     category: "PhD Preparation",
-    coverImage: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1000",
+    coverImage: "/blog/blog1.png",
     date: "May 30, 2026",
     content: `
       <p class="mb-4">A fully funded PhD abroad is no longer a distant dream reserved for a handful of elite students. With the right strategy — strong research positioning, well-timed professor outreach, and a publication-ready profile — students from India are securing PhDs in the US, UK, Germany, Canada, and Australia every cycle, with tuition waived and a monthly stipend that covers living costs.</p>
@@ -145,7 +145,7 @@ export const blogs: BlogPost[] = [
     authorRole: "Career Strategist",
     authorImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200",
     category: "Research Strategy",
-    coverImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600",
+    coverImage: "/blog/blog2.png",
     date: "May 25, 2026",
     content: `
       <p class="mb-4">Choosing where to do your Master's abroad is one of the highest-stakes decisions you'll make in your twenties. The country you pick shapes more than your degree — it shapes your career ceiling, your earning potential, your settlement options, and the network you build for the next 20 years.</p>
@@ -328,7 +328,7 @@ export const blogs: BlogPost[] = [
     authorRole: "Lead Essay Editor",
     authorImage: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200",
     category: "Academic Branding",
-    coverImage: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=600",
+    coverImage: "/blog/blog1.png",
     date: "May 20, 2026",
     content: `
       <p class="mb-4">Your Statement of Purpose is the only place in your application where the admissions committee hears you in your own voice. Your transcripts show what you did. Your test scores show how you performed. Your recommendation letters show what others think of you. The SOP is the one document where you make your own case.</p>
@@ -1030,6 +1030,247 @@ export const blogs: BlogPost[] = [
         <p class="mb-4">The students who get admitted to top humanities programs abroad aren't always the ones with the best grades. They're the ones who've already begun to do the work the program will train them to do.</p>
         <p class="mb-4">Explore LiftmyGrade's Bachelor's Abroad pathway to see how structured publication support, profile mentoring, and country-specific application strategy come together as one ecosystem.</p>
         <p class="font-semibold text-[#1C362B]">Don't wait for permission to publish. Pitch the piece. Make the argument. Build the profile.</p>
+      </div>
+    `
+  },
+  {
+    id: "8",
+    slug: "top-scholarships-indian-students-abroad-2026",
+    title: "Top Scholarships for Indian Students to Study Abroad in 2026: A Complete Guide",
+    excerpt: "Studying abroad without a scholarship is possible. Studying abroad well without one — at a top university, in the program you actually want, without crushing family debt — usually isn't.",
+    author: "Aditi Rao",
+    authorRole: "Funding Strategy Mentor",
+    authorImage: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200",
+    category: "Financial Strategy",
+    coverImage: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1000",
+    date: "June 17, 2026",
+    content: `
+      <p class="mb-4">Studying abroad without a scholarship is possible. Studying abroad well without one — at a top university, in the program you actually want, without crushing family debt — usually isn't. For most Indian middle-class families, scholarships aren't an optional bonus. They're the difference between a feasible plan and an aspirational fantasy.</p>
+      <p class="mb-6">The good news: more than two dozen serious scholarships are available to Indian students across the Bachelor's, Master's, and PhD levels. The harder news: most of them open and close 6–9 months before university application deadlines, and Indian students consistently miss them by treating scholarships as something to "look into" after applying.</p>
+      <p class="mb-6">This guide breaks down the scholarships that matter, what they cover, who they're realistic for, and how to actually win one.</p>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4" id="the-three-tiers-of-scholarships">The Three Tiers of Scholarships You Should Know</h2>
+      <p class="mb-4">Not all scholarships are the same. They differ in funding amount, prestige, eligibility filters, and competition level. Understanding which tier you're realistically competing in saves months of misdirected applications.</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Tier 1 — Government & Sovereign Scholarships.</strong> Fully funded, prestigious, internationally branded. Fulbright (US), Chevening (UK), DAAD (Germany), Commonwealth (UK), Vanier (Canada). These cover tuition + stipend + flights + insurance, but admission rates are typically 2–5%.</li>
+        <li><strong>Tier 2 — University Merit & Need-Based Aid.</strong> Direct from the institution. Cover partial-to-full tuition, sometimes with a stipend. More accessible than Tier 1, but each university has different rules — research them program-by-program.</li>
+        <li><strong>Tier 3 — Private Foundations & Indian Trusts.</strong> Tata, Inlaks Shivdasani, J.N. Tata Endowment, KC Mahindra. Cover specific portions (tuition, travel, books) and are particularly accessible for high-merit Indian students.</li>
+      </ul>
+      <p class="mb-6 font-medium text-[#1C362B]">The strongest applicants stack across tiers — they don't bet on one Tier 1 win.</p>
+      <figure class="my-8 rounded-2xl overflow-hidden border border-neutral-100 shadow-sm bg-neutral-50">
+        <img src="/blog/blog-8.png" alt="The Major Scholarships Deep Dive" class="w-full h-auto object-cover" />
+      </figure>
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4" id="major-scholarships-deep-dive">The Major Scholarships Deep Dive</h2>
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-xl font-bold text-[#1C362B] mb-2">Fulbright-Nehru (United States)</h3>
+          <p>One of the world's most prestigious scholarships, fully funded for Master's and PhD in the US. Covers tuition, stipend, travel, and health insurance. Highly competitive (around 80–100 awards per year for India), with separate streams for Master's (Fulbright-Nehru Master's) and doctoral research. Application opens around February, closes mid-May. Strong emphasis on leadership, demonstrated impact, and clear return-to-India intent.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-[#1C362B] mb-2">Chevening (United Kingdom)</h3>
+          <p>Fully funded one-year Master's at any UK university. Approximately 65–80 Chevening scholarships are awarded to Indian applicants annually. Applications open in August, close in early November. Selection emphasizes leadership potential, networking ability, and clear post-Master's career plans.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-[#1C362B] mb-2">DAAD (Germany)</h3>
+          <p>Germany's official academic exchange service. Multiple streams: Master's (EPOS-funded development-relevant), Doctoral (full and joint funding), and short research grants. Generous monthly stipend (~EUR 934 for Master's, ~EUR 1,300 for PhD) plus tuition and travel. Deadlines vary by program — most fall between September and December.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-[#1C362B] mb-2">Commonwealth Scholarships (UK)</h3>
+          <p>Funded by the UK government for citizens of Commonwealth countries. Master's, PhD, and split-site PhD options. Applications close in early December. Focus on developmental impact in your home country.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-[#1C362B] mb-2">Vanier Canada Graduate Scholarships</h3>
+          <p>PhD-only, CAD 50,000/year for three years. Awarded by Canadian universities (you must be nominated by the university). Internal university deadlines fall in October–November.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-[#1C362B] mb-2">Rhodes Scholarship (Oxford)</h3>
+          <p>Fully funded postgraduate study at Oxford. Five Rhodes Scholarships are awarded to Indian citizens each year. Extremely competitive, selection emphasizes intellectual excellence, character, and commitment to public service. Application closes around end of July.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-[#1C362B] mb-2">Inlaks Shivdasani Foundation</h3>
+          <p>Indian-funded, covers part of tuition + living costs at top universities globally. Excellent for Master's-level applicants. Applications typically close in March.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-[#1C362B] mb-2">J.N. Tata Endowment</h3>
+          <p>Loan-scholarship from the Tata Trusts for Indian postgraduate students studying abroad. Covers up to INR 10 lakh, repayable on favorable terms. Applications close in late March.</p>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-10 mb-4" id="how-to-actually-win-a-scholarship">How to Actually Win a Scholarship</h2>
+      <p class="mb-4">The students who win Tier 1 scholarships share a pattern. Their applications aren't generic essays about "wanting to study abroad." They're tightly argued cases that demonstrate three things: a specific contribution they'll make, a clear connection to the scholarship's stated mission, and credible evidence that they've already started doing the work.</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Map your scholarship calendar 12 months out.</strong> Most students discover scholarships when they discover universities — far too late. Build your calendar in reverse: when do scholarships close, what do they need, when do I start drafting?</li>
+        <li><strong>Tailor each application — don't recycle.</strong> A Chevening essay isn't a Fulbright essay isn't a DAAD motivation letter. Each scholarship has stated values (leadership, research impact, developmental contribution, regional knowledge). Your essay needs to mirror those values with evidence specific to you.</li>
+        <li><strong>Apply for more than you think you can win.</strong> Tier 1 acceptance rates are low. Apply to 4–6 scholarships across tiers, not 1–2. A common pattern that wins: one Tier 1 (Fulbright/Chevening), two Tier 2 (university aid), one Indian trust (Inlaks/Tata).</li>
+        <li><strong>Get LORs from people who can speak to scholarship-specific qualities.</strong> A research-focused scholarship needs a recommender who can describe your research process. A leadership scholarship needs a recommender who has watched you lead something concrete.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4" id="common-mistakes">Common Scholarship Application Mistakes</h2>
+      <ul class="list-disc pl-6 mb-8 space-y-2">
+        <li><strong>Treating the SOP and scholarship essay as interchangeable.</strong> They serve different audiences with different priorities. Scholarship essays should explicitly engage with the scholarship's mission.</li>
+        <li><strong>Vague "return to India" claims.</strong> For Fulbright and Chevening, the return narrative matters. Don't just state intent — describe what you'll do, where, and why your foreign education makes that work possible.</li>
+        <li><strong>Missing the scholarship's named requirements.</strong> Some scholarships require specific work experience, specific leadership roles, or specific research output. Read the eligibility criteria literally, not aspirationally.</li>
+        <li><strong>Waiting for a university admission to apply for a scholarship.</strong> Most scholarships are independent of admission. You apply for them in parallel — not after.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4" id="how-liftmygrade-supports">How LiftmyGrade Supports Scholarship Applications</h2>
+      <p class="mb-4">Scholarship strategy is built into every LiftmyGrade pathway. Our mentors map your eligible scholarships at the start of the engagement, build a calendar that runs ahead of university deadlines, and work with you on scholarship-specific essay drafts (which are structurally different from SOPs).</p>
+      <p class="mb-4">For PhD applicants, we focus on funding pathways — research fellowships, university assistantships, project-based funding, and government scholarships. For Master's applicants, we map all five tiers. For Bachelor's applicants, we focus on university-specific aid and Indian trust applications.</p>
+      <p class="mb-6">The goal isn't to apply to every scholarship. It's to apply to the right four to six — with applications that actually reflect the scholarship's stated mission.</p>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-10 mb-4" id="frequently-asked-questions">Frequently Asked Questions</h2>
+      <div class="space-y-4 mb-8">
+        <div>
+          <strong class="block mb-1 text-[#1C362B]">Can I apply for multiple scholarships at the same time?</strong>
+          <p>Yes — and you should. Most scholarships allow concurrent applications. Some (like Chevening and Commonwealth) have specific rules about combining funding, but applying to several in parallel is standard practice.</p>
+        </div>
+        <div>
+          <strong class="block mb-1 text-[#1C362B]">Do scholarships affect my chances of admission?</strong>
+          <p>Generally no — scholarships are evaluated independently of university admissions. Some scholarships (like Vanier) require university nomination, so the university must support your application internally. Most don't.</p>
+        </div>
+        <div>
+          <strong class="block mb-1 text-[#1C362B]">What's the timeline for Fulbright-Nehru?</strong>
+          <p>Application opens in February. Deadline in May. Interview shortlist announced in August. Final decisions in February of the following year. Yes — over a year of process.</p>
+        </div>
+        <div>
+          <strong class="block mb-1 text-[#1C362B]">Can students with lower GPAs win scholarships?</strong>
+          <p>Yes — most major scholarships are not purely GPA-driven. Fulbright weights leadership and impact equally with academics. DAAD weights research fit and project quality. Chevening weights leadership potential and post-study plans. A clear narrative often beats a slightly higher GPA.</p>
+        </div>
+        <div>
+          <strong class="block mb-1 text-[#1C362B]">Are there scholarships specifically for women in STEM?</strong>
+          <p>Yes. The Schlumberger Foundation Faculty for the Future grant, AAUW International Fellowships, and various country-specific awards. Plus university-specific awards at MIT, Stanford, ETH, and others.</p>
+        </div>
+      </div>
+
+      <div class="bg-[#F6F8F7] p-6 rounded-2xl border border-[#EBEFEA]">
+        <h3 class="text-xl font-bold text-[#1C362B] mb-2" id="ready-to-build-strategy">Ready to Build Your Scholarship Strategy?</h3>
+        <p class="mb-4">A scholarship application written six weeks before the deadline almost never wins. One built over six months — with the right essay strategy, the right recommenders, and the right tier coverage — often does.</p>
+        <p class="mb-4">Explore LiftmyGrade's pathways for Bachelor's, Master's, and PhD applications to see how scholarship strategy fits into our end-to-end approach.</p>
+        <p class="font-semibold text-[#1C362B]">The best scholarship for you is the one you actually win. Let's find it.</p>
+      </div>
+    `
+  },
+  {
+    id: "9",
+    slug: "how-to-get-strong-letters-of-recommendation",
+    title: "How to Get Strong Letters of Recommendation (LOR) for Studying Abroad",
+    excerpt: "A great Statement of Purpose tells admissions committees what you think of yourself. A great Letter of Recommendation tells them what someone else thinks of you.",
+    author: "Karan Desai",
+    authorRole: "Admissions Consultant",
+    authorImage: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200",
+    category: "Application Strategy",
+    coverImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000",
+    date: "June 17, 2026",
+    content: `
+      <p class="mb-4">A great Statement of Purpose tells admissions committees what you think of yourself. A great Letter of Recommendation tells them what someone else thinks of you — and that's why LORs often carry more weight than students realize.</p>
+      <p class="mb-4">A weak LOR can quietly undo a strong application. A strong LOR can lift a marginal one into the admitted pile. Most Indian students get this wrong in the same way: they ask the wrong people, give them too little to work with, and hope for the best.</p>
+      <p class="mb-6">This guide walks you through how to actually engineer a strong LOR — from picking recommenders to giving them what they need to write something powerful.</p>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4" id="why-lors-matter">Why LORs Matter More Than You Think</h2>
+      <p class="mb-4">A typical Master's or PhD application asks for 2–3 LORs. These are the only documents in your file written by someone other than you. To a committee reading 200 applications a week, that third-party perspective is enormously valuable — because applicants always pitch themselves favorably, and recommenders can corroborate or contradict that pitch.</p>
+      <p class="mb-4 font-medium text-[#1C362B]">Three patterns committees specifically look for in LORs:</p>
+      <ol class="list-decimal pl-6 mb-6 space-y-4">
+        <li><strong>Specificity.</strong> Vague praise ("She is hardworking and intelligent") signals that the recommender doesn't know you well. Specific anecdotes ("In my graduate seminar, she challenged my interpretation of Foucault and produced a 40-page term paper that I encouraged her to develop into a publication") signal genuine familiarity.</li>
+        <li><strong>Comparative ranking.</strong> Where do you fit among the recommender's students? "Top 5% of students I've taught in 15 years" is a different statement than "a good student." Top US PhD programs explicitly ask for ranking.</li>
+        <li><strong>Independent corroboration.</strong> If your SOP claims you led a research project, your LOR should confirm that. Mismatches between what you claim and what your recommender confirms can sink an application faster than a weak essay.</li>
+      </ol>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4" id="who-should-write">Who Should Write Your LOR?</h2>
+      <p class="mb-4">The rule most students get wrong: prestige of the recommender matters less than depth of knowledge about you. A senior dean who barely remembers you writes a worse LOR than an assistant professor who has read your papers and seen you struggle.</p>
+      <p class="mb-4">Here's how to think about it.</p>
+      <figure class="my-8 rounded-2xl overflow-hidden border border-neutral-100 shadow-sm bg-neutral-50">
+        <img src="/blog/blog-91.png" alt="Who should write your LOR" class="w-full h-auto object-cover" />
+      </figure>
+      <p class="mb-6">A common mistake: students chase senior or famous names, hoping the title alone will impress. It doesn't. Admissions committees read the letter, not just the signature. A specific, warm, detailed letter from an assistant professor who supervised your thesis is almost always more powerful than a vague paragraph from a department head who taught you one lecture.</p>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4" id="how-many-recommenders">How Many Recommenders Should You Line Up?</h2>
+      <p class="mb-4">For each LOR slot in your applications, line up one primary recommender and one backup. So if your applications need 3 LORs each, identify 3 primaries and 2 backups — that's five people to brief. Some recommenders will agree but then disappear during writing season. The backup saves you.</p>
+      <p class="mb-4 font-medium text-[#1C362B]">Distribute strategically:</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li>One academic recommender minimum (your strongest researcher-mentor) — anchor of the letter set</li>
+        <li>One additional academic (a different subject faculty, ideally with a different perspective on your abilities)</li>
+        <li>One professional/internship recommender if the program is industry-adjacent, OR a third academic if it's research-pure</li>
+      </ul>
+      <p class="mb-6">For PhD applications, all three should typically be academic. For Master's, a mix is acceptable. For Bachelor's, school principals or senior teachers are standard.</p>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4" id="how-to-ask">How to Ask — Without Burning the Bridge</h2>
+      <p class="mb-4">The way you ask determines the quality of the letter. A casual "can you write me a recommendation?" gets you a generic letter. A structured, well-prepared ask gets you a strong one.</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Ask early.</strong> 8–12 weeks before the deadline, not 2. Recommenders have lives, schedules, and reading queues. Last-minute requests get rushed, generic letters — or rejections.</li>
+        <li><strong>Ask in person if possible, or with a thoughtful email.</strong> A 3-line email saying "please write a LOR by Friday" telegraphs that you've put no work into your own application. Match the effort you want them to put in.</li>
+        <li><strong>Ask whether they can write a "strong" letter.</strong> This is the most important question and the one students avoid. "Would you be able to write me a strong letter of recommendation?" gives the recommender an out — a graceful way to say "you'd be better served by someone else." If they hedge, take the hint.</li>
+        <li><strong>Bring documentation.</strong> When they say yes, send them a package: your CV, draft SOP, the universities you're applying to, deadlines, and a one-page brief on what each program is looking for. This is non-negotiable. Recommenders write better letters when they know what story to support.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4" id="what-to-give-recommender">What to Give Your Recommender (The LOR Brief)</h2>
+      <figure class="my-8 rounded-2xl overflow-hidden border border-neutral-100 shadow-sm bg-neutral-50">
+        <img src="/blog/blog-92.png" alt="The LOR Brief" class="w-full h-auto object-cover" />
+      </figure>
+      <p class="mb-4">The single highest-leverage move you can make: write a one-page brief for each recommender. It should include:</p>
+      <ol class="list-decimal pl-6 mb-6 space-y-2">
+        <li><strong>Your applications.</strong> Universities, programs, intended start date, why you chose them.</li>
+        <li><strong>Your story arc.</strong> A 4–5 sentence summary of the narrative your SOP is making — so the LOR can corroborate, not contradict.</li>
+        <li><strong>Specific moments and work you'd like them to highlight.</strong> "If helpful, you could mention the term paper on X that I expanded into a working paper, or the seminar on Y where I challenged the conventional reading." Don't write the letter for them — surface options.</li>
+        <li><strong>Deadlines, in a clean table.</strong> University, deadline date, submission method (online portal, email).</li>
+        <li><strong>Logistics.</strong> Submission link if it's a portal, your applicant ID if applicable.</li>
+      </ol>
+      <p class="mb-6 font-medium text-[#1C362B]">This brief isn't manipulation. It's professional respect for their time. Most recommenders appreciate it — and many will explicitly say so.</p>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4" id="handling-rejection">Handling LOR Rejection or Delay</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>If a recommender declines:</strong> thank them, move to your backup, and don't take it personally. Some professors have a policy of writing limited LORs. Others know they can't write strong ones and are being honest.</li>
+        <li><strong>If a recommender ghosts you mid-process:</strong> a polite reminder email at T−2 weeks is fair. At T−1 week, escalate to your backup. Never compromise your application waiting for a letter that may not come.</li>
+        <li><strong>If a recommender misses the deadline:</strong> most universities accept LORs 1–3 days late if submitted directly. Don't panic, do email the admissions office, and have your backup ready.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4" id="common-lor-mistakes">Common LOR Mistakes That Cost Admissions</h2>
+      <ul class="list-disc pl-6 mb-8 space-y-2">
+        <li><strong>Choosing recommenders by title, not by relationship.</strong> The single biggest mistake. Depth beats prestige every time.</li>
+        <li><strong>Asking too late.</strong> Recommenders write better letters when they have time to think.</li>
+        <li><strong>Sending the same recommender brief to everyone.</strong> Different recommenders should highlight different parts of your story. A research-mentor LOR shouldn't sound like an internship-supervisor LOR.</li>
+        <li><strong>Not following up.</strong> Recommenders are busy. A polite reminder 1 week before the deadline is professional, not pushy.</li>
+        <li><strong>Asking someone who barely knows you because they have a big name.</strong> It will read exactly that way to admissions committees.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4" id="how-liftmygrade-supports">How LiftmyGrade Supports LOR Strategy</h2>
+      <p class="mb-4">At LiftmyGrade, LOR strategy is built into our SOP and application support across all pathways. We work with students on:</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li>Recommender selection — who fits which application best, given their relationship with you</li>
+        <li>The LOR brief — a structured document that gives recommenders everything they need</li>
+        <li>Anti-overlap planning — ensuring your LORs highlight different aspects of your profile</li>
+        <li>Timeline tracking — making sure no LOR slips through the cracks 2 weeks before a deadline</li>
+      </ul>
+      <p class="mb-6 font-medium text-[#1C362B]">We don't write your LORs (that would be inappropriate and easily detected). We help you engineer the conditions for strong LORs to be written.</p>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-10 mb-4" id="frequently-asked-questions">Frequently Asked Questions</h2>
+      <div class="space-y-4 mb-8">
+        <div>
+          <strong class="block mb-1 text-[#1C362B]">Can I write my own LOR for my professor to sign?</strong>
+          <p>This happens in India sometimes — and it's a bad idea. Admissions committees can tell when LORs are self-written (the voice matches the SOP too closely). Worse, ethical violations of this nature, if discovered, can void admissions. Write your brief, give your recommender bullet points if needed, but never write the letter itself.</p>
+        </div>
+        <div>
+          <strong class="block mb-1 text-[#1C362B]">What if my recommender doesn't know how to write academic LORs in English?</strong>
+          <p>Common issue. You can offer to share sample LOR structures (publicly available) without writing the content. Or suggest they write in their preferred language and use professional translation. Some universities accept LORs in other languages with certified translation.</p>
+        </div>
+        <div>
+          <strong class="block mb-1 text-[#1C362B]">How long should a LOR be?</strong>
+          <p>400–800 words for Master's. 600–1,200 words for PhD. Anything under 300 words signals a recommender who doesn't have much to say.</p>
+        </div>
+        <div>
+          <strong class="block mb-1 text-[#1C362B]">Should I waive my right to read the LOR?</strong>
+          <p>In US applications (FERPA waiver), yes — always waive. An unwaived LOR is read as a less credible LOR by admissions committees.</p>
+        </div>
+        <div>
+          <strong class="block mb-1 text-[#1C362B]">Can my recommender be from a different country than where I'm applying?</strong>
+          <p>Absolutely. Indian recommenders are perfectly acceptable for US/UK/EU applications, as long as they write in English and their letter is specific and detailed.</p>
+        </div>
+      </div>
+
+      <div class="bg-[#F6F8F7] p-6 rounded-2xl border border-[#EBEFEA]">
+        <h3 class="text-xl font-bold text-[#1C362B] mb-2" id="ready-to-engineer">Ready to Engineer Strong LORs?</h3>
+        <p class="mb-4">A great LOR doesn't happen by chance. It happens when you ask the right people, give them the right brief, and time the request to give them space to write well.</p>
+        <p class="mb-4">Explore LiftmyGrade's pathways for Bachelor's, Master's, and PhD applications — LOR strategy is built into every engagement.</p>
+        <p class="font-semibold text-[#1C362B]">Your recommenders are your advocates. Make it easy for them to advocate well.</p>
       </div>
     `
   }

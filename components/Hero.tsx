@@ -10,7 +10,7 @@ export default function Hero() {
     <section className="relative min-h-screen pt-32 px-6 md:px-12 lg:px-16 pb-24 flex items-end bg-[#0a0a0a] overflow-hidden" id="hero">
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1709054172839-17880c040f22?q=80"
+          src="/hero.png"
           alt="Premium Academic Environment"
           fill
           priority
@@ -29,12 +29,12 @@ export default function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
             </span>
-            <span className="text-[10px] sm:text-[13px] font-medium tracking-wide text-white/90">
+            <span className="text-[12px] sm:text-[13px] font-medium tracking-wide text-white/90">
               Academic, Research, Career & Strategic Communication Ecosystem
             </span>
           </div>
           <h1
-            className="animate-fade-in-up text-4xl sm:text-4xl md:text-[42px] lg:text-5xl font-bold text-white leading-[1.15] sm:leading-[1.15] mb-5 tracking-tighter max-w-3xl"
+            className="animate-fade-in-up text-5xl sm:text-5xl md:text-[52px] lg:text-6xl font-bold text-white leading-[1.15] sm:leading-[1.15] mb-5 tracking-tighter max-w-4xl"
           >
             Build A Global Academic<br className="sm:hidden" /><span className="relative inline-block whitespace-nowrap z-10 px-1">
               <span className="relative z-10">Profile</span>
@@ -59,7 +59,7 @@ export default function Hero() {
           </h1>
 
           <div
-            className="animate-fade-in-up delay-200 text-[14px] sm:text-base md:text-lg text-white/70 leading-relaxed mb-8 sm:mb-10 max-w-xl font-light"
+            className="animate-fade-in-up delay-200 text-base sm:text-lg md:text-xl text-white/70 leading-relaxed mb-8 sm:mb-10 max-w-2xl font-light"
           >
             <p>
               A premium academic ecosystem. We guide your journey—from global admissions and fully funded PhDs to research support and strategic career branding.

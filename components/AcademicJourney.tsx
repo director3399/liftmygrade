@@ -122,8 +122,8 @@ export default function AcademicJourney() {
         </div>
 
         {/* Mobile Vertical Layout */}
-        <div className="lg:hidden w-full overflow-hidden pt-8 pl-4 pr-4">
-          <div className="relative flex flex-col gap-8 max-w-sm mx-auto">
+        <div className="lg:hidden w-full overflow-hidden pt-8">
+          <div className="relative flex flex-col gap-8 w-full">
             {stages.map((stage, i) => (
               <div key={stage.id} className="relative w-full group pl-10">
                 {/* Mobile Dot */}

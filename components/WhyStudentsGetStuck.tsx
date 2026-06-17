@@ -28,12 +28,12 @@ const cards = [
 const StickyCard = ({ card, index }: any) => {
   return (
     <div 
-      className="static lg:sticky flex items-center justify-center w-full"
+      className="sticky flex items-center justify-center w-full"
       style={{
-        top: `calc(15vh + ${index * 120}px)`, 
+        top: `calc(10vh + ${index * 80}px)`, 
       }}
     >
-      <div className="w-full bg-[#F9F9F9] border border-neutral-100 rounded-4xl lg:rounded-[2.5rem] p-6 sm:p-8 lg:p-12 shadow-sm mb-6 sm:mb-8 lg:mb-12 origin-top">
+      <div className="w-full bg-[#F9F9F9] border border-neutral-100 rounded-4xl lg:rounded-[2.5rem] p-6 sm:p-8 lg:p-12 shadow-[0_-8px_30px_-15px_rgba(0,0,0,0.1)] mb-4 sm:mb-8 lg:mb-12 origin-top">
         <div className="mb-4 sm:mb-6">
           <span className="text-xs sm:text-sm font-semibold text-neutral-400 tracking-widest uppercase block mb-2">
             Challenge {card.id}

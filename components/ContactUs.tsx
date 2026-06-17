@@ -155,7 +155,7 @@ export default function ContactUs() {
         <div className="bg-transparent sm:bg-white rounded-none sm:rounded-[3rem] p-0 sm:p-4 sm:shadow-[0_8px_40px_rgb(0,0,0,0.04)] sm:border border-transparent sm:border-neutral-100 flex flex-col-reverse lg:flex-row max-w-6xl mx-auto gap-8 sm:gap-0">
           
           {/* Left Column: Contact Details (Appears on right/bottom) */}
-          <div className="bg-[#050B1D] text-white p-8 md:p-14 lg:p-16 rounded-[1.5rem] sm:rounded-[2.5rem] lg:w-5/12 flex flex-col relative overflow-hidden shrink-0 mt-4 lg:mt-0 shadow-xl sm:shadow-none">
+          <div className="bg-[#050B1D] text-white p-8 md:p-14 lg:p-16 rounded-3xl sm:rounded-[2.5rem] lg:w-5/12 flex flex-col relative overflow-hidden shrink-0 mt-4 lg:mt-0 shadow-xl sm:shadow-none">
             <div className="absolute -top-32 -right-32 w-64 h-64 bg-blue-600 rounded-full mix-blend-screen filter blur-[100px] opacity-60" />
             <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-indigo-600 rounded-full mix-blend-screen filter blur-[100px] opacity-40" />
 
@@ -175,7 +175,7 @@ export default function ContactUs() {
                   </div>
                   <div className="min-w-0">
                     <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-white/40 mb-1">Email Us</p>
-                    <a href="mailto:info@liftmygrade.com" className="text-base sm:text-lg font-medium text-white/90 hover:text-white transition-colors break-words">info@liftmygrade.com</a>
+                    <a href="mailto:info@liftmygrade.com" className="text-base sm:text-lg font-medium text-white/90 hover:text-white transition-colors wrap-break-words">info@liftmygrade.com</a>
                   </div>
                 </div>
                 
@@ -258,33 +258,33 @@ export default function ContactUs() {
                     {currentStep === 1 && (
                       <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-300">
                         <div className="group">
-                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-500 mb-2 group-focus-within:text-blue-600 transition-colors">Full Name *</label>
+                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2 group-focus-within:text-blue-600 transition-colors">Full Name *</label>
                           <input 
                             {...register("fullName")}
                             type="text" 
-                            className="w-full bg-white sm:bg-neutral-50 border border-neutral-200 rounded-xl px-4 py-3.5 text-[#171717] font-medium focus:outline-none focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all placeholder:text-neutral-400 placeholder:font-normal shadow-sm sm:shadow-none"
+                            className="w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all placeholder:text-neutral-300 placeholder:font-normal"
                             placeholder="John Doe"
                           />
                           {errors.fullName && <p className="text-red-500 text-xs mt-2 font-medium">{errors.fullName.message}</p>}
                         </div>
                         
                         <div className="group">
-                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-500 mb-2 group-focus-within:text-blue-600 transition-colors">Email Address *</label>
+                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2 group-focus-within:text-blue-600 transition-colors">Email Address *</label>
                           <input 
                             {...register("email")}
                             type="email" 
-                            className="w-full bg-white sm:bg-neutral-50 border border-neutral-200 rounded-xl px-4 py-3.5 text-[#171717] font-medium focus:outline-none focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all placeholder:text-neutral-400 placeholder:font-normal shadow-sm sm:shadow-none"
+                            className="w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all placeholder:text-neutral-300 placeholder:font-normal"
                             placeholder="you@example.com"
                           />
                           {errors.email && <p className="text-red-500 text-xs mt-2 font-medium">{errors.email.message}</p>}
                         </div>
                         
                         <div className="group">
-                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-500 mb-2 group-focus-within:text-blue-600 transition-colors">Phone Number *</label>
+                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2 group-focus-within:text-blue-600 transition-colors">Phone Number *</label>
                           <div className="flex gap-2 sm:gap-3">
                             <select
                               {...register("dialCode")}
-                              className="w-20 sm:w-28 bg-white sm:bg-neutral-50 border border-neutral-200 rounded-xl px-1 sm:px-3 py-3.5 text-[#171717] font-medium focus:outline-none focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all appearance-none cursor-pointer text-center shadow-sm sm:shadow-none text-sm sm:text-base"
+                              className="w-24 bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all appearance-none cursor-pointer"
                             >
                               <option value="+91">🇮🇳 +91</option>
                               <option value="+1">🇺🇸 +1</option>
@@ -297,7 +297,7 @@ export default function ContactUs() {
                             <input 
                               {...register("phone")}
                               type="tel" 
-                              className="flex-1 w-full min-w-0 bg-white sm:bg-neutral-50 border border-neutral-200 rounded-xl px-3 sm:px-4 py-3.5 text-[#171717] font-medium focus:outline-none focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all placeholder:text-neutral-400 placeholder:font-normal shadow-sm sm:shadow-none text-sm sm:text-base"
+                              className="flex-1 w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all placeholder:text-neutral-300 placeholder:font-normal"
                               placeholder="98XXXXXXXX"
                             />
                           </div>
@@ -310,11 +310,11 @@ export default function ContactUs() {
                     {currentStep === 2 && (
                       <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-300">
                         <div className="group">
-                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-500 mb-2 group-focus-within:text-blue-600 transition-colors">You are a... *</label>
+                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2 group-focus-within:text-blue-600 transition-colors">You are a... *</label>
                           <select 
                             {...register("status")}
                             defaultValue=""
-                            className="w-full bg-white sm:bg-neutral-50 border border-neutral-200 rounded-xl px-4 py-3.5 text-[#171717] font-medium focus:outline-none focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all appearance-none cursor-pointer shadow-sm sm:shadow-none"
+                            className="w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all appearance-none cursor-pointer"
                           >
                             <option value="" disabled>Select</option>
                             <option value="Student / Recent graduate">Student / Recent graduate</option>
@@ -329,11 +329,11 @@ export default function ContactUs() {
                         </div>
 
                         <div className="group">
-                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-500 mb-2 group-focus-within:text-blue-600 transition-colors">Industry / Field (Optional)</label>
+                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2 group-focus-within:text-blue-600 transition-colors">Industry / Field (Optional)</label>
                           <select 
                             {...register("industry")}
                             defaultValue=""
-                            className="w-full bg-white sm:bg-neutral-50 border border-neutral-200 rounded-xl px-4 py-3.5 text-[#171717] font-medium focus:outline-none focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all appearance-none cursor-pointer shadow-sm sm:shadow-none"
+                            className="w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all appearance-none cursor-pointer"
                           >
                             <option value="" disabled>Select (optional)</option>
                             <option value="Technology / IT">Technology / IT</option>
@@ -385,12 +385,12 @@ export default function ContactUs() {
                             >
                               <div className="p-5 bg-white sm:bg-neutral-50 rounded-2xl space-y-4 shadow-sm sm:shadow-none">
                                 <p className="text-xs font-bold uppercase text-neutral-500">Résumé Details</p>
-                                <select {...register("resumeType")} defaultValue="" className="w-full bg-white border border-neutral-200 rounded-lg px-3 py-2.5 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/10 outline-none">
+                                <select {...register("resumeType")} defaultValue="" className="w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all appearance-none cursor-pointer">
                                   <option value="" disabled>Do you have an existing résumé?</option>
                                   <option value="Build a new one from scratch">Build a new one from scratch</option>
                                   <option value="Edit & optimise my existing one">Edit & optimise my existing one</option>
                                 </select>
-                                <input {...register("resumeTarget")} type="text" placeholder="Target role / industry" className="w-full bg-white border border-neutral-200 rounded-lg px-3 py-2.5 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/10 outline-none placeholder:text-neutral-400" />
+                                <input {...register("resumeTarget")} type="text" placeholder="Target role / industry" className="w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all placeholder:text-neutral-300 placeholder:font-normal" />
                               </div>
                             </motion.div>
                           )}
@@ -405,8 +405,8 @@ export default function ContactUs() {
                             >
                               <div className="p-5 bg-white sm:bg-neutral-50 rounded-2xl space-y-4 shadow-sm sm:shadow-none">
                                 <p className="text-xs font-bold uppercase text-neutral-500">LinkedIn Details</p>
-                                <input {...register("liUrl")} type="text" placeholder="Current LinkedIn URL (optional)" className="w-full bg-white border border-neutral-200 rounded-lg px-3 py-2.5 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/10 outline-none placeholder:text-neutral-400" />
-                                <select {...register("liGoal")} defaultValue="" className="w-full bg-white border border-neutral-200 rounded-lg px-3 py-2.5 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/10 outline-none">
+                                <input {...register("liUrl")} type="text" placeholder="Current LinkedIn URL (optional)" className="w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all placeholder:text-neutral-300 placeholder:font-normal" />
+                                <select {...register("liGoal")} defaultValue="" className="w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all appearance-none cursor-pointer">
                                   <option value="" disabled>Primary objective</option>
                                   <option value="Job search / recruiter visibility">Job search / recruiter visibility</option>
                                   <option value="Personal branding">Personal branding</option>
@@ -447,22 +447,22 @@ export default function ContactUs() {
                     {currentStep === 4 && (
                       <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-300">
                         <div className="group">
-                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-500 mb-2 group-focus-within:text-blue-600 transition-colors">What are you aiming to achieve? *</label>
+                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2 group-focus-within:text-blue-600 transition-colors">What are you aiming to achieve? *</label>
                           <textarea 
                             {...register("brief")}
                             rows={3}
-                            className="w-full bg-white sm:bg-neutral-50 border border-neutral-200 rounded-xl px-4 py-3.5 text-[#171717] font-medium focus:outline-none focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all resize-none placeholder:text-neutral-400 placeholder:font-normal shadow-sm sm:shadow-none"
+                            className="w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all resize-none placeholder:text-neutral-300 placeholder:font-normal"
                             placeholder="A few lines about your goal, context, and anything we should know."
                           ></textarea>
                           {errors.brief && <p className="text-red-500 text-xs mt-2 font-medium">{errors.brief.message}</p>}
                         </div>
 
                         <div className="group">
-                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-500 mb-2 group-focus-within:text-blue-600 transition-colors">Timeline (Optional)</label>
+                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2 group-focus-within:text-blue-600 transition-colors">Timeline (Optional)</label>
                           <select 
                             {...register("timeline")}
                             defaultValue=""
-                            className="w-full bg-white sm:bg-neutral-50 border border-neutral-200 rounded-xl px-4 py-3.5 text-[#171717] font-medium focus:outline-none focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all appearance-none cursor-pointer shadow-sm sm:shadow-none"
+                            className="w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all appearance-none cursor-pointer"
                           >
                             <option value="" disabled>Select</option>
                             <option value="As soon as possible">As soon as possible</option>

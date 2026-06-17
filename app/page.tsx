@@ -22,7 +22,7 @@ export default function Home() {
       <WhyStudentsGetStuck />
       <Pathways />
       <AcademicJourney />
-      <Milestones />  
+      <Milestones />
       <MeetOurTeam />
       <Pricing />
       <Testimonials />
