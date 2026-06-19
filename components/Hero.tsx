@@ -15,7 +15,7 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover opacity-60 grayscale-[0.2]"
+          className="object-cover object-[80%_center] md:object-center opacity-60 grayscale-[0.2]"
         />
         <div className="absolute inset-0 bg-linear-to-r from-black via-black/40 to-transparent z-10" />
         <div className="absolute inset-0 bg-linear-to-b from-black/60 via-transparent to-transparent z-10" />

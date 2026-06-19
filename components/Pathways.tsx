@@ -105,9 +105,11 @@ export default function Pathways() {
             </div>
 
             <div className="mt-8 lg:mt-auto overflow-hidden">
-              <div
+              <motion.div
                 key={activeIndex}
-                className="animate-fade-in-up"
+                initial={{ opacity: 0, x: 30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
               >
                 <div className="text-xs sm:text-sm font-semibold text-neutral-400 mb-3 sm:mb-4 tracking-widest uppercase">
                   {current.id} / 06
@@ -118,7 +120,7 @@ export default function Pathways() {
                 <p className="text-sm sm:text-base text-neutral-700 leading-relaxed max-w-md mb-6 sm:mb-8 min-h-[100px] sm:min-h-[80px]">
                   {current.desc}
                 </p>
-              </div>
+              </motion.div>
 
               {/* Thick Progress Bars */}
               <div className="flex gap-2 sm:gap-4 mt-4 sm:mt-6 w-full max-w-sm sm:max-w-none">

@@ -191,22 +191,7 @@ export default function ContactUs() {
                   </div>
                 </div>
                 
-                <div className="flex items-start gap-4 sm:gap-5 group">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-indigo-500 transition-colors duration-300">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-white/80 group-hover:text-white transition-colors sm:w-5 sm:h-5">
-                      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
-                      <circle cx="12" cy="10" r="3"/>
-                    </svg>
-                  </div>
-                  <div className="min-w-0">
-                    <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-white/40 mb-1">HQ Address</p>
-                    <p className="text-sm sm:text-base font-light text-white/80 leading-relaxed">
-                      LiftmyGrade HQ<br />
-                      Salt Lake Sector 5<br />
-                      Kolkata, India
-                    </p>
-                  </div>
-                </div>
+
               </div>
             </div>
           </div>
