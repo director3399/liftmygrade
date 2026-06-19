@@ -125,15 +125,7 @@ export default function AcademicJourney() {
         <div className="lg:hidden w-full overflow-hidden pt-8">
           <div className="relative flex flex-col gap-8 w-full">
             {stages.map((stage, i) => (
-              <div key={stage.id} className="relative w-full group pl-10">
-                {/* Mobile Dot */}
-                <div className="absolute left-[11px] top-[40px] w-[10px] h-[10px] rounded-full bg-neutral-200 group-hover:bg-blue-500 z-10 transition-colors" />
-
-                {/* Mobile Line Segment (hide on last item) */}
-                {i < stages.length - 1 && (
-                  <div className="absolute left-[15px] top-[46px] bottom-[-40px] w-px border-l-2 border-dashed border-neutral-300 z-0" />
-                )}
-
+              <div key={stage.id} className="relative w-full group">
                 {/* Card */}
                 <div
                   className="relative z-10 w-full bg-white rounded-2xl p-4 border border-neutral-100 shadow-sm"
