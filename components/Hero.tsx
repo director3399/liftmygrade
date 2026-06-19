@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[100svh] sm:min-h-screen pt-28 sm:pt-32 px-5 sm:px-6 md:px-12 lg:px-16 pb-20 sm:pb-24 flex items-end bg-[#0a0a0a] overflow-hidden" id="hero">
+    <section className="relative min-h-svh sm:min-h-screen pt-28 sm:pt-32 px-5 sm:px-6 md:px-12 lg:px-16 pb-20 sm:pb-24 flex items-end bg-[#0a0a0a] overflow-hidden" id="hero">
       <div className="absolute inset-0 z-0">
         <Image
           src="/hero.webp"
@@ -38,8 +38,7 @@ export default function Hero() {
           >
             Build A Global Academic<br className="sm:hidden" /><span className="relative inline-block whitespace-nowrap z-10 px-1">
               <span className="relative z-10">Profile</span>
-            </span>-<br className="sm:hidden" />
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 via-blue-200 to-white">Not Just An Application</span>
+            </span>- <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 via-blue-200 to-white">Not Just An Application</span>
           </h1>
 
           <div
