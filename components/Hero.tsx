@@ -10,7 +10,7 @@ export default function Hero() {
     <section className="relative min-h-screen pt-32 px-6 md:px-12 lg:px-16 pb-24 flex items-end bg-[#0a0a0a] overflow-hidden" id="hero">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/hero.png"
+          src="/hero.webp"
           alt="Premium Academic Environment"
           fill
           priority

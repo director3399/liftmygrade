@@ -82,7 +82,7 @@ export default function Testimonials() {
           {/* Left Side: Portrait Image */}
           <div className="relative aspect-square md:aspect-auto h-[250px] sm:h-[300px] md:h-full min-h-[250px] rounded-4xl md:rounded-[3rem] overflow-hidden shadow-sm">
             <Image
-              src="/testmonial.png"
+              src="/testmonial.webp"
               alt="LiftMyGrade Testimonial"
               fill
               className="object-cover grayscale-[0.2]"

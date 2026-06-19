@@ -86,7 +86,7 @@ export default function WhyStudentsGetStuck() {
           <div className="w-full lg:w-1/2 lg:sticky lg:top-[15vh] h-[300px] sm:h-[400px] lg:h-[70vh] rounded-4xl lg:rounded-[3rem] overflow-hidden order-first lg:order-last mb-8 sm:mb-12 lg:mb-0">
             <div className="relative w-full h-full">
               <Image
-                src="/wasg.png"
+                src="/wasg.webp"
                 alt="Student planning future"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"

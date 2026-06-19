@@ -65,7 +65,7 @@ export default function Mentorship() {
 
         <div className="relative rounded-4xl sm:rounded-[3rem] overflow-hidden flex flex-col justify-end min-h-[360px] sm:min-h-[300px] sm:aspect-[2.8/1]">
           <Image
-            src="/mentorship.png"
+            src="/mentorship.webp"
             alt="International Academic Environment"
             fill
             sizes="(max-width: 1024px) 100vw, 1200px"

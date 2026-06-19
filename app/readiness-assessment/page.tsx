@@ -36,7 +36,7 @@ export default function ReadinessAssessmentPage() {
             <div className="sticky top-[120px] w-full h-[calc(100vh-160px)] min-h-[600px] rounded-4xl overflow-hidden">
               <div className="relative w-full h-full">
                 <Image
-                  src="/program1.png"
+                  src="/program1.webp"
                   alt="Premium Academic Environment"
                   fill
                   priority
