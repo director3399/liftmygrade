@@ -33,7 +33,7 @@ export async function POST(req: Request) {
     }
 
     const { success, data, error } = await sendEmail({
-      to: "naitikkumar2408@gmail.com",
+      to: "info@liftmygrade.com",
       subject: `New Career Consultation from ${fullName}`,
       html: `
         <div style="font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 650px; margin: 0 auto; background-color: #ffffff; border: 1px solid #e5e7eb; border-top: 6px solid #2563eb; border-bottom: 6px solid #2563eb; padding: 0;">
@@ -142,6 +142,32 @@ export async function POST(req: Request) {
     if (!success) {
       return NextResponse.json({ error }, { status: 500 });
     }
+
+    // Send confirmation email to the user
+    await sendEmail({
+      to: email,
+      subject: "Application Received - LiftmyGrade",
+      html: `
+        <div style="font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; background-color: #ffffff; padding: 40px 20px;">
+          <img src="https://raw.githubusercontent.com/Naitik2408/liftmygrade/main/public/logo-3.png" alt="LiftmyGrade" width="150" style="display: block; margin-bottom: 30px;" />
+          <h2 style="color: #111827; font-size: 24px; margin-bottom: 20px;">We've received your application!</h2>
+          <p style="color: #4b5563; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+            Hi ${fullName.split(" ")[0]},
+          </p>
+          <p style="color: #4b5563; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+            Thank you for reaching out to LiftmyGrade. We have successfully received your career consultation request.
+          </p>
+          <p style="color: #4b5563; font-size: 16px; line-height: 1.6; margin-bottom: 30px;">
+            Our expert mentors are reviewing your profile and will get back to you within <strong>48 hours</strong> with personalized guidance and next steps.
+          </p>
+          <div style="border-top: 1px solid #e5e7eb; padding-top: 30px;">
+            <p style="color: #6b7280; font-size: 14px; margin-bottom: 5px;">Best regards,</p>
+            <p style="color: #111827; font-size: 16px; font-weight: 600; margin: 0;">The LiftmyGrade Team</p>
+            <p style="color: #2563eb; font-size: 14px; margin-top: 5px;"><a href="https://www.liftmygrade.com" style="color: #2563eb; text-decoration: none;">www.liftmygrade.com</a></p>
+          </div>
+        </div>
+      `,
+    });
 
     return NextResponse.json({ success: true, data });
   } catch (error) {

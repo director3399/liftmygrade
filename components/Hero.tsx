@@ -38,22 +38,6 @@ export default function Hero() {
           >
             Build A Global Academic<br className="sm:hidden" /><span className="relative inline-block whitespace-nowrap z-10 px-1">
               <span className="relative z-10">Profile</span>
-              <svg
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[140%] text-blue-500 -z-10"
-                viewBox="0 0 100 100"
-                fill="none"
-                preserveAspectRatio="none"
-              >
-                <path
-                  d="M 15,50 C 15,10 85,10 85,50 C 85,90 15,90 15,50 C 15,30 30,15 50,15"
-                  stroke="currentColor"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  className="animate-[dash_2s_ease-out_forwards]"
-                  strokeDasharray="300"
-                  strokeDashoffset="0"
-                />
-              </svg>
             </span>-<br className="sm:hidden" />
             <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 via-blue-200 to-white">Not Just An Application</span>
           </h1>

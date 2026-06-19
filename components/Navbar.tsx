@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { ArrowRight, Menu, Close, Instagram, Youtube } from "./Icons";
+import { ArrowRight, Menu, Close, Instagram, Youtube, Facebook, Linkedin } from "./Icons";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar({
@@ -89,20 +89,26 @@ export default function Navbar({
       <header className="absolute top-0 left-0 right-0 z-60">
 
         {/* Topbar */}
-        <div className={`hidden md:flex justify-between items-center py-2.5 px-6 md:px-12 transition-colors duration-300 ${isMobileMenuOpen ? 'bg-neutral-100 text-neutral-800' : (isLight ? 'bg-neutral-100 text-neutral-800' : 'bg-white/5 backdrop-blur-sm text-white/90 border-b border-white/10')}`}>
-          <div className="text-[13px] sm:text-sm font-semibold tracking-wide">
-            Call Us : +91 90513 84241
+        <div className={`hidden md:grid grid-cols-[1fr_auto_1fr] items-center py-2.5 px-6 md:px-12 transition-colors duration-300 ${isMobileMenuOpen ? 'bg-neutral-100 text-neutral-800' : (isLight ? 'bg-neutral-100 text-neutral-800' : 'bg-white/5 backdrop-blur-sm text-white/90 border-b border-white/10')}`}>
+          <div className="text-[13px] sm:text-sm font-semibold tracking-wide flex items-center justify-start gap-2 lg:gap-3 overflow-hidden">
+            <span className="shrink-0">Contact Us : +91 90513 84241</span>
+            <span className="hidden lg:inline opacity-60 shrink-0">|</span>
+            <a href="mailto:info@liftmygrade.com" className="hidden lg:inline hover:text-blue-400 transition-colors truncate">info@liftmygrade.com</a>
           </div>
-          <div className="text-[13px] sm:text-sm tracking-wide text-center flex-1">
+          <div className="text-[13px] sm:text-sm tracking-wide text-center px-4">
             Welcome to LiftmyGrade! <span className="font-bold">Book your FREE consultation today.</span>
           </div>
-          <div className="flex items-center gap-2.5">
-            <a href="https://www.instagram.com/liftmygrade?igsh=Ynl2dXdrZHFqM2dp" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className={`w-7 h-7 rounded-full flex items-center justify-center transition-colors ${isMobileMenuOpen || isLight ? 'bg-blue-100 text-blue-600 hover:bg-blue-200' : 'bg-white/10 hover:bg-white/20'}`}>
-              <Instagram className="w-3.5 h-3.5" />
-            </a>
-            <a href="https://www.youtube.com/@LiftMyGrade" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className={`w-7 h-7 rounded-full flex items-center justify-center transition-colors ${isMobileMenuOpen || isLight ? 'bg-blue-100 text-blue-600 hover:bg-blue-200' : 'bg-white/10 hover:bg-white/20'}`}>
-              <Youtube className="w-3.5 h-3.5" />
-            </a>
+          <div className="flex items-center justify-end gap-2.5">
+            {[
+              { Icon: Facebook, href: "https://www.facebook.com/share/1YvxK4wTn7/?mibextid=wwXIfr", label: "Facebook" },
+              { Icon: Instagram, href: "https://www.instagram.com/liftmygrade?igsh=Ynl2dXdrZHFqM2dp", label: "Instagram" },
+              { Icon: Youtube, href: "https://www.youtube.com/@LiftMyGrade", label: "YouTube" },
+              { Icon: Linkedin, href: "https://www.linkedin.com/company/lift-my-grade/", label: "LinkedIn" }
+            ].map((social, i) => (
+              <a key={i} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label} className={`w-7 h-7 rounded-full flex items-center justify-center transition-colors ${isMobileMenuOpen || isLight ? 'bg-blue-100 text-blue-600 hover:bg-blue-200' : 'bg-white/10 hover:bg-white/20'}`}>
+                <social.Icon className="w-3.5 h-3.5" />
+              </a>
+            ))}
           </div>
         </div>
 

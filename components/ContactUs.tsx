@@ -187,7 +187,7 @@ export default function ContactUs() {
                   </div>
                   <div className="min-w-0">
                     <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-white/40 mb-1">WhatsApp / Phone</p>
-                    <a href="https://wa.me/919051384241" target="_blank" rel="noopener noreferrer" className="text-base sm:text-lg font-medium text-white/90 hover:text-white transition-colors">+91 90513 84241</a>
+                    <a href="https://wa.me/919147720702" target="_blank" rel="noopener noreferrer" className="text-base sm:text-lg font-medium text-white/90 hover:text-white transition-colors">+91 9147720702</a>
                   </div>
                 </div>
                 
