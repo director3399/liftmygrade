@@ -123,25 +123,25 @@ export default function AcademicJourney() {
 
         {/* Mobile Vertical Layout */}
         <div className="lg:hidden w-full overflow-hidden pt-8">
-          <div className="relative flex flex-col gap-8 w-full">
+          <div className="relative flex flex-col gap-4 sm:gap-8 w-full">
             {stages.map((stage, i) => (
               <div key={stage.id} className="relative w-full group">
                 {/* Card */}
                 <div
-                  className="relative z-10 w-full bg-white rounded-2xl p-5 border border-neutral-100 shadow-sm"
+                  className="relative z-10 w-full bg-white rounded-2xl p-3 sm:p-5 border border-neutral-100 shadow-none sm:shadow-sm"
                 >
-                  <div className="flex flex-row gap-5 items-center text-left">
-                    <div className="relative w-24 h-24 rounded-xl overflow-hidden shrink-0 border border-neutral-100">
+                  <div className="flex flex-row gap-4 items-center text-left">
+                    <div className="relative w-20 h-20 rounded-xl overflow-hidden shrink-0 border border-neutral-100">
                       <Image src={stage.image} alt={stage.title} fill unoptimized className="object-cover" />
                     </div>
-                    <div className="flex flex-col gap-1.5">
-                      <span className="text-xs font-bold uppercase tracking-widest text-blue-500">
+                    <div className="flex flex-col gap-1 w-full">
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-blue-500">
                         Phase {stage.id}
                       </span>
-                      <h3 className="text-base sm:text-lg font-bold text-neutral-900 leading-tight">
+                      <h3 className="text-sm sm:text-base font-bold text-neutral-900 leading-tight">
                         {stage.title}
                       </h3>
-                      <p className="text-sm text-neutral-600 leading-relaxed">
+                      <p className="text-xs text-neutral-600 leading-relaxed line-clamp-2">
                         {stage.desc}
                       </p>
                     </div>
