@@ -37,7 +37,7 @@ export default function Footer() {
           <div className="lg:col-span-5 flex flex-col h-full">
             <div className="mb-8">
               <div className="flex items-center gap-2.5 text-2xl md:text-3xl font-extrabold tracking-tighter uppercase">
-                <Image src="/logo-3.webp" alt="LiftmyGrade" width={160} height={40} className="h-8 md:h-10 w-auto object-contain brightness-0 invert opacity-90" />
+                <Image src="/logo-3.webp" alt="LiftmyGrade" width={160} height={40} className="h-8 md:h-10 w-auto object-contain brightness-0 invert opacity-90" style={{ width: 'auto' }} />
                 <span>LIFT<span className="font-light opacity-50">MYGRADE</span></span>
               </div>
             </div>

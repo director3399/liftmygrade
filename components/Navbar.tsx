@@ -126,7 +126,7 @@ export default function Navbar({
           <div className="py-4 md:py-5 px-6 md:px-12">
           <div className="max-w-7xl mx-auto flex items-center justify-between">
             <a href="/" className={`flex items-center gap-2.5 text-xl font-extrabold ${textColor} tracking-tighter uppercase relative z-60`}>
-              <Image src="/logo-3.webp" alt="LiftmyGrade" width={160} height={32} className="h-7 sm:h-8 w-auto object-contain" priority />
+              <Image src="/logo-3.webp" alt="LiftmyGrade" width={160} height={32} className="h-7 sm:h-8 w-auto object-contain" style={{ width: 'auto' }} priority />
               <span>LIFT<span className="font-light opacity-80">MYGRADE</span></span>
             </a>
 

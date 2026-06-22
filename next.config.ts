@@ -18,6 +18,16 @@ const nextConfig: NextConfig = {
         hostname: "www.transparenttextures.com",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "encrypted-tbn0.gstatic.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "t4.ftcdn.net",
+        pathname: "/**",
+      },
     ],
   },
 };
