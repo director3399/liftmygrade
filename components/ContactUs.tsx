@@ -197,7 +197,7 @@ export default function ContactUs() {
           </div>
           
           {/* Right Column: Multi-Step Form */}
-          <div className="p-0 sm:p-14 lg:p-16 lg:w-7/12 flex flex-col justify-center min-h-[400px] sm:min-h-[600px]">
+          <div className="p-0 sm:p-14 lg:p-16 lg:w-7/12 flex flex-col justify-start">
             {isSubmitted && submitData ? (
               <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 flex flex-col items-center text-center h-full justify-center">
                 <div className="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mb-6">
@@ -238,7 +238,7 @@ export default function ContactUs() {
                 
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 flex-1 flex flex-col" noValidate>
                   
-                  <div className="flex-1">
+                  <div className="mb-4">
                     {/* STEP 1: Your Details */}
                     {currentStep === 1 && (
                       <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-300">
@@ -338,21 +338,73 @@ export default function ContactUs() {
                     {currentStep === 3 && (
                       <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-300">
                         <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-4">What Do You Need? *</label>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                        <div className="max-h-[350px] sm:max-h-[240px] overflow-y-auto pr-2 space-y-6 custom-scrollbar">
                           {[
-                            { id: "Résumé & CV", desc: "Build from scratch or edit." },
-                            { id: "LinkedIn Profile", desc: "Full build-out and keywords." },
-                            { id: "Company SOP", desc: "Corporate statement of purpose." },
-                            { id: "Grant Writing", desc: "Persuasive proposals for funding." },
-                            { id: "PR Writing", desc: "Press releases, white papers." }
-                          ].map(svc => (
-                            <div 
-                              key={svc.id}
-                              onClick={() => toggleService(svc.id)}
-                              className={`p-4 rounded-2xl border-2 cursor-pointer transition-all ${watchServices.includes(svc.id) ? 'border-blue-600 bg-blue-50/50' : 'border-neutral-100 hover:border-blue-200 bg-white sm:bg-transparent shadow-sm sm:shadow-none'}`}
-                            >
-                              <p className="font-semibold text-sm text-[#171717]">{svc.id}</p>
-                              <p className="text-xs text-neutral-500 mt-1 leading-relaxed">{svc.desc}</p>
+                            {
+                              category: "Free Discovery Services",
+                              items: [
+                                { id: "Readiness Form", desc: "An honest profile assessment." },
+                                { id: "2 Consultation Calls", desc: "One-to-one sessions." },
+                                { id: "Country Shortlisting", desc: "Narrow best-fit destinations." },
+                                { id: "Detailed Roadmap", desc: "Country-specific plan." },
+                                { id: "Document Analysis", desc: "Review of existing documents." },
+                              ]
+                            },
+                            {
+                              category: "Bachelor's & Master's Admissions",
+                              items: [
+                                { id: "Statement of Purpose (SOP)", desc: "Tailored SOP for target programs." },
+                                { id: "Letters of Recommendation", desc: "Well-structured LORs." },
+                                { id: "Academic CV / Résumé", desc: "Admissions-ready CV." },
+                                { id: "Test & Exam Guidance", desc: "Direction for GRE/GMAT/IELTS etc." },
+                                { id: "Visa & Formalities Support", desc: "Financial documentation & visa prep." },
+                                { id: "Submission & Tracking", desc: "Application assembly & tracking." },
+                              ]
+                            },
+                            {
+                              category: "PhD & Research Support",
+                              items: [
+                                { id: "Research Proposal", desc: "Focused, fundable research proposal." },
+                                { id: "Academic CV & SOR", desc: "Research-focused documents." },
+                                { id: "Research-Focused LORs", desc: "Letters for research potential." },
+                                { id: "Supervisor Mapping", desc: "Identify aligned professors." },
+                                { id: "Professor Outreach Strategy", desc: "Personalised first-contact emails." },
+                                { id: "Communication Strategy", desc: "Managing supervisor dialogue." },
+                                { id: "Funding & Interview Support", desc: "Scholarship & interview prep." },
+                              ]
+                            },
+                            {
+                              category: "Publication Support",
+                              items: [
+                                { id: "Journal Publication Assistance", desc: "Get published in peer-reviewed journals." },
+                                { id: "Manuscript Editing", desc: "Editorial support for submission." },
+                              ]
+                            },
+                            {
+                              category: "Career & Professional Support",
+                              items: [
+                                { id: "Résumé & CV", desc: "Build from scratch or edit." },
+                                { id: "LinkedIn Profile", desc: "Full build-out and keywords." },
+                                { id: "Company SOP", desc: "Corporate statement of purpose." },
+                                { id: "Grant Writing", desc: "Persuasive proposals for funding." },
+                                { id: "PR Writing", desc: "Press releases, white papers." }
+                              ]
+                            }
+                          ].map(group => (
+                            <div key={group.category} className="space-y-3">
+                              <h4 className="text-sm font-bold text-[#171717]">{group.category}</h4>
+                              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                {group.items.map(svc => (
+                                  <div 
+                                    key={svc.id}
+                                    onClick={() => toggleService(svc.id)}
+                                    className={`p-4 rounded-2xl border-2 cursor-pointer transition-all ${watchServices.includes(svc.id) ? 'border-blue-600 bg-blue-50/50' : 'border-neutral-100 hover:border-blue-200 bg-white sm:bg-transparent shadow-sm sm:shadow-none'}`}
+                                  >
+                                    <p className="font-semibold text-sm text-[#171717]">{svc.id}</p>
+                                    <p className="text-xs text-neutral-500 mt-1 leading-relaxed">{svc.desc}</p>
+                                  </div>
+                                ))}
+                              </div>
                             </div>
                           ))}
                         </div>
@@ -461,7 +513,7 @@ export default function ContactUs() {
                   </div>
                   
                   {/* Navigation Buttons */}
-                  <div className="pt-8 flex items-center justify-between mt-auto">
+                  <div className="pt-4 mt-2 flex items-center justify-between">
                     {currentStep > 1 ? (
                       <button 
                         type="button" 
