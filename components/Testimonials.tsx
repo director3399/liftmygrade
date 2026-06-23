@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import SectionLabel from "./SectionLabel";
 import { ArrowRight } from "./Icons";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
@@ -38,20 +38,18 @@ export default function Testimonials() {
     if (index > 0) setIndex(index - 1);
   };
 
-  const current = testimonials[index];
-
   return (
-    <section className="py-24 px-6 md:px-12 bg-white" id="testimonial">
+    <section className="py-16 md:py-24 px-4 sm:px-6 md:px-12 bg-white" id="testimonial">
       <div className="max-w-7xl mx-auto">
         {/* Header with Navigation */}
-        <div className="flex flex-col md:flex-row md:justify-between items-start md:items-end gap-6 mb-12 sm:mb-16">
-          <div>
+        <div className="flex flex-col md:flex-row md:justify-between items-start md:items-end gap-4 md:gap-6 mb-10 sm:mb-12 md:mb-16">
+          <div className="w-full md:w-auto">
             <SectionLabel>Testimonials</SectionLabel>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] tracking-tight mt-4 sm:mt-0">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-[#171717] tracking-tight mt-3 sm:mt-4 md:mt-0">
               What People Say About Us
             </h2>
           </div>
-          <div className="flex gap-3 mb-2 w-full md:w-auto justify-start md:justify-end">
+          <div className="flex gap-2 sm:gap-3 w-full md:w-auto justify-end">
             <button 
               onClick={handlePrev}
               disabled={index === 0}
@@ -78,9 +76,9 @@ export default function Testimonials() {
         </div>
 
         {/* Featured Testimonial Card */}
-        <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 items-stretch">
           {/* Left Side: Portrait Image */}
-          <div className="relative aspect-square md:aspect-auto h-[250px] sm:h-[300px] md:h-full min-h-[250px] rounded-4xl md:rounded-[3rem] overflow-hidden shadow-sm">
+          <div className="relative aspect-4/3 sm:aspect-square md:aspect-auto h-auto md:h-full min-h-[200px] sm:min-h-[300px] rounded-3xl md:rounded-[3rem] overflow-hidden shadow-sm">
             {testimonials.map((item, i) => (
               <motion.div
                 key={item.name + "-image"}
@@ -105,7 +103,7 @@ export default function Testimonials() {
           </div>
 
           {/* Right Side: Content Card */}
-          <div className="bg-[#F9F9F9] h-full rounded-4xl md:rounded-[3rem] p-8 sm:p-10 md:p-14 lg:p-16 flex flex-col justify-center border border-neutral-100 relative overflow-hidden min-h-[300px]">
+          <div className="bg-[#F9F9F9] h-full rounded-3xl md:rounded-[3rem] p-6 sm:p-8 md:p-14 lg:p-16 flex flex-col justify-center border border-neutral-100 relative overflow-hidden min-h-[250px] sm:min-h-[300px]">
             <div className="grid">
               {testimonials.map((item, i) => (
                 <motion.div
@@ -119,12 +117,12 @@ export default function Testimonials() {
                   }}
                   transition={{ duration: 0.5 }}
                 >
-                  <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium text-[#171717] leading-relaxed mb-8 md:mb-10 tracking-tight">
+                  <p className="text-base sm:text-lg md:text-2xl lg:text-3xl font-medium text-[#171717] leading-relaxed mb-6 sm:mb-8 md:mb-10 tracking-tight">
                     &ldquo;{item.quote}&rdquo;
                   </p>
                   
                   <div className="mt-auto pt-4 border-t border-neutral-200 md:border-none md:pt-0">
-                    <div className="text-xl sm:text-2xl font-bold text-[#171717] mb-1 sm:mb-2 tracking-tight">{item.name}</div>
+                    <div className="text-lg sm:text-xl md:text-2xl font-bold text-[#171717] mb-1 sm:mb-2 tracking-tight">{item.name}</div>
                     <div className="text-[10px] sm:text-[11px] text-blue-600 font-bold uppercase tracking-widest">{item.role}</div>
                   </div>
                 </motion.div>
@@ -134,13 +132,13 @@ export default function Testimonials() {
         </div>
 
         {/* Dots */}
-        <div className="flex gap-2.5 mt-8 justify-center md:justify-start">
+        <div className="flex gap-2 sm:gap-2.5 mt-6 sm:mt-8 justify-center md:justify-start">
           {testimonials.map((_, i) => (
             <button
               key={i}
               onClick={() => setIndex(i)}
-              className={`h-2.5 rounded-full transition-all duration-300 ${
-                i === index ? "w-8 bg-[#171717]" : "w-2.5 bg-neutral-300 hover:bg-neutral-400"
+              className={`h-2 sm:h-2.5 rounded-full transition-all duration-300 ${
+                i === index ? "w-6 sm:w-8 bg-[#171717]" : "w-2 sm:w-2.5 bg-neutral-300 hover:bg-neutral-400"
               }`}
               aria-label={`Go to testimonial ${i + 1}`}
             />
