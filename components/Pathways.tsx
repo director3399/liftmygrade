@@ -12,7 +12,7 @@ export default function Pathways() {
   const pathways = [
     {
       id: "01",
-      title: "Global Study Readiness Report",
+      title: "Global Study Readiness Form",
       desc: "Understand where you stand today through profile evaluation, country alignment, gap analysis, and a personalized academic roadmap.",
       image: "https://images.unsplash.com/photo-1627556704302-624286467c65?w=1000&q=90",
     },
@@ -146,7 +146,7 @@ export default function Pathways() {
 
           <div className="relative aspect-square sm:aspect-4/5 lg:aspect-auto lg:h-full rounded-4xl sm:rounded-[2.5rem] overflow-hidden mt-8 lg:mt-0">
             <Image
-              src="/program1.png"
+              src="/program1.webp"
               alt="LiftMyGrade Programs"
               fill
               className="object-cover"

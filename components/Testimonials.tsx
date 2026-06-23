@@ -11,19 +11,19 @@ const testimonials = [
     quote: "I was struggling with my Statement of Purpose, but the structured feedback from LiftmyGrade mentors helped me articulate my research interests with precision. The admission felt like a natural outcome.",
     name: "Sanya Malhotra",
     role: "MS, Stanford University",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQEmVag-NvAaA82ns8SrPRePldZeSkoZgJ_mqKcQYzIw&s=10"
+    image: "/testmonial/sanya-malhotra.webp"
   },
   {
     quote: "The research mentorship completely changed my approach to profile positioning. I secured a fully funded PhD position because we focused on long-term academic growth rather than just applications.",
     name: "Arpit Verma",
     role: "PhD Candidate, TU Delft",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBjn1Z4nuWbwAvXdLuhTbdcME34OKj_hg-KdZJzwpzxH3UYzEnWKXU3F0&s=10"
+    image: "/testmonial/arpit-verma.webp"
   },
   {
     quote: "From shortlisting universities to nailing my interviews, LiftmyGrade gave me a clear roadmap at every step. I went in confident and came out with three offers.",
     name: "Aditya Rao",
     role: "MS, Carnegie Mellon University",
-    image: "https://t4.ftcdn.net/jpg/06/77/30/71/360_F_677307123_bVNJqZD8AGDjPolT5riGQd1uYHh2XVXY.jpg"
+    image: "/testmonial/aditya-rao.webp"
   }
 ];
 

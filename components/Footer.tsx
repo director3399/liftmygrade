@@ -22,7 +22,7 @@ export default function Footer() {
             href="/readiness-assessment"
             className="inline-flex items-center gap-3 bg-white text-[#050B1D]! px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:bg-neutral-100 transition-all group"
           >
-            Get Free Readiness Report
+            Get Free Readiness Form
             <ArrowRight className="w-4 h-4 text-[#050B1D]! transition-transform group-hover:translate-x-1" />
           </a>
         </div>

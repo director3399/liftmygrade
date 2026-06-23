@@ -383,7 +383,7 @@ export default function ReadinessForm() {
               disabled={isSubmitting}
               className="w-full sm:w-auto bg-blue-600 text-white font-semibold py-4 px-10 rounded-full hover:bg-blue-700 transition-all hover:shadow-lg hover:shadow-blue-600/20 flex items-center justify-center gap-2 group disabled:opacity-70 disabled:cursor-not-allowed"
             >
-              {isSubmitting ? "Submitting..." : "Get My Readiness Report"}
+              {isSubmitting ? "Submitting..." : "Get My Readiness Form"}
               {!isSubmitting && <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}
             </button>
           </div>

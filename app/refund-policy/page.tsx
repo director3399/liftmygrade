@@ -32,7 +32,7 @@ export default function RefundPolicyPage() {
               <span className="text-blue-600 text-lg">1.</span> Free Services
             </h2>
             <p>
-              Several of our offerings are provided free of charge — including the Readiness Report, country shortlisting, the detailed roadmap, consultation calls, and analysis of an existing document. As no payment is taken for these, they are not subject to any refund.
+              Several of our offerings are provided free of charge — including the Readiness Form, country shortlisting, the detailed roadmap, consultation calls, and analysis of an existing document. As no payment is taken for these, they are not subject to any refund.
             </p>
           </section>
 

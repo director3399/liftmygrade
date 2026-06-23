@@ -6,7 +6,7 @@ export default function AcademicJourney() {
   const stages = [
     {
       id: "01",
-      title: "Readiness Report",
+      title: "Readiness Form",
       desc: "An honest snapshot of your eligibility, early strengths, visible gaps, and where you realistically stand.",
       image: "https://images.unsplash.com/photo-1707299651093-1c1448a7d993?q=80&w=1266&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },

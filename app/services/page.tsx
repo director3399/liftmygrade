@@ -65,7 +65,7 @@ const ServiceSection = ({ id, label, title, subtitle, items, theme = "default" }
 
 export default function ServicesPage() {
   const freeServices = [
-    { title: "Readiness Report", desc: "An honest assessment of where you stand, generated from your profile.", isFree: true, image: "https://images.unsplash.com/photo-1627556704302-624286467c65?w=1000&q=90" },
+    { title: "Readiness Form", desc: "An honest assessment of where you stand, generated from your profile.", isFree: true, image: "https://images.unsplash.com/photo-1627556704302-624286467c65?w=1000&q=90" },
     { title: "2 Consultation Calls", desc: "Two one-to-one sessions to understand your goals and direction.", isFree: true, image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1000&q=90" },
     { title: "Country Shortlisting", desc: "We narrow your best-fit top 1–3 destinations together.", isFree: true, image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1000&q=90" },
     { title: "Detailed Roadmap", desc: "A country-specific plan — timelines, tests, intakes, funding, checklist.", isFree: true, image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1000&q=90" },

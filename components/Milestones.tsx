@@ -7,10 +7,10 @@ export default function Milestones() {
   const items = [
     {
       id: "01",
-      title: "Readiness Report",
+      title: "Readiness Form",
       desc: "An honest assessment of where you stand, generated from your profile — no cost, no commitment.",
       tags: ["Assessment", "Strengths", "Gaps", "Free"],
-      image: "/outcome/outcome1.png",
+      image: "/outcome/outcome1.webp",
       reverse: false,
     },
     {
@@ -18,7 +18,7 @@ export default function Milestones() {
       title: "Country Shortlisting",
       desc: "We narrow down your best-fit top 1–3 countries together, matched to your goals and budget.",
       tags: ["Global", "Fit", "Budget", "Strategy"],
-      image: "/outcome/outcome2.png",
+      image: "/outcome/outcome2.webp",
       reverse: true,
     },
     {
@@ -26,7 +26,7 @@ export default function Milestones() {
       title: "Detailed Roadmap",
       desc: "A complete, country-specific plan — timelines, tests, intakes, funding outlook, and document checklist.",
       tags: ["Timelines", "Intakes", "Tests", "Checklist"],
-      image: "/outcome/outcome3.png",
+      image: "/outcome/outcome3.webp",
       reverse: false,
     },
     {
@@ -34,7 +34,7 @@ export default function Milestones() {
       title: "2 Consultation Calls",
       desc: "Two no-cost one-to-one sessions with our team to discuss your goals and direction.",
       tags: ["1-on-1", "Goals", "Direction", "Free"],
-      image: "/outcome/outcome4.png",
+      image: "/outcome/outcome4.webp",
       reverse: true,
     }
   ];

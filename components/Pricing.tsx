@@ -5,7 +5,7 @@ import { ArrowRight, Check } from "./Icons";
 
 const programs = [
   {
-    name: "Global Study Readiness Report",
+    name: "Global Study Readiness Form",
     price: "FREE",
     tag: "STARTER",
     highlight: true,

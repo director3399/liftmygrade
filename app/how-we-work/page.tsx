@@ -49,7 +49,7 @@ export default function HowWeWorkPage() {
                 01
               </div>
               <div className="relative z-10 pt-14">
-                <h3 className="text-2xl font-bold text-[#171717] mb-4">Readiness Report</h3>
+                <h3 className="text-2xl font-bold text-[#171717] mb-4">Readiness Form</h3>
                 <p className="text-neutral-600 leading-relaxed text-lg">
                   Generated from your <Link href="/readiness-assessment" className="text-blue-600 hover:underline">readiness assessment form</Link> — an honest snapshot of your eligibility for your chosen level, your early strengths, visible gaps, and where you realistically stand.
                 </p>

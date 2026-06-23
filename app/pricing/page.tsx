@@ -30,7 +30,7 @@ export default function PricingPage() {
             Clear Programs,<br className="hidden md:block" />Transparent Pricing.
           </h1>
           <p className="text-lg md:text-xl text-neutral-600 max-w-3xl leading-relaxed mb-12">
-            As your <Highlighter>Academic, Research, Career & Strategic Communication Ecosystem</Highlighter>, we provide structured programs for every stage of your journey. From a <Link href="/readiness-assessment" className="text-blue-600 hover:underline">free readiness report</Link> for Bachelor’s or Master’s, to fully funded PhDs, research support, and <Link href="/career-services" className="text-blue-600 hover:underline">career branding</Link>. No hidden costs; full pricing is confirmed at your free consultation.
+            As your <Highlighter>Academic, Research, Career & Strategic Communication Ecosystem</Highlighter>, we provide structured programs for every stage of your journey. From a <Link href="/readiness-assessment" className="text-blue-600 hover:underline">free readiness form</Link> for Bachelor’s or Master’s, to fully funded PhDs, research support, and <Link href="/career-services" className="text-blue-600 hover:underline">career branding</Link>. No hidden costs; full pricing is confirmed at your free consultation.
           </p>
         </div>
       </section>
@@ -53,7 +53,7 @@ export default function PricingPage() {
             </div>
             <div className="mb-6 flex flex-col gap-2">
               <span className="text-[11px] font-bold uppercase tracking-widest text-blue-600">[ STARTER ]</span>
-              <h3 className="text-2xl font-bold text-[#171717] leading-tight mt-2">Global Study Readiness Report</h3>
+              <h3 className="text-2xl font-bold text-[#171717] leading-tight mt-2">Global Study Readiness Form</h3>
               <div className="mt-4 pb-6 border-b border-neutral-100">
                 <span className="text-3xl font-extrabold text-[#171717] tracking-tight">FREE</span>
               </div>
@@ -226,7 +226,7 @@ export default function PricingPage() {
       {/* CTA Section */}
       <section className="py-24 px-6 md:px-12 w-full bg-blue-600">
         <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">Start with your free Readiness Report</h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">Start with your free Readiness Form</h2>
           <p className="text-lg md:text-xl text-blue-100 mb-12 max-w-2xl">
             Not sure which program fits? Take the free assessment and we'll recommend the right path — no commitment.
           </p>

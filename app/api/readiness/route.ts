@@ -29,14 +29,14 @@ export async function POST(req: Request) {
 
     const { success, data, error } = await sendEmail({
       to: "info@liftmygrade.com",
-      subject: `New Readiness Report Request from ${fullName}`,
+      subject: `New Readiness Form Request from ${fullName}`,
       html: `
         <div style="font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 650px; margin: 0 auto; background-color: #ffffff; border: 1px solid #e5e7eb; border-top: 6px solid #2563eb; border-bottom: 6px solid #2563eb; padding: 0;">
           
           <table width="100%" cellpadding="0" cellspacing="0" border="0" style="padding: 30px 40px 20px; border-bottom: 1px solid #f3f4f6;">
             <tr>
               <td align="left" valign="middle">
-                <img src="https://raw.githubusercontent.com/Naitik2408/liftmygrade/main/public/logo-3.png" alt="LiftmyGrade" width="140" style="display: block; max-width: 140px; height: auto;" />
+                <img src="https://raw.githubusercontent.com/Naitik2408/liftmygrade/main/public/logo-3.webp" alt="LiftmyGrade" width="140" style="display: block; max-width: 140px; height: auto;" />
               </td>
               <td align="right" valign="middle" style="font-size: 12px; color: #6b7280; line-height: 1.6;">
                 <strong style="color: #111827;">www.liftmygrade.com</strong><br />
@@ -86,7 +86,7 @@ export async function POST(req: Request) {
 
             <div style="margin-top: 50px; padding-top: 20px; border-top: 1px solid #f3f4f6;">
               <p style="margin: 0; font-size: 14px; color: #4b5563;">Best regards,</p>
-              <img src="https://raw.githubusercontent.com/Naitik2408/liftmygrade/main/public/logo-3.png" alt="LiftmyGrade Signature" width="100" style="display: block; margin: 15px 0 5px;" />
+              <img src="https://raw.githubusercontent.com/Naitik2408/liftmygrade/main/public/logo-3.webp" alt="LiftmyGrade Signature" width="100" style="display: block; margin: 15px 0 5px;" />
               <p style="margin: 0; font-size: 12px; color: #9ca3af; font-weight: 500;">Automated Dispatch System</p>
             </div>
           </div>
@@ -104,7 +104,7 @@ export async function POST(req: Request) {
       subject: "Application Received - LiftmyGrade",
       html: `
         <div style="font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; background-color: #ffffff; padding: 40px 20px;">
-          <img src="https://raw.githubusercontent.com/Naitik2408/liftmygrade/main/public/logo-3.png" alt="LiftmyGrade" width="150" style="display: block; margin-bottom: 30px;" />
+          <img src="https://raw.githubusercontent.com/Naitik2408/liftmygrade/main/public/logo-3.webp" alt="LiftmyGrade" width="150" style="display: block; margin-bottom: 30px;" />
           <h2 style="color: #111827; font-size: 24px; margin-bottom: 20px;">We've received your application!</h2>
           <p style="color: #4b5563; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
             Hi ${fullName.split(" ")[0]},

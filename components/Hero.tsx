@@ -58,7 +58,7 @@ export default function Hero() {
               href="/readiness-assessment"
               className="w-full sm:w-auto inline-flex items-center justify-between sm:justify-start gap-3 bg-white text-neutral-800 pl-6 sm:pl-6 pr-1.5 py-1.5 rounded-full text-[14px] sm:text-sm font-medium hover:bg-neutral-50 transition-all group"
             >
-              Get Free Readiness Report
+              Get Free Readiness Form
               <span className="inline-flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 bg-blue-600 rounded-full text-white group-hover:bg-blue-700 transition-colors shrink-0">
                 <ArrowRight className="w-4 h-4" />
               </span>
