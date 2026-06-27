@@ -84,7 +84,7 @@ export default function Footer() {
             </div>
 
             <div className="text-sm sm:text-base font-light text-white/80 space-y-2 mt-2">
-              <p>+91 90513 84241</p>
+              <p>+91 9147720702</p>
               <a href="mailto:info@liftmygrade.com" className="hover:text-white transition-colors block">info@liftmygrade.com</a>
             </div>
           </div>

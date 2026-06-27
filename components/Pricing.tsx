@@ -77,7 +77,7 @@ const programs = [
       "Paper Structuring",
       "Journal Publication Support",
       "Academic Profile Development",
-      "Scopus, Google Scholar, UGC",
+      "SCOPUS, WOS, UGC, Google Scholar, Mycite, CNKY, Conferences",
     ]
   },
   {

@@ -92,7 +92,7 @@ export default function Navbar({
         {/* Topbar */}
         <div className={`hidden md:grid grid-cols-[1fr_auto_1fr] items-center py-2.5 px-6 md:px-12 transition-colors duration-300 ${isMobileMenuOpen ? 'bg-neutral-100 text-neutral-800' : (isLight ? 'bg-neutral-100 text-neutral-800' : 'bg-white/5 backdrop-blur-sm text-white/90 border-b border-white/10')}`}>
           <div className="text-[13px] sm:text-sm font-semibold tracking-wide flex items-center justify-start gap-2 lg:gap-3 overflow-hidden">
-            <span className="shrink-0">Contact Us : +91 90513 84241</span>
+            <span className="shrink-0">Contact Us : +91 9147720702</span>
             <span className="hidden lg:inline opacity-60 shrink-0">|</span>
             <a href="mailto:info@liftmygrade.com" className="hidden lg:inline hover:text-blue-400 transition-colors truncate">info@liftmygrade.com</a>
           </div>
