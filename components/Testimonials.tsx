@@ -14,7 +14,7 @@ const testimonials = [
     image: "/testmonial/sanya-malhotra.webp"
   },
   {
-    quote: "The research mentorship completely changed my approach to profile positioning. I secured a fully funded PhD position because we focused on long-term academic growth rather than just applications.",
+    quote: "The research mentorship completely changed my approach to profile positioning. I secured a PhD position because we focused on long-term academic growth rather than just applications.",
     name: "Arpit Verma",
     role: "PhD Candidate, TU Delft",
     image: "/testmonial/arpit-verma.webp"
@@ -33,7 +33,7 @@ export default function Testimonials() {
   const handleNext = () => {
     if (index < testimonials.length - 1) setIndex(index + 1);
   };
-  
+
   const handlePrev = () => {
     if (index > 0) setIndex(index - 1);
   };
@@ -50,25 +50,23 @@ export default function Testimonials() {
             </h2>
           </div>
           <div className="flex gap-2 sm:gap-3 w-full md:w-auto justify-end">
-            <button 
+            <button
               onClick={handlePrev}
               disabled={index === 0}
-              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full border flex items-center justify-center transition-colors ${
-                index === 0 
-                  ? "border-neutral-200 text-neutral-300 cursor-not-allowed" 
+              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full border flex items-center justify-center transition-colors ${index === 0
+                  ? "border-neutral-200 text-neutral-300 cursor-not-allowed"
                   : "border-neutral-200 text-[#171717] hover:border-[#171717]"
-              }`}
+                }`}
             >
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 rotate-180" />
             </button>
-            <button 
+            <button
               onClick={handleNext}
               disabled={index === testimonials.length - 1}
-              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full border flex items-center justify-center transition-colors ${
-                index === testimonials.length - 1 
-                  ? "border-neutral-200 text-neutral-300 cursor-not-allowed bg-transparent" 
+              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full border flex items-center justify-center transition-colors ${index === testimonials.length - 1
+                  ? "border-neutral-200 text-neutral-300 cursor-not-allowed bg-transparent"
                   : "border-transparent bg-[#333333] text-white hover:bg-black"
-              }`}
+                }`}
             >
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
@@ -84,8 +82,8 @@ export default function Testimonials() {
                 key={item.name + "-image"}
                 className="absolute inset-0"
                 initial={false}
-                animate={{ 
-                  opacity: index === i ? 1 : 0, 
+                animate={{
+                  opacity: index === i ? 1 : 0,
                   pointerEvents: index === i ? "auto" : "none"
                 }}
                 transition={{ duration: 0.5 }}
@@ -110,8 +108,8 @@ export default function Testimonials() {
                   key={item.name}
                   className="col-start-1 row-start-1 flex flex-col h-full"
                   initial={false}
-                  animate={{ 
-                    opacity: index === i ? 1 : 0, 
+                  animate={{
+                    opacity: index === i ? 1 : 0,
                     y: index === i ? 0 : 20,
                     pointerEvents: index === i ? "auto" : "none"
                   }}
@@ -120,7 +118,7 @@ export default function Testimonials() {
                   <p className="text-base sm:text-lg md:text-2xl lg:text-3xl font-medium text-[#171717] leading-relaxed mb-6 sm:mb-8 md:mb-10 tracking-tight">
                     &ldquo;{item.quote}&rdquo;
                   </p>
-                  
+
                   <div className="mt-auto pt-4 border-t border-neutral-200 md:border-none md:pt-0">
                     <div className="text-lg sm:text-xl md:text-2xl font-bold text-[#171717] mb-1 sm:mb-2 tracking-tight">{item.name}</div>
                     <div className="text-[10px] sm:text-[11px] text-blue-600 font-bold uppercase tracking-widest">{item.role}</div>
@@ -137,9 +135,8 @@ export default function Testimonials() {
             <button
               key={i}
               onClick={() => setIndex(i)}
-              className={`h-2 sm:h-2.5 rounded-full transition-all duration-300 ${
-                i === index ? "w-6 sm:w-8 bg-[#171717]" : "w-2 sm:w-2.5 bg-neutral-300 hover:bg-neutral-400"
-              }`}
+              className={`h-2 sm:h-2.5 rounded-full transition-all duration-300 ${i === index ? "w-6 sm:w-8 bg-[#171717]" : "w-2 sm:w-2.5 bg-neutral-300 hover:bg-neutral-400"
+                }`}
               aria-label={`Go to testimonial ${i + 1}`}
             />
           ))}

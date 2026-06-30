@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ScrollRestorationFix from "./ScrollRestorationFix";
+import FloatingContactIcons from "@/components/FloatingContactIcons";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
@@ -18,7 +19,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "LIFTMYGRADE | Global Academic Ecosystem & Mentorship",
   description:
-    "Premium academic guidance for Bachelor's, Master's, and Fully Funded PhD journeys abroad. Structured mentorship for your global academic growth.",
+    "Premium academic guidance for Bachelor's, Master's, and PhD journeys abroad. Structured mentorship for your global academic growth.",
 };
 
 export default function RootLayout({
@@ -36,6 +37,7 @@ export default function RootLayout({
       <body suppressHydrationWarning>
         <ScrollRestorationFix />
         {children}
+        <FloatingContactIcons />
       </body>
     </html>
   );

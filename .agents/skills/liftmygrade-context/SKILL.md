@@ -103,7 +103,7 @@ Profile → Admission → Research → Career
 Main categories:
 - Bachelor’s Abroad
 - Master’s Abroad
-- Fully Funded PhD
+- PhD
 - Research & Publication Support
 - Career Branding & Academic Positioning
 

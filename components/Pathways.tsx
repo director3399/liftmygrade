@@ -25,7 +25,7 @@ export default function Pathways() {
     {
       id: "03",
       title: "PhD Specialization",
-      desc: "Secure fully funded PhD opportunities through professor outreach strategy, research proposal development, funding guidance, and supervisor targeting.",
+      desc: "Secure PhD opportunities through professor outreach strategy, research proposal development, funding guidance, and supervisor targeting.",
       image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1000&q=90",
     },
     {

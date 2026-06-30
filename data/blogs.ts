@@ -16,8 +16,8 @@ export const blogs: BlogPost[] = [
   {
     id: "1",
     slug: "fully-funded-phd-abroad",
-    title: "How to Get a Fully Funded PhD Abroad from India: A Complete 2026 Guide",
-    excerpt: "A fully funded PhD abroad is no longer a distant dream. Learn the right strategy — strong research positioning, well-timed professor outreach, and a publication-ready profile.",
+    title: "How to Get a PhD Abroad from India: A Complete 2026 Guide",
+    excerpt: "A PhD abroad is no longer a distant dream. Learn the right strategy — strong research positioning, well-timed professor outreach, and a publication-ready profile.",
     author: "Dr. Ananya Sharma",
     authorRole: "Admissions Mentor & Researcher",
     authorImage: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200",
@@ -25,11 +25,11 @@ export const blogs: BlogPost[] = [
     coverImage: "/blog/blog1.webp",
     date: "May 30, 2026",
     content: `
-      <p class="mb-4">A fully funded PhD abroad is no longer a distant dream reserved for a handful of elite students. With the right strategy — strong research positioning, well-timed professor outreach, and a publication-ready profile — students from India are securing PhDs in the US, UK, Germany, Canada, and Australia every cycle, with tuition waived and a monthly stipend that covers living costs.</p>
-      <p class="mb-6">But here's the truth most students discover too late: a fully funded PhD isn't won at the application stage. It's won 12 to 18 months before, in how you build your research identity, choose your supervisors, and frame your scholarly contribution. This guide breaks down exactly how to do that.</p>
+      <p class="mb-4">A PhD abroad is no longer a distant dream reserved for a handful of elite students. With the right strategy — strong research positioning, well-timed professor outreach, and a publication-ready profile — students from India are securing PhDs in the US, UK, Germany, Canada, and Australia every cycle, with tuition waived and a monthly stipend that covers living costs.</p>
+      <p class="mb-6">But here's the truth most students discover too late: a PhD isn't won at the application stage. It's won 12 to 18 months before, in how you build your research identity, choose your supervisors, and frame your scholarly contribution. This guide breaks down exactly how to do that.</p>
 
-      <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4" id="what-does-fully-funded-phd-actually-mean">What Does "Fully Funded PhD" Actually Mean?</h2>
-      <p class="mb-4">A fully funded PhD typically covers three things:</p>
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4" id="what-does-fully-funded-phd-actually-mean">What Does " PhD" Actually Mean?</h2>
+      <p class="mb-4">A PhD typically covers three things:</p>
       <ol class="list-decimal pl-6 mb-6 space-y-2">
         <li><strong>Tuition waiver</strong> — your university fees are paid in full</li>
         <li><strong>Monthly stipend</strong> — usually USD 1,800–3,500 (or local equivalent) to cover rent, food, and living expenses</li>
@@ -37,9 +37,9 @@ export const blogs: BlogPost[] = [
       </ol>
       <p class="mb-6">Funding can come from the university itself (graduate assistantships, teaching/research fellowships), government scholarships (DAAD in Germany, Fulbright-Nehru in the US, Commonwealth in the UK), or individual professor grants (where your supervisor pays you from their funded project). Most successful PhD applicants don't rely on a single source. They stack them — and that stacking is a strategic skill.</p>
 
-      <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4" id="top-countries-for-fully-funded-phds-in-2026">Top Countries for Fully Funded PhDs in 2026</h2>
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4" id="top-countries-for-fully-funded-phds-in-2026">Top Countries for PhDs in 2026</h2>
       <figure class="my-8 rounded-2xl overflow-hidden border border-neutral-100 shadow-sm bg-neutral-50">
-        <img src="/blog/blog-1-1.webp" alt="Top Countries for Fully Funded PhDs" class="w-full h-auto object-cover" />
+        <img src="/blog/blog-1-1.webp" alt="Top Countries for PhDs" class="w-full h-auto object-cover" />
       </figure>
       <div class="space-y-6">
         <div>
@@ -64,10 +64,10 @@ export const blogs: BlogPost[] = [
         </div>
       </div>
 
-      <h2 class="text-2xl font-bold text-[#1C362B] mt-10 mb-4" id="the-five-stage-roadmap-to-a-fully-funded-phd">The Five-Stage Roadmap to a Fully Funded PhD</h2>
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-10 mb-4" id="the-five-stage-roadmap-to-a-fully-funded-phd">The Five-Stage Roadmap to a PhD</h2>
       
       <figure class="my-8 rounded-2xl overflow-hidden border border-neutral-100 shadow-sm bg-neutral-50">
-        <img src="/blog/blog-1-2.webp" alt="The Five-Stage Roadmap to a Fully Funded PhD" class="w-full h-auto object-cover" />
+        <img src="/blog/blog-1-2.webp" alt="The Five-Stage Roadmap to a PhD" class="w-full h-auto object-cover" />
       </figure>
       
       <h3 class="text-xl font-bold text-[#1C362B] mt-6 mb-2" id="stage-1-define-your-research-identity-12-18-months-before-applying">Stage 1: Define Your Research Identity (12–18 months before applying)</h3>
@@ -108,15 +108,15 @@ export const blogs: BlogPost[] = [
       <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4" id="frequently-asked-questions">Frequently Asked Questions</h2>
       <div class="space-y-4 mb-8">
         <div>
-          <strong class="block mb-1">Can I get a fully funded PhD abroad without a publication?</strong>
+          <strong class="block mb-1">Can I get a PhD abroad without a publication?</strong>
           <p>Yes, but it's harder. Strong research experience, clear research articulation, and a high-quality research proposal can compensate — especially in fields where undergraduate publishing is uncommon. However, having at least one working paper or conference paper meaningfully improves your odds.</p>
         </div>
         <div>
-          <strong class="block mb-1">Do I need to crack GRE for a fully funded PhD?</strong>
+          <strong class="block mb-1">Do I need to crack GRE for a PhD?</strong>
           <p>It depends on the country and program. Many US programs have made GRE optional or waived it post-2020. Most European, UK, and Australian PhDs do not require GRE. Always check program-specific requirements before investing in test prep.</p>
         </div>
         <div>
-          <strong class="block mb-1">How much does it cost to apply for a fully funded PhD?</strong>
+          <strong class="block mb-1">How much does it cost to apply for a PhD?</strong>
           <p>Application fees, document costs, English test fees (IELTS/TOEFL), and outreach costs typically total INR 60,000–1,50,000 across a full application cycle of 6–10 universities. This is a fraction of what you save through funding — but it's still a meaningful investment.</p>
         </div>
         <div>
@@ -124,14 +124,14 @@ export const blogs: BlogPost[] = [
           <p>Absolutely — and you should. In Germany, the Netherlands, Sweden, and most of Europe, professor contact is essentially required. In the US and UK, it's strongly recommended for funded programs.</p>
         </div>
         <div>
-          <strong class="block mb-1">What's the success rate for fully funded PhD applications from India?</strong>
+          <strong class="block mb-1">What's the success rate for PhD applications from India?</strong>
           <p>For students who follow a structured 12–18 month preparation roadmap — research identity, publication, targeted outreach, strong SOP — funded admission rates typically range from 30–60% across applied programs. For unprepared applicants, the rate is in low single digits.</p>
         </div>
       </div>
       
       <div class="bg-[#F6F8F7] p-6 rounded-2xl border border-[#EBEFEA]">
         <h3 class="text-xl font-bold text-[#1C362B] mb-2" id="ready-to-build-your-funded-phd-roadmap">Ready to Build Your Funded PhD Roadmap?</h3>
-        <p>A fully funded PhD abroad isn't about luck. It's about starting early, positioning your research identity sharply, and executing a structured outreach and application strategy. If you're 12–18 months out from applications, this is the right time to start. Explore LiftmyGrade's PhD & Research Abroad pathway to see how mentor-led guidance, publication support, and funding strategy come together into one structured journey.</p>
+        <p>A PhD abroad isn't about luck. It's about starting early, positioning your research identity sharply, and executing a structured outreach and application strategy. If you're 12–18 months out from applications, this is the right time to start. Explore LiftmyGrade's PhD & Research Abroad pathway to see how mentor-led guidance, publication support, and funding strategy come together into one structured journey.</p>
         <p class="mt-4 font-semibold text-[#1C362B]">Your research career deserves more than a generic consultancy. It deserves a system built around it.</p>
       </div>
     `
@@ -1052,7 +1052,7 @@ export const blogs: BlogPost[] = [
       <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4" id="the-three-tiers-of-scholarships">The Three Tiers of Scholarships You Should Know</h2>
       <p class="mb-4">Not all scholarships are the same. They differ in funding amount, prestige, eligibility filters, and competition level. Understanding which tier you're realistically competing in saves months of misdirected applications.</p>
       <ul class="list-disc pl-6 mb-6 space-y-2">
-        <li><strong>Tier 1 — Government & Sovereign Scholarships.</strong> Fully funded, prestigious, internationally branded. Fulbright (US), Chevening (UK), DAAD (Germany), Commonwealth (UK), Vanier (Canada). These cover tuition + stipend + flights + insurance, but admission rates are typically 2–5%.</li>
+        <li><strong>Tier 1 — Government & Sovereign Scholarships.</strong>, prestigious, internationally branded. Fulbright (US), Chevening (UK), DAAD (Germany), Commonwealth (UK), Vanier (Canada). These cover tuition + stipend + flights + insurance, but admission rates are typically 2–5%.</li>
         <li><strong>Tier 2 — University Merit & Need-Based Aid.</strong> Direct from the institution. Cover partial-to-full tuition, sometimes with a stipend. More accessible than Tier 1, but each university has different rules — research them program-by-program.</li>
         <li><strong>Tier 3 — Private Foundations & Indian Trusts.</strong> Tata, Inlaks Shivdasani, J.N. Tata Endowment, KC Mahindra. Cover specific portions (tuition, travel, books) and are particularly accessible for high-merit Indian students.</li>
       </ul>
@@ -1064,11 +1064,11 @@ export const blogs: BlogPost[] = [
       <div class="space-y-6">
         <div>
           <h3 class="text-xl font-bold text-[#1C362B] mb-2">Fulbright-Nehru (United States)</h3>
-          <p>One of the world's most prestigious scholarships, fully funded for Master's and PhD in the US. Covers tuition, stipend, travel, and health insurance. Highly competitive (around 80–100 awards per year for India), with separate streams for Master's (Fulbright-Nehru Master's) and doctoral research. Application opens around February, closes mid-May. Strong emphasis on leadership, demonstrated impact, and clear return-to-India intent.</p>
+          <p>One of the world's most prestigious scholarships, for Master's and PhD in the US. Covers tuition, stipend, travel, and health insurance. Highly competitive (around 80–100 awards per year for India), with separate streams for Master's (Fulbright-Nehru Master's) and doctoral research. Application opens around February, closes mid-May. Strong emphasis on leadership, demonstrated impact, and clear return-to-India intent.</p>
         </div>
         <div>
           <h3 class="text-xl font-bold text-[#1C362B] mb-2">Chevening (United Kingdom)</h3>
-          <p>Fully funded one-year Master's at any UK university. Approximately 65–80 Chevening scholarships are awarded to Indian applicants annually. Applications open in August, close in early November. Selection emphasizes leadership potential, networking ability, and clear post-Master's career plans.</p>
+          <p> one-year Master's at any UK university. Approximately 65–80 Chevening scholarships are awarded to Indian applicants annually. Applications open in August, close in early November. Selection emphasizes leadership potential, networking ability, and clear post-Master's career plans.</p>
         </div>
         <div>
           <h3 class="text-xl font-bold text-[#1C362B] mb-2">DAAD (Germany)</h3>
@@ -1084,7 +1084,7 @@ export const blogs: BlogPost[] = [
         </div>
         <div>
           <h3 class="text-xl font-bold text-[#1C362B] mb-2">Rhodes Scholarship (Oxford)</h3>
-          <p>Fully funded postgraduate study at Oxford. Five Rhodes Scholarships are awarded to Indian citizens each year. Extremely competitive, selection emphasizes intellectual excellence, character, and commitment to public service. Application closes around end of July.</p>
+          <p> postgraduate study at Oxford. Five Rhodes Scholarships are awarded to Indian citizens each year. Extremely competitive, selection emphasizes intellectual excellence, character, and commitment to public service. Application closes around end of July.</p>
         </div>
         <div>
           <h3 class="text-xl font-bold text-[#1C362B] mb-2">Inlaks Shivdasani Foundation</h3>
@@ -1432,7 +1432,7 @@ export const blogs: BlogPost[] = [
         <li><strong>Recommended for funded admission:</strong> United States. PhD programs admit through committees, but supervisors who have flagged interest carry weight in those committees — especially for research assistantships and fellowships.</li>
         <li><strong>Less common:</strong> Australia, parts of Asia. Where outreach culture is less established. Still useful but not always necessary.</li>
       </ul>
-      <p class="mb-8 font-medium text-[#1C362B]">If you're applying for a fully funded PhD anywhere — outreach matters.</p>
+      <p class="mb-8 font-medium text-[#1C362B]">If you're applying for a PhD anywhere — outreach matters.</p>
 
       <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4">The Strategy: Few, Targeted, Specific</h2>
       <p class="mb-6">The volume-vs-quality tradeoff in professor outreach is brutal:</p>

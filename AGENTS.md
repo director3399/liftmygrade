@@ -39,7 +39,7 @@ Avoid:
 The platform focuses on:
 - Bachelor’s Abroad
 - Master’s Abroad
-- Fully Funded PhD
+- PhD
 - Research Support
 - Career Branding
 

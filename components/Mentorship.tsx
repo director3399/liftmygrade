@@ -55,7 +55,7 @@ export default function Mentorship() {
           </h2>
           <div className="flex flex-col items-start">
             <p className="text-base sm:text-lg text-neutral-700 leading-relaxed mb-6 sm:mb-8">
-              Most students start thinking about studying abroad only when applications open. By then, they often realize they lack research experience, strong extracurriculars, publications, or a clear strategy. As your <Highlighter>Academic, Research, Career & Strategic Communication Ecosystem</Highlighter>, LiftMyGrade helps you prepare years in advance through structured mentorship, focusing on Bachelor’s, Master’s, Fully Funded PhDs, research support, and career branding.
+              Most students start thinking about studying abroad only when applications open. By then, they often realize they lack research experience, strong extracurriculars, publications, or a clear strategy. As your <Highlighter>Academic, Research, Career & Strategic Communication Ecosystem</Highlighter>, LiftMyGrade helps you prepare years in advance through structured mentorship, focusing on Bachelor’s, Master’s, PhDs, research support, and career branding.
             </p>
             <a href="/readiness-assessment" className="inline-flex items-center gap-2 text-sm font-semibold border-b-2 border-black hover:opacity-70 transition-all pb-1">
               Start Your Journey <DiagonalArrow className="w-3.5 h-3.5 ml-1" />

@@ -45,7 +45,7 @@ export default function Hero() {
             className="animate-fade-in-up delay-200 text-base sm:text-lg md:text-xl text-white/70 leading-relaxed mb-8 sm:mb-10 max-w-2xl font-light"
           >
             <p>
-              A premium academic ecosystem. We guide your journey—from global, master’s, B.Tech, and Ph.D. admissions to research support and strategic career branding.
+              A premium academic ecosystem. We guide your journey—from global,Bachelor’s, Master’s and Ph.D. admissions to research support and strategic career branding.
             </p>
           </div>
 

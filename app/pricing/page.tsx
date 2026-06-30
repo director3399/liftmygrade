@@ -30,7 +30,7 @@ export default function PricingPage() {
             Clear Programs,<br className="hidden md:block" />Transparent Pricing.
           </h1>
           <p className="text-lg md:text-xl text-neutral-600 max-w-3xl leading-relaxed mb-12">
-            As your <Highlighter>Academic, Research, Career & Strategic Communication Ecosystem</Highlighter>, we provide structured programs for every stage of your journey. From a <Link href="/readiness-assessment" className="text-blue-600 hover:underline">free readiness form</Link> for Bachelor’s or Master’s, to fully funded PhDs, research support, and <Link href="/career-services" className="text-blue-600 hover:underline">career branding</Link>. No hidden costs; full pricing is confirmed at your free consultation.
+            As your <Highlighter>Academic, Research, Career & Strategic Communication Ecosystem</Highlighter>, we provide structured programs for every stage of your journey. From a <Link href="/readiness-assessment" className="text-blue-600 hover:underline">free readiness form</Link> for Bachelor’s or Master’s, to PhDs, research support, and <Link href="/career-services" className="text-blue-600 hover:underline">career branding</Link>. No hidden costs; full pricing is confirmed at your free consultation.
           </p>
         </div>
       </section>
