@@ -81,6 +81,10 @@ export default function ServicesPage() {
   ];
 
   const admissions = [
+    // Client's new services added
+    { title: "International Admissions Support", desc: "Bachelor's and Master's applications — readiness assessment, country shortlisting, detailed roadmap, and submission." },
+    { title: "SOP, LOR & CV Help", desc: "Admissions documents structured and edited around your story — country- and university-specific." },
+    // Existing services
     { title: "Statement of Purpose (SOP)", desc: "A compelling, tailored SOP drafted around your story and each target program." },
     { title: "Letters of Recommendation", desc: "Well-structured LORs that highlight the right strengths for your application." },
     { title: "Academic CV / Résumé", desc: "An admissions-ready CV that presents your profile clearly and credibly." },
@@ -90,6 +94,10 @@ export default function ServicesPage() {
   ];
 
   const phd = [
+    // Client's new services added
+    { title: "Dissertation Support", desc: "Chapter-wise guidance calibrated to your supervisor's expectations — proposal, methodology, findings, defense." },
+    { title: "Literature Review & Methodology Support", desc: "Standalone and systematic (PRISMA-aligned) reviews, and methodology chapter structuring and review." },
+    // Existing services
     { title: "Research Proposal", desc: "A focused, fundable research proposal — the centrepiece of your PhD application." },
     { title: "Academic CV & SOR", desc: "Research-focused academic CV and Statement of Research Interest." },
     { title: "Research-Focused LORs", desc: "Recommendation letters positioned for research potential and fit." },
@@ -100,6 +108,11 @@ export default function ServicesPage() {
   ];
 
   const publication = [
+    // Client's new services added
+    { title: "Thesis Help", desc: "Structural review, academic editing, university-specific citation checks and a verified report — from your draft to a submission-ready thesis.", tags: ["Thesis", "Editing", "Submission"] },
+    { title: "Publication Help", desc: "Manuscript editing, a journal shortlist verified against official indexing, predatory screening and reviewer-response support.", tags: ["Scopus", "Google Scholar", "UGC-listed"] },
+    { title: "Book Help", desc: "Developmental review, line editing and publisher submission formatting for academic books, edited volumes and chapters.", tags: ["Books", "Chapters", "Editing"] },
+    // Existing services
     { title: "Journal Publication Assistance", desc: "Support getting your work published in peer-reviewed journals — including Scopus-indexed, Google Scholar, and UGC-listed outlets.", tags: ["Scopus", "Google Scholar", "UGC-listed", "Peer-reviewed"] },
     { title: "Manuscript Editing & Positioning", desc: "Editorial support to refine and position your manuscript for submission — an additional edge for humanities, postgraduate, and research applicants." },
     { title: "Book & Book Chapter Editing", desc: "Comprehensive structural and line editing for academic books, edited volumes, and contributed book chapters." },
@@ -107,6 +120,9 @@ export default function ServicesPage() {
   ];
 
   const career = [
+    // Client's new service added
+    { title: "Career & Professional Branding", desc: "Résumé, LinkedIn, company SOP, grant writing and PR writing — project-based support." },
+    // Existing services
     { title: "Résumé & CV", desc: "Built from scratch or a full edit and optimisation of your existing résumé." },
     { title: "LinkedIn Profile", desc: "Complete build-out — headline, About, experience, and keyword positioning." },
     { title: "Company SOP", desc: "Corporate statement of purpose and operating documentation." },
