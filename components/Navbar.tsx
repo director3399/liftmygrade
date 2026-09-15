@@ -17,11 +17,9 @@ export default function Navbar({
   const [isTransitionReady, setIsTransitionReady] = useState(false);
   const isLight = theme === "light";
 
-  // Only apply custom text colors if mobile menu is closed, otherwise force dark text on white bg
   const textColor = isMobileMenuOpen ? "text-[#171717]" : (isLight ? "text-[#171717]" : "text-white");
   const linkColor = isLight ? "text-[#171717]! hover:text-blue-600" : "text-white! hover:text-blue-300";
 
-  // Prevent scrolling when mobile menu is open
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -31,25 +29,21 @@ export default function Navbar({
     return () => { document.body.style.overflow = 'unset'; };
   }, [isMobileMenuOpen]);
 
-  // Handle scroll to add background to navbar
   useEffect(() => {
     const handleScroll = () => {
       const aboutSection = document.getElementById('about');
       const footerSection = document.querySelector('footer');
       const scrollY = window.scrollY;
 
-      // Enable transition only when safely out of the top zone
       setIsTransitionReady(scrollY > 400);
 
       let isAtFooter = false;
       if (footerSection) {
         const footerRect = footerSection.getBoundingClientRect();
-        // Hide navbar when the footer comes into view
         isAtFooter = footerRect.top < window.innerHeight - 50;
       }
 
       if (aboutSection) {
-        // Reveal navbar smoothly slightly before the section
         const threshold = aboutSection.offsetTop - 80;
         
         if (scrollY < 200) {
@@ -60,7 +54,6 @@ export default function Navbar({
           setNavState('sticky');
         }
       } else {
-        // Fallback for pages without the Mentorship section
         if (scrollY < 200) {
           setNavState('top');
         } else if (isAtFooter) {
@@ -72,7 +65,7 @@ export default function Navbar({
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Initial check
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -80,7 +73,6 @@ export default function Navbar({
     { name: "About", href: "/#about" },
     { name: "Services", href: "/#services" },
     { name: "How It Works", href: "/#journey" },
-    { name: "Pricing", href: "/#pricing" },
     { name: "Testimonials", href: "/#testimonial" },
     { name: "Blogs", href: "/#blog" },
     { name: "Contact", href: "/#contact" }
@@ -152,7 +144,6 @@ export default function Navbar({
                 </span>
               </a>
 
-              {/* Mobile Menu Toggle Button */}
               {!hideLinks && (
                 <button
                   className={`lg:hidden relative z-60 p-2 -mr-2 ${textColor}`}

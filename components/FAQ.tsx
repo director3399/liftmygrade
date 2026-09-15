@@ -45,13 +45,13 @@ const faqData: FAQItem[] = [
     id: "faq-6",
     question: "How much does this cost?",
     answer:
-      "We don’t run a fixed price list, because two projects in the same discipline can take very different amounts of work. Every engagement starts with a free consultation where we scope your stage, subject, and deadline, and confirm a fee in writing before anything begins. See our Pricing page for what factors shape a quote.",
+      "We don’t run a fixed price list, because two projects in the same discipline can take very different amounts of work. Every engagement starts with a free consultation where we scope your stage, subject, and deadline, and confirm a fee in writing before anything begins. A few lightweight services — like the Readiness Form, AI-content report, plagiarism report, and roadmap plan — are available instantly at a small, fixed fee of ₹99.",
   },
   {
     id: "faq-7",
     question: "Is the Readiness Form free?",
     answer:
-      "It carries a small, confirmed fee — it isn’t free, and we’d rather say that plainly than surprise you at payment. The initial consultation call itself is free.",
+      "It carries a small, confirmed fee of ₹99 — it isn’t free, and we’d rather say that plainly than surprise you at payment. The initial consultation call itself is free.",
   },
   {
     id: "faq-8",

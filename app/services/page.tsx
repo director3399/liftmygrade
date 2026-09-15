@@ -72,19 +72,36 @@ const ServiceSection = ({ id, label, title, subtitle, items, theme = "default" }
 };
 
 export default function ServicesPage() {
+  // Two ₹99 quick services — same data as landing banner
+  const quickServices = [
+    {
+      title: "AI & Plagiarism Report",
+      price: "₹99",
+      tag: "Instant Report",
+      desc: "A verified AI-content and plagiarism report for any document you're about to submit — with a source-level breakdown.",
+      image: "/banner/banner1.png",
+      link: "/#contact",
+    },
+    {
+      title: "Personalised Roadmap Plan",
+      price: "₹99",
+      tag: "Country-Specific",
+      desc: "A ready-to-follow roadmap with timelines, tests, intake windows, and a document checklist for your target country.",
+      image: "/banner/banner2.png",
+      link: "/#contact",
+    },
+  ];
+
   const freeServices = [
     { title: "Readiness Form", desc: "An honest assessment of where you stand, generated from your profile.", isFree: true, image: "https://images.unsplash.com/photo-1627556704302-624286467c65?w=1000&q=90" },
     { title: "2 Consultation Calls", desc: "Two one-to-one sessions to understand your goals and direction.", isFree: true, image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1000&q=90" },
     { title: "Country Shortlisting", desc: "We narrow your best-fit top 1–3 destinations together.", isFree: true, image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1000&q=90" },
-    { title: "Detailed Roadmap", desc: "A country-specific plan — timelines, tests, intakes, funding, checklist.", isFree: true, image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1000&q=90" },
     { title: "Document Analysis", desc: "A complimentary review of any résumé, SOP, or document you already have.", isFree: true, image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1000&q=90" }
   ];
 
   const admissions = [
-    // Client's new services added
     { title: "International Admissions Support", desc: "Bachelor's and Master's applications — readiness assessment, country shortlisting, detailed roadmap, and submission." },
     { title: "SOP, LOR & CV Help", desc: "Admissions documents structured and edited around your story — country- and university-specific." },
-    // Existing services
     { title: "Statement of Purpose (SOP)", desc: "A compelling, tailored SOP drafted around your story and each target program." },
     { title: "Letters of Recommendation", desc: "Well-structured LORs that highlight the right strengths for your application." },
     { title: "Academic CV / Résumé", desc: "An admissions-ready CV that presents your profile clearly and credibly." },
@@ -94,10 +111,8 @@ export default function ServicesPage() {
   ];
 
   const phd = [
-    // Client's new services added
     { title: "Dissertation Support", desc: "Chapter-wise guidance calibrated to your supervisor's expectations — proposal, methodology, findings, defense." },
     { title: "Literature Review & Methodology Support", desc: "Standalone and systematic (PRISMA-aligned) reviews, and methodology chapter structuring and review." },
-    // Existing services
     { title: "Research Proposal", desc: "A focused, fundable research proposal — the centrepiece of your PhD application." },
     { title: "Academic CV & SOR", desc: "Research-focused academic CV and Statement of Research Interest." },
     { title: "Research-Focused LORs", desc: "Recommendation letters positioned for research potential and fit." },
@@ -108,11 +123,9 @@ export default function ServicesPage() {
   ];
 
   const publication = [
-    // Client's new services added
     { title: "Thesis Help", desc: "Structural review, academic editing, university-specific citation checks and a verified report — from your draft to a submission-ready thesis.", tags: ["Thesis", "Editing", "Submission"] },
     { title: "Publication Help", desc: "Manuscript editing, a journal shortlist verified against official indexing, predatory screening and reviewer-response support.", tags: ["Scopus", "Google Scholar", "UGC-listed"] },
     { title: "Book Help", desc: "Developmental review, line editing and publisher submission formatting for academic books, edited volumes and chapters.", tags: ["Books", "Chapters", "Editing"] },
-    // Existing services
     { title: "Journal Publication Assistance", desc: "Support getting your work published in peer-reviewed journals — including Scopus-indexed, Google Scholar, and UGC-listed outlets.", tags: ["Scopus", "Google Scholar", "UGC-listed", "Peer-reviewed"] },
     { title: "Manuscript Editing & Positioning", desc: "Editorial support to refine and position your manuscript for submission — an additional edge for humanities, postgraduate, and research applicants." },
     { title: "Book & Book Chapter Editing", desc: "Comprehensive structural and line editing for academic books, edited volumes, and contributed book chapters." },
@@ -120,9 +133,7 @@ export default function ServicesPage() {
   ];
 
   const career = [
-    // Client's new service added
     { title: "Career & Professional Branding", desc: "Résumé, LinkedIn, company SOP, grant writing and PR writing — project-based support." },
-    // Existing services
     { title: "Résumé & CV", desc: "Built from scratch or a full edit and optimisation of your existing résumé." },
     { title: "LinkedIn Profile", desc: "Complete build-out — headline, About, experience, and keyword positioning." },
     { title: "Company SOP", desc: "Corporate statement of purpose and operating documentation." },
@@ -147,6 +158,7 @@ export default function ServicesPage() {
           </p>
 
           <div className="flex flex-wrap gap-3">
+            <a href="#quick-reports" className="text-sm font-bold text-blue-700 bg-blue-50 px-5 py-2.5 rounded-full hover:bg-blue-100 transition-colors">Quick Reports (₹99)</a>
             <a href="#free" className="text-sm font-bold text-neutral-800 bg-neutral-100 px-5 py-2.5 rounded-full hover:bg-neutral-200 transition-colors">Free Services</a>
             <a href="#admissions" className="text-sm font-bold text-neutral-800 bg-neutral-100 px-5 py-2.5 rounded-full hover:bg-neutral-200 transition-colors">Bachelor's & Master's</a>
             <a href="#phd" className="text-sm font-bold text-neutral-800 bg-neutral-100 px-5 py-2.5 rounded-full hover:bg-neutral-200 transition-colors">PhD & Research</a>
@@ -156,44 +168,142 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <ServiceSection 
-        id="free" 
-        label="Free" 
-        title="Free Discovery Services" 
-        subtitle="Where every journey begins — at no cost, no commitment." 
-        items={freeServices} 
+      {/* Quick Reports Banner — matches landing page PricingBanner */}
+      <section
+        id="quick-reports"
+        className="bg-transparent w-full px-6 md:px-12 lg:px-16 pt-8 sm:pt-10 pb-12 sm:pb-16"
+      >
+        <div className="max-w-7xl mx-auto">
+          {/* Intro Line */}
+          <div className="text-center mb-8 sm:mb-10">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#171717] tracking-tight leading-tight max-w-2xl mx-auto">
+              Two reports to{" "}
+              <span className="relative inline-block">
+                <span className="relative z-10">get you moving.</span>
+                <svg
+                  className="absolute bottom-0 left-0 w-full h-2.5 text-blue-500 -z-0"
+                  viewBox="0 0 100 20"
+                  fill="none"
+                  preserveAspectRatio="none"
+                >
+                  <path
+                    d="M 5,15 C 20,5 40,12 60,8 C 80,4 90,15 95,12"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </span>
+            </h2>
+          </div>
+
+          {/* Two-Card Grid */}
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
+            {quickServices.map((svc, i) => (
+              <Link
+                key={i}
+                href={svc.link}
+                className="group relative bg-white border border-neutral-200 rounded-3xl overflow-hidden flex flex-row hover:border-blue-500/40 hover:shadow-[0_12px_40px_-10px_rgba(59,130,246,0.18)] transition-all duration-300 hover:-translate-y-1"
+              >
+                {/* Image Side */}
+                <div className="relative w-[40%] sm:w-[42%] shrink-0 overflow-hidden bg-neutral-100">
+                  <Image
+                    src={svc.image}
+                    alt={svc.title}
+                    fill
+                    sizes="(max-width: 768px) 40vw, 20vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-black/15 via-transparent to-transparent" />
+                </div>
+
+                {/* Content Side */}
+                <div className="flex-1 p-5 sm:p-7 flex flex-col justify-between min-w-0">
+                  <div>
+                    <div className="flex items-start justify-between gap-3 mb-3">
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-blue-600 pt-1">
+                        {svc.tag}
+                      </span>
+                      <span className="text-2xl sm:text-3xl font-bold text-[#171717] tracking-tight leading-none">
+                        {svc.price}
+                      </span>
+                    </div>
+                    <h3 className="text-base sm:text-lg font-bold text-[#171717] tracking-tight mb-2 leading-snug">
+                      {svc.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed">
+                      {svc.desc}
+                    </p>
+                  </div>
+
+                  <div className="mt-5 flex items-center text-blue-600 font-semibold text-xs tracking-wider uppercase group-hover:gap-2 transition-all">
+                    Get It Now
+                    <ArrowRight className="w-3.5 h-3.5 ml-1.5 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          {/* Footer Note */}
+          <p className="text-center text-xs sm:text-sm text-neutral-500 mt-8 sm:mt-10 leading-relaxed">
+            Looking for something else?{" "}
+            <a
+              href="/#contact"
+              className="text-blue-600 font-semibold hover:underline"
+            >
+              Book a free consultation
+            </a>{" "}
+            or{" "}
+            <a
+              href="#free"
+              className="text-blue-600 font-semibold hover:underline"
+            >
+              explore our full range of services
+            </a>
+            .
+          </p>
+        </div>
+      </section>
+
+      <ServiceSection
+        id="free"
+        label="Free"
+        title="Free Discovery Services"
+        subtitle="Where every journey begins — at no cost, no commitment."
+        items={freeServices}
       />
 
-      <ServiceSection 
-        id="admissions" 
-        label="Study Abroad" 
-        title="Bachelor's & Master's Admissions" 
-        subtitle="Undergraduate & postgraduate application support." 
-        items={admissions} 
+      <ServiceSection
+        id="admissions"
+        label="Study Abroad"
+        title="Bachelor's & Master's Admissions"
+        subtitle="Undergraduate & postgraduate application support."
+        items={admissions}
       />
 
-      <ServiceSection 
-        id="phd" 
-        label="Study Abroad" 
-        title="PhD & Research Support" 
-        subtitle="For doctoral and research-track applicants." 
-        items={phd} 
+      <ServiceSection
+        id="phd"
+        label="Study Abroad"
+        title="PhD & Research Support"
+        subtitle="For doctoral and research-track applicants."
+        items={phd}
       />
 
-      <ServiceSection 
-        id="publication" 
-        label="Research Edge" 
-        title="Publication Support" 
-        subtitle="Strengthen your profile with peer-reviewed research output." 
-        items={publication} 
+      <ServiceSection
+        id="publication"
+        label="Research Edge"
+        title="Publication Support"
+        subtitle="Strengthen your profile with peer-reviewed research output."
+        items={publication}
       />
 
-      <ServiceSection 
-        id="career" 
-        label="Career & Professional" 
-        title="Career & Professional Support" 
-        subtitle="Project-based document and communications services." 
-        items={career} 
+      <ServiceSection
+        id="career"
+        label="Career & Professional"
+        title="Career & Professional Support"
+        subtitle="Project-based document and communications services."
+        items={career}
       />
 
       {/* CTA Section */}

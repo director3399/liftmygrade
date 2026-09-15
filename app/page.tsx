@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import PricingBanner from "@/components/PricingBanner";
 import WhyStudentsGetStuck from "@/components/WhyStudentsGetStuck";
 import Mentorship from "@/components/Mentorship";
 import AcademicJourney from "@/components/AcademicJourney";
@@ -8,7 +9,6 @@ import Milestones from "@/components/Milestones";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
 import Pathways from "@/components/Pathways";
-import Pricing from "@/components/Pricing";
 import BlogSection from "@/components/BlogSection";
 import MeetOurTeam from "@/components/MeetOurTeam";
 import FAQ from "@/components/FAQ";
@@ -19,13 +19,13 @@ export default function Home() {
     <main className="bg-white selection:bg-blue-100 selection:text-blue-900">
       <Navbar />
       <Hero />
+      <PricingBanner />
       <Mentorship />
       <WhyStudentsGetStuck />
       <Pathways />
       <AcademicJourney />
       <Milestones />
       <MeetOurTeam />
-      {/* <Pricing /> */}
       <Testimonials />
       <BlogSection />
       <FAQ />
