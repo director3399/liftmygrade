@@ -11,6 +11,7 @@ import Pathways from "@/components/Pathways";
 import Pricing from "@/components/Pricing";
 import BlogSection from "@/components/BlogSection";
 import MeetOurTeam from "@/components/MeetOurTeam";
+import FAQ from "@/components/FAQ";
 import ContactUs from "@/components/ContactUs";
 
 export default function Home() {
@@ -24,9 +25,10 @@ export default function Home() {
       <AcademicJourney />
       <Milestones />
       <MeetOurTeam />
-      <Pricing />
+      {/* <Pricing /> */}
       <Testimonials />
       <BlogSection />
+      <FAQ />
       <Suspense fallback={<div>Loading...</div>}>
         <ContactUs />
       </Suspense>

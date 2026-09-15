@@ -43,9 +43,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "LIFTMYGRADE | Global Academic Ecosystem & Mentorship",
+    title: "LiftMyGrade | Thesis, Dissertation & Publication Help by PhD Experts",
     description:
-      "Premium academic guidance for Bachelor's, Master's, and PhD journeys abroad. Structured mentorship for your global academic growth.",
+      "Thesis, dissertation, and publication help by PhD-level experts — plus admissions support for Bachelor’s, Master’s, and PhD applicants. Every project verified.",
     images: ["/icon.png"],
   },
   robots: {

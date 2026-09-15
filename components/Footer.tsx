@@ -11,20 +11,28 @@ export default function Footer() {
         {/* Footer CTA Section */}
         <div className="flex flex-col items-center text-center mb-24">
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 tracking-tight leading-[1.1]">
-            Ready To Build Your Global
+            Ready to Move From
             <br />
-            Academic Journey?
+            Draft to Defense?
           </h2>
           <p className="text-base sm:text-lg text-white/60 mb-10 font-light max-w-xl">
-            Start with a structured roadmap designed around your academic goals.
+            Start with a free consultation, or begin with the Readiness Form for a small, confirmed fee.
           </p>
-          <a
-            href="/readiness-assessment"
-            className="inline-flex items-center gap-3 bg-white text-[#050B1D]! px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:bg-neutral-100 transition-all group"
-          >
-            Get Free Readiness Form
-            <ArrowRight className="w-4 h-4 text-[#050B1D]! transition-transform group-hover:translate-x-1" />
-          </a>
+          <div className="flex flex-col sm:flex-row items-center gap-4">
+            <a
+              href="/#contact"
+              className="inline-flex items-center gap-3 bg-white text-[#050B1D]! px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:bg-neutral-100 transition-all group"
+            >
+              Request a Free Consultation
+              <ArrowRight className="w-4 h-4 text-[#050B1D]! transition-transform group-hover:translate-x-1" />
+            </a>
+            <a
+              href="/readiness-assessment"
+              className="inline-flex items-center gap-3 bg-transparent border border-white/30 text-white! px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:bg-white/10 transition-all"
+            >
+              Start With the Readiness Form
+            </a>
+          </div>
         </div>
 
         {/* Separator Line */}
@@ -44,10 +52,10 @@ export default function Footer() {
 
             <div className="mb-10 text-white/80 font-light max-w-lg leading-relaxed space-y-4">
               <p>
-                <strong className="font-semibold text-white">LiftmyGrade</strong> is your Academic, Research, Career & Strategic Communication Ecosystem.
+                <strong className="font-semibold text-white">LiftMyGrade</strong> is your Academic, Research, Career & Strategic Communication Ecosystem.
               </p>
               <p>
-                We empower students, researchers, professionals, startups, and institutions through global education pathways, PhD admissions support, research and publication guidance, career branding, grant writing, company documentation, and strategic communication services that drive meaningful growth and long-term impact.
+                We help scholars and researchers move from thesis and dissertation work to publication, with PhD-level experts, chapter-wise review, and a full AI, plagiarism & reference/DOI verification report on every project. We also support Bachelor’s, Master’s, and PhD applicants with SOPs, LORs, and academic CVs, and provide career branding, grant writing, and strategic communication for professionals and institutions.
               </p>
             </div>
           </div>

@@ -3,69 +3,86 @@
 import React from "react";
 import Link from "next/link";
 import SectionLabel from "./SectionLabel";
+import { allServices, ServiceItem } from "@/data/services";
+import { ArrowRight, DiagonalArrow } from "./Icons";
+
+const ServiceCard = ({ item }: { item: ServiceItem }) => {
+  return (
+    <Link
+      href={item.link}
+      className="group relative w-[280px] sm:w-[320px] md:w-[340px] shrink-0 bg-[#F9FAFB] hover:bg-white border border-neutral-200/80 hover:border-blue-500 rounded-3xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:shadow-[0_12px_30px_-10px_rgba(37,99,235,0.12)] hover:-translate-y-1.5"
+    >
+      <div>
+        {/* Top Bar: Category / Free Tag */}
+        <div className="flex items-center justify-between gap-2 mb-4">
+          <span className="text-[11px] font-semibold tracking-wider uppercase text-neutral-400">
+            {item.category}
+          </span>
+          {item.isFree ? (
+            <span className="text-[10px] font-bold uppercase tracking-wider text-green-700 bg-green-100/80 px-2 py-0.5 rounded-full">
+              Free
+            </span>
+          ) : item.tags && item.tags.length > 0 ? (
+            <span className="text-[10px] font-semibold text-neutral-600 bg-neutral-200/60 px-2 py-0.5 rounded-full">
+              {item.tags[0]}
+            </span>
+          ) : null}
+        </div>
+
+        {/* Service Title */}
+        <h3 className="text-lg sm:text-xl font-bold text-[#171717] tracking-tight group-hover:text-blue-600 transition-colors mb-2.5 line-clamp-2">
+          {item.title}
+        </h3>
+
+        {/* Description */}
+        <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed line-clamp-3">
+          {item.desc}
+        </p>
+      </div>
+
+      {/* Bottom Row */}
+      <div className="mt-6 pt-4 border-t border-neutral-200/60 flex items-center justify-between">
+        <span className="text-xs font-semibold text-neutral-700 group-hover:text-blue-600 transition-colors">
+          Learn more
+        </span>
+        <div className="w-7 h-7 rounded-full bg-white group-hover:bg-blue-600 text-neutral-500 group-hover:text-white flex items-center justify-center border border-neutral-200 group-hover:border-blue-600 transition-all duration-300 shadow-xs">
+          <DiagonalArrow className="w-3 h-3" />
+        </div>
+      </div>
+    </Link>
+  );
+};
 
 export default function Pathways() {
-  const pathways = [
-    {
-      id: "01",
-      title: "Thesis Help",
-      desc: "Structural review, academic editing, university-specific citation checks and a verified report — from your draft to a submission-ready thesis.",
-      link: "/services#thesis",
-      color: "#0000FF",
-    },
-    {
-      id: "02",
-      title: "Dissertation Support",
-      desc: "Chapter-wise guidance calibrated to your supervisor's expectations — proposal, methodology, findings, defense.",
-      link: "/services#dissertation",
-      color: "#4169E1",
-    },
-    {
-      id: "03",
-      title: "Publication Help",
-      desc: "Manuscript editing, a journal shortlist verified against official indexing, predatory screening and reviewer-response support.",
-      link: "/services#publication",
-      color: "#4863A0",
-    },
-    {
-      id: "04",
-      title: "Book Help",
-      desc: "Developmental review, line editing and publisher submission formatting for academic books, edited volumes and chapters.",
-      link: "/services#book",
-      color: "#79BAEC",
-    },
-  ];
+  // Split services into two distinct balanced groups
+  const half = Math.ceil(allServices.length / 2);
+  const row1Services = allServices.slice(0, half);
+  const row2Services = allServices.slice(half);
+
+  // Duplicate each row for smooth seamless infinite scroll loops
+  const marqueeRow1 = [...row1Services, ...row1Services];
+  const marqueeRow2 = [...row2Services, ...row2Services];
 
   return (
     <section
-      className="py-16 sm:py-24 px-6 md:px-12 lg:px-16 bg-white"
+      className="py-16 sm:py-24 bg-white overflow-hidden relative"
       id="services"
     >
-      <div className="max-w-7xl mx-auto">
-
-        {/* =========================================================
-            SECTION LABEL
-           ========================================================= */}
+      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 mb-12">
+        {/* Section Label */}
         <div className="flex items-center gap-4 mb-4">
           <SectionLabel>Our Services</SectionLabel>
         </div>
 
-        {/* =========================================================
-            HEADER
-           ========================================================= */}
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 mb-12">
-
+        {/* Header Grid */}
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12">
           {/* Left: Title */}
           <div className="flex flex-col">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] leading-[1.1] tracking-tight">
               Our
               <br />
-
               <span className="relative inline-block">
-                <span className="relative z-10">
-                  Services
-                </span>
-
+                <span className="relative z-10">Services</span>
                 <svg
                   className="absolute bottom-0 left-0 w-full h-3 text-blue-500 -z-0"
                   viewBox="0 0 100 20"
@@ -85,288 +102,43 @@ export default function Pathways() {
 
           {/* Right: Description + Button */}
           <div className="flex flex-col items-start justify-end">
-
             <p className="text-sm sm:text-base text-neutral-700 leading-relaxed mb-6 sm:mb-8">
-              Explore the programs, systems, and support services designed to
-              help students move from academic planning to admissions, research
-              opportunities, and long-term career growth.
+              Explore our complete range of academic, research, doctoral, and career solutions — from free readiness assessment to thesis defense and professional branding.
             </p>
 
             <Link
               href="/services"
-              className="
-                inline-flex
-                items-center
-                gap-3
-                bg-blue-600
-                text-white
-                px-5
-                sm:px-6
-                py-3.5
-                sm:py-4
-                rounded-full
-                text-sm
-                sm:text-base
-                font-semibold
-                hover:bg-blue-700
-                transition-colors
-              "
+              className="inline-flex items-center gap-3 bg-blue-600 text-white px-5 sm:px-6 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:bg-blue-700 transition-colors"
             >
               Explore All Services
-
-              <span
-                className="
-                  inline-flex
-                  items-center
-                  justify-center
-                  w-6
-                  h-6
-                  sm:w-8
-                  sm:h-8
-                  bg-white
-                  rounded-full
-                  text-blue-600
-                "
-              >
-                <svg
-                  className="w-3.5 h-3.5 sm:w-4 sm:h-4"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M5 12h14M13 6l6 6-6 6" />
-                </svg>
+              <span className="inline-flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 bg-white rounded-full text-blue-600">
+                <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-600" />
               </span>
             </Link>
           </div>
         </div>
+      </div>
 
-        {/* =========================================================
-            SERVICE CARDS
-            Reference-inspired editorial card structure
-           ========================================================= */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+      {/* Dual Marquee Container */}
+      <div className="relative w-full overflow-hidden pause-hover flex flex-col gap-6 pt-2 pb-6">
+        {/* Gradient edge fades for polished aesthetic - hidden on mobile */}
+        <div className="hidden md:block absolute top-0 left-0 w-24 lg:w-32 h-full bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
+        <div className="hidden md:block absolute top-0 right-0 w-24 lg:w-32 h-full bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none" />
 
-          {pathways.map((pathway) => (
-            <Link
-              key={pathway.id}
-              href={pathway.link}
-              style={{
-                backgroundColor: pathway.color,
-              }}
-              className="
-                group
-                relative
-                min-h-[460px]
-                p-7
-                sm:p-8
-                flex
-                flex-col
-                overflow-hidden
-                transition-all
-                duration-300
-                hover:-translate-y-1
-              "
-            >
-
-              {/* =====================================================
-                  TOP ROW
-                 ===================================================== */}
-              <div className="flex items-start justify-between">
-
-                {/* Number */}
-                <span
-                  className="
-                    text-xs
-                    font-semibold
-                    tracking-wide
-                    text-white
-                  "
-                >
-                  {pathway.id}
-                </span>
-
-                {/* Icon */}
-                <span
-                  className="
-                    flex
-                    items-center
-                    justify-center
-                    w-10
-                    h-10
-                    text-white
-                  "
-                >
-
-                  {/* Thesis Help */}
-                  {pathway.id === "01" && (
-                    <svg
-                      className="w-8 h-8"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <rect
-                        x="4"
-                        y="5"
-                        width="16"
-                        height="14"
-                        rx="1"
-                      />
-                      <path d="M8 9h8" />
-                      <path d="M8 13h5" />
-                    </svg>
-                  )}
-
-                  {/* Dissertation Support */}
-                  {pathway.id === "02" && (
-                    <svg
-                      className="w-8 h-8"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <rect
-                        x="3"
-                        y="4"
-                        width="18"
-                        height="16"
-                        rx="1"
-                      />
-                      <path d="M7 8h10" />
-                      <path d="M7 12h10" />
-                      <path d="M7 16h6" />
-                    </svg>
-                  )}
-
-                  {/* Publication Help */}
-                  {pathway.id === "03" && (
-                    <svg
-                      className="w-8 h-8"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M6 4h12v16H6z" />
-                      <path d="M9 8h6" />
-                      <path d="M9 12h6" />
-                      <path d="M9 16h4" />
-                    </svg>
-                  )}
-
-                  {/* Book Help */}
-                  {pathway.id === "04" && (
-                    <svg
-                      className="w-8 h-8"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M5 4h14v16H5z" />
-                      <path d="M8 8h8" />
-                      <path d="M8 12h8" />
-                      <path d="M8 16h5" />
-                    </svg>
-                  )}
-
-                </span>
-              </div>
-
-              {/* =====================================================
-                  TITLE
-                 ===================================================== */}
-              <div className="flex-1 flex items-center">
-
-                <h3
-                  className="
-                    text-2xl
-                    sm:text-[27px]
-                    md:text-[28px]
-                    font-semibold
-                    leading-[1.05]
-                    tracking-tight
-                    text-white
-                    max-w-[230px]
-                  "
-                >
-                  {pathway.title}
-                </h3>
-
-              </div>
-
-              {/* =====================================================
-                  BOTTOM CONTENT
-                 ===================================================== */}
-              <div>
-
-                {/* Description */}
-                <p
-                  className="
-                    text-sm
-                    leading-relaxed
-                    max-w-[270px]
-                    text-white
-                  "
-                >
-                  {pathway.desc}
-                </p>
-
-                {/* CTA */}
-                <div
-                  className="
-                    mt-8
-                    flex
-                    items-center
-                    gap-3
-                    text-[11px]
-                    font-semibold
-                    uppercase
-                    tracking-[0.08em]
-                    text-white
-                  "
-                >
-                  Explore Service
-
-                  <svg
-                    className="
-                      w-4
-                      h-4
-                      transition-transform
-                      duration-300
-                      group-hover:translate-x-1
-                    "
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M5 12h14" />
-                    <path d="m13 6 6 6-6 6" />
-                  </svg>
-                </div>
-
-              </div>
-
-            </Link>faq
+        {/* Row 1: Right to Left (Visible on all screens) */}
+        <div className="animate-marquee flex gap-5 sm:gap-6 pl-4">
+          {marqueeRow1.map((item, index) => (
+            <ServiceCard key={`r1-${item.id}-${index}`} item={item} />
           ))}
+        </div>
 
+        {/* Row 2: Left to Right (Hidden on mobile, visible on desktop/tablet) */}
+        <div className="hidden md:flex">
+          <div className="animate-marquee-reverse flex gap-5 sm:gap-6 pl-4">
+            {marqueeRow2.map((item, index) => (
+              <ServiceCard key={`r2-${item.id}-${index}`} item={item} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

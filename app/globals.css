@@ -57,3 +57,42 @@ html {
 .delay-400 {
   animation-delay: 400ms;
 }
+
+/* Infinite Marquee Scroll (Right to Left) */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Infinite Marquee Scroll (Left to Right) */
+@keyframes marquee-scroll-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 120s linear infinite;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll-reverse 120s linear infinite;
+}
+
+.pause-hover:hover .animate-marquee,
+.pause-hover:hover .animate-marquee-reverse,
+.animate-marquee:hover,
+.animate-marquee-reverse:hover {
+  animation-play-state: paused;
+}
