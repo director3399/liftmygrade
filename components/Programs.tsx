@@ -1,6 +1,5 @@
 import React from "react";
 import SectionLabel from "./SectionLabel";
-import { ArrowRight } from "./Icons";
 
 type Program = {
   label: string;
@@ -8,8 +7,6 @@ type Program = {
   idealFor: string;
   outcome: string;
   features: string[];
-  cta: string;
-  link: string;
   featured?: boolean;
 };
 
@@ -27,8 +24,6 @@ export default function Programs() {
         "Tracked-changes delivery",
         "AI, plagiarism & reference report",
       ],
-      cta: "Request details",
-      link: "/thesis-help",
       featured: true,
     },
     {
@@ -43,8 +38,6 @@ export default function Programs() {
         "Defense preparation",
         "Tracked changes + verification report",
       ],
-      cta: "Request details",
-      link: "/dissertation-help",
       featured: true,
     },
     {
@@ -59,8 +52,6 @@ export default function Programs() {
         "Submission formatting",
         "Response-to-reviewer support",
       ],
-      cta: "Request details",
-      link: "/publication-help",
       featured: true,
     },
     {
@@ -75,8 +66,6 @@ export default function Programs() {
         "Publisher submission formatting",
         "Reference/DOI verification",
       ],
-      cta: "Request details",
-      link: "/book-help",
       featured: true,
     },
   ];
@@ -94,8 +83,6 @@ export default function Programs() {
         "Gap analysis",
         "Personalised roadmap",
       ],
-      cta: "Start",
-      link: "/readiness-assessment",
     },
     {
       label: "[ Core ]",
@@ -110,8 +97,6 @@ export default function Programs() {
         "IELTS/TOEFL/GRE planning",
         "Visa & financial planning guidance",
       ],
-      cta: "Request details",
-      link: "/services#admissions",
     },
     {
       label: "[ Career ]",
@@ -124,8 +109,6 @@ export default function Programs() {
         "Interview preparation",
         "Country-specific job strategy",
       ],
-      cta: "Request details",
-      link: "/career-services",
     },
   ];
 
@@ -186,17 +169,6 @@ export default function Programs() {
           </li>
         ))}
       </ul>
-
-      {/* CTA */}
-      <a
-        href={p.link}
-        className={`inline-flex items-center gap-2 text-sm font-semibold mt-2 transition-all ${
-          p.featured ? "text-amber-700 hover:text-amber-800" : "text-blue-600 hover:text-blue-800"
-        }`}
-      >
-        {p.cta}
-        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-      </a>
     </div>
   );
 
@@ -265,7 +237,7 @@ export default function Programs() {
           </div>
         </div>
 
-        {/* Bottom note — matches client's consultation-based pricing */}
+        {/* Bottom note */}
         <p className="text-center text-xs sm:text-sm text-neutral-500 mt-12 leading-relaxed">
           Not sure which program fits?{" "}
           <a
