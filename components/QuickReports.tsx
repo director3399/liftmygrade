@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "./Icons";
 
-export default function PricingBanner() {
+export default function QuickReports() {
   const quickServices = [
     {
       title: "AI & Plagiarism Report",

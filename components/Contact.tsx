@@ -42,7 +42,7 @@ type FormData = z.infer<typeof schema>;
 
 const TOTAL_STEPS = 4;
 
-export default function ContactUs() {
+export default function Contact() {
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submitData, setSubmitData] = useState<FormData | null>(null);

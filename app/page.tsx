@@ -1,36 +1,47 @@
 import { Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import PricingBanner from "@/components/PricingBanner";
-import WhyStudentsGetStuck from "@/components/WhyStudentsGetStuck";
-import Mentorship from "@/components/Mentorship";
-import AcademicJourney from "@/components/AcademicJourney";
-import Milestones from "@/components/Milestones";
+import QuickReports from "@/components/QuickReports";
+import Challenges from "@/components/Challenges";
+import About from "@/components/About";
+import AcademicJourney from "@/components/Journey";
+import Standards from "@/components/Standards";
+import Programs from "@/components/Programs";
+import StartPaths from "@/components/StartPaths";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
-import Pathways from "@/components/Pathways";
-import BlogSection from "@/components/BlogSection";
-import MeetOurTeam from "@/components/MeetOurTeam";
+import Services from "@/components/Services";
+import Blog from "@/components/Blog";
+import Team from "@/components/Team";
 import FAQ from "@/components/FAQ";
-import ContactUs from "@/components/ContactUs";
+import Contact from "@/components/Contact";
+
+// ═══════════════════════════════════════════════════════════════════
+// COMMENTED OUT — Components replaced or merged into new sections.
+// Kept here for reference so nothing is lost. To restore, uncomment
+// and remove the corresponding new component below.
+// ═══════════════════════════════════════════════════════════════════
+// import Milestones from "@/components/Milestones";
+// → Content consolidated into: AcademicJourney (two-track flow)
 
 export default function Home() {
   return (
     <main className="bg-white selection:bg-blue-100 selection:text-blue-900">
       <Navbar />
       <Hero />
-      <PricingBanner />
-      <Mentorship />
-      <WhyStudentsGetStuck />
-      <Pathways />
+      <About />
+      <Challenges />
+      <Services />
+      <Standards />
       <AcademicJourney />
-      <Milestones />
-      <MeetOurTeam />
+      <Programs />
+      <Team />
       <Testimonials />
-      <BlogSection />
+      <Blog />
+      {/* <StartPaths /> */}
       <FAQ />
       <Suspense fallback={<div>Loading...</div>}>
-        <ContactUs />
+        <Contact />
       </Suspense>
       <Footer />
     </main>
