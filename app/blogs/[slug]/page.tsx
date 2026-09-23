@@ -109,7 +109,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       url: "https://liftmygrade.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://liftmygrade.com/icon.png",
+        url: "https://liftmygrade.com/icon.webp",
       },
     },
     mainEntityOfPage: {

@@ -8,14 +8,14 @@ import { motion } from "framer-motion";
 export default function OfferBanner() {
   const banners = [
     {
-      image: "/banner/banner1.png",
+      image: "/banner/banner1.webp",
       alt: "AI & Plagiarism Report — ₹99",
       link: "/#contact",
       width: 1600,
       height: 500,
     },
     {
-      image: "/banner/banner2.png",
+      image: "/banner/banner2.webp",
       alt: "Personalised Roadmap Plan — ₹99",
       link: "/#contact",
       width: 1600,

@@ -34,7 +34,7 @@ export const metadata: Metadata = {
       "Premium academic guidance for Bachelor's, Master's, and PhD journeys abroad. Structured mentorship for your global academic growth.",
     images: [
       {
-        url: "/icon.png",
+        url: "/icon.webp",
         width: 512,
         height: 512,
         alt: "LiftmyGrade Logo",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: "LiftMyGrade | Thesis, Dissertation & Publication Help by PhD Experts",
     description:
       "Thesis, dissertation, and publication help by PhD-level experts — plus admissions support for Bachelor’s, Master’s, and PhD applicants. Every project verified.",
-    images: ["/icon.png"],
+    images: ["/icon.webp"],
   },
   robots: {
     index: true,

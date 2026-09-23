@@ -13,7 +13,7 @@ export default function Hero() {
     >
       <div className="absolute inset-0 z-0">
         <Image
-          src="/hero.png"
+          src="/hero.webp"
           alt="Premium Academic Environment"
           fill
           priority

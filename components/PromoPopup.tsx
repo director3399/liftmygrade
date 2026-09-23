@@ -17,14 +17,14 @@ export default function PromoPopup() {
   const popups: Popup[] = [
     {
       id: "popup1",
-      image: "/popup/popup1.png",
+      image: "/popup/popup1.webp",
       alt: "Special offer 1",
       width: 800,
       height: 1000,
     },
     {
       id: "popup2",
-      image: "/popup/popup2.png",
+      image: "/popup/popup2.webp",
       alt: "Special offer 2",
       width: 800,
       height: 1000,

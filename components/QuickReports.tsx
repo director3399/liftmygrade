@@ -12,7 +12,7 @@ export default function QuickReports() {
       price: "₹99",
       tag: "Instant Report",
       desc: "A verified AI-content and plagiarism report for any document you're about to submit — with a source-level breakdown.",
-      image: "/banner/banner1.png",
+      image: "/banner/banner1.webp",
       link: "/#contact",
     },
     {
@@ -20,7 +20,7 @@ export default function QuickReports() {
       price: "₹99",
       tag: "Country-Specific",
       desc: "A ready-to-follow roadmap with timelines, tests, intake windows, and a document checklist for your target country.",
-      image: "/banner/banner2.png",
+      image: "/banner/banner2.webp",
       link: "/#contact",
     },
   ];

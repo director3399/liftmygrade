@@ -142,7 +142,7 @@ export default function Standards() {
       {/* ── Background image layer ─────────────────────────────── */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/project.png"
+          src="/project.webp"
           alt=""
           fill
           sizes="100vw"
