@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 
@@ -11,6 +12,7 @@ type Popup = {
   alt: string;
   width: number;
   height: number;
+  link: string;
 };
 
 export default function PromoPopup() {
@@ -21,6 +23,7 @@ export default function PromoPopup() {
       alt: "Special offer 1",
       width: 800,
       height: 1000,
+      link: "/#contact",
     },
     {
       id: "popup2",
@@ -28,6 +31,7 @@ export default function PromoPopup() {
       alt: "Special offer 2",
       width: 800,
       height: 1000,
+      link: "/#contact",
     },
   ];
 
@@ -43,7 +47,10 @@ export default function PromoPopup() {
     if (next === -1) return; // All popups already shown
     setActiveIndex(next);
     setShownIds([...currentShown, popups[next].id]);
-    sessionStorage.setItem("promoPopupShown", JSON.stringify([...currentShown, popups[next].id]));
+    sessionStorage.setItem(
+      "promoPopupShown",
+      JSON.stringify([...currentShown, popups[next].id])
+    );
   };
 
   // ── On mount: restore session state, and schedule popup 1 ──
@@ -133,8 +140,13 @@ export default function PromoPopup() {
               <X className="w-4 h-4 sm:w-5 sm:h-5" strokeWidth={2.5} />
             </button>
 
-            {/* Image */}
-            <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-[0_24px_80px_-10px_rgba(0,0,0,0.6)]">
+            {/* Image — wrapped in Link for redirection */}
+            <Link
+              href={popups[activeIndex].link}
+              onClick={handleClose}
+              aria-label={popups[activeIndex].alt}
+              className="relative block rounded-2xl sm:rounded-3xl overflow-hidden shadow-[0_24px_80px_-10px_rgba(0,0,0,0.6)] group"
+            >
               <Image
                 src={popups[activeIndex].image}
                 alt={popups[activeIndex].alt}
@@ -142,9 +154,9 @@ export default function PromoPopup() {
                 height={popups[activeIndex].height}
                 priority
                 sizes="(max-width: 640px) 90vw, 520px"
-                className="w-full h-auto object-contain block"
+                className="w-full h-auto object-contain block group-hover:scale-[1.02] transition-transform duration-500"
               />
-            </div>
+            </Link>
           </motion.div>
         </motion.div>
       )}

@@ -19,6 +19,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://liftmygrade.com"),
   title: "LIFTMYGRADE | Global Academic Ecosystem & Mentorship",
+  icons: {
+    icon: "/favicon-1.webp",
+    shortcut: "/favicon-1.webp",
+    apple: "/favicon-1.webp",
+  },
   description:
     "Premium academic guidance for Bachelor's, Master's, and PhD journeys abroad. Structured mentorship for your global academic growth.",
   alternates: {
