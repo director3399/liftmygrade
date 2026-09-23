@@ -15,6 +15,8 @@ import Blog from "@/components/Blog";
 import Team from "@/components/Team";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
+import OfferBanner from "@/components/OfferBanner";
+import PromoPopup from "@/components/PromoPopup";
 
 // ═══════════════════════════════════════════════════════════════════
 // COMMENTED OUT — Components replaced or merged into new sections.
@@ -29,6 +31,7 @@ export default function Home() {
     <main className="bg-white selection:bg-blue-100 selection:text-blue-900">
       <Navbar />
       <Hero />
+      <OfferBanner />
       <About />
       <Challenges />
       <Services />
@@ -44,6 +47,8 @@ export default function Home() {
         <Contact />
       </Suspense>
       <Footer />
+
+      <PromoPopup />
     </main>
   );
 }

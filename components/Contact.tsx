@@ -14,26 +14,26 @@ const schema = z.object({
   email: z.string().email("Please enter a valid email address"),
   dialCode: z.string().min(1, "Dial code is required"),
   phone: z.string().min(7, "Phone number is too short").max(12, "Phone number is too long"),
-  
+
   status: z.string().min(1, "Please select an option"),
   industry: z.string().optional(),
-  
+
   services: z.array(z.string()).min(1, "Please select at least one service"),
-  
+
   resumeType: z.string().optional(),
   resumeTarget: z.string().optional(),
-  
+
   liUrl: z.string().optional(),
   liGoal: z.string().optional(),
-  
+
   sopOrg: z.string().optional(),
   sopPurpose: z.string().optional(),
-  
+
   grantBody: z.string().optional(),
   grantOrg: z.string().optional(),
-  
+
   prDeliverables: z.array(z.string()).optional(),
-  
+
   brief: z.string().min(5, "Please tell us a little about your goal"),
   timeline: z.string().optional(),
 });
@@ -135,6 +135,68 @@ export default function Contact() {
     }
   };
 
+  /* ────────────────────────────────────────────────────────────
+     Service groups — updated to match the services page
+     ──────────────────────────────────────────────────────────── */
+  const serviceGroups = [
+    {
+      category: "Free Discovery Services",
+      items: [
+        { id: "Readiness Form", desc: "An honest profile assessment." },
+        { id: "2 Consultation Calls", desc: "One-to-one sessions." },
+        { id: "Country Shortlisting", desc: "Narrow best-fit destinations." },
+        { id: "Document Analysis", desc: "Review of existing documents." },
+      ],
+    },
+    {
+      category: "Bachelor's & Master's Admissions",
+      items: [
+        { id: "SOP, LOR & CV Help", desc: "Admissions documents structured around your story." },
+        { id: "Statement of Purpose (SOP)", desc: "Tailored SOP for target programs." },
+        { id: "Letters of Recommendation", desc: "Well-structured LORs." },
+        { id: "Academic CV / Résumé", desc: "Admissions-ready CV." },
+      ],
+    },
+    {
+      category: "PhD & Research Support",
+      items: [
+        { id: "Dissertation Support", desc: "Chapter-wise guidance from proposal to defense." },
+        { id: "Literature Review & Methodology Support", desc: "Standalone and systematic (PRISMA-aligned) reviews." },
+        { id: "Research Proposal", desc: "Focused, fundable research proposal." },
+        { id: "Academic CV & SOR", desc: "Research-focused documents." },
+        { id: "Research-Focused LORs", desc: "Letters for research potential." },
+        { id: "Supervisor & Program Mapping", desc: "Identify aligned professors." },
+        { id: "Professor Outreach Strategy", desc: "Personalised first-contact emails." },
+        { id: "Communication Strategy", desc: "Managing supervisor dialogue." },
+        { id: "Funding & Interview Support", desc: "Scholarship & interview prep." },
+      ],
+    },
+    {
+      category: "Publication Support",
+      items: [
+        { id: "Thesis Help", desc: "Structural review and academic editing." },
+        { id: "Publication Help", desc: "Manuscript editing and verified journal shortlist." },
+        { id: "Book Help", desc: "Developmental and line editing for books & chapters." },
+        { id: "Journal Publication Assistance", desc: "Get published in peer-reviewed journals." },
+        { id: "Manuscript Editing & Positioning", desc: "Editorial support for submission." },
+        { id: "Book & Book Chapter Editing", desc: "Editing for academic books & chapters." },
+        { id: "Plagiarism & AI Content Removal", desc: "Similarity reduction & AI score optimization." },
+      ],
+    },
+    {
+      category: "Career & Professional Support",
+      items: [
+        { id: "Career & Professional Branding", desc: "Résumé, LinkedIn, company SOP, grants, PR." },
+        { id: "Résumé & CV", desc: "Build from scratch or edit." },
+        { id: "LinkedIn Profile", desc: "Full build-out and keywords." },
+        { id: "Company SOP", desc: "Corporate statement of purpose." },
+        { id: "Grant Writing", desc: "Persuasive proposals for funding." },
+        { id: "PR Writing", desc: "Press releases, white papers." },
+        { id: "Book Editing", desc: "Comprehensive editorial support." },
+      ],
+    },
+  ];
+
   return (
     <section className="py-24 md:py-32 px-6 md:px-12 lg:px-16 bg-[#F6F8F7] relative" id="contact">
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
@@ -153,8 +215,8 @@ export default function Contact() {
         </div>
 
         <div className="bg-transparent sm:bg-white rounded-none sm:rounded-[3rem] p-0 sm:p-4 sm:shadow-[0_8px_40px_rgb(0,0,0,0.04)] sm:border border-transparent sm:border-neutral-100 flex flex-col-reverse lg:flex-row max-w-6xl mx-auto gap-8 sm:gap-0">
-          
-          {/* Left Column: Contact Details (Appears on right/bottom) */}
+
+          {/* Left Column: Contact Details */}
           <div className="bg-[#050B1D] text-white p-8 md:p-14 lg:p-16 rounded-3xl sm:rounded-[2.5rem] lg:w-5/12 flex flex-col relative overflow-hidden shrink-0 mt-4 lg:mt-0 shadow-xl sm:shadow-none">
             <div className="absolute -top-32 -right-32 w-64 h-64 bg-blue-600 rounded-full mix-blend-screen filter blur-[100px] opacity-60" />
             <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-indigo-600 rounded-full mix-blend-screen filter blur-[100px] opacity-40" />
@@ -164,7 +226,7 @@ export default function Contact() {
               <p className="text-white/60 mb-12 font-light leading-relaxed">
                 Connect with our academic mentors to discuss your aspirations and find the right pathway.
               </p>
-              
+
               <div className="space-y-10 flex-1">
                 <div className="flex items-start gap-4 sm:gap-5 group">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-blue-600 transition-colors duration-300">
@@ -178,7 +240,7 @@ export default function Contact() {
                     <a href="mailto:info@liftmygrade.com" className="text-base sm:text-lg font-medium text-white/90 hover:text-white transition-colors wrap-break-words">info@liftmygrade.com</a>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4 sm:gap-5 group">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-green-500 transition-colors duration-300">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-white/80 group-hover:text-white transition-colors sm:w-5 sm:h-5">
@@ -190,12 +252,10 @@ export default function Contact() {
                     <a href="https://wa.me/919147720702" target="_blank" rel="noopener noreferrer" className="text-base sm:text-lg font-medium text-white/90 hover:text-white transition-colors">+91 9147720702</a>
                   </div>
                 </div>
-                
-
               </div>
             </div>
           </div>
-          
+
           {/* Right Column: Multi-Step Form */}
           <div className="p-0 sm:p-14 lg:p-16 lg:w-7/12 flex flex-col justify-start">
             {isSubmitted && submitData ? (
@@ -223,11 +283,10 @@ export default function Contact() {
                     <h3 className="text-2xl font-bold text-[#171717] tracking-tight mb-2">Book Free Consultation</h3>
                     <p className="text-neutral-500 text-sm">Step {currentStep} of {TOTAL_STEPS}</p>
                   </div>
-                  {/* Progress Bar */}
                   <div className="flex gap-1.5">
                     {[...Array(TOTAL_STEPS)].map((_, i) => (
-                      <div 
-                        key={i} 
+                      <div
+                        key={i}
                         className={`h-1.5 rounded-full transition-all duration-300 ${
                           i + 1 <= currentStep ? "w-6 bg-blue-600" : "w-3 bg-neutral-200"
                         }`}
@@ -235,35 +294,35 @@ export default function Contact() {
                     ))}
                   </div>
                 </div>
-                
+
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 flex-1 flex flex-col" noValidate>
-                  
+
                   <div className="mb-4">
                     {/* STEP 1: Your Details */}
                     {currentStep === 1 && (
                       <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-300">
                         <div className="group">
                           <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2 group-focus-within:text-blue-600 transition-colors">Full Name *</label>
-                          <input 
+                          <input
                             {...register("fullName")}
-                            type="text" 
+                            type="text"
                             className="w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all placeholder:text-neutral-300 placeholder:font-normal"
                             placeholder="John Doe"
                           />
                           {errors.fullName && <p className="text-red-500 text-xs mt-2 font-medium">{errors.fullName.message}</p>}
                         </div>
-                        
+
                         <div className="group">
                           <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2 group-focus-within:text-blue-600 transition-colors">Email Address *</label>
-                          <input 
+                          <input
                             {...register("email")}
-                            type="email" 
+                            type="email"
                             className="w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all placeholder:text-neutral-300 placeholder:font-normal"
                             placeholder="you@example.com"
                           />
                           {errors.email && <p className="text-red-500 text-xs mt-2 font-medium">{errors.email.message}</p>}
                         </div>
-                        
+
                         <div className="group">
                           <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2 group-focus-within:text-blue-600 transition-colors">Phone Number *</label>
                           <div className="flex gap-2 sm:gap-3">
@@ -279,9 +338,9 @@ export default function Contact() {
                               <option value="+971">🇦🇪 +971</option>
                               <option value="+65">🇸🇬 +65</option>
                             </select>
-                            <input 
+                            <input
                               {...register("phone")}
-                              type="tel" 
+                              type="tel"
                               className="flex-1 w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all placeholder:text-neutral-300 placeholder:font-normal"
                               placeholder="98XXXXXXXX"
                             />
@@ -296,7 +355,7 @@ export default function Contact() {
                       <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-300">
                         <div className="group">
                           <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2 group-focus-within:text-blue-600 transition-colors">You are a... *</label>
-                          <select 
+                          <select
                             {...register("status")}
                             defaultValue=""
                             className="w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all appearance-none cursor-pointer"
@@ -315,7 +374,7 @@ export default function Contact() {
 
                         <div className="group">
                           <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2 group-focus-within:text-blue-600 transition-colors">Industry / Field (Optional)</label>
-                          <select 
+                          <select
                             {...register("industry")}
                             defaultValue=""
                             className="w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all appearance-none cursor-pointer"
@@ -334,70 +393,17 @@ export default function Contact() {
                       </div>
                     )}
 
-                    {/* STEP 3: Services */}
+                    {/* STEP 3: Services — updated to match services page */}
                     {currentStep === 3 && (
                       <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-300">
                         <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-4">What Do You Need? *</label>
-                        <div className="max-h-[350px] sm:max-h-[240px] overflow-y-auto pr-2 space-y-6 custom-scrollbar">
-                          {[
-                            {
-                              category: "Free Discovery Services",
-                              items: [
-                                { id: "Readiness Form", desc: "An honest profile assessment." },
-                                { id: "2 Consultation Calls", desc: "One-to-one sessions." },
-                                { id: "Country Shortlisting", desc: "Narrow best-fit destinations." },
-                                { id: "Detailed Roadmap", desc: "Country-specific plan." },
-                                { id: "Document Analysis", desc: "Review of existing documents." },
-                              ]
-                            },
-                            {
-                              category: "Bachelor's & Master's Admissions",
-                              items: [
-                                { id: "Statement of Purpose (SOP)", desc: "Tailored SOP for target programs." },
-                                { id: "Letters of Recommendation", desc: "Well-structured LORs." },
-                                { id: "Academic CV / Résumé", desc: "Admissions-ready CV." },
-                                { id: "Test & Exam Guidance", desc: "Direction for GRE/GMAT/IELTS etc." },
-                                { id: "Visa & Formalities Support", desc: "Financial documentation & visa prep." },
-                                { id: "Submission & Tracking", desc: "Application assembly & tracking." },
-                              ]
-                            },
-                            {
-                              category: "PhD & Research Support",
-                              items: [
-                                { id: "Research Proposal", desc: "Focused, fundable research proposal." },
-                                { id: "Academic CV & SOR", desc: "Research-focused documents." },
-                                { id: "Research-Focused LORs", desc: "Letters for research potential." },
-                                { id: "Supervisor Mapping", desc: "Identify aligned professors." },
-                                { id: "Professor Outreach Strategy", desc: "Personalised first-contact emails." },
-                                { id: "Communication Strategy", desc: "Managing supervisor dialogue." },
-                                { id: "Funding & Interview Support", desc: "Scholarship & interview prep." },
-                              ]
-                            },
-                            {
-                              category: "Publication Support",
-                              items: [
-                                { id: "Journal Publication Assistance", desc: "Get published in peer-reviewed journals." },
-                                { id: "Manuscript Editing", desc: "Editorial support for submission." },
-                                { id: "Book & Book Chapter Editing", desc: "Editing for academic books & chapters." },
-                                { id: "Plagiarism & AI Content Removal", desc: "Similarity reduction & AI score optimization." },
-                              ]
-                            },
-                            {
-                              category: "Career & Professional Support",
-                              items: [
-                                { id: "Résumé & CV", desc: "Build from scratch or edit." },
-                                { id: "LinkedIn Profile", desc: "Full build-out and keywords." },
-                                { id: "Company SOP", desc: "Corporate statement of purpose." },
-                                { id: "Grant Writing", desc: "Persuasive proposals for funding." },
-                                { id: "PR Writing", desc: "Press releases, white papers." }
-                              ]
-                            }
-                          ].map(group => (
+                        <div className="max-h-[400px] sm:max-h-[320px] overflow-y-auto pr-2 space-y-6 custom-scrollbar">
+                          {serviceGroups.map(group => (
                             <div key={group.category} className="space-y-3">
                               <h4 className="text-sm font-bold text-[#171717]">{group.category}</h4>
                               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                 {group.items.map(svc => (
-                                  <div 
+                                  <div
                                     key={svc.id}
                                     onClick={() => toggleService(svc.id)}
                                     className={`p-4 rounded-2xl border-2 cursor-pointer transition-all ${watchServices.includes(svc.id) ? 'border-blue-600 bg-blue-50/50' : 'border-neutral-100 hover:border-blue-200 bg-white sm:bg-transparent shadow-sm sm:shadow-none'}`}
@@ -415,7 +421,7 @@ export default function Contact() {
                         {/* Conditionals */}
                         <AnimatePresence>
                           {watchServices.includes("Résumé & CV") && (
-                            <motion.div 
+                            <motion.div
                               initial={{ height: 0, opacity: 0, overflow: 'hidden' }}
                               animate={{ height: "auto", opacity: 1 }}
                               exit={{ height: 0, opacity: 0 }}
@@ -435,7 +441,7 @@ export default function Contact() {
                           )}
 
                           {watchServices.includes("LinkedIn Profile") && (
-                            <motion.div 
+                            <motion.div
                               initial={{ height: 0, opacity: 0, overflow: 'hidden' }}
                               animate={{ height: "auto", opacity: 1 }}
                               exit={{ height: 0, opacity: 0 }}
@@ -456,7 +462,7 @@ export default function Contact() {
                           )}
 
                           {watchServices.includes("PR Writing") && (
-                            <motion.div 
+                            <motion.div
                               initial={{ height: 0, opacity: 0, overflow: 'hidden' }}
                               animate={{ height: "auto", opacity: 1 }}
                               exit={{ height: 0, opacity: 0 }}
@@ -466,7 +472,7 @@ export default function Contact() {
                                 <p className="text-xs font-bold uppercase text-neutral-500 mb-2">PR Deliverables</p>
                                 <div className="flex flex-wrap gap-2">
                                   {["Press release", "Media advisory", "Fact sheet", "White paper", "Case study", "Social media posts"].map(pr => (
-                                    <span 
+                                    <span
                                       key={pr}
                                       onClick={() => togglePrDeliverable(pr)}
                                       className={`px-3 py-1.5 rounded-full text-xs font-medium cursor-pointer transition-colors border ${watchPrDeliverables.includes(pr) ? 'bg-blue-600 text-white border-blue-600' : 'bg-white border-neutral-200 text-neutral-600 hover:border-blue-300'}`}
@@ -487,7 +493,7 @@ export default function Contact() {
                       <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-300">
                         <div className="group">
                           <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2 group-focus-within:text-blue-600 transition-colors">What are you aiming to achieve? *</label>
-                          <textarea 
+                          <textarea
                             {...register("brief")}
                             rows={3}
                             className="w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all resize-none placeholder:text-neutral-300 placeholder:font-normal"
@@ -498,7 +504,7 @@ export default function Contact() {
 
                         <div className="group">
                           <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2 group-focus-within:text-blue-600 transition-colors">Timeline (Optional)</label>
-                          <select 
+                          <select
                             {...register("timeline")}
                             defaultValue=""
                             className="w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all appearance-none cursor-pointer"
@@ -513,12 +519,12 @@ export default function Contact() {
                       </div>
                     )}
                   </div>
-                  
+
                   {/* Navigation Buttons */}
                   <div className="pt-4 mt-2 flex items-center justify-between">
                     {currentStep > 1 ? (
-                      <button 
-                        type="button" 
+                      <button
+                        type="button"
                         onClick={handlePrev}
                         className="text-neutral-500 font-semibold py-3 px-6 rounded-full hover:bg-neutral-100 transition-colors flex items-center gap-2"
                       >
@@ -527,15 +533,15 @@ export default function Contact() {
                     ) : <div></div>}
 
                     {currentStep < TOTAL_STEPS ? (
-                      <button 
-                        type="button" 
+                      <button
+                        type="button"
                         onClick={handleNext}
                         className="bg-[#171717] text-white font-semibold py-3 px-8 rounded-full hover:bg-neutral-800 transition-all hover:shadow-lg hover:shadow-neutral-900/10 flex items-center gap-2 group"
                       >
                         Next Step <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       </button>
                     ) : (
-                      <button 
+                      <button
                         type="submit"
                         disabled={isSubmitting}
                         className="bg-blue-600 text-white font-semibold py-3 px-8 rounded-full hover:bg-blue-700 transition-all hover:shadow-lg hover:shadow-blue-600/20 flex items-center gap-2 group disabled:opacity-70 disabled:cursor-not-allowed"
@@ -549,7 +555,6 @@ export default function Contact() {
               </>
             )}
           </div>
-          
         </div>
       </div>
     </section>
