@@ -1,127 +1,113 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
+import { ArrowRight } from "./Icons";
 
-type Popup = {
+type Slide = {
   id: string;
   image: string;
   alt: string;
-  width: number;
-  height: number;
+  tag: string;
+  title: string;
+  desc: string;
+  price: string;
+  cta: string;
   link: string;
 };
 
 export default function PromoPopup() {
-  const popups: Popup[] = [
+  const slides: Slide[] = [
     {
-      id: "popup1",
+      id: "slide1",
       image: "/popup/popup1.webp",
-      alt: "Special offer 1",
-      width: 800,
-      height: 1000,
-      link: "/#contact",
+      alt: "AI & Plagiarism Report — ₹99",
+      tag: "Instant Report",
+      title: "AI & Plagiarism Report",
+      desc: "A verified AI-content and plagiarism report for any document you're about to submit — with a source-level breakdown.",
+      price: "₹99",
+      cta: "Get Report",
+      link: "https://wa.me/919147720702?text=Hi%20LiftmyGrade%2C%20I%27d%20like%20to%20get%20the%20AI%20%26%20Plagiarism%20Report",
     },
     {
-      id: "popup2",
+      id: "slide2",
       image: "/popup/popup2.webp",
-      alt: "Special offer 2",
-      width: 800,
-      height: 1000,
-      link: "/#contact",
+      alt: "Personalised Roadmap Plan — ₹199",
+      tag: "Country-Specific",
+      title: "Personalised Roadmap Plan",
+      desc: "A ready-to-follow roadmap with timelines, tests, intake windows, and a document checklist for your target country.",
+      price: "₹199",
+      cta: "Get Roadmap",
+      link: "https://wa.me/919147720702?text=Hi%20LiftmyGrade%2C%20I%27d%20like%20to%20get%20the%20Personalised%20Roadmap%20Plan",
     },
   ];
 
-  // Currently visible popup — null means none open
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const [slideIndex, setSlideIndex] = useState(0);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Which popups have already been shown this session (prevents re-show)
-  const [shownIds, setShownIds] = useState<string[]>([]);
-
-  // Helper — find next unseen popup and show it
-  const showNextUnseen = (currentShown: string[]) => {
-    const next = popups.findIndex((p) => !currentShown.includes(p.id));
-    if (next === -1) return; // All popups already shown
-    setActiveIndex(next);
-    setShownIds([...currentShown, popups[next].id]);
-    sessionStorage.setItem(
-      "promoPopupShown",
-      JSON.stringify([...currentShown, popups[next].id])
-    );
-  };
-
-  // ── On mount: restore session state, and schedule popup 1 ──
+  /* ────────────────────────────────────────────────────────────
+     Trigger logic:
+     - Show only ONCE per session
+     - Wait for user to scroll past the hero
+     - Then wait a further grace period before showing
+     ──────────────────────────────────────────────────────────── */
   useEffect(() => {
-    const stored = sessionStorage.getItem("promoPopupShown");
-    const alreadyShown: string[] = stored ? JSON.parse(stored) : [];
+    const alreadyShown = sessionStorage.getItem("promoPopupShown");
+    if (alreadyShown) return;
 
-    setShownIds(alreadyShown);
-
-    // If both popups already shown this session → do nothing
-    if (alreadyShown.length >= popups.length) return;
-
-    // First popup trigger: 10s after load OR scroll past 80% of viewport
-    let firstTriggered = false;
-    const triggerFirst = () => {
-      if (firstTriggered) return;
-      firstTriggered = true;
-      showNextUnseen(alreadyShown);
-    };
-
-    const timer = setTimeout(triggerFirst, 10000);
+    let shown = false;
 
     const handleScroll = () => {
-      if (window.scrollY > window.innerHeight * 0.8) {
-        triggerFirst();
+      if (shown) return;
+      if (window.scrollY > window.innerHeight * 1.5) {
+        shown = true;
+        setTimeout(() => {
+          setIsOpen(true);
+          sessionStorage.setItem("promoPopupShown", "true");
+          window.removeEventListener("scroll", handleScroll);
+        }, 12000);
       }
     };
-    window.addEventListener("scroll", handleScroll, { passive: true });
 
-    return () => {
-      clearTimeout(timer);
-      window.removeEventListener("scroll", handleScroll);
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // ── When a popup is dismissed: wait, then trigger the next unseen one ──
+  /* ────────────────────────────────────────────────────────────
+     Auto-carousel inside popup — rotate every 5s while open
+     ──────────────────────────────────────────────────────────── */
   useEffect(() => {
-    if (activeIndex !== null) return; // Popup currently open — don't schedule
-    if (shownIds.length === 0) return; // Nothing shown yet — wait for first trigger
-    if (shownIds.length >= popups.length) return; // All shown — done
-
-    // Second popup trigger: 20s after the first was dismissed
-    const timer = setTimeout(() => {
-      showNextUnseen(shownIds);
-    }, 20000);
-
-    return () => clearTimeout(timer);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [activeIndex, shownIds]);
+    if (!isOpen) {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+      return;
+    }
+    intervalRef.current = setInterval(() => {
+      setSlideIndex((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+  }, [isOpen, slides.length]);
 
   const handleClose = () => {
-    setActiveIndex(null);
+    setIsOpen(false);
   };
 
   return (
     <AnimatePresence>
-      {activeIndex !== null && (
+      {isOpen && (
         <motion.div
-          key={popups[activeIndex].id}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.35, ease: "easeOut" }}
           className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6"
         >
-          {/* Backdrop */}
-          <div
-            onClick={handleClose}
-            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
-          />
+          {/* Backdrop — does NOT close the popup */}
+          <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
 
           {/* Popup card */}
           <motion.div
@@ -129,34 +115,102 @@ export default function PromoPopup() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.96 }}
             transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
-            className="relative z-10 w-full max-w-[480px] sm:max-w-[520px]"
+            className="relative z-10 w-full max-w-[1040px]"
           >
-            {/* Close button */}
+            {/* Close button — the only way to dismiss */}
             <button
               onClick={handleClose}
               aria-label="Close popup"
-              className="absolute -top-2 -right-2 sm:-top-3 sm:-right-3 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white shadow-[0_4px_20px_rgba(0,0,0,0.25)] flex items-center justify-center text-[#171717] hover:bg-neutral-100 hover:scale-105 transition-all"
+              className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white shadow-[0_8px_24px_rgba(0,0,0,0.35)] flex items-center justify-center text-[#171717] hover:bg-neutral-100 hover:scale-105 transition-all"
             >
               <X className="w-4 h-4 sm:w-5 sm:h-5" strokeWidth={2.5} />
             </button>
 
-            {/* Image — wrapped in Link for redirection */}
-            <Link
-              href={popups[activeIndex].link}
-              onClick={handleClose}
-              aria-label={popups[activeIndex].alt}
-              className="relative block rounded-2xl sm:rounded-3xl overflow-hidden shadow-[0_24px_80px_-10px_rgba(0,0,0,0.6)] group"
-            >
-              <Image
-                src={popups[activeIndex].image}
-                alt={popups[activeIndex].alt}
-                width={popups[activeIndex].width}
-                height={popups[activeIndex].height}
-                priority
-                sizes="(max-width: 640px) 90vw, 520px"
-                className="w-full h-auto object-contain block group-hover:scale-[1.02] transition-transform duration-500"
-              />
-            </Link>
+            {/* ── Slide viewport (16:9 aspect) ─────────────── */}
+            <div className="relative aspect-video overflow-hidden rounded-2xl sm:rounded-3xl shadow-[0_24px_80px_-10px_rgba(0,0,0,0.6)]">
+              {/* Sliding track */}
+              <motion.div
+                className="flex h-full"
+                animate={{ x: `-${slideIndex * 100}%` }}
+                transition={{ duration: 0.7, ease: "easeInOut" }}
+              >
+                {slides.map((slide, i) => (
+                  <a
+                    key={slide.id}
+                    href={slide.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative w-full h-full shrink-0 block group"
+                  >
+                    {/* Background image — bright and clear */}
+                    <Image
+                      src={slide.image}
+                      alt=""
+                      fill
+                      priority={i === 0}
+                      sizes="(max-width: 768px) 100vw, 1040px"
+                      className="object-cover object-center group-hover:scale-105 transition-transform duration-[1.5s]"
+                      aria-hidden="true"
+                    />
+
+                    {/* Soft overlay — only darkens the LEFT side where text sits */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#050B1D]/85 via-[#050B1D]/55 to-transparent" />
+                    {/* Very subtle bottom fade so the price/CTA row stays readable */}
+                    <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#050B1D]/70 to-transparent" />
+
+                    {/* Content */}
+                    <div className="relative z-10 flex flex-col justify-between h-full p-5 sm:p-8 lg:p-10">
+                      {/* Top: tag */}
+                      <span className="inline-block text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-blue-300">
+                        {slide.tag}
+                      </span>
+
+                      {/* Middle: title + desc */}
+                      <div className="max-w-xl">
+                        <h3 className="text-[26px] sm:text-3xl lg:text-4xl font-bold text-white tracking-tight leading-[1.1] mb-3 drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
+                          {slide.title}
+                        </h3>
+                        {/* Description — hidden on mobile, visible on sm and up */}
+                        <p className="hidden sm:block text-sm sm:text-base text-white/85 leading-relaxed font-light drop-shadow-[0_1px_4px_rgba(0,0,0,0.5)]">
+                          {slide.desc}
+                        </p>
+                      </div>
+
+                      {/* Bottom: price + CTA */}
+                      <div className="flex items-end justify-between gap-3 sm:gap-4">
+                        <div className="flex flex-col">
+                          <span className="text-[10px] font-bold uppercase tracking-widest text-white/60 mb-0.5">
+                            Starting at
+                          </span>
+                          <span className="text-2xl sm:text-4xl font-bold text-white tracking-tight leading-none drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
+                            {slide.price}
+                          </span>
+                        </div>
+
+                        <div className="inline-flex items-center gap-2 sm:gap-2.5 bg-white text-[#050B1D] pl-4 sm:pl-5 pr-1.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold group-hover:bg-neutral-100 transition-all">
+                          {slide.cta}
+                          <span className="inline-flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 bg-blue-600 rounded-full text-white group-hover:bg-blue-700 transition-colors shrink-0">
+                            <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </motion.div>
+
+              {/* Progress dots — hidden on mobile, visible on sm+ */}
+              <div className="hidden sm:flex absolute bottom-6 right-6 z-20 gap-2">
+                {slides.map((_, i) => (
+                  <span
+                    key={i}
+                    className={`h-1.5 rounded-full transition-all duration-300 ${
+                      i === slideIndex ? "w-6 bg-white" : "w-1.5 bg-white/40"
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
           </motion.div>
         </motion.div>
       )}

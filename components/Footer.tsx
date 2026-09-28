@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { ArrowRight, Instagram, Youtube, Facebook, Linkedin } from "./Icons";
+
 export default function Footer() {
   return (
     <footer className="relative bg-[#050B1D] text-white pt-24 pb-12 px-6 md:px-12 lg:px-16 overflow-hidden">
@@ -8,39 +9,9 @@ export default function Footer() {
       <div className="absolute top-0 left-0 right-0 h-32 bg-linear-to-b from-white to-transparent opacity-10 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Footer CTA Section */}
-        <div className="flex flex-col items-center text-center mb-24">
-          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 tracking-tight leading-[1.1]">
-            Ready to Move From
-            <br />
-            Draft to Defense?
-          </h2>
-          <p className="text-base sm:text-lg text-white/60 mb-10 font-light max-w-xl">
-            Start with a free consultation, or begin with the Readiness Form for a small, confirmed fee.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center gap-4">
-            <a
-              href="/#contact"
-              className="inline-flex items-center gap-3 bg-white text-[#050B1D]! px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:bg-neutral-100 transition-all group"
-            >
-              Request a Free Consultation
-              <ArrowRight className="w-4 h-4 text-[#050B1D]! transition-transform group-hover:translate-x-1" />
-            </a>
-            <a
-              href="/readiness-assessment"
-              className="inline-flex items-center gap-3 bg-transparent border border-white/30 text-white! px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:bg-white/10 transition-all"
-            >
-              Start With the Readiness Form
-            </a>
-          </div>
-        </div>
-
-        {/* Separator Line */}
-        <div className="w-full h-px bg-white/10 mb-16 sm:mb-20" />
-
         {/* Bottom Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 md:gap-12 lg:gap-16 items-start mb-16 sm:mb-24">
-          
+
           {/* Column 1: Branding and Company Details */}
           <div className="lg:col-span-5 flex flex-col h-full">
             <div className="mb-8">
@@ -55,7 +26,7 @@ export default function Footer() {
                 <strong className="font-semibold text-white">LiftMyGrade</strong> is your Academic, Research, Career & Strategic Communication Ecosystem.
               </p>
               <p>
-                We help scholars and researchers move from thesis and dissertation work to publication, with PhD-level experts, chapter-wise review, and a full AI, plagiarism & reference/DOI verification report on every project. We also support Bachelor’s, Master’s, and PhD applicants with SOPs, LORs, and academic CVs, and provide career branding, grant writing, and strategic communication for professionals and institutions.
+                We help scholars and researchers move from thesis and dissertation work to publication, with PhD-level experts, chapter-wise review, and a full AI, plagiarism & reference/DOI verification report on every project. We also support Bachelor's, Master's, and PhD applicants with SOPs, LORs, and academic CVs, and provide career branding, grant writing, and strategic communication for professionals and institutions.
               </p>
             </div>
           </div>
@@ -67,6 +38,7 @@ export default function Footer() {
               <a href="/services" className="text-sm sm:text-base font-light text-white/70 hover:text-white transition-colors">Our Services</a>
               <a href="/how-we-work" className="text-sm sm:text-base font-light text-white/70 hover:text-white transition-colors">How We Work</a>
               <a href="/career-services" className="text-sm sm:text-base font-light text-white/70 hover:text-white transition-colors">Career Services</a>
+              <a href="/blog" className="text-sm sm:text-base font-light text-white/70 hover:text-white transition-colors">Blog</a>
               <a href="/what-to-expect" className="text-sm sm:text-base font-light text-white/70 hover:text-white transition-colors">What to Expect</a>
               <a href="/#testimonial" className="text-sm sm:text-base font-light text-white/70 hover:text-white transition-colors">Student Success</a>
               <a href="/refund-policy" className="text-sm sm:text-base font-light text-white/70 hover:text-white transition-colors">Privacy & Refund</a>
@@ -76,7 +48,7 @@ export default function Footer() {
           {/* Column 3: Get in Touch & Contact */}
           <div className="lg:col-span-4 flex flex-col gap-4">
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 tracking-tight">Get in Touch</h3>
-            
+
             <div className="flex items-center gap-3 mb-6">
               {[
                 { Icon: Facebook, href: "https://www.facebook.com/share/1YvxK4wTn7/?mibextid=wwXIfr" },
@@ -90,9 +62,51 @@ export default function Footer() {
               ))}
             </div>
 
-            <div className="text-sm sm:text-base font-light text-white/80 space-y-2 mt-2">
-              <p>+91 9147720702</p>
-              <a href="mailto:info@liftmygrade.com" className="hover:text-white transition-colors block">info@liftmygrade.com</a>
+            <div className="text-sm sm:text-base font-light text-white/80 space-y-3 mt-2">
+              {/* Phone with icon */}
+              <a
+                href="tel:+919147720702"
+                className="flex items-center gap-3 hover:text-white transition-colors group"
+              >
+                <span className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/70 group-hover:bg-white group-hover:text-[#050B1D] transition-all shrink-0">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                </span>
+                <span>+91 9147720702</span>
+              </a>
+
+              {/* Email with icon */}
+              <a
+                href="mailto:info@liftmygrade.com"
+                className="flex items-center gap-3 hover:text-white transition-colors group"
+              >
+                <span className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/70 group-hover:bg-white group-hover:text-[#050B1D] transition-all shrink-0">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                  </svg>
+                </span>
+                <span>info@liftmygrade.com</span>
+              </a>
             </div>
           </div>
         </div>

@@ -1,0 +1,612 @@
+"use client";
+
+import React, { useState, useEffect } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import { ArrowRight, CheckCircle2, ChevronLeft, ChevronRight } from "lucide-react";
+import { Instagram, Youtube, Facebook, Linkedin } from "./Icons";
+import { motion, AnimatePresence } from "framer-motion";
+import { useSearchParams } from "next/navigation";
+
+const schema = z.object({
+  fullName: z.string().min(2, "Please enter your full name"),
+  email: z.string().email("Please enter a valid email address"),
+  dialCode: z.string().min(1, "Dial code is required"),
+  phone: z.string().min(7, "Phone number is too short").max(12, "Phone number is too long"),
+
+  status: z.string().min(1, "Please select an option"),
+  industry: z.string().optional(),
+
+  services: z.array(z.string()).min(1, "Please select at least one service"),
+
+  resumeType: z.string().optional(),
+  resumeTarget: z.string().optional(),
+
+  liUrl: z.string().optional(),
+  liGoal: z.string().optional(),
+
+  sopOrg: z.string().optional(),
+  sopPurpose: z.string().optional(),
+
+  grantBody: z.string().optional(),
+  grantOrg: z.string().optional(),
+
+  prDeliverables: z.array(z.string()).optional(),
+
+  brief: z.string().min(5, "Please tell us a little about your goal"),
+  timeline: z.string().optional(),
+});
+
+type FormData = z.infer<typeof schema>;
+
+const TOTAL_STEPS = 4;
+
+export default function Contact2() {
+  const [currentStep, setCurrentStep] = useState(1);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitData, setSubmitData] = useState<FormData | null>(null);
+
+  const {
+    register,
+    handleSubmit,
+    watch,
+    trigger,
+    reset,
+    setValue,
+    formState: { errors, isSubmitting },
+  } = useForm<FormData>({
+    resolver: zodResolver(schema),
+    defaultValues: {
+      dialCode: "+91",
+      services: [],
+      prDeliverables: [],
+    },
+  });
+
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const serviceParam = searchParams.get("service");
+    if (serviceParam) {
+      setValue("services", [serviceParam], { shouldValidate: true });
+    }
+  }, [searchParams, setValue]);
+
+  const watchServices = watch("services") || [];
+  const watchPrDeliverables = watch("prDeliverables") || [];
+
+  const handleNext = async () => {
+    let fieldsToValidate: any[] = [];
+    if (currentStep === 1) fieldsToValidate = ["fullName", "email", "phone"];
+    if (currentStep === 2) fieldsToValidate = ["status"];
+    if (currentStep === 3) fieldsToValidate = ["services"];
+
+    const isStepValid = await trigger(fieldsToValidate);
+    if (isStepValid) {
+      setCurrentStep((prev) => Math.min(prev + 1, TOTAL_STEPS));
+    }
+  };
+
+  const handlePrev = () => {
+    setCurrentStep((prev) => Math.max(prev - 1, 1));
+  };
+
+  const onSubmit = async (data: FormData) => {
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) throw new Error("Failed to submit form");
+
+      setSubmitData(data);
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("Something went wrong. Please try again later.");
+    }
+  };
+
+  const handleRestart = () => {
+    reset();
+    setCurrentStep(1);
+    setIsSubmitted(false);
+    setSubmitData(null);
+  };
+
+  const toggleService = (service: string) => {
+    const current = watch("services") || [];
+    if (current.includes(service)) {
+      setValue("services", current.filter((s) => s !== service), { shouldValidate: true });
+    } else {
+      setValue("services", [...current, service], { shouldValidate: true });
+    }
+  };
+
+  const togglePrDeliverable = (deliverable: string) => {
+    const current = watch("prDeliverables") || [];
+    if (current.includes(deliverable)) {
+      setValue("prDeliverables", current.filter((d) => d !== deliverable));
+    } else {
+      setValue("prDeliverables", [...current, deliverable]);
+    }
+  };
+
+  const serviceGroups = [
+    {
+      category: "Free Discovery Services",
+      items: [
+        { id: "Readiness Form", desc: "An honest profile assessment." },
+        { id: "2 Consultation Calls", desc: "One-to-one sessions." },
+        { id: "Country Shortlisting", desc: "Narrow best-fit destinations." },
+        { id: "Document Analysis", desc: "Review of existing documents." },
+      ],
+    },
+    {
+      category: "Bachelor's & Master's Admissions",
+      items: [
+        { id: "SOP, LOR & CV Help", desc: "Admissions documents structured around your story." },
+        { id: "Statement of Purpose (SOP)", desc: "Tailored SOP for target programs." },
+        { id: "Letters of Recommendation", desc: "Well-structured LORs." },
+        { id: "Academic CV / Résumé", desc: "Admissions-ready CV." },
+      ],
+    },
+    {
+      category: "PhD & Research Support",
+      items: [
+        { id: "Dissertation Support", desc: "Chapter-wise guidance from proposal to defense." },
+        { id: "Literature Review & Methodology Support", desc: "Standalone and systematic (PRISMA-aligned) reviews." },
+        { id: "Research Proposal", desc: "Focused, fundable research proposal." },
+        { id: "Academic CV & SOR", desc: "Research-focused documents." },
+        { id: "Research-Focused LORs", desc: "Letters for research potential." },
+        { id: "Supervisor & Program Mapping", desc: "Identify aligned professors." },
+        { id: "Professor Outreach Strategy", desc: "Personalised first-contact emails." },
+        { id: "Communication Strategy", desc: "Managing supervisor dialogue." },
+        { id: "Funding & Interview Support", desc: "Scholarship & interview prep." },
+      ],
+    },
+    {
+      category: "Publication Support",
+      items: [
+        { id: "Thesis Help", desc: "Structural review and academic editing." },
+        { id: "Publication Help", desc: "Manuscript editing and verified journal shortlist." },
+        { id: "Book Help", desc: "Developmental and line editing for books & chapters." },
+        { id: "Journal Publication Assistance", desc: "Get published in peer-reviewed journals." },
+        { id: "Manuscript Editing & Positioning", desc: "Editorial support for submission." },
+        { id: "Book & Book Chapter Editing", desc: "Editing for academic books & chapters." },
+        { id: "Plagiarism & AI Content Removal", desc: "Similarity reduction & AI score optimization." },
+      ],
+    },
+    {
+      category: "Career & Professional Support",
+      items: [
+        { id: "Career & Professional Branding", desc: "Résumé, LinkedIn, company SOP, grants, PR." },
+        { id: "Résumé & CV", desc: "Build from scratch or edit." },
+        { id: "LinkedIn Profile", desc: "Full build-out and keywords." },
+        { id: "Company SOP", desc: "Corporate statement of purpose." },
+        { id: "Grant Writing", desc: "Persuasive proposals for funding." },
+        { id: "PR Writing", desc: "Press releases, white papers." },
+        { id: "Book Editing", desc: "Comprehensive editorial support." },
+      ],
+    },
+  ];
+
+  const socials = [
+    { Icon: Facebook, href: "https://www.facebook.com/share/1YvxK4wTn7/?mibextid=wwXIfr", label: "Facebook" },
+    { Icon: Instagram, href: "https://www.instagram.com/liftmygrade?igsh=Ynl2dXdrZHFqM2dp", label: "Instagram" },
+    { Icon: Youtube, href: "https://www.youtube.com/@LiftMyGrade", label: "YouTube" },
+    { Icon: Linkedin, href: "https://www.linkedin.com/company/lift-my-grade/", label: "LinkedIn" },
+  ];
+
+  return (
+    <section className="py-24 md:py-32 px-6 md:px-12 lg:px-16 bg-[#F6F8F7] relative" id="contact">
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="absolute top-[-20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-blue-500/5 blur-[120px]" />
+        <div className="absolute top-[40%] left-[-10%] w-[40%] h-[40%] rounded-full bg-blue-600/5 blur-[120px]" />
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="bg-transparent sm:bg-white rounded-none sm:rounded-[3rem] p-0 sm:p-4 sm:shadow-[0_8px_40px_rgb(0,0,0,0.04)] sm:border border-transparent sm:border-neutral-100 flex flex-col-reverse lg:flex-row max-w-6xl mx-auto gap-8 sm:gap-0">
+
+          {/* Left Column: CTA + Contact Details */}
+          <div className="bg-[#050B1D] text-white p-8 md:p-12 lg:p-14 rounded-3xl sm:rounded-[2.5rem] lg:w-5/12 flex flex-col relative overflow-hidden shrink-0 mt-4 lg:mt-0 shadow-xl sm:shadow-none">
+            <div className="absolute -top-32 -right-32 w-64 h-64 bg-blue-600 rounded-full mix-blend-screen filter blur-[100px] opacity-60" />
+            <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-indigo-600 rounded-full mix-blend-screen filter blur-[100px] opacity-40" />
+
+            <div className="relative z-10 flex flex-col h-full">
+
+              {/* ── CTA HEADING ── */}
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-[1.15] mb-4">
+                Ready to Move From
+                <br />
+                Draft to Defense?
+              </h3>
+
+              <p className="text-white/60 mb-8 font-light leading-relaxed">
+                Start with a free consultation, or begin with the Readiness Form for a small, confirmed fee.
+              </p>
+
+              {/* ── CTAs — primary full-width, two secondaries below ── */}
+              <div className="flex flex-col gap-3 mb-10">
+                {/* Primary — full width */}
+                <a
+                  href="#contact-form"
+                  className="inline-flex items-center justify-center gap-2 bg-white text-[#050B1D] px-5 py-3 rounded-full text-sm font-semibold hover:bg-neutral-100 transition-all group"
+                >
+                  Request a Free Consultation
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </a>
+
+                {/* Secondary — two side by side */}
+                <div className="grid grid-cols-2 gap-3">
+                  <a
+                    href="/readiness-assessment"
+                    className="inline-flex items-center justify-center gap-2 bg-transparent border border-white/30 text-white px-4 py-3 rounded-full text-[13px] font-semibold hover:bg-white/10 transition-all text-center"
+                  >
+                    Readiness Form
+                  </a>
+                  <a
+                    href="/#pricing-banner"
+                    className="inline-flex items-center justify-center gap-2 bg-transparent border border-white/30 text-white px-4 py-3 rounded-full text-[13px] font-semibold hover:bg-white/10 transition-all text-center"
+                  >
+                    AI, Plag Report
+                  </a>
+                </div>
+              </div>
+
+              {/* Divider */}
+              <div className="w-full h-px bg-white/10 mb-8" />
+
+              {/* ── CONTACT DETAILS ── */}
+              <div className="space-y-6 mb-8">
+                <div className="flex items-start gap-4 group">
+                  <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-blue-600 transition-colors duration-300">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="text-white/80 group-hover:text-white transition-colors">
+                      <rect width="20" height="16" x="2" y="4" rx="2"/>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                    </svg>
+                  </div>
+                  <div className="min-w-0">
+                    <p className="text-[10px] font-semibold uppercase tracking-widest text-white/40 mb-1">Email Us</p>
+                    <a href="mailto:info@liftmygrade.com" className="text-sm sm:text-base font-medium text-white/90 hover:text-white transition-colors break-words">info@liftmygrade.com</a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 group">
+                  <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-green-500 transition-colors duration-300">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="text-white/80 group-hover:text-white transition-colors">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                  </div>
+                  <div className="min-w-0">
+                    <p className="text-[10px] font-semibold uppercase tracking-widest text-white/40 mb-1">WhatsApp / Phone</p>
+                    <a href="https://wa.me/919147720702" target="_blank" rel="noopener noreferrer" className="text-sm sm:text-base font-medium text-white/90 hover:text-white transition-colors">+91 9147720702</a>
+                  </div>
+                </div>
+              </div>
+
+              {/* ── SOCIAL ICONS ── */}
+              {/* <div className="flex items-center gap-2.5 mt-auto pt-6 border-t border-white/10">
+                {socials.map((social, i) => (
+                  <a
+                    key={i}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.label}
+                    className="w-9 h-9 rounded-full bg-white/5 border border-white/10 text-white flex items-center justify-center hover:bg-white hover:text-[#050B1D] transition-all transform hover:-translate-y-0.5"
+                  >
+                    <social.Icon className="w-4 h-4" />
+                  </a>
+                ))}
+              </div> */}
+
+            </div>
+          </div>
+
+          {/* Right Column: Multi-Step Form */}
+          <div id="contact-form" className="p-0 sm:p-14 lg:p-16 lg:w-7/12 flex flex-col justify-start">
+            {isSubmitted && submitData ? (
+              <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 flex flex-col items-center text-center h-full justify-center">
+                <div className="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mb-6">
+                  <CheckCircle2 className="w-10 h-10 text-green-500" />
+                </div>
+                <h3 className="text-3xl font-bold text-[#171717] tracking-tight mb-4">
+                  Thank you, {submitData.fullName.split(" ")[0]}!
+                </h3>
+                <p className="text-neutral-500 max-w-md mx-auto mb-10 leading-relaxed">
+                  Your consultation request is in. Our specialists will review it and reach out shortly to plan your project — at no cost.
+                </p>
+                <button
+                  onClick={handleRestart}
+                  className="bg-white border-2 border-neutral-200 text-[#171717] font-semibold py-3 px-8 rounded-full hover:border-blue-600 hover:text-blue-600 transition-colors"
+                >
+                  Submit another request
+                </button>
+              </div>
+            ) : (
+              <>
+                <div className="mb-8 flex items-center justify-between">
+                  <div>
+                    <h3 className="text-2xl font-bold text-[#171717] tracking-tight mb-2">Book Free Consultation</h3>
+                    <p className="text-neutral-500 text-sm">Step {currentStep} of {TOTAL_STEPS}</p>
+                  </div>
+                  <div className="flex gap-1.5">
+                    {[...Array(TOTAL_STEPS)].map((_, i) => (
+                      <div
+                        key={i}
+                        className={`h-1.5 rounded-full transition-all duration-300 ${
+                          i + 1 <= currentStep ? "w-6 bg-blue-600" : "w-3 bg-neutral-200"
+                        }`}
+                      />
+                    ))}
+                  </div>
+                </div>
+
+                <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 flex-1 flex flex-col" noValidate>
+
+                  <div className="mb-4">
+                    {/* STEP 1 */}
+                    {currentStep === 1 && (
+                      <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-300">
+                        <div className="group">
+                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2 group-focus-within:text-blue-600 transition-colors">Full Name *</label>
+                          <input
+                            {...register("fullName")}
+                            type="text"
+                            className="w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all placeholder:text-neutral-300 placeholder:font-normal"
+                            placeholder="John Doe"
+                          />
+                          {errors.fullName && <p className="text-red-500 text-xs mt-2 font-medium">{errors.fullName.message}</p>}
+                        </div>
+
+                        <div className="group">
+                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2 group-focus-within:text-blue-600 transition-colors">Email Address *</label>
+                          <input
+                            {...register("email")}
+                            type="email"
+                            className="w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all placeholder:text-neutral-300 placeholder:font-normal"
+                            placeholder="you@example.com"
+                          />
+                          {errors.email && <p className="text-red-500 text-xs mt-2 font-medium">{errors.email.message}</p>}
+                        </div>
+
+                        <div className="group">
+                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2 group-focus-within:text-blue-600 transition-colors">Phone Number *</label>
+                          <div className="flex gap-2 sm:gap-3">
+                            <select
+                              {...register("dialCode")}
+                              className="w-24 bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all appearance-none cursor-pointer"
+                            >
+                              <option value="+91">🇮🇳 +91</option>
+                              <option value="+1">🇺🇸 +1</option>
+                              <option value="+44">🇬🇧 +44</option>
+                              <option value="+61">🇦🇺 +61</option>
+                              <option value="+49">🇩🇪 +49</option>
+                              <option value="+971">🇦🇪 +971</option>
+                              <option value="+65">🇸🇬 +65</option>
+                            </select>
+                            <input
+                              {...register("phone")}
+                              type="tel"
+                              className="flex-1 w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all placeholder:text-neutral-300 placeholder:font-normal"
+                              placeholder="98XXXXXXXX"
+                            />
+                          </div>
+                          {errors.phone && <p className="text-red-500 text-xs mt-2 font-medium">{errors.phone.message}</p>}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* STEP 2 */}
+                    {currentStep === 2 && (
+                      <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-300">
+                        <div className="group">
+                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2 group-focus-within:text-blue-600 transition-colors">You are a... *</label>
+                          <select
+                            {...register("status")}
+                            defaultValue=""
+                            className="w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all appearance-none cursor-pointer"
+                          >
+                            <option value="" disabled>Select</option>
+                            <option value="Student / Recent graduate">Student / Recent graduate</option>
+                            <option value="Working professional">Working professional</option>
+                            <option value="Founder / Business owner">Founder / Business owner</option>
+                            <option value="Freelancer / Consultant">Freelancer / Consultant</option>
+                            <option value="Nonprofit / Organisation">Nonprofit / Organisation</option>
+                            <option value="Academic / Researcher">Academic / Researcher</option>
+                            <option value="Other">Other</option>
+                          </select>
+                          {errors.status && <p className="text-red-500 text-xs mt-2 font-medium">{errors.status.message}</p>}
+                        </div>
+
+                        <div className="group">
+                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2 group-focus-within:text-blue-600 transition-colors">Industry / Field (Optional)</label>
+                          <select
+                            {...register("industry")}
+                            defaultValue=""
+                            className="w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all appearance-none cursor-pointer"
+                          >
+                            <option value="" disabled>Select (optional)</option>
+                            <option value="Technology / IT">Technology / IT</option>
+                            <option value="Finance & Banking">Finance & Banking</option>
+                            <option value="Healthcare & Pharma">Healthcare & Pharma</option>
+                            <option value="Engineering & Manufacturing">Engineering & Manufacturing</option>
+                            <option value="Education & Academia">Education & Academia</option>
+                            <option value="Marketing & Media">Marketing & Media</option>
+                            <option value="Consulting">Consulting</option>
+                            <option value="Other">Other</option>
+                          </select>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* STEP 3 */}
+                    {currentStep === 3 && (
+                      <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-300">
+                        <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-4">What Do You Need? *</label>
+                        <div className="max-h-[400px] sm:max-h-[320px] overflow-y-auto pr-2 space-y-6 custom-scrollbar">
+                          {serviceGroups.map(group => (
+                            <div key={group.category} className="space-y-3">
+                              <h4 className="text-sm font-bold text-[#171717]">{group.category}</h4>
+                              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                {group.items.map(svc => (
+                                  <div
+                                    key={svc.id}
+                                    onClick={() => toggleService(svc.id)}
+                                    className={`p-4 rounded-2xl border-2 cursor-pointer transition-all ${watchServices.includes(svc.id) ? 'border-blue-600 bg-blue-50/50' : 'border-neutral-100 hover:border-blue-200 bg-white sm:bg-transparent shadow-sm sm:shadow-none'}`}
+                                  >
+                                    <p className="font-semibold text-sm text-[#171717]">{svc.id}</p>
+                                    <p className="text-xs text-neutral-500 mt-1 leading-relaxed">{svc.desc}</p>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                        {errors.services && <p className="text-red-500 text-xs mt-2 font-medium">{errors.services.message}</p>}
+
+                        <AnimatePresence>
+                          {watchServices.includes("Résumé & CV") && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0, overflow: 'hidden' }}
+                              animate={{ height: "auto", opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.3 }}
+                              className="mb-4"
+                            >
+                              <div className="p-5 bg-white sm:bg-neutral-50 rounded-2xl space-y-4 shadow-sm sm:shadow-none">
+                                <p className="text-xs font-bold uppercase text-neutral-500">Résumé Details</p>
+                                <select {...register("resumeType")} defaultValue="" className="w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all appearance-none cursor-pointer">
+                                  <option value="" disabled>Do you have an existing résumé?</option>
+                                  <option value="Build a new one from scratch">Build a new one from scratch</option>
+                                  <option value="Edit & optimise my existing one">Edit & optimise my existing one</option>
+                                </select>
+                                <input {...register("resumeTarget")} type="text" placeholder="Target role / industry" className="w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all placeholder:text-neutral-300 placeholder:font-normal" />
+                              </div>
+                            </motion.div>
+                          )}
+
+                          {watchServices.includes("LinkedIn Profile") && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0, overflow: 'hidden' }}
+                              animate={{ height: "auto", opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.3 }}
+                              className="mb-4"
+                            >
+                              <div className="p-5 bg-white sm:bg-neutral-50 rounded-2xl space-y-4 shadow-sm sm:shadow-none">
+                                <p className="text-xs font-bold uppercase text-neutral-500">LinkedIn Details</p>
+                                <input {...register("liUrl")} type="text" placeholder="Current LinkedIn URL (optional)" className="w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all placeholder:text-neutral-300 placeholder:font-normal" />
+                                <select {...register("liGoal")} defaultValue="" className="w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all appearance-none cursor-pointer">
+                                  <option value="" disabled>Primary objective</option>
+                                  <option value="Job search / recruiter visibility">Job search / recruiter visibility</option>
+                                  <option value="Personal branding">Personal branding</option>
+                                  <option value="Networking & outreach">Networking & outreach</option>
+                                </select>
+                              </div>
+                            </motion.div>
+                          )}
+
+                          {watchServices.includes("PR Writing") && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0, overflow: 'hidden' }}
+                              animate={{ height: "auto", opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.3 }}
+                            >
+                              <div className="p-5 bg-white sm:bg-neutral-50 rounded-2xl space-y-4 shadow-sm sm:shadow-none">
+                                <p className="text-xs font-bold uppercase text-neutral-500 mb-2">PR Deliverables</p>
+                                <div className="flex flex-wrap gap-2">
+                                  {["Press release", "Media advisory", "Fact sheet", "White paper", "Case study", "Social media posts"].map(pr => (
+                                    <span
+                                      key={pr}
+                                      onClick={() => togglePrDeliverable(pr)}
+                                      className={`px-3 py-1.5 rounded-full text-xs font-medium cursor-pointer transition-colors border ${watchPrDeliverables.includes(pr) ? 'bg-blue-600 text-white border-blue-600' : 'bg-white border-neutral-200 text-neutral-600 hover:border-blue-300'}`}
+                                    >
+                                      {pr}
+                                    </span>
+                                  ))}
+                                </div>
+                              </div>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
+                    )}
+
+                    {/* STEP 4 */}
+                    {currentStep === 4 && (
+                      <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-300">
+                        <div className="group">
+                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2 group-focus-within:text-blue-600 transition-colors">What are you aiming to achieve? *</label>
+                          <textarea
+                            {...register("brief")}
+                            rows={3}
+                            className="w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all resize-none placeholder:text-neutral-300 placeholder:font-normal"
+                            placeholder="A few lines about your goal, context, and anything we should know."
+                          ></textarea>
+                          {errors.brief && <p className="text-red-500 text-xs mt-2 font-medium">{errors.brief.message}</p>}
+                        </div>
+
+                        <div className="group">
+                          <label className="block text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2 group-focus-within:text-blue-600 transition-colors">Timeline (Optional)</label>
+                          <select
+                            {...register("timeline")}
+                            defaultValue=""
+                            className="w-full bg-transparent border-b-2 border-neutral-200 py-3 text-[#171717] font-medium focus:outline-none focus:border-blue-600 transition-all appearance-none cursor-pointer"
+                          >
+                            <option value="" disabled>Select</option>
+                            <option value="As soon as possible">As soon as possible</option>
+                            <option value="Within 2 weeks">Within 2 weeks</option>
+                            <option value="Within a month">Within a month</option>
+                            <option value="Flexible / just exploring">Flexible / just exploring</option>
+                          </select>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Navigation Buttons */}
+                  <div className="pt-4 mt-2 flex items-center justify-between">
+                    {currentStep > 1 ? (
+                      <button
+                        type="button"
+                        onClick={handlePrev}
+                        className="text-neutral-500 font-semibold py-3 px-6 rounded-full hover:bg-neutral-100 transition-colors flex items-center gap-2"
+                      >
+                        <ChevronLeft className="w-4 h-4" /> Back
+                      </button>
+                    ) : <div></div>}
+
+                    {currentStep < TOTAL_STEPS ? (
+                      <button
+                        type="button"
+                        onClick={handleNext}
+                        className="bg-[#171717] text-white font-semibold py-3 px-8 rounded-full hover:bg-neutral-800 transition-all hover:shadow-lg hover:shadow-neutral-900/10 flex items-center gap-2 group"
+                      >
+                        Next Step <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </button>
+                    ) : (
+                      <button
+                        type="submit"
+                        disabled={isSubmitting}
+                        className="bg-blue-600 text-white font-semibold py-3 px-8 rounded-full hover:bg-blue-700 transition-all hover:shadow-lg hover:shadow-blue-600/20 flex items-center gap-2 group disabled:opacity-70 disabled:cursor-not-allowed"
+                      >
+                        {isSubmitting ? "Submitting..." : "Book Consultation"}
+                        {!isSubmitting && <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />}
+                      </button>
+                    )}
+                  </div>
+                </form>
+              </>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -6,13 +6,13 @@ import SectionLabel from "./SectionLabel";
 import { ArrowRight } from "./Icons";
 
 export default function Services() {
-  // Top 4 priority services — matching HTML's svc.major
+  // Top 5 priority services — with WhatsApp prefilled messages
   const pathways = [
     {
       id: "01",
       title: "Thesis Help",
       desc: "Structural review, academic editing, university-specific citation checks and a verified report — from your draft to a submission-ready thesis.",
-      link: "/thesis-help",
+      link: "https://wa.me/919147720702?text=Hi%20LiftmyGrade%2C%20I%27d%20like%20to%20get%20Thesis%20Help",
       bgColor: "bg-blue-600",
       textColor: "text-white",
       hoverColor: "group-hover:bg-blue-700",
@@ -22,7 +22,7 @@ export default function Services() {
       id: "02",
       title: "Dissertation Support",
       desc: "Chapter-wise guidance calibrated to your supervisor's expectations — proposal, methodology, findings, defense.",
-      link: "/dissertation-help",
+      link: "https://wa.me/919147720702?text=Hi%20LiftmyGrade%2C%20I%27d%20like%20to%20get%20Dissertation%20Support",
       bgColor: "bg-[#0A3A2A]",
       textColor: "text-white",
       hoverColor: "group-hover:bg-[#082e21]",
@@ -32,7 +32,7 @@ export default function Services() {
       id: "03",
       title: "Publication Help",
       desc: "Manuscript editing, a journal shortlist verified against official indexing, predatory screening and reviewer-response support.",
-      link: "/publication-help",
+      link: "https://wa.me/919147720702?text=Hi%20LiftmyGrade%2C%20I%27d%20like%20to%20get%20Publication%20Help",
       bgColor: "bg-blue-600",
       textColor: "text-white",
       hoverColor: "group-hover:bg-blue-700",
@@ -42,12 +42,22 @@ export default function Services() {
       id: "04",
       title: "Book Help",
       desc: "Developmental review, line editing and publisher submission formatting for academic books, edited volumes and chapters.",
-      link: "/book-help",
+      link: "https://wa.me/919147720702?text=Hi%20LiftmyGrade%2C%20I%27d%20like%20to%20get%20Book%20Help",
       bgColor: "bg-[#E8ECEF]",
       textColor: "text-[#171717]",
       hoverColor: "group-hover:bg-[#dce1e6]",
       iconColor: "text-[#171717]",
       descColor: "text-neutral-600",
+    },
+    {
+      id: "05",
+      title: "Plagiarism & AI Content Removal",
+      desc: "Thorough similarity reduction, paraphrase refinement, and AI detection score optimization while preserving original academic voice.",
+      link: "https://wa.me/919147720702?text=Hi%20LiftmyGrade%2C%20I%27d%20like%20to%20get%20Plagiarism%20%26%20AI%20Content%20Removal",
+      bgColor: "bg-[#0A3A2A]",
+      textColor: "text-white",
+      hoverColor: "group-hover:bg-[#082e21]",
+      iconColor: "text-white",
     },
   ];
 
@@ -95,7 +105,6 @@ export default function Services() {
               admissions documents, international admissions and career branding.
             </p>
 
-            {/* Button directly below description */}
             <Link
               href="/services"
               className="inline-flex items-center gap-3 bg-blue-600 text-white px-5 sm:px-6 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:bg-blue-700 transition-colors"
@@ -118,17 +127,16 @@ export default function Services() {
           </div>
         </div>
 
-        {/* 4 Cards Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-0 rounded-2xl overflow-hidden shadow-sm">
+        {/* 5 Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-0 rounded-2xl overflow-hidden shadow-sm">
           {pathways.map((pathway, idx) => (
-            <Link
+            <div
               key={idx}
-              href={pathway.link}
-              className={`group flex flex-col justify-between p-8 min-h-[420px] transition-all duration-300 ${pathway.bgColor} ${pathway.hoverColor}`}
+              className={`group flex flex-col justify-between p-6 sm:p-7 min-h-[380px] lg:min-h-[420px] transition-all duration-300 ${pathway.bgColor} ${pathway.hoverColor}`}
             >
               <div>
                 {/* Top Row: Number and Icon */}
-                <div className="flex items-center justify-between mb-12">
+                <div className="flex items-center justify-between mb-10">
                   <span
                     className={`text-sm font-mono font-medium ${pathway.textColor} opacity-80`}
                   >
@@ -153,7 +161,7 @@ export default function Services() {
 
                 {/* Title */}
                 <h3
-                  className={`text-2xl font-bold tracking-tight mb-4 ${pathway.textColor}`}
+                  className={`text-xl lg:text-[22px] font-bold tracking-tight mb-4 ${pathway.textColor}`}
                 >
                   {pathway.title}
                 </h3>
@@ -166,11 +174,14 @@ export default function Services() {
                 </p>
               </div>
 
-              {/* Bottom CTA */}
-              <div
-                className={`flex items-center text-sm font-semibold tracking-wider ${pathway.textColor} mt-8`}
+              {/* Bottom CTA — Get Now → WhatsApp */}
+              <a
+                href={pathway.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`inline-flex items-center text-xs sm:text-sm font-semibold tracking-wider ${pathway.textColor} mt-8 hover:opacity-80 transition-opacity`}
               >
-                EXPLORE SERVICE
+                GET NOW
                 <svg
                   className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
                   viewBox="0 0 24 24"
@@ -182,8 +193,8 @@ export default function Services() {
                 >
                   <path d="M5 12h14M13 6l6 6-6 6" />
                 </svg>
-              </div>
-            </Link>
+              </a>
+            </div>
           ))}
         </div>
       </div>

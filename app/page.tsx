@@ -17,6 +17,8 @@ import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import OfferBanner from "@/components/OfferBanner";
 import PromoPopup from "@/components/PromoPopup";
+import TestimonialsFAQ from "@/components/TestimonialsFAQ";
+import Contact2 from "@/components/Contact2";
 
 // ═══════════════════════════════════════════════════════════════════
 // COMMENTED OUT — Components replaced or merged into new sections.
@@ -32,19 +34,21 @@ export default function Home() {
       <Navbar />
       <Hero />
       <OfferBanner />
-      <About />
-      <Challenges />
+      {/* <About /> */}
+      {/* <Challenges /> */}
       <Services />
       <Standards />
       <AcademicJourney />
-      <Programs />
-      <Team />
-      <Testimonials />
+      {/* <Programs /> */}
+      {/* <Team /> */}
+      {/* <Testimonials /> */}
       <Blog />
+      <TestimonialsFAQ /> 
       {/* <StartPaths /> */}
-      <FAQ />
+      {/* <FAQ /> */}
       <Suspense fallback={<div>Loading...</div>}>
-        <Contact />
+        {/* <Contact /> */}
+        <Contact2 />
       </Suspense>
       <Footer />
 

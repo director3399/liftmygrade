@@ -28,26 +28,26 @@ export default function Journey() {
     accent: "amber" | "blue";
   }) => {
     const isAmber = accent === "amber";
-    const numberColor = isAmber ? "text-amber-200" : "text-blue-200";
     const labelColor = isAmber ? "text-amber-600" : "text-blue-600";
+    const lineColor = isAmber ? "bg-amber-300" : "bg-blue-300";
     const cardHover = isAmber
       ? "hover:border-amber-300 hover:shadow-[0_12px_40px_-12px_rgba(201,162,107,0.28)]"
       : "hover:border-blue-500/40 hover:shadow-[0_12px_40px_-12px_rgba(59,130,246,0.25)]";
 
     return (
       <div
-        className={`relative group bg-white border border-neutral-200 rounded-3xl p-6 sm:p-7 flex flex-col gap-3 transition-all duration-300 hover:-translate-y-1 ${cardHover} overflow-hidden min-h-[200px] sm:min-h-[220px]`}
+        className={`relative group bg-white border border-neutral-200 rounded-3xl p-6 sm:p-7 flex flex-col gap-4 transition-all duration-300 hover:-translate-y-1 ${cardHover} min-h-[200px] sm:min-h-[220px]`}
       >
-        <span
-          className={`absolute top-3 right-4 sm:top-4 sm:right-5 text-[52px] sm:text-[64px] font-bold leading-none tracking-tighter ${numberColor} select-none pointer-events-none`}
-        >
-          {step.id}
-        </span>
-
-        <div className="flex flex-col gap-2 relative z-10 mt-auto">
-          <span className={`text-[10px] font-bold uppercase tracking-widest ${labelColor}`}>
+        {/* "Step 01" label + accent line */}
+        <div className="flex items-center gap-3">
+          <span className={`text-2xl sm:text-3xl font-bold tracking-tight leading-none ${labelColor}`}>
             Step {step.id}
           </span>
+          <span className={`h-[2px] flex-1 max-w-[48px] ${lineColor}`} />
+        </div>
+
+        {/* Content */}
+        <div className="flex flex-col gap-2 mt-auto">
           <h4 className="text-[17px] sm:text-[18px] font-bold text-[#171717] leading-tight">
             {step.title}
           </h4>
@@ -59,105 +59,98 @@ export default function Journey() {
     );
   };
 
-/* ────────────────────────────────────────────────────────────
-   MobileCarousel — transform-based slider.
-   No native scroll, no snap, no scrollTo. Pure translateX +
-   CSS transition. Fully smooth, fully controllable.
-   ──────────────────────────────────────────────────────────── */
-const MobileCarousel = ({
-  steps,
-  accent,
-}: {
-  steps: typeof researchTrack;
-  accent: "amber" | "blue";
-}) => {
-  const [index, setIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
+  /* ────────────────────────────────────────────────────────────
+     MobileCarousel — transform-based slider.
+     ──────────────────────────────────────────────────────────── */
+  const MobileCarousel = ({
+    steps,
+    accent,
+  }: {
+    steps: typeof researchTrack;
+    accent: "amber" | "blue";
+  }) => {
+    const [index, setIndex] = useState(0);
+    const [isPaused, setIsPaused] = useState(false);
 
-  // Auto-advance every 3.5s
-  useEffect(() => {
-    if (isPaused) return;
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % steps.length);
-    }, 3500);
-    return () => clearInterval(interval);
-  }, [isPaused, steps.length]);
+    // Auto-advance every 3.5s
+    useEffect(() => {
+      if (isPaused) return;
+      const interval = setInterval(() => {
+        setIndex((prev) => (prev + 1) % steps.length);
+      }, 3500);
+      return () => clearInterval(interval);
+    }, [isPaused, steps.length]);
 
-  // Swipe support (touch gestures)
-  const touchStartX = useRef<number | null>(null);
-  const touchEndX = useRef<number | null>(null);
+    // Swipe support
+    const touchStartX = useRef<number | null>(null);
+    const touchEndX = useRef<number | null>(null);
 
-  const onTouchStart = (e: React.TouchEvent) => {
-    setIsPaused(true);
-    touchStartX.current = e.touches[0].clientX;
-    touchEndX.current = null;
-  };
+    const onTouchStart = (e: React.TouchEvent) => {
+      setIsPaused(true);
+      touchStartX.current = e.touches[0].clientX;
+      touchEndX.current = null;
+    };
 
-  const onTouchMove = (e: React.TouchEvent) => {
-    touchEndX.current = e.touches[0].clientX;
-  };
+    const onTouchMove = (e: React.TouchEvent) => {
+      touchEndX.current = e.touches[0].clientX;
+    };
 
-  const onTouchEnd = () => {
-    if (touchStartX.current !== null && touchEndX.current !== null) {
-      const delta = touchStartX.current - touchEndX.current;
-      if (delta > 50) {
-        // swipe left → next
-        setIndex((prev) => Math.min(prev + 1, steps.length - 1));
-      } else if (delta < -50) {
-        // swipe right → prev
-        setIndex((prev) => Math.max(prev - 1, 0));
+    const onTouchEnd = () => {
+      if (touchStartX.current !== null && touchEndX.current !== null) {
+        const delta = touchStartX.current - touchEndX.current;
+        if (delta > 50) {
+          setIndex((prev) => Math.min(prev + 1, steps.length - 1));
+        } else if (delta < -50) {
+          setIndex((prev) => Math.max(prev - 1, 0));
+        }
       }
-    }
-    touchStartX.current = null;
-    touchEndX.current = null;
-    // Resume after 4s
-    setTimeout(() => setIsPaused(false), 4000);
-  };
+      touchStartX.current = null;
+      touchEndX.current = null;
+      setTimeout(() => setIsPaused(false), 4000);
+    };
 
-  return (
-    <div className="lg:hidden">
-      {/* Viewport — clips overflow */}
-      <div
-        className="overflow-hidden"
-        onTouchStart={onTouchStart}
-        onTouchMove={onTouchMove}
-        onTouchEnd={onTouchEnd}
-      >
-        {/* Sliding track — moves via translateX */}
+    return (
+      <div className="lg:hidden">
         <div
-          className="flex gap-4 transition-transform duration-700 ease-out"
-          style={{
-            transform: `translateX(calc(-${index} * (85% + 16px)))`,
-          }}
+          className="overflow-hidden"
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
         >
-          {steps.map((step) => (
-            <div key={step.id} className="shrink-0 w-[85%]">
-              <StepCard step={step} accent={accent} />
-            </div>
+          <div
+            className="flex gap-4 transition-transform duration-700 ease-out"
+            style={{
+              transform: `translateX(calc(-${index} * (85% + 16px)))`,
+            }}
+          >
+            {steps.map((step) => (
+              <div key={step.id} className="shrink-0 w-[85%]">
+                <StepCard step={step} accent={accent} />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Dots */}
+        <div className="flex justify-center gap-2 mt-5">
+          {steps.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => {
+                setIndex(i);
+                setIsPaused(true);
+                setTimeout(() => setIsPaused(false), 4000);
+              }}
+              className={`h-2 rounded-full transition-all duration-300 ${
+                i === index ? "w-6 bg-[#171717]" : "w-2 bg-neutral-300"
+              }`}
+              aria-label={`Go to step ${i + 1}`}
+            />
           ))}
         </div>
       </div>
-
-      {/* Dots */}
-      <div className="flex justify-center gap-2 mt-5">
-        {steps.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => {
-              setIndex(i);
-              setIsPaused(true);
-              setTimeout(() => setIsPaused(false), 4000);
-            }}
-            className={`h-2 rounded-full transition-all duration-300 ${
-              i === index ? "w-6 bg-[#171717]" : "w-2 bg-neutral-300"
-            }`}
-            aria-label={`Go to step ${i + 1}`}
-          />
-        ))}
-      </div>
-    </div>
-  );
-};
+    );
+  };
 
   return (
     <section

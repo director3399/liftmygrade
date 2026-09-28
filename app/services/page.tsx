@@ -8,18 +8,34 @@ import Highlighter from "@/components/Highlighter";
 
 export const metadata = {
   title: "Our Services & Products | LiftmyGrade",
-  description: "Everything we offer, in one place. From free readiness assessments to fully drafted applications, research support, and career documents.",
+  description: "Everything we offer, in one place. From readiness assessments to fully drafted applications, research support, and career documents.",
   alternates: {
     canonical: "https://liftmygrade.com/services",
   },
   openGraph: {
     title: "Our Services & Products | LiftmyGrade",
-    description: "Everything we offer, in one place. From free readiness assessments to fully drafted applications, research support, and career documents.",
+    description: "Everything we offer, in one place. From readiness assessments to fully drafted applications, research support, and career documents.",
     url: "https://liftmygrade.com/services",
   },
 };
 
-const ServiceSection = ({ id, label, title, subtitle, items, theme = "default" }: any) => {
+/* ────────────────────────────────────────────────────────────
+   Helper — build a WhatsApp URL with a prefilled message
+   ──────────────────────────────────────────────────────────── */
+const waLink = (message: string) =>
+  `https://wa.me/919147720702?text=${encodeURIComponent(message)}`;
+
+/* ────────────────────────────────────────────────────────────
+   ServiceSection — reusable section for each category
+   ──────────────────────────────────────────────────────────── */
+const ServiceSection = ({
+  id,
+  label,
+  title,
+  subtitle,
+  items,
+  theme = "default",
+}: any) => {
   return (
     <section id={id} className="py-16 md:py-24 px-6 md:px-12 w-full border-t border-neutral-100">
       <div className="max-w-7xl mx-auto">
@@ -35,33 +51,66 @@ const ServiceSection = ({ id, label, title, subtitle, items, theme = "default" }
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {items.map((item: any, i: number) => (
-            <div key={i} className="bg-white border border-neutral-100 rounded-3xl overflow-hidden shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_12px_30px_-10px_rgba(0,0,0,0.1)] transition-all flex flex-col">
+            <div
+              key={i}
+              className="group bg-white border border-neutral-100 rounded-3xl overflow-hidden shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_12px_30px_-10px_rgba(0,0,0,0.1)] transition-all flex flex-col"
+            >
               {item.image && (
                 <div className="w-full h-48 relative bg-neutral-100">
-                  <Image src={item.image} alt={item.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
                 </div>
               )}
+
               <div className="p-8 flex flex-col flex-1">
                 <div className="mb-4">
-                  <h3 className="text-xl font-bold text-[#171717] tracking-tight">{item.title}</h3>
-                  {item.isFree && (
-                    <span className="inline-block mt-2 text-[10px] font-bold uppercase tracking-widest text-green-700 bg-green-50 px-2.5 py-1 rounded-md">
-                      Free
-                    </span>
-                  )}
+                  <h3 className="text-xl font-bold text-[#171717] tracking-tight">
+                    {item.title}
+                  </h3>
                 </div>
-                <p className="text-neutral-600 text-sm leading-relaxed mb-6 flex-1">
+
+                <p className="text-neutral-600 text-sm leading-relaxed mb-6">
                   {item.desc}
                 </p>
+
                 {item.tags && item.tags.length > 0 && (
-                  <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-neutral-50">
+                  <div className="flex flex-wrap gap-2 mb-6 pb-6 border-b border-neutral-50">
                     {item.tags.map((tag: string, t: number) => (
-                      <span key={t} className="text-[10px] font-semibold text-amber-700 bg-amber-50 px-2 py-1 rounded-md">
+                      <span
+                        key={t}
+                        className="text-[10px] font-semibold text-amber-700 bg-amber-50 px-2 py-1 rounded-md"
+                      >
                         {tag}
                       </span>
                     ))}
                   </div>
                 )}
+
+                {/* Get Now — WhatsApp redirect */}
+                <a
+                  href={waLink(`Hi LiftmyGrade, I'd like to get ${item.title}`)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700 mt-auto pt-2 transition-colors group/cta"
+                >
+                  GET NOW
+                  <svg
+                    className="w-4 h-4 group-hover/cta:translate-x-1 transition-transform"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </a>
               </div>
             </div>
           ))}
@@ -72,11 +121,13 @@ const ServiceSection = ({ id, label, title, subtitle, items, theme = "default" }
 };
 
 export default function ServicesPage() {
-  const freeServices = [
-    { title: "Readiness Form", desc: "An honest assessment of where you stand, generated from your profile.", isFree: true, image: "https://images.unsplash.com/photo-1627556704302-624286467c65?w=1000&q=90" },
-    { title: "2 Consultation Calls", desc: "Two one-to-one sessions to understand your goals and direction.", isFree: true, image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1000&q=90" },
-    { title: "Country Shortlisting", desc: "We narrow your best-fit top 1–3 destinations together.", isFree: true, image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1000&q=90" },
-    { title: "Document Analysis", desc: "A complimentary review of any résumé, SOP, or document you already have.", isFree: true, image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1000&q=90" }
+  const gettingStarted = [
+    { title: "Readiness Form", desc: "An honest assessment of where you stand, generated from your profile.", image: "https://images.unsplash.com/photo-1627556704302-624286467c65?w=1000&q=90" },
+    { title: "AI & Plagiarism Report", desc: "A verified AI-content and plagiarism report for any document you're about to submit — with a source-level breakdown. Available at a small, fixed fee of ₹99.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3gA33OKur8McQpw1HBmT0JH38FGXe_tuzydRM_tOzuKm72zJGG62bWvDR&s=10" },
+    { title: "Personalised Roadmap Plan", desc: "A ready-to-follow roadmap with timelines, tests, intake windows, and a document checklist for your target country. Available at a small, fixed fee of ₹199.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbRZEjt7XfeZkdRSWJNzEz8aX65acyXXCXp19sb_yroa7ruk3jskJNxUDw&s=10" },
+    { title: "2 Consultation Calls", desc: "Two one-to-one sessions to understand your goals and direction.", image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1000&q=90" },
+    { title: "Country Shortlisting", desc: "We narrow your best-fit top 1–3 destinations together.", image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1000&q=90" },
+    { title: "Document Analysis", desc: "A complimentary review of any résumé, SOP, or document you already have.", image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1000&q=90" }
   ];
 
   const admissions = [
@@ -130,11 +181,11 @@ export default function ServicesPage() {
             Everything We Offer, <br className="hidden md:block" />In One Place.
           </h1>
           <p className="text-lg md:text-xl text-neutral-600 max-w-3xl leading-relaxed mb-12">
-            As your <Highlighter>Academic, Research, Career & Strategic Communication Ecosystem</Highlighter>, we cover everything from a <Link href="/readiness-assessment" className="text-blue-600 hover:underline">free readiness assessment</Link> to fully drafted applications, research support, publication assistance, and <Link href="/career-services" className="text-blue-600 hover:underline">career branding</Link> — here's the complete range of what we do, organised so you can find exactly what you need.
+            As your <Highlighter>Academic, Research, Career & Strategic Communication Ecosystem</Highlighter>, we cover everything from a <Link href="/readiness-assessment" className="text-blue-600 hover:underline">readiness assessment</Link> to fully drafted applications, research support, publication assistance, and <Link href="/career-services" className="text-blue-600 hover:underline">career branding</Link> — here's the complete range of what we do, organised so you can find exactly what you need.
           </p>
 
           <div className="flex flex-wrap gap-3">
-            <a href="#free" className="text-sm font-bold text-neutral-800 bg-neutral-100 px-5 py-2.5 rounded-full hover:bg-neutral-200 transition-colors">Free Services</a>
+            <a href="#getting-started" className="text-sm font-bold text-neutral-800 bg-neutral-100 px-5 py-2.5 rounded-full hover:bg-neutral-200 transition-colors">Getting Started</a>
             <a href="#admissions" className="text-sm font-bold text-neutral-800 bg-neutral-100 px-5 py-2.5 rounded-full hover:bg-neutral-200 transition-colors">Bachelor's & Master's</a>
             <a href="#phd" className="text-sm font-bold text-neutral-800 bg-neutral-100 px-5 py-2.5 rounded-full hover:bg-neutral-200 transition-colors">PhD & Research</a>
             <a href="#publication" className="text-sm font-bold text-neutral-800 bg-neutral-100 px-5 py-2.5 rounded-full hover:bg-neutral-200 transition-colors">Publication Support</a>
@@ -144,11 +195,11 @@ export default function ServicesPage() {
       </section>
 
       <ServiceSection
-        id="free"
-        label="Free"
-        title="Free Discovery Services"
-        subtitle="Where every journey begins — at no cost, no commitment."
-        items={freeServices}
+        id="getting-started"
+        label="Getting Started"
+        title="Getting Started"
+        subtitle="Where every journey begins — from a quick assessment to a structured roadmap."
+        items={gettingStarted}
       />
 
       <ServiceSection
@@ -188,7 +239,7 @@ export default function ServicesPage() {
         <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">Not sure where to start?</h2>
           <p className="text-lg md:text-xl text-blue-100 mb-12 max-w-2xl">
-            Begin with a free assessment or consultation — we'll point you to exactly the right service for your goal.
+            Begin with a readiness assessment or consultation — we'll point you to exactly the right service for your goal.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/readiness-assessment" className="inline-flex items-center justify-center gap-3 bg-white text-blue-600 px-8 py-4 rounded-full font-bold hover:bg-neutral-50 transition-colors">
