@@ -19,6 +19,7 @@ import OfferBanner from "@/components/OfferBanner";
 import PromoPopup from "@/components/PromoPopup";
 import TestimonialsFAQ from "@/components/TestimonialsFAQ";
 import Contact2 from "@/components/Contact2";
+import FounderNote from "@/components/FounderNote";
 
 // ═══════════════════════════════════════════════════════════════════
 // COMMENTED OUT — Components replaced or merged into new sections.
@@ -34,6 +35,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <OfferBanner />
+      <FounderNote />
       {/* <About /> */}
       {/* <Challenges /> */}
       <Services />

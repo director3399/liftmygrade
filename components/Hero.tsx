@@ -54,9 +54,9 @@ export default function Hero() {
               <span className="font-semibold text-white">
                 Subject-matched PhD experts
               </span>
-              , a full AI, plagiarism &amp; reference verification report on
-              every project, and unlimited revisions until you're confident to
-              submit and defend.
+              , journal fit report, reference verification report on every
+              project, and unlimited revisions until you're confident to submit
+              and defend.
             </p>
           </div>
 
@@ -102,7 +102,6 @@ export default function Hero() {
                 </span>
               </div>
 
-              {/* Manuscript text with tracked changes — fonts bumped from 12.5 → 14 */}
               <p className="font-serif text-[14px] leading-[1.65] text-[#1B1F27] mb-3.5">
                 The study{" "}
                 <del className="text-red-700 line-through decoration-[1.5px] bg-red-500/10">
@@ -129,7 +128,6 @@ export default function Hero() {
                 from three public universities.
               </p>
 
-              {/* Expert note — fonts bumped from 11 → 12.5 */}
               <div className="p-3 rounded-lg border-l-[3px] border-amber-500 bg-[#FBF6EC] text-[12.5px] text-[#4B4232] leading-relaxed">
                 <strong className="text-[#8A6A32] font-bold mr-1.5">
                   Expert note

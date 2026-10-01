@@ -30,17 +30,20 @@ export default function RefundPolicyPage() {
         </div>
 
         <div className="text-neutral-600 text-base md:text-lg leading-relaxed space-y-12">
-          
+
           <p className="text-xl text-[#171717] font-medium leading-relaxed">
             This Refund & Cancellation Policy explains when and how refunds may be available for paid services provided by LiftmyGrade LLP ("LiftmyGrade", "we", "us", or "our"). Please read it together with our Privacy Policy & Disclaimer. By engaging our paid services, you agree to the terms set out below.
           </p>
 
           <section>
             <h2 className="text-2xl font-bold text-[#171717] mb-4 flex items-baseline gap-3 tracking-tight">
-              <span className="text-blue-600 text-lg">1.</span> Free Services
+              <span className="text-blue-600 text-lg">1.</span> Free Consultation &amp; Minimal-Fee Reports
             </h2>
+            <p className="mb-4">
+              Our consultation calls are provided free of charge. As no payment is taken for these, they are not subject to any refund.
+            </p>
             <p>
-              Several of our offerings are provided free of charge — including the Readiness Form, country shortlisting, the detailed roadmap, consultation calls, and analysis of an existing document. As no payment is taken for these, they are not subject to any refund.
+              The Journal Fit Report and the Study Abroad Readiness Report are provided for a minimal, fixed fee and are non-refundable once generated.
             </p>
           </section>
 
@@ -141,8 +144,6 @@ export default function RefundPolicyPage() {
             </p>
           </section>
 
-
-          
         </div>
       </div>
 

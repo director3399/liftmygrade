@@ -123,7 +123,7 @@ const ServiceSection = ({
 export default function ServicesPage() {
   const gettingStarted = [
     { title: "Readiness Form", desc: "An honest assessment of where you stand, generated from your profile.", image: "https://images.unsplash.com/photo-1627556704302-624286467c65?w=1000&q=90" },
-    { title: "AI & Plagiarism Report", desc: "A verified AI-content and plagiarism report for any document you're about to submit — with a source-level breakdown. Available at a small, fixed fee of ₹99.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3gA33OKur8McQpw1HBmT0JH38FGXe_tuzydRM_tOzuKm72zJGG62bWvDR&s=10" },
+    { title: "Journal Fit Report", desc: "A live journal-fit and indexing report for any manuscript you're about to submit — with a database-level breakdown and risky-journal screening. Available at a small, fixed fee of ₹199.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3gA33OKur8McQpw1HBmT0JH38FGXe_tuzydRM_tOzuKm72zJGG62bWvDR&s=10" },
     { title: "Personalised Roadmap Plan", desc: "A ready-to-follow roadmap with timelines, tests, intake windows, and a document checklist for your target country. Available at a small, fixed fee of ₹199.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbRZEjt7XfeZkdRSWJNzEz8aX65acyXXCXp19sb_yroa7ruk3jskJNxUDw&s=10" },
     { title: "2 Consultation Calls", desc: "Two one-to-one sessions to understand your goals and direction.", image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1000&q=90" },
     { title: "Country Shortlisting", desc: "We narrow your best-fit top 1–3 destinations together.", image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1000&q=90" },
@@ -156,7 +156,7 @@ export default function ServicesPage() {
     { title: "Journal Publication Assistance", desc: "Support getting your work published in peer-reviewed journals — including Scopus-indexed, Google Scholar, and UGC-listed outlets.", tags: ["Scopus", "Google Scholar", "UGC-listed", "Peer-reviewed"] },
     { title: "Manuscript Editing & Positioning", desc: "Editorial support to refine and position your manuscript for submission — an additional edge for humanities, postgraduate, and research applicants." },
     { title: "Book & Book Chapter Editing", desc: "Comprehensive structural and line editing for academic books, edited volumes, and contributed book chapters." },
-    { title: "Plagiarism & AI Content Removal", desc: "Thorough similarity reduction, paraphrase refinement, and AI detection score optimization while preserving original academic voice." }
+    { title: "Journal Fit Report", desc: "A live journal-fit and indexing report for any manuscript you're about to submit — with a database-level breakdown and risky-journal screening.", tags: ["Scopus", "UGC-CARE", "Predatory screening"] }
   ];
 
   const career = [

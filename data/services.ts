@@ -202,9 +202,10 @@ export const allServices: ServiceItem[] = [
   },
   {
     id: "pub-5",
-    title: "Plagiarism & AI Content Removal",
-    desc: "Thorough similarity reduction, paraphrase refinement, and AI detection score optimization.",
+    title: "Journal Fit Report",
+    desc: "A live journal-fit and indexing report for any manuscript you're about to submit — with a database-level breakdown and risky-journal screening.",
     category: "Publication Support",
+    tags: ["Scopus", "UGC-CARE", "Predatory screening"],
     link: "/services#publication",
   },
 

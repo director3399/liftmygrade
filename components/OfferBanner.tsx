@@ -10,11 +10,11 @@ export default function OfferBanner() {
     {
       image: "/banner/banner1.webp",
       tag: "Instant Report",
-      title: "AI & Plagiarism Report",
-      desc: "A verified AI-content and plagiarism report for any document you're about to submit — with a source-level breakdown.",
-      price: "₹99",
+      title: "Journal Fit Report",
+      desc: "A live journal-fit and indexing report for any manuscript you're about to submit — with a database-level breakdown and risky-journal screening.",
+      price: "₹199",
       cta: "Get Report",
-      link: "https://wa.me/919147720702?text=Hi%20LiftmyGrade%2C%20I%27d%20like%20to%20get%20the%20AI%20%26%20Plagiarism%20Report",
+      link: "https://wa.me/919147720702?text=Hi%20LiftmyGrade%2C%20I%27d%20like%20to%20get%20the%20Journal%20Fit%20Report",
     },
     {
       image: "/banner/banner2.webp",

@@ -33,7 +33,7 @@ const faqData: FAQItem[] = [
     id: "faq-4",
     question: "What is the \"proof packet\" you deliver with every project?",
     answer:
-      "An AI-content report, a plagiarism report, and a reference/DOI verification report — checked against Crossref and publisher records, not just an aggregator listing. It’s delivered with every project, not as an add-on.",
+      "A Journal Fit Report with a database-level breakdown and risky-journal screening, and a reference/DOI verification report — checked against Crossref and publisher records, not just an aggregator listing. It’s delivered with every project, not as an add-on.",
   },
   {
     id: "faq-5",
@@ -45,7 +45,7 @@ const faqData: FAQItem[] = [
     id: "faq-6",
     question: "How much does this cost?",
     answer:
-      "We don’t run a fixed price list, because two projects in the same discipline can take very different amounts of work. Every engagement starts with a free consultation where we scope your stage, subject, and deadline, and confirm a fee in writing before anything begins. A few lightweight services — like the Readiness Form, AI-content report, plagiarism report, and roadmap plan — are available instantly at a small, fixed fee of ₹99.",
+      "We don’t run a fixed price list, because two projects in the same discipline can take very different amounts of work. Every engagement starts with a free consultation where we scope your stage, subject, and deadline, and confirm a fee in writing before anything begins. A few lightweight services — like the Readiness Form, Journal Fit Report, and roadmap plan — are available instantly at a small, fixed fee of ₹199.",
   },
   {
     id: "faq-7",

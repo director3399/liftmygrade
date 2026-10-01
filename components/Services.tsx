@@ -2,8 +2,6 @@
 
 import React from "react";
 import Link from "next/link";
-import SectionLabel from "./SectionLabel";
-import { ArrowRight } from "./Icons";
 
 export default function Services() {
   // Top 5 priority services — with WhatsApp prefilled messages
@@ -51,9 +49,9 @@ export default function Services() {
     },
     {
       id: "05",
-      title: "Plagiarism & AI Content Removal",
-      desc: "Thorough similarity reduction, paraphrase refinement, and AI detection score optimization while preserving original academic voice.",
-      link: "https://wa.me/919147720702?text=Hi%20LiftmyGrade%2C%20I%27d%20like%20to%20get%20Plagiarism%20%26%20AI%20Content%20Removal",
+      title: "Journal Fit Report",
+      desc: "A live journal-fit and indexing report for any manuscript you're about to submit — with a database-level breakdown and risky-journal screening.",
+      link: "https://wa.me/919147720702?text=Hi%20LiftmyGrade%2C%20I%27d%20like%20to%20get%20the%20Journal%20Fit%20Report",
       bgColor: "bg-[#0A3A2A]",
       textColor: "text-white",
       hoverColor: "group-hover:bg-[#082e21]",
@@ -67,11 +65,6 @@ export default function Services() {
       id="services"
     >
       <div className="max-w-7xl mx-auto">
-        {/* Header with Section Label */}
-        <div className="flex items-center gap-4 mb-4">
-          <SectionLabel>Our Services</SectionLabel>
-        </div>
-
         {/* Title, Description, and Button */}
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 mb-12">
           {/* Left: Title */}

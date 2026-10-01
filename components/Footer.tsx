@@ -26,7 +26,7 @@ export default function Footer() {
                 <strong className="font-semibold text-white">LiftMyGrade</strong> is your Academic, Research, Career & Strategic Communication Ecosystem.
               </p>
               <p>
-                We help scholars and researchers move from thesis and dissertation work to publication, with PhD-level experts, chapter-wise review, and a full AI, plagiarism & reference/DOI verification report on every project. We also support Bachelor's, Master's, and PhD applicants with SOPs, LORs, and academic CVs, and provide career branding, grant writing, and strategic communication for professionals and institutions.
+                We help scholars and researchers move from thesis and dissertation work to publication, with PhD-level experts, chapter-wise review, reference/DOI verification report on every project. We also support Bachelor's, Master's, and PhD applicants with SOPs, LORs, and academic CVs, and provide career branding, grant writing, and strategic communication for professionals and institutions.
               </p>
             </div>
           </div>
@@ -37,7 +37,7 @@ export default function Footer() {
             <div className="flex flex-col gap-3">
               <a href="/services" className="text-sm sm:text-base font-light text-white/70 hover:text-white transition-colors">Our Services</a>
               <a href="/how-we-work" className="text-sm sm:text-base font-light text-white/70 hover:text-white transition-colors">How We Work</a>
-              <a href="/career-services" className="text-sm sm:text-base font-light text-white/70 hover:text-white transition-colors">Career Services</a>
+              <a href="/career-services" className="text-sm sm:text-base font-light text-white/70 hover:text-white transition-colors">Professional Services</a>
               <a href="/blog" className="text-sm sm:text-base font-light text-white/70 hover:text-white transition-colors">Blog</a>
               <a href="/what-to-expect" className="text-sm sm:text-base font-light text-white/70 hover:text-white transition-colors">What to Expect</a>
               <a href="/#testimonial" className="text-sm sm:text-base font-light text-white/70 hover:text-white transition-colors">Student Success</a>
@@ -106,6 +106,33 @@ export default function Footer() {
                   </svg>
                 </span>
                 <span>info@liftmygrade.com</span>
+              </a>
+
+              {/* Address with icon */}
+              <a
+                href="https://maps.google.com/?q=West+Block,+3rd+Floor,+3ws1,+004+Unit,+Mani+Casadona,+11F,+04,+Street+Number+372,+Action+Area+I,+IIF,+Newtown,+Kolkata,+Chakpachuria,+West+Bengal+700160"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-3 hover:text-white transition-colors group"
+              >
+                <span className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/70 group-hover:bg-white group-hover:text-[#050B1D] transition-all shrink-0 mt-0.5">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </span>
+                <span className="leading-relaxed">
+                  West Block, 3rd Floor, 3ws1, 004 Unit, Mani Casadona, 11F, 04, Street Number 372, Action Area I, IIF, Newtown, Kolkata, Chakpachuria, West Bengal 700160
+                </span>
               </a>
             </div>
           </div>

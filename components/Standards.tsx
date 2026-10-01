@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import SectionLabel from "./SectionLabel";
 
 export default function Standards() {
   const pillars = [
@@ -157,7 +156,6 @@ export default function Standards() {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="mb-12 sm:mb-16">
-          <SectionLabel>Every Project, The Same Standard</SectionLabel>
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 mt-4">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] leading-[1.1] tracking-tight">
               How Every Project

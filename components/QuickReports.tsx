@@ -8,10 +8,10 @@ import { ArrowRight } from "./Icons";
 export default function QuickReports() {
   const quickServices = [
     {
-      title: "AI & Plagiarism Report",
-      price: "₹99",
+      title: "Journal Fit Report",
+      price: "₹199",
       tag: "Instant Report",
-      desc: "A verified AI-content and plagiarism report for any document you're about to submit — with a source-level breakdown.",
+      desc: "A live journal-fit and indexing report for any manuscript you're about to submit — with a database-level breakdown and risky-journal screening.",
       image: "/banner/banner1.webp",
       link: "/#contact",
     },

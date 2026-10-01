@@ -180,7 +180,7 @@ export default function Contact() {
         { id: "Journal Publication Assistance", desc: "Get published in peer-reviewed journals." },
         { id: "Manuscript Editing & Positioning", desc: "Editorial support for submission." },
         { id: "Book & Book Chapter Editing", desc: "Editing for academic books & chapters." },
-        { id: "Plagiarism & AI Content Removal", desc: "Similarity reduction & AI score optimization." },
+        { id: "Journal Fit Report", desc: "Journal-fit & indexing report with risky-journal screening." },
       ],
     },
     {
