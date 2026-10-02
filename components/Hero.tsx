@@ -169,8 +169,6 @@ export default function Hero() {
 
               <ul className="space-y-2">
                 {[
-                  "AI-content report",
-                  "Plagiarism report",
                   "Reference / DOI verification report",
                 ].map((item) => (
                   <li

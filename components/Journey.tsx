@@ -9,8 +9,7 @@ export default function Journey() {
     { id: "02", title: "Scope Agreed", desc: "We agree the stages, timeline, and deliverables for your work before the review begins." },
     { id: "03", title: "Expert Assigned", desc: "A PhD-level specialist from your own discipline takes your project." },
     { id: "04", title: "Chapter-wise Review", desc: "Tracked-changes review and structuring, chapter by chapter — you keep writing." },
-    { id: "05", title: "Quality Check + Delivery", desc: "Subject, language, and final QA layers — then your file with the AI, plagiarism & reference/DOI packet." },
-    { id: "06", title: "Unlimited Revisions", desc: "We keep revising until you're confident to submit and defend." },
+    { id: "05", title: "Unlimited Revisions", desc: "We keep revising until you're confident to submit and defend." },
   ];
 
   const admissionsTrack = [
