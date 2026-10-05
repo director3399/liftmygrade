@@ -252,7 +252,7 @@ export default function Hero() {
               </span>
             </div>
             <ul className="space-y-1.5">
-              {["AI-content report", "Plagiarism report", "Reference / DOI verification"].map((item) => (
+              {["Reference / DOI verification"].map((item) => (
                 <li
                   key={item}
                   className="flex items-center gap-2 text-[12px] text-white/90"
