@@ -38,7 +38,7 @@ export default function Footer() {
               <a href="/services" className="text-sm sm:text-base font-light text-white/70 hover:text-white transition-colors">Our Services</a>
               <a href="/how-we-work" className="text-sm sm:text-base font-light text-white/70 hover:text-white transition-colors">How We Work</a>
               <a href="/career-services" className="text-sm sm:text-base font-light text-white/70 hover:text-white transition-colors">Professional Services</a>
-              <a href="/blog" className="text-sm sm:text-base font-light text-white/70 hover:text-white transition-colors">Blog</a>
+              <a href="/blogs" className="text-sm sm:text-base font-light text-white/70 hover:text-white transition-colors">Blog</a>
               <a href="/what-to-expect" className="text-sm sm:text-base font-light text-white/70 hover:text-white transition-colors">What to Expect</a>
               <a href="/#testimonial" className="text-sm sm:text-base font-light text-white/70 hover:text-white transition-colors">Student Success</a>
               <a href="/refund-policy" className="text-sm sm:text-base font-light text-white/70 hover:text-white transition-colors">Privacy & Refund</a>

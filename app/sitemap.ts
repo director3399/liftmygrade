@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 import { blogs } from "@/data/blogs";
 
-const BASE_URL = "https://liftmygrade.com";
+const BASE_URL = "https://www.liftmygrade.com";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticRoutes: MetadataRoute.Sitemap = [
@@ -31,12 +31,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: `${BASE_URL}/how-we-work`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/pricing`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,

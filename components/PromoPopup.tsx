@@ -109,25 +109,25 @@ export default function PromoPopup() {
           {/* Backdrop — does NOT close the popup */}
           <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
 
-          {/* Popup card */}
+          {/* Popup card — compact modal size on laptop/desktop, comfortable fit on mobile */}
           <motion.div
             initial={{ opacity: 0, y: 30, scale: 0.96 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.96 }}
             transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
-            className="relative z-10 w-full max-w-[1040px]"
+            className="relative z-10 w-full max-w-[440px] md:max-w-[560px] lg:max-w-[580px]"
           >
             {/* Close button — the only way to dismiss */}
             <button
               onClick={handleClose}
               aria-label="Close popup"
-              className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white shadow-[0_8px_24px_rgba(0,0,0,0.35)] flex items-center justify-center text-[#171717] hover:bg-neutral-100 hover:scale-105 transition-all"
+              className="absolute -top-3 -right-3 z-30 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white shadow-[0_8px_24px_rgba(0,0,0,0.35)] flex items-center justify-center text-[#171717] hover:bg-neutral-100 hover:scale-105 transition-all"
             >
-              <X className="w-4 h-4 sm:w-5 sm:h-5" strokeWidth={2.5} />
+              <X className="w-4 h-4 sm:w-4.5 sm:h-4.5" strokeWidth={2.5} />
             </button>
 
-            {/* ── Slide viewport (16:9 aspect) ─────────────── */}
-            <div className="relative aspect-video overflow-hidden rounded-2xl sm:rounded-3xl shadow-[0_24px_80px_-10px_rgba(0,0,0,0.6)]">
+            {/* ── Slide viewport (compact rectangle / soft aspect on desktop) ─────────────── */}
+            <div className="relative aspect-[16/10] sm:aspect-[16/10] md:aspect-[16/10] overflow-hidden rounded-2xl sm:rounded-3xl shadow-[0_24px_80px_-10px_rgba(0,0,0,0.6)]">
               {/* Sliding track */}
               <motion.div
                 className="flex h-full"
@@ -159,38 +159,38 @@ export default function PromoPopup() {
                     <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#050B1D]/70 to-transparent" />
 
                     {/* Content */}
-                    <div className="relative z-10 flex flex-col justify-between h-full p-5 sm:p-8 lg:p-10">
+                    <div className="relative z-10 flex flex-col justify-between h-full p-5 sm:p-6 md:p-7">
                       {/* Top: tag */}
                       <span className="inline-block text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-blue-300">
                         {slide.tag}
                       </span>
 
                       {/* Middle: title + desc */}
-                      <div className="max-w-xl">
-                        <h3 className="text-[26px] sm:text-3xl lg:text-4xl font-bold text-white tracking-tight leading-[1.1] mb-3 drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
+                      <div className="max-w-md">
+                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white tracking-tight leading-snug mb-2 drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
                           {slide.title}
                         </h3>
                         {/* Description — hidden on mobile, visible on sm and up */}
-                        <p className="hidden sm:block text-sm sm:text-base text-white/85 leading-relaxed font-light drop-shadow-[0_1px_4px_rgba(0,0,0,0.5)]">
+                        <p className="hidden sm:block text-xs sm:text-sm text-white/85 leading-relaxed font-light drop-shadow-[0_1px_4px_rgba(0,0,0,0.5)] line-clamp-3">
                           {slide.desc}
                         </p>
                       </div>
 
                       {/* Bottom: price + CTA */}
-                      <div className="flex items-end justify-between gap-3 sm:gap-4">
+                      <div className="flex items-end justify-between gap-3 pt-2">
                         <div className="flex flex-col">
-                          <span className="text-[10px] font-bold uppercase tracking-widest text-white/60 mb-0.5">
+                          <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-white/60 mb-0.5">
                             Starting at
                           </span>
-                          <span className="text-2xl sm:text-4xl font-bold text-white tracking-tight leading-none drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
+                          <span className="text-2xl sm:text-3xl font-bold text-white tracking-tight leading-none drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
                             {slide.price}
                           </span>
                         </div>
 
-                        <div className="inline-flex items-center gap-2 sm:gap-2.5 bg-white text-[#050B1D] pl-4 sm:pl-5 pr-1.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold group-hover:bg-neutral-100 transition-all">
+                        <div className="inline-flex items-center gap-2 bg-white text-[#050B1D] pl-3.5 sm:pl-4 pr-1 py-1 sm:py-1.5 rounded-full text-xs font-semibold group-hover:bg-neutral-100 transition-all">
                           {slide.cta}
-                          <span className="inline-flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 bg-blue-600 rounded-full text-white group-hover:bg-blue-700 transition-colors shrink-0">
-                            <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                          <span className="inline-flex items-center justify-center w-6 h-6 sm:w-7 sm:h-7 bg-blue-600 rounded-full text-white group-hover:bg-blue-700 transition-colors shrink-0">
+                            <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                           </span>
                         </div>
                       </div>

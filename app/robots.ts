@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/"],
       },
     ],
-    sitemap: "https://liftmygrade.com/sitemap.xml",
+    sitemap: "https://www.liftmygrade.com/sitemap.xml",
   };
 }

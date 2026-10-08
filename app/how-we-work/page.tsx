@@ -6,15 +6,17 @@ import Link from "next/link";
 import Highlighter from "@/components/Highlighter";
 
 export const metadata = {
-  title: "How We Work | LiftmyGrade",
-  description: "Learn about the step-by-step process we take to build your global academic journey.",
+  title: "How We Work: Step-by-Step Academic Mentorship | LiftmyGrade",
+  description:
+    "Learn about our transparent, milestone-driven process from free profile discovery to thesis completion, manuscript acceptance, and study abroad admissions.",
   alternates: {
-    canonical: "https://liftmygrade.com/how-we-work",
+    canonical: "https://www.liftmygrade.com/how-we-work",
   },
   openGraph: {
-    title: "How We Work | LiftmyGrade",
-    description: "Learn about the step-by-step process we take to build your global academic journey.",
-    url: "https://liftmygrade.com/how-we-work",
+    title: "How We Work: Step-by-Step Academic Mentorship | LiftmyGrade",
+    description:
+      "Learn about our transparent, milestone-driven process from free profile discovery to thesis completion, manuscript acceptance, and study abroad admissions.",
+    url: "https://www.liftmygrade.com/how-we-work",
   },
 };
 

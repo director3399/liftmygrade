@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://liftmygrade.com"),
+  metadataBase: new URL("https://www.liftmygrade.com"),
   title: "LIFTMYGRADE | Global Academic Ecosystem & Mentorship",
   icons: {
     icon: "/favicon-1.webp",
@@ -27,12 +27,12 @@ export const metadata: Metadata = {
   description:
     "Premium academic guidance for Bachelor's, Master's, and PhD journeys abroad. Structured mentorship for your global academic growth.",
   alternates: {
-    canonical: "https://liftmygrade.com",
+    canonical: "https://www.liftmygrade.com",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://liftmygrade.com",
+    url: "https://www.liftmygrade.com",
     siteName: "LiftmyGrade",
     title: "LIFTMYGRADE | Global Academic Ecosystem & Mentorship",
     description:

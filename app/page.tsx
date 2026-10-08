@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
@@ -20,6 +21,23 @@ import PromoPopup from "@/components/PromoPopup";
 import TestimonialsFAQ from "@/components/TestimonialsFAQ";
 import Contact2 from "@/components/Contact2";
 import FounderNote from "@/components/FounderNote";
+
+export const metadata: Metadata = {
+  title: "Thesis Help, Dissertation Support & Admissions Mentorship | LiftmyGrade",
+  description:
+    "Expert academic guidance and PhD-level mentorship for thesis, dissertation, research publications, and study abroad admissions (SOP, LOR, CV).",
+  alternates: {
+    canonical: "https://www.liftmygrade.com",
+  },
+  openGraph: {
+    title: "Thesis Help, Dissertation Support & Admissions Mentorship | LiftmyGrade",
+    description:
+      "Expert academic guidance and PhD-level mentorship for thesis, dissertation, research publications, and study abroad admissions (SOP, LOR, CV).",
+    url: "https://www.liftmygrade.com",
+  },
+};
+
+
 
 // ═══════════════════════════════════════════════════════════════════
 // COMMENTED OUT — Components replaced or merged into new sections.

@@ -1134,7 +1134,7 @@ export const blogs: BlogPost[] = [
 
       <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4">Get your SOP read before a committee does</h2>
       <p class="mb-4">Our mentor-guided profile evaluation includes a document review that tells you plainly what is working, what is generic and what a reviewer will skip. The roadmap that follows — intake form, consultation, country shortlisting, detailed plan — is free.</p>
-      <p class="mb-6">Start with the free readiness form at <a href="https://liftmygrade.com" class="text-emerald-700 underline font-medium">liftmygrade.com</a></p>
+      <p class="mb-6">Start with the free readiness form at <a href="https://www.liftmygrade.com" class="text-emerald-700 underline font-medium">liftmygrade.com</a></p>
     `
   },
   {
@@ -1284,7 +1284,7 @@ export const blogs: BlogPost[] = [
 
       <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4">Supervisor mapping and outreach strategy</h2>
       <p class="mb-4">We build a supervisor list from live publications in your subfield, not from rankings — and draft outreach that references real work. This sits alongside research proposal support and publication assistance, which is rarely offered together with admissions.</p>
-      <p class="mb-6">Book a free consultation at <a href="https://liftmygrade.com" class="text-emerald-700 underline font-medium">liftmygrade.com</a></p>
+      <p class="mb-6">Book a free consultation at <a href="https://www.liftmygrade.com" class="text-emerald-700 underline font-medium">liftmygrade.com</a></p>
     `
   },
   {
@@ -1300,7 +1300,7 @@ export const blogs: BlogPost[] = [
     date: "August 2026",
     content: `
       <figure class="my-8">
-        <img src="/blog/blog-31-1.webp" alt="Comparison of two applicants with identical CGPA, one with a peer-reviewed publication — LiftmyGrade" class="w-full rounded-2xl shadow-sm border border-[#EBEFEA] object-cover max-h-[450px]">
+        <img src="/blog/blog-31-1.webp" alt="Comparison of applicants with and without peer-reviewed publications" class="w-full rounded-2xl shadow-sm border border-[#EBEFEA] object-cover max-h-[450px]">
         <figcaption class="text-sm text-center mt-3 text-gray-500">Comparison of two applicants with identical CGPA, one with a peer-reviewed publication — LiftmyGrade</figcaption>
       </figure>
 
@@ -1443,7 +1443,7 @@ export const blogs: BlogPost[] = [
 
       <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4">Publication support, alongside admissions</h2>
       <p class="mb-4">We shortlist journals by index and quartile before a word is written, support the manuscript through submission and revision, and keep the process tied to your application timeline. Research and publication support offered alongside admissions is rarely available in one place.</p>
-      <p class="mb-6">Discuss your research profile at <a href="https://liftmygrade.com" class="text-emerald-700 underline font-medium">liftmygrade.com</a></p>
+      <p class="mb-6">Discuss your research profile at <a href="https://www.liftmygrade.com" class="text-emerald-700 underline font-medium">liftmygrade.com</a></p>
     `
   },
   {
@@ -1459,7 +1459,7 @@ export const blogs: BlogPost[] = [
     date: "August 2026",
     content: `
       <figure class="my-8">
-        <img src="/blog/blog-32-1.webp" alt="The four free stages of a study abroad consultation from readiness form to written roadmap — LiftmyGrade" class="w-full rounded-2xl shadow-sm border border-[#EBEFEA] object-cover max-h-[450px]">
+        <img src="/blog/blog-32-1.webp" alt="The four free stages of a study abroad consultation roadmap" class="w-full rounded-2xl shadow-sm border border-[#EBEFEA] object-cover max-h-[450px]">
         <figcaption class="text-sm text-center mt-3 text-gray-500">The four free stages of a study abroad consultation from readiness form to written roadmap — LiftmyGrade</figcaption>
       </figure>
 
@@ -1625,7 +1625,7 @@ export const blogs: BlogPost[] = [
 
       <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4">Start with the readiness form</h2>
       <p class="mb-4">Ten minutes of structured intake, then a conversation that tells you where you actually stand. Country shortlisting and a written, dated roadmap follow — all before any payment is discussed.</p>
-      <p class="mb-6"><a href="https://liftmygrade.com" class="text-emerald-700 underline font-medium">liftmygrade.com — free roadmap</a></p>
+      <p class="mb-6"><a href="https://www.liftmygrade.com" class="text-emerald-700 underline font-medium">liftmygrade.com — free roadmap</a></p>
     `
   },
   {
@@ -1641,7 +1641,7 @@ export const blogs: BlogPost[] = [
     date: "August 2026",
     content: `
       <figure class="my-8">
-        <img src="/blog/blog-33-1.webp" alt="The four levels of manuscript editing and what each one actually fixes — LiftmyGrade book editing guide" class="w-full rounded-2xl shadow-sm border border-[#EBEFEA] object-cover max-h-[450px]">
+        <img src="/blog/blog-33-1.webp" alt="The four levels of academic manuscript editing" class="w-full rounded-2xl shadow-sm border border-[#EBEFEA] object-cover max-h-[450px]">
         <figcaption class="text-sm text-center mt-3 text-gray-500">The four levels of manuscript editing and what each one actually fixes — LiftmyGrade book editing guide</figcaption>
       </figure>
 
@@ -1753,7 +1753,7 @@ export const blogs: BlogPost[] = [
 
       <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4">Start with a sample edit</h2>
       <p class="mb-4">We work across developmental, line and copy editing, with PhD-level editors and graduates of foreign-university English programmes. A sample edit on your opening pages will tell you which level your manuscript actually needs.</p>
-      <p class="mb-6">Book an editing consultation at <a href="https://liftmygrade.com" class="text-emerald-700 underline font-medium">liftmygrade.com</a></p>
+      <p class="mb-6">Book an editing consultation at <a href="https://www.liftmygrade.com" class="text-emerald-700 underline font-medium">liftmygrade.com</a></p>
     `
   },
   {
@@ -1769,7 +1769,7 @@ export const blogs: BlogPost[] = [
     date: "August 2026",
     content: `
       <figure class="my-8">
-        <img src="/blog/blog-34-1.webp" alt="Six verification checks to run on a journal before submitting a manuscript — LiftmyGrade publication support" class="w-full rounded-2xl shadow-sm border border-[#EBEFEA] object-cover max-h-[450px]">
+        <img src="/blog/blog-34-1.webp" alt="Six essential verification checks before journal submission" class="w-full rounded-2xl shadow-sm border border-[#EBEFEA] object-cover max-h-[450px]">
         <figcaption class="text-sm text-center mt-3 text-gray-500">Six verification checks to run on a journal before submitting a manuscript — LiftmyGrade publication support</figcaption>
       </figure>
 
@@ -1926,7 +1926,7 @@ export const blogs: BlogPost[] = [
 
       <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4">Journal shortlisting before you write a word</h2>
       <p class="mb-4">We shortlist by index and quartile, verify current listing status at the source, and support the manuscript through submission and revision. Our refund guarantee is tied to the booked index and quartile rather than to any specific journal title.</p>
-      <p class="mb-6">Discuss publication support at <a href="https://liftmygrade.com" class="text-emerald-700 underline font-medium">liftmygrade.com</a></p>
+      <p class="mb-6">Discuss publication support at <a href="https://www.liftmygrade.com" class="text-emerald-700 underline font-medium">liftmygrade.com</a></p>
     `
   },
   {
@@ -1942,7 +1942,7 @@ export const blogs: BlogPost[] = [
     date: "August 2026",
     content: `
       <figure class="my-8">
-        <img src="/blog/blog-35-1.webp" alt="The six-part research proposal structure — problem, gap, question, method, feasibility, fit — LiftmyGrade" class="w-full rounded-2xl shadow-sm border border-[#EBEFEA] object-cover max-h-[450px]">
+        <img src="/blog/blog-35-1.webp" alt="Six-part research proposal structure for PhD applications" class="w-full rounded-2xl shadow-sm border border-[#EBEFEA] object-cover max-h-[450px]">
         <figcaption class="text-sm text-center mt-3 text-gray-500">The six-part research proposal structure — problem, gap, question, method, feasibility, fit — LiftmyGrade</figcaption>
       </figure>
 
@@ -2101,7 +2101,7 @@ export const blogs: BlogPost[] = [
 
       <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4">Research proposal and supervisor mapping</h2>
       <p class="mb-4">We work on the proposal and the supervisor list together, because a proposal is only strong relative to the group it is written for. Publication support runs alongside — rarely offered together with admissions.</p>
-      <p class="mb-6">Book a free consultation at <a href="https://liftmygrade.com" class="text-emerald-700 underline font-medium">liftmygrade.com</a></p>
+      <p class="mb-6">Book a free consultation at <a href="https://www.liftmygrade.com" class="text-emerald-700 underline font-medium">liftmygrade.com</a></p>
     `
   },
   {
@@ -2251,7 +2251,7 @@ export const blogs: BlogPost[] = [
 
       <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4">An honest read on where you stand</h2>
       <p class="mb-4">The free roadmap covers profile, admission, research and career, with a dated plan and the constraints stated plainly. If the assessment is that you should target the next intake, that is what it will say — and it will come with a plan for the months in between.</p>
-      <p class="mb-6">Start the readiness form at <a href="https://liftmygrade.com" class="text-emerald-700 underline font-medium">liftmygrade.com</a></p>
+      <p class="mb-6">Start the readiness form at <a href="https://www.liftmygrade.com" class="text-emerald-700 underline font-medium">liftmygrade.com</a></p>
     `
   }
 ];

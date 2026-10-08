@@ -91,13 +91,8 @@ export default function Services() {
             </h2>
           </div>
 
-          {/* Right: Description and Button */}
+          {/* Right: Button */}
           <div className="flex flex-col items-start justify-end">
-            <p className="text-sm sm:text-base text-neutral-700 leading-relaxed mb-6 sm:mb-8">
-              Thesis, dissertation, publication and book help first — then
-              admissions documents, international admissions and career branding.
-            </p>
-
             <Link
               href="/services"
               className="inline-flex items-center gap-3 bg-blue-600 text-white px-5 sm:px-6 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold hover:bg-blue-700 transition-colors"

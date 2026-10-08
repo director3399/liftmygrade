@@ -5,15 +5,17 @@ import { ArrowRight } from "@/components/Icons";
 import Link from "next/link";
 
 export const metadata = {
-  title: "What You Can Expect | LiftmyGrade",
-  description: "What you can expect after joining our ecosystem - free discovery, our promises, and step-by-step guidance.",
+  title: "What You Can Expect: Standards & Mentorship Guarantees | LiftmyGrade",
+  description:
+    "Discover what happens after joining LiftmyGrade: zero-risk discovery, verified academic reports, subject-matched PhD mentorship, and unlimited revisions.",
   alternates: {
-    canonical: "https://liftmygrade.com/what-to-expect",
+    canonical: "https://www.liftmygrade.com/what-to-expect",
   },
   openGraph: {
-    title: "What You Can Expect | LiftmyGrade",
-    description: "What you can expect after joining our ecosystem - free discovery, our promises, and step-by-step guidance.",
-    url: "https://liftmygrade.com/what-to-expect",
+    title: "What You Can Expect: Standards & Mentorship Guarantees | LiftmyGrade",
+    description:
+      "Discover what happens after joining LiftmyGrade: zero-risk discovery, verified academic reports, subject-matched PhD mentorship, and unlimited revisions.",
+    url: "https://www.liftmygrade.com/what-to-expect",
   },
 };
 

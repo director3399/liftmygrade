@@ -121,11 +121,10 @@ export default function Standards() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/project.webp"
-          alt=""
+          alt="Researcher reviewing thesis chapters with tracked changes"
           fill
           sizes="100vw"
           className="object-cover object-center"
-          aria-hidden="true"
         />
         {/* Soft overlay to keep content legible */}
         <div className="absolute inset-0 bg-[#F6F8F7]/85" />
@@ -156,10 +155,6 @@ export default function Standards() {
                 </svg>
               </span>
             </h2>
-            <p className="text-sm sm:text-base text-neutral-700 leading-relaxed self-end">
-              Edited with you, defended by you — five commitments on every
-              thesis, dissertation, manuscript and book.
-            </p>
           </div>
         </div>
 

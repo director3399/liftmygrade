@@ -159,19 +159,9 @@ export default function Journey() {
       <div className="px-6 md:px-12 lg:px-16">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12 sm:mb-16">
-            <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-              <div className="flex flex-col">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] leading-[1.1] tracking-tight mt-4 md:mt-auto">
-                  How Our System Works
-                </h2>
-              </div>
-
-              <div className="flex flex-col items-start justify-end">
-                <p className="text-sm sm:text-base text-neutral-700 leading-relaxed">
-                  Two tracks, one standard — you always know the next step.
-                </p>
-              </div>
-            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#171717] leading-[1.1] tracking-tight">
+              How Our System Works
+            </h2>
           </div>
 
           {/* TRACK 1 */}

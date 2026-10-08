@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ArrowLeft, ArrowRight } from "lucide-react";
 
 /* ────────────────────────────────────────────────────────────
    TESTIMONIAL DATA
@@ -149,16 +149,16 @@ const faqData: FAQItem[] = [
 const FAQ_PAGE_SIZE = 6;
 
 export default function TestimonialsFAQ() {
-  /* ── Testimonial carousel state ── */
+  /* ── Testimonial state & manual controls (Priority 12) ── */
   const [tIndex, setTIndex] = useState(0);
 
-  // Auto-rotate testimonials every 6 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTIndex((prev) => (prev + 1) % testimonials.length);
-    }, 6000);
-    return () => clearInterval(interval);
-  }, []);
+  const prevTestimonial = () => {
+    setTIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
+  const nextTestimonial = () => {
+    setTIndex((prev) => (prev + 1) % testimonials.length);
+  };
 
   /* ── FAQ state ── */
   const [openId, setOpenId] = useState<string | null>(null);
@@ -201,11 +201,11 @@ export default function TestimonialsFAQ() {
                 <AnimatePresence mode="wait" initial={false}>
                   <motion.div
                     key={tIndex}
-                    initial={{ opacity: 0, x: 30 }}
+                    initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -30 }}
-                    transition={{ duration: 0.45, ease: "easeInOut" }}
-                    className="bg-[#F9F9F9] border border-neutral-100 rounded-3xl p-6 sm:p-7 lg:p-8 flex flex-col gap-5"
+                    exit={{ opacity: 0, x: -20 }}
+                    transition={{ duration: 0.35, ease: "easeInOut" }}
+                    className="bg-[#F9F9F9] border border-neutral-100 rounded-3xl p-6 sm:p-7 lg:p-8 flex flex-col gap-5 min-h-[300px]"
                   >
                     {/* Quote mark */}
                     <span
@@ -221,7 +221,7 @@ export default function TestimonialsFAQ() {
                     </p>
 
                     {/* Author */}
-                    <div className="mt-auto pt-5 border-t border-neutral-200 flex items-center gap-3">
+                    <div className="mt-auto pt-4 border-t border-neutral-200 flex items-center gap-3">
                       <div className="relative w-11 h-11 rounded-full overflow-hidden shrink-0 border border-neutral-200">
                         <Image
                           src={testimonials[tIndex].image}
@@ -244,18 +244,39 @@ export default function TestimonialsFAQ() {
                 </AnimatePresence>
               </div>
 
-              {/* Dots */}
-              <div className="flex gap-2 mt-6">
-                {testimonials.map((_, i) => (
+              {/* Navigation controls: Prev & Next Arrows + Dots */}
+              <div className="flex items-center justify-between mt-5">
+                {/* Dots indicator */}
+                <div className="flex gap-1.5">
+                  {testimonials.map((_, i) => (
+                    <button
+                      key={i}
+                      onClick={() => setTIndex(i)}
+                      className={`h-2 rounded-full transition-all duration-300 ${
+                        i === tIndex ? "w-6 bg-[#171717]" : "w-2 bg-neutral-300"
+                      }`}
+                      aria-label={`Go to testimonial ${i + 1}`}
+                    />
+                  ))}
+                </div>
+
+                {/* Left & Right Clickable Arrows */}
+                <div className="flex items-center gap-2">
                   <button
-                    key={i}
-                    onClick={() => setTIndex(i)}
-                    className={`h-2 rounded-full transition-all duration-300 ${
-                      i === tIndex ? "w-8 bg-[#171717]" : "w-2 bg-neutral-300"
-                    }`}
-                    aria-label={`Go to testimonial ${i + 1}`}
-                  />
-                ))}
+                    onClick={prevTestimonial}
+                    aria-label="Previous testimonial"
+                    className="w-9 h-9 rounded-full border border-neutral-200 bg-white hover:bg-neutral-100 flex items-center justify-center text-[#171717] shadow-sm hover:scale-105 active:scale-95 transition-all cursor-pointer"
+                  >
+                    <ArrowLeft className="w-4 h-4" />
+                  </button>
+                  <button
+                    onClick={nextTestimonial}
+                    aria-label="Next testimonial"
+                    className="w-9 h-9 rounded-full border border-neutral-200 bg-white hover:bg-neutral-100 flex items-center justify-center text-[#171717] shadow-sm hover:scale-105 active:scale-95 transition-all cursor-pointer"
+                  >
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </div>
               </div>
             </div>
           </div>

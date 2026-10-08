@@ -6,15 +6,17 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
 export const metadata = {
-  title: "Blog - LiftmyGrade",
-  description: "Explore our latest insights and academic journeys.",
+  title: "Academic Insights, Research & Study Abroad Guides | LiftmyGrade",
+  description:
+    "Explore actionable guides, research publication strategies, and study abroad insights from academic mentors and PhD researchers at LiftmyGrade.",
   alternates: {
-    canonical: "https://liftmygrade.com/blogs",
+    canonical: "https://www.liftmygrade.com/blogs",
   },
   openGraph: {
-    title: "Blog - LiftmyGrade",
-    description: "Explore our latest insights and academic journeys.",
-    url: "https://liftmygrade.com/blogs",
+    title: "Academic Insights, Research & Study Abroad Guides | LiftmyGrade",
+    description:
+      "Explore actionable guides, research publication strategies, and study abroad insights from academic mentors and PhD researchers at LiftmyGrade.",
+    url: "https://www.liftmygrade.com/blogs",
   },
 };
 
@@ -26,7 +28,7 @@ export default function BlogsPage() {
       <div className="max-w-6xl mx-auto">
         <div className="mb-16 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-[#171717] tracking-tight leading-tight">
-            Our Latest Insights
+            Academic Insights &amp; Study Abroad Guides
           </h1>
           <p className="mt-6 text-[15px] text-neutral-600 max-w-2xl leading-relaxed mx-auto">
             Dive into expert tips, personal success stories, and educational resources to support your global study goals.

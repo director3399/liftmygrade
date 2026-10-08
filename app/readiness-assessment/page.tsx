@@ -5,15 +5,17 @@ import SectionLabel from "@/components/SectionLabel";
 import Image from "next/image";
 
 export const metadata = {
-  title: "Study Abroad Readiness Assessment | LiftmyGrade",
-  description: "Tell us about your goals and academic background. Our admissions mentors will review your profile and map out the right pathway for you.",
+  title: "Free Study Abroad & Research Readiness Assessment | LiftmyGrade",
+  description:
+    "Evaluate your academic profile and study abroad readiness. Get an honest, expert assessment and strategic roadmap from admissions mentors within 48 hours.",
   alternates: {
-    canonical: "https://liftmygrade.com/readiness-assessment",
+    canonical: "https://www.liftmygrade.com/readiness-assessment",
   },
   openGraph: {
-    title: "Study Abroad Readiness Assessment | LiftmyGrade",
-    description: "Tell us about your goals and academic background. Our admissions mentors will review your profile and map out the right pathway for you.",
-    url: "https://liftmygrade.com/readiness-assessment",
+    title: "Free Study Abroad & Research Readiness Assessment | LiftmyGrade",
+    description:
+      "Evaluate your academic profile and study abroad readiness. Get an honest, expert assessment and strategic roadmap from admissions mentors within 48 hours.",
+    url: "https://www.liftmygrade.com/readiness-assessment",
   },
 };
 
@@ -44,8 +46,8 @@ export default function ReadinessAssessmentPage() {
             <div className="sticky top-[120px] w-full h-[calc(100vh-160px)] min-h-[600px] rounded-4xl overflow-hidden">
               <div className="relative w-full h-full">
                 <Image
-                  src="/program1.webp"
-                  alt="Premium Academic Environment"
+                  src="/readiness-hero.webp"
+                  alt="Graduate tossing academic mortarboard cap celebrating degree completion"
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 50vw"

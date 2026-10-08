@@ -7,15 +7,17 @@ import Image from "next/image";
 import Highlighter from "@/components/Highlighter";
 
 export const metadata = {
-  title: "Our Services & Products | LiftmyGrade",
-  description: "Everything we offer, in one place. From readiness assessments to fully drafted applications, research support, and career documents.",
+  title: "Academic Mentorship & Admissions Services | LiftmyGrade",
+  description:
+    "Explore our complete academic mentorship solutions: thesis and dissertation support, journal publication guidance, and study abroad admissions (SOP, LOR, CV).",
   alternates: {
-    canonical: "https://liftmygrade.com/services",
+    canonical: "https://www.liftmygrade.com/services",
   },
   openGraph: {
-    title: "Our Services & Products | LiftmyGrade",
-    description: "Everything we offer, in one place. From readiness assessments to fully drafted applications, research support, and career documents.",
-    url: "https://liftmygrade.com/services",
+    title: "Academic Mentorship & Admissions Services | LiftmyGrade",
+    description:
+      "Explore our complete academic mentorship solutions: thesis and dissertation support, journal publication guidance, and study abroad admissions (SOP, LOR, CV).",
+    url: "https://www.liftmygrade.com/services",
   },
 };
 
@@ -122,12 +124,12 @@ const ServiceSection = ({
 
 export default function ServicesPage() {
   const gettingStarted = [
-    { title: "Readiness Form", desc: "An honest assessment of where you stand, generated from your profile.", image: "https://images.unsplash.com/photo-1627556704302-624286467c65?w=1000&q=90" },
-    { title: "Journal Fit Report", desc: "A live journal-fit and indexing report for any manuscript you're about to submit — with a database-level breakdown and risky-journal screening. Available at a small, fixed fee of ₹199.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3gA33OKur8McQpw1HBmT0JH38FGXe_tuzydRM_tOzuKm72zJGG62bWvDR&s=10" },
-    { title: "Personalised Roadmap Plan", desc: "A ready-to-follow roadmap with timelines, tests, intake windows, and a document checklist for your target country. Available at a small, fixed fee of ₹199.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbRZEjt7XfeZkdRSWJNzEz8aX65acyXXCXp19sb_yroa7ruk3jskJNxUDw&s=10" },
-    { title: "2 Consultation Calls", desc: "Two one-to-one sessions to understand your goals and direction.", image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1000&q=90" },
-    { title: "Country Shortlisting", desc: "We narrow your best-fit top 1–3 destinations together.", image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1000&q=90" },
-    { title: "Document Analysis", desc: "A complimentary review of any résumé, SOP, or document you already have.", image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1000&q=90" }
+    { title: "Readiness Form", desc: "An honest assessment of where you stand, generated from your profile.", image: "/service/getting-started-1.webp" },
+    { title: "Journal Fit Report", desc: "A live journal-fit and indexing report for any manuscript you're about to submit — with a database-level breakdown and risky-journal screening. Available at a small, fixed fee of ₹199.", image: "/banner/banner1.webp" },
+    { title: "Personalised Roadmap Plan", desc: "A ready-to-follow roadmap with timelines, tests, intake windows, and a document checklist for your target country. Available at a small, fixed fee of ₹199.", image: "/banner/banner2.webp" },
+    { title: "2 Consultation Calls", desc: "Two one-to-one sessions to understand your goals and direction.", image: "/service/getting-started-2.webp" },
+    { title: "Country Shortlisting", desc: "We narrow your best-fit top 1–3 destinations together.", image: "/service/getting-started-3.webp" },
+    { title: "Document Analysis", desc: "A complimentary review of any résumé, SOP, or document you already have.", image: "/service/getting-started-4.webp" }
   ];
 
   const admissions = [
@@ -178,7 +180,7 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto">
 
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-[#171717] tracking-tight mb-8 leading-[1.1] max-w-4xl">
-            Everything We Offer, <br className="hidden md:block" />In One Place.
+            Our Academic &amp; Research <br className="hidden md:block" />Support Services.
           </h1>
           <p className="text-lg md:text-xl text-neutral-600 max-w-3xl leading-relaxed mb-12">
             As your <Highlighter>Academic, Research, Career & Strategic Communication Ecosystem</Highlighter>, we cover everything from a <Link href="/readiness-assessment" className="text-blue-600 hover:underline">readiness assessment</Link> to fully drafted applications, research support, publication assistance, and <Link href="/career-services" className="text-blue-600 hover:underline">career branding</Link> — here's the complete range of what we do, organised so you can find exactly what you need.

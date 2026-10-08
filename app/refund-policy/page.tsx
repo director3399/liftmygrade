@@ -4,14 +4,16 @@ import SectionLabel from "@/components/SectionLabel";
 
 export const metadata = {
   title: "Refund & Cancellation Policy | LiftmyGrade",
-  description: "Learn about our refund and cancellation policies for paid services at LiftmyGrade.",
+  description:
+    "Review our transparent refund and cancellation policy for academic mentorship, admissions consulting, and publication support services at LiftmyGrade.",
   alternates: {
-    canonical: "https://liftmygrade.com/refund-policy",
+    canonical: "https://www.liftmygrade.com/refund-policy",
   },
   openGraph: {
     title: "Refund & Cancellation Policy | LiftmyGrade",
-    description: "Learn about our refund and cancellation policies for paid services at LiftmyGrade.",
-    url: "https://liftmygrade.com/refund-policy",
+    description:
+      "Review our transparent refund and cancellation policy for academic mentorship, admissions consulting, and publication support services at LiftmyGrade.",
+    url: "https://www.liftmygrade.com/refund-policy",
   },
 };
 

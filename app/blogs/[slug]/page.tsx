@@ -19,10 +19,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const blog = blogs.find((b) => b.slug === slug);
   if (!blog) return { title: "Blog Not Found - LiftmyGrade" };
   
-  const canonicalUrl = `https://liftmygrade.com/blogs/${blog.slug}`;
+  const canonicalUrl = `https://www.liftmygrade.com/blogs/${blog.slug}`;
   const imageUrl = blog.coverImage.startsWith("http")
     ? blog.coverImage
-    : `https://liftmygrade.com${blog.coverImage}`;
+    : `https://www.liftmygrade.com${blog.coverImage}`;
 
   return {
     title: `${blog.title} - LiftmyGrade`,
@@ -89,7 +89,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   const coverImageUrl = blog.coverImage.startsWith("http")
     ? blog.coverImage
-    : `https://liftmygrade.com${blog.coverImage}`;
+    : `https://www.liftmygrade.com${blog.coverImage}`;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -106,15 +106,15 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     publisher: {
       "@type": "Organization",
       name: "LiftmyGrade",
-      url: "https://liftmygrade.com",
+      url: "https://www.liftmygrade.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://liftmygrade.com/icon.webp",
+        url: "https://www.liftmygrade.com/icon.webp",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://liftmygrade.com/blogs/${blog.slug}`,
+      "@id": `https://www.liftmygrade.com/blogs/${blog.slug}`,
     },
   };
 

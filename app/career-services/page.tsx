@@ -6,15 +6,17 @@ import Link from "next/link";
 import Highlighter from "@/components/Highlighter";
 
 export const metadata = {
-  title: "Career & Professional Services | LiftmyGrade",
-  description: "Project-based professional document writing and career support services.",
+  title: "Career Branding & Executive Resume Services | LiftmyGrade",
+  description:
+    "Elevate your career trajectory with expert CV writing, executive resumes, cover letters, and professional branding tailored to global standards.",
   alternates: {
-    canonical: "https://liftmygrade.com/career-services",
+    canonical: "https://www.liftmygrade.com/career-services",
   },
   openGraph: {
-    title: "Career & Professional Services | LiftmyGrade",
-    description: "Project-based professional document writing and career support services.",
-    url: "https://liftmygrade.com/career-services",
+    title: "Career Branding & Executive Resume Services | LiftmyGrade",
+    description:
+      "Elevate your career trajectory with expert CV writing, executive resumes, cover letters, and professional branding tailored to global standards.",
+    url: "https://www.liftmygrade.com/career-services",
   },
 };
 
@@ -30,7 +32,7 @@ export default function CareerServicesPage() {
             <SectionLabel>Professional Services</SectionLabel>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-[#171717] tracking-tight mb-8 leading-[1.1] max-w-4xl">
-            Career & Professional Support.
+            Career Branding &amp; Professional Support.
           </h1>
           <p className="text-lg md:text-xl text-neutral-600 max-w-2xl leading-relaxed">
             As your <Highlighter>Academic, Research, Career & Strategic Communication Ecosystem</Highlighter>, our career services are project-based and shaped entirely by your brief — there's no country to choose or admissions cycle to follow. You bring the goal; we build the document. Every engagement starts with a free consultation.
