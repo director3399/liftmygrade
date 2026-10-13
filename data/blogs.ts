@@ -482,9 +482,7 @@ export const blogs: BlogPost[] = [
 
       <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4" id="what-publication-means-for-a-humanities-undergraduate">What "Publication" Means for a Humanities Undergraduate</h2>
       <p class="mb-4">This is where most students get confused, and where the opportunity hides. For a STEM undergraduate, publication usually means a peer-reviewed paper. For a humanities undergraduate, publication is a much wider category — and several of its tiers are surprisingly accessible.</p>
-      <figure class="my-8 rounded-2xl overflow-hidden border border-neutral-100 shadow-sm bg-neutral-50">
-        <img src="/blog/humanities-publication-1.webp" alt="Humanities Publication Tiers" class="w-full h-auto object-cover" />
-      </figure>
+      
       <p class="mb-6">Each of these is a real publication category. Each is harder than students think, but far more reachable than a peer-reviewed STEM paper. And critically, each signals something specific that humanities admissions committees genuinely want to see.</p>
 
       <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4" id="what-admissions-committees-actually-read">What Admissions Committees Actually Read From a Humanities Publication</h2>
@@ -974,19 +972,102 @@ export const blogs: BlogPost[] = [
     coverImage: "/blog/blog-14.webp",
     date: "July 3, 2026",
     content: `
-      <p class="mb-4">Most rejected applications aren't rejected for the reasons students think. The applicant assumes it was their GPA, their GRE, or "they only take students from IITs." The actual reason — visible only to the admissions committee — is usually a profile that didn't make a clear, distinctive argument for itself.</p>
-      <p class="mb-6">This guide breaks down the real rejection patterns we see across Bachelor's, Master's, and PhD applications from India — and what to fix before you submit, not after the email arrives.</p>
+      <p class="mb-4">Most rejected applications aren't rejected for the reasons students think. The applicant assumes it was their GPA, their GRE, or "they only take students from IITs." The actual reason, visible only to the admissions committee, is usually a profile that didn't make a clear, distinctive argument for itself.</p>
+      <p class="mb-6">This guide breaks down the real rejection patterns we see across Bachelor's, Master's, and PhD applications from India, and what to fix before you submit, not after the email arrives.</p>
+      <p class="mb-6">Below, each pattern is explained from the committee's side, followed by a practical fix. If you are asking why study abroad applications get rejected, start by finding which of these five describes your own application.</p>
       
       <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4">The Five Rejection Categories</h2>
-      <p class="mb-4">Rejections cluster into five recognizable patterns. Most failed applications fall into one (sometimes two) of these — rarely "the candidate just wasn't good enough."</p>
+      <p class="mb-4">Rejections cluster into five recognizable patterns. Most failed applications fall into one (sometimes two) of these, rarely "the candidate just wasn't good enough."</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2 text-neutral-700">
+        <li>Profile mismatch</li>
+        <li>A generic or unfocused SOP</li>
+        <li>Weak or generic recommendation letters</li>
+        <li>No evidence of research or academic fit</li>
+        <li>Execution and readiness problems</li>
+      </ul>
       
       <figure class="my-8">
         <img src="/blog/blog-14-1.webp" alt="Application Rejection Patterns" class="w-full rounded-2xl shadow-sm border border-[#EBEFEA] object-cover h-[400px]">
         <figcaption class="text-sm text-center mt-3 text-gray-500">Common rejection patterns identified by admissions committees</figcaption>
       </figure>
 
-      <h3 class="text-xl font-bold text-[#1C362B] mb-2">Pattern 1: Profile Mismatch</h3>
-      <p class="mb-6">You can have a strong profile that's still mismatched to the program. A 9.2 CGPA in Mechanical Engineering doesn't help a Computer Science PhD application without demonstrating necessary coursework or research experience. Committees don't admit smart people; they admit smart people who fit their specific cohort needs.</p>
+      <h3 class="text-xl font-bold text-[#1C362B] mt-8 mb-2">Pattern 1: Profile Mismatch</h3>
+      <p class="mb-4">You can have a strong profile that's still mismatched to the program. A 9.2 CGPA in Mechanical Engineering doesn't help a Computer Science PhD application without demonstrating necessary coursework or research experience. Committees don't admit smart people; they admit smart people who fit their specific cohort needs. A related version is sending one generic profile to programmes with very different focus areas, so no single application looks designed for the place it is going to.</p>
+      <p class="mb-6"><strong class="text-[#1C362B]">How to fix it:</strong> Read the programme's curriculum, entry requirements and faculty research areas before you shortlist it. Apply where your coursework, projects and goals line up with what the programme teaches. If there is a gap, close it with relevant coursework or a documented project, or choose a different programme. If the gap is too large for this cycle, a <a href="https://www.liftmygrade.com/blogs/apply-this-year-or-wait-readiness-check" class="text-blue-600 underline font-medium hover:text-blue-800">readiness check before applying</a> is better than a rejection.</p>
+
+      <h3 class="text-xl font-bold text-[#1C362B] mt-8 mb-2">Pattern 2: A Generic or Unfocused SOP</h3>
+      <p class="mb-4">A statement of purpose that opens with a childhood dream, repeats the CV line by line, or could be sent to any university unchanged gives the committee nothing to remember. It explains who you are but never argues why this programme is the right next step for you. Committees read many of these, and the ones that stand out are specific about the programme, the faculty and the applicant's own direction.</p>
+      <p class="mb-6"><strong class="text-[#1C362B]">How to fix it:</strong> Build the SOP around one clear argument: what you want to do, what you have already done toward it, and why this programme and these faculty are the way to get there. Cut anything that does not support that argument. Our guides on <a href="https://www.liftmygrade.com/blogs/winning-sop-structure-mistakes" class="text-blue-600 underline font-medium hover:text-blue-800">writing a winning SOP for studying abroad</a> and on <a href="https://www.liftmygrade.com/blogs/sop-opening-paragraph-mistake" class="text-blue-600 underline font-medium hover:text-blue-800">the SOP opening paragraph mistake</a> show the structure and the most common errors. It also helps to be clear on your <a href="https://www.liftmygrade.com/blogs/long-term-motivation-studying-abroad" class="text-blue-600 underline font-medium hover:text-blue-800">long-term motivation for studying abroad</a>, because committees can tell when it is missing.</p>
+
+      <h3 class="text-xl font-bold text-[#1C362B] mt-8 mb-2">Pattern 3: Weak or Generic Recommendation Letters</h3>
+      <p class="mb-4">A letter from someone who barely supervised you, or one that praises you in general terms without a single concrete example, adds little. A letter that contradicts your CV or SOP can do real damage, because committees notice when the three documents describe different people.</p>
+      <p class="mb-6"><strong class="text-[#1C362B]">How to fix it:</strong> Choose referees who have actually taught, supervised or managed your work. Give them your CV, your SOP draft, the programme details and the points you hope they can speak to, and give them enough time. Our guide on <a href="https://www.liftmygrade.com/blogs/how-to-get-strong-letters-of-recommendation" class="text-blue-600 underline font-medium hover:text-blue-800">how to get strong letters of recommendation</a> explains how.</p>
+
+      <h3 class="text-xl font-bold text-[#1C362B] mt-8 mb-2">Pattern 4: No Evidence of Research or Academic Fit</h3>
+      <p class="mb-4">For Master's and especially PhD applications, committees look for signs that you can do academic work: projects, research experience, a clear research direction, and for PhDs, alignment with a specific supervisor. A Master's applicant whose only evidence is coursework, or a PhD applicant whose interests match no faculty member's current work, gives the committee little reason to believe the research will go well. A vague proposal or an unanswered supervisor email often means the application never gets serious attention.</p>
+      <p class="mb-2"><strong class="text-[#1C362B]">How to fix it:</strong></p>
+      <ul class="list-disc pl-6 mb-6 space-y-2 text-neutral-700">
+        <li>Build an <a href="https://www.liftmygrade.com/blogs/building-an-academic-cv-for-study-abroad" class="text-blue-600 underline font-medium hover:text-blue-800">academic CV for study abroad</a> that puts research and projects first.</li>
+        <li>Write a focused proposal. See how to write a <a href="https://www.liftmygrade.com/blogs/how-to-write-a-research-proposal-for-phd-abroad" class="text-blue-600 underline font-medium hover:text-blue-800">research proposal for a PhD abroad</a> and the <a href="https://www.liftmygrade.com/blogs/research-proposal-structure-supervisors-read" class="text-blue-600 underline font-medium hover:text-blue-800">structure supervisors actually scan</a>.</li>
+        <li>Contact supervisors properly, using our guides to <a href="https://www.liftmygrade.com/blogs/professor-outreach-for-phd-abroad" class="text-blue-600 underline font-medium hover:text-blue-800">professor outreach for a PhD abroad</a> and <a href="https://www.liftmygrade.com/blogs/email-phd-supervisor-first-contact" class="text-blue-600 underline font-medium hover:text-blue-800">how to email a PhD supervisor</a>.</li>
+        <li>If you have a paper, make sure it is genuine. Learn how to <a href="https://www.liftmygrade.com/blogs/how-to-verify-journal-before-submitting" class="text-blue-600 underline font-medium hover:text-blue-800">verify a journal before submitting</a>, and see why <a href="https://www.liftmygrade.com/blogs/publishing-paper-advantage-post-graduate" class="text-blue-600 underline font-medium hover:text-blue-800">publishing a paper can help postgraduate applicants</a> and what it changes in a <a href="https://www.liftmygrade.com/blogs/publication-funded-admission-difference" class="text-blue-600 underline font-medium hover:text-blue-800">funded application</a>.</li>
+      </ul>
+
+      <h3 class="text-xl font-bold text-[#1C362B] mt-8 mb-2">Pattern 5: Execution and Readiness Problems</h3>
+      <p class="mb-4">Some applications are rejected because of avoidable mistakes: details that differ between documents, missed requirements, typos, claims that cannot be verified, or an application sent before the profile was ready. In these cases the candidate may be capable, but the application does not show it. Another common version is an inconsistent story, such as an SOP that describes one goal while the CV and letters point somewhere else.</p>
+      <p class="mb-6"><strong class="text-[#1C362B]">How to fix it:</strong> Cross-check every document against the others before you submit, follow each university's instructions exactly, and verify every publication and reference you list. Be honest about readiness too. Sometimes the right answer is to strengthen your profile first and apply next cycle. If you are speaking to a consultant, know <a href="https://www.liftmygrade.com/blogs/what-happens-free-study-abroad-consultation" class="text-blue-600 underline font-medium hover:text-blue-800">what a free study abroad consultation should look like</a>.</p>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-10 mb-4">Why the Reason Is Rarely Just Your GPA</h2>
+      <p class="mb-4">Admissions committees usually compare many capable candidates for a limited number of places, so the decision is rarely about a single number. They read your SOP, CV and letters together and ask whether they tell one consistent story: what you want to do, why this programme, and what evidence supports it. They also cannot call you to clarify, so your documents have to answer their questions on their own.</p>
+      <p class="mb-6">An application with a slightly lower GPA but a sharp argument and strong evidence often reads better than a high-scoring one with none.</p>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-10 mb-4">A Pre-Submission Checklist</h2>
+      <ul class="list-disc pl-6 mb-8 space-y-2 text-neutral-700">
+        <li>The programme matches your coursework, projects and goals.</li>
+        <li>Your SOP makes one clear argument and is written for this programme.</li>
+        <li>Your recommenders know your work and have the details they need.</li>
+        <li>Your CV leads with research and projects, with every claim verifiable.</li>
+        <li>For a PhD, your proposal and supervisor outreach are focused and specific.</li>
+        <li>Names, dates, grades and details match across all documents.</li>
+        <li>Every university requirement and deadline has been checked.</li>
+        <li>Someone other than you has proofread the full application.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-10 mb-4">What to Do If You Have Already Been Rejected</h2>
+      <p class="mb-4">A rejection is information, not a verdict on your ability. Take it in four steps:</p>
+      <ol class="list-decimal pl-6 mb-8 space-y-3 text-neutral-700">
+        <li><strong>Diagnose:</strong> Compare your application against the five patterns above and identify the weakest part, instead of assuming it was your GPA.</li>
+        <li><strong>Ask for feedback:</strong> Where a university offers it, request it, although many do not.</li>
+        <li><strong>Fix the weakest area first:</strong> Improving one real weakness is better than rewriting everything.</li>
+        <li><strong>Decide your next move:</strong> Choose honestly between reapplying, changing your target programmes, or waiting for the next intake. Check each university's reapplication policy, because rules differ.</li>
+      </ol>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-10 mb-4">Frequently Asked Questions</h2>
+      <div class="space-y-4 mb-8">
+        <div>
+          <strong class="block mb-1 text-[#1C362B]">Why do study abroad applications get rejected even with a high GPA?</strong>
+          <p class="text-neutral-700">A high GPA shows academic performance, but committees also look for fit, a clear argument, strong references and evidence of research or relevant experience. Most rejections come from gaps in those areas.</p>
+        </div>
+        <div>
+          <strong class="block mb-1 text-[#1C362B]">Can I reapply after a rejection?</strong>
+          <p class="text-neutral-700">Often yes, but policies differ by university and programme. Check the rules, and reapply only when the application is meaningfully stronger.</p>
+        </div>
+        <div>
+          <strong class="block mb-1 text-[#1C362B]">How many universities should I apply to?</strong>
+          <p class="text-neutral-700">There is no fixed number. A shortlist you can genuinely tailor, with a clear reason for each programme, usually works better than a long list of generic applications.</p>
+        </div>
+        <div>
+          <strong class="block mb-1 text-[#1C362B]">Will a research paper stop my application from being rejected?</strong>
+          <p class="text-neutral-700">A genuine, well-placed paper can strengthen a research-focused application, but it does not guarantee admission. It also needs to be real and verifiable.</p>
+        </div>
+      </div>
+
+      <div class="bg-[#F6F8F7] p-6 rounded-2xl border border-[#EBEFEA]">
+        <h3 class="text-xl font-bold text-[#1C362B] mb-2">Get Your Application Reviewed Before You Submit</h3>
+        <p class="mb-4 text-neutral-700">It is far easier to fix an application before you send it than after a rejection. LiftMyGrade's admissions team works on SOPs, LORs and academic CVs as part of a full application plan built around your target programmes.</p>
+        <p class="mb-4 text-neutral-700">Start with the <a href="https://www.liftmygrade.com/readiness-assessment" class="text-blue-600 underline font-medium hover:text-blue-800">free readiness assessment</a> to see where your profile stands, or read <a href="https://www.liftmygrade.com/how-we-work" class="text-blue-600 underline font-medium hover:text-blue-800">how we work</a> and browse <a href="https://www.liftmygrade.com/services" class="text-blue-600 underline font-medium hover:text-blue-800">all our services</a>.</p>
+        <p class="font-semibold text-[#1C362B]">We do not promise admission outcomes, only a clearer, stronger and honest application that gives the committee every reason to take a closer look.</p>
+      </div>
     `
   },
   {
@@ -1001,16 +1082,144 @@ export const blogs: BlogPost[] = [
     coverImage: "/blog/blog-15.webp",
     date: "July 3, 2026",
     content: `
-      <p class="mb-4">The academic CV is the most underestimated document in a study abroad application. Students agonize over their SOP for months, then attach a 1-page corporate-style resume with bullet points about "team collaboration" and "communication skills." The mismatch is jarring — and admissions committees notice.</p>
-      <p class="mb-6">An academic CV isn't a job resume. It serves a different audience, follows different conventions, and emphasizes different signals. This guide breaks down what an academic CV should look like for Master's and PhD applications, and how to build one that actually supports your application.</p>
+      <p class="mb-4">Your academic CV is the one document in a study abroad application that shows an admissions committee, at a glance, what you have actually done. Your SOP explains why you want the course, your recommendation letters give someone else's view, and your CV is the evidence. Yet it is also the document most applicants write last, in a hurry, from an old job resume.</p>
+      <p class="mb-6">This guide explains how to build an academic CV for study abroad applications: how it differs from a resume, what to include and in what order, before-and-after examples, the mistakes that weaken strong profiles, and a checklist to run before you submit. It is written for Master's and PhD applications abroad, and bachelor's applicants can adapt it by leaning on projects, coursework and leadership.</p>
       
       <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4">Academic CV vs Resume: The Critical Distinction</h2>
-      <p class="mb-4">A job resume is a marketing document: it sells you to a hiring manager who will spend 30 seconds scanning it. An academic CV is a credential document: it lists everything you've done that's relevant to academic evaluation, in a format admissions officers can quickly digest.</p>
-      
+      <p class="mb-4">A resume is a short, selective document for a job: usually one page, tailored to a role and built around skills and results. An academic CV is a fuller record of your academic life, covering education, research, publications, teaching, awards and technical skills, arranged so a reader can judge your potential for advanced study.</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2 text-neutral-700">
+        <li><strong>Purpose:</strong> A resume shows employability, while an academic CV shows readiness for advanced study and research.</li>
+        <li><strong>Order:</strong> Education and research come first, and work experience comes later.</li>
+        <li><strong>Length:</strong> An academic CV is usually longer than a resume, but longer is not better. Every line has to earn its place.</li>
+        <li><strong>Content:</strong> Publications, conference presentations, research projects, lab or software skills and academic awards belong here. Career objectives and hobbies usually do not.</li>
+        <li><strong>Audience:</strong> The reader is often a professor or a committee member, not a recruiter.</li>
+      </ul>
+      <p class="mb-6">If you are applying for a PhD, your CV also supports your <a href="https://www.liftmygrade.com/blogs/professor-outreach-for-phd-abroad" class="text-blue-600 underline font-medium hover:text-blue-800">professor outreach</a>, because a supervisor will often open it before replying to your first email.</p>
+
       <figure class="my-8">
         <img src="/blog/blog-15-1.webp" alt="Academic CV Structure" class="w-full rounded-2xl shadow-sm border border-[#EBEFEA] object-cover h-[400px]">
         <figcaption class="text-sm text-center mt-3 text-gray-500">The core structure of a winning academic CV</figcaption>
       </figure>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4">What Admissions Committees Look for in an Academic CV</h2>
+      <p class="mb-4">Committees read many applications, so your CV needs to answer four questions quickly:</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2 text-neutral-700">
+        <li>Does your academic background suit this programme?</li>
+        <li>Is there evidence of research or independent project work, even at a small scale?</li>
+        <li>Are your claims specific and believable?</li>
+        <li>Does the CV agree with your SOP and recommendation letters?</li>
+      </ul>
+      <p class="mb-6">Clear structure and honest detail answer all four. Padding answers none of them.</p>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-8 mb-4">The Structure of a Strong Academic CV</h2>
+      <p class="mb-6">Use the order below for most Master's and PhD applications. Always check the university's own instructions first, because formats and page limits vary by country and programme.</p>
+
+      <h3 class="text-xl font-bold text-[#1C362B] mt-6 mb-2">1. Header and contact details</h3>
+      <p class="mb-6 text-neutral-700">Give your full name, a professional email address, phone number, city and country, and a LinkedIn or ORCID link if you have one.</p>
+
+      <h3 class="text-xl font-bold text-[#1C362B] mt-6 mb-2">2. Short academic profile (optional)</h3>
+      <p class="mb-6 text-neutral-700">Write two or three factual lines covering your field, your strongest area and the direction you want to take. If the application asks for a separate statement, skip this and let your SOP do the work.</p>
+
+      <h3 class="text-xl font-bold text-[#1C362B] mt-6 mb-2">3. Education</h3>
+      <p class="mb-6 text-neutral-700">List degrees in reverse chronological order with the institution, programme, dates and grade or CGPA in the format the university expects. Add relevant coursework, and your thesis or dissertation title and supervisor if you have them.</p>
+
+      <h3 class="text-xl font-bold text-[#1C362B] mt-6 mb-2">4. Research experience and projects</h3>
+      <p class="mb-6 text-neutral-700">This is often the strongest section. For each project, state the title, where and with whom you did it, the dates, the methods or tools you used, and what you produced. A final-year project, a lab placement or a data analysis assignment all count when you describe them precisely.</p>
+
+      <h3 class="text-xl font-bold text-[#1C362B] mt-6 mb-2">5. Publications and presentations</h3>
+      <p class="mb-6 text-neutral-700">List papers, conference presentations and posters in one consistent citation style, with their status (published, accepted or under review). Only list what is real and verifiable. If you are unsure about a journal, read how to <a href="https://www.liftmygrade.com/blogs/how-to-verify-journal-before-submitting" class="text-blue-600 underline font-medium hover:text-blue-800">verify a journal before submitting</a>, and see what a peer-reviewed paper actually changes in a <a href="https://www.liftmygrade.com/blogs/publication-funded-admission-difference" class="text-blue-600 underline font-medium hover:text-blue-800">funded application</a>.</p>
+
+      <h3 class="text-xl font-bold text-[#1C362B] mt-6 mb-2">6. Work, teaching and internships</h3>
+      <p class="mb-6 text-neutral-700">Include only roles that show relevant skills, such as teaching assistance, research internships or industry projects. Keep each to two or three bullet points.</p>
+
+      <h3 class="text-xl font-bold text-[#1C362B] mt-6 mb-2">7. Scholarships, awards and honours</h3>
+      <p class="mb-6 text-neutral-700">List merit scholarships, ranks, competitive fellowships and academic prizes, with the year and the awarding body.</p>
+
+      <h3 class="text-xl font-bold text-[#1C362B] mt-6 mb-2">8. Skills</h3>
+      <p class="mb-6 text-neutral-700">Add technical skills (software, lab methods, programming languages), languages and test scores such as IELTS or TOEFL where relevant. Be honest about your level.</p>
+
+      <h3 class="text-xl font-bold text-[#1C362B] mt-6 mb-2">9. References (optional)</h3>
+      <p class="mb-6 text-neutral-700">Add referee names only if the application asks for them, and tell your referees before you do.</p>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-10 mb-4">How Long Should an Academic CV Be, and How Should It Look?</h2>
+      <p class="mb-4">For Master's applications, one to two pages is a safe target. For PhD applications, two to three pages is common when you have genuine research or publication history, and longer only if the content justifies it. If the university sets a limit, follow it exactly.</p>
+      <p class="mb-6">Use one readable font, consistent date formats, clear headings and short bullet points. Avoid colour blocks, skill bars, decorative templates and dense paragraphs. Include a photo only if the country or programme expects one. Save the file as a PDF with a clear name, such as <code>Firstname-Lastname-Academic-CV.pdf</code>.</p>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-10 mb-4">Academic CV Examples: Before and After</h2>
+      <p class="mb-6">These illustrative examples show how to turn vague entries into specific ones. Replace the details with your own, and never add anything you did not do.</p>
+
+      <div class="space-y-6 mb-8">
+        <div class="border border-neutral-200 rounded-xl p-5 bg-white shadow-sm">
+          <h4 class="font-bold text-[#1C362B] mb-2">Research project</h4>
+          <p class="text-sm text-red-700 mb-2"><strong>Before:</strong> Did a project on air quality.</p>
+          <p class="text-sm text-green-800"><strong>After:</strong> Final-year project: analysed twelve months of air-quality data from three monitoring stations using Python (pandas, matplotlib) to compare seasonal pollutant trends. Supervised by Dr. [Name]; presented at the department symposium.</p>
+        </div>
+
+        <div class="border border-neutral-200 rounded-xl p-5 bg-white shadow-sm">
+          <h4 class="font-bold text-[#1C362B] mb-2">Teaching experience</h4>
+          <p class="text-sm text-red-700 mb-2"><strong>Before:</strong> Worked as a teaching assistant and helped students.</p>
+          <p class="text-sm text-green-800"><strong>After:</strong> Teaching assistant, Introductory Statistics (two semesters): ran weekly problem sessions and marked assignments against a shared rubric.</p>
+        </div>
+
+        <div class="border border-neutral-200 rounded-xl p-5 bg-white shadow-sm">
+          <h4 class="font-bold text-[#1C362B] mb-2">Skills</h4>
+          <p class="text-sm text-red-700 mb-2"><strong>Before:</strong> Good at computers and research.</p>
+          <p class="text-sm text-green-800"><strong>After:</strong> Python (pandas, scikit-learn), R, SPSS; systematic literature review (PRISMA); reference management in Zotero.</p>
+        </div>
+      </div>
+      <p class="mb-6 italic text-neutral-600">The pattern is simple: an action verb, what you did, how you did it, and what it produced.</p>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-10 mb-4">Common Academic CV Mistakes</h2>
+      <ul class="list-disc pl-6 mb-8 space-y-3 text-neutral-700">
+        <li><strong>Using a job resume template:</strong> Objective statements, photos and skill bars take up space and signal that the CV was not written for academic readers.</li>
+        <li><strong>Sending the same CV everywhere:</strong> A CV for a data science Master's should lead with different projects than one for a public health PhD. Reorder and trim for each programme.</li>
+        <li><strong>Listing duties instead of outputs:</strong> "Responsible for lab work" says nothing. Say what you did, with which method, and what came out of it.</li>
+        <li><strong>Padding the page:</strong> When every certificate and club is listed, the two things that matter get lost. Cut anything that does not support your case.</li>
+        <li><strong>Ignoring country and programme norms:</strong> A study abroad CV is read differently by each university, and UK, European and US programmes can expect different lengths and ordering, so read each set of instructions.</li>
+        <li><strong>Including claims you cannot verify:</strong> Overstating a role, listing a paper that is not accepted, or citing a doubtful journal can damage the whole application.</li>
+        <li><strong>Contradicting your SOP or recommenders:</strong> If your CV says you led a project and your referee calls you a team member, the committee will notice.</li>
+        <li><strong>Leaving typos and inconsistent formatting:</strong> Small errors suggest the same carelessness in your research.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-10 mb-4">How Your CV Fits With the Rest of Your Application</h2>
+      <p class="mb-4">Your CV, SOP, recommendation letters and (for research degrees) research proposal should tell one consistent story. Your <a href="https://www.liftmygrade.com/blogs/winning-sop-structure-mistakes" class="text-blue-600 underline font-medium hover:text-blue-800">SOP for studying abroad</a> explains your motivation, your CV provides the evidence, and your <a href="https://www.liftmygrade.com/blogs/how-to-get-strong-letters-of-recommendation" class="text-blue-600 underline font-medium hover:text-blue-800">letters of recommendation</a> confirm it from the outside.</p>
+      <p class="mb-4">For a PhD, your CV should also line up with your <a href="https://www.liftmygrade.com/blogs/how-to-write-a-research-proposal-for-phd-abroad" class="text-blue-600 underline font-medium hover:text-blue-800">research proposal for a PhD abroad</a> and with the email you send when you <a href="https://www.liftmygrade.com/blogs/email-phd-supervisor-first-contact" class="text-blue-600 underline font-medium hover:text-blue-800">contact a PhD supervisor</a>.</p>
+      <p class="mb-6">If you are unsure whether your profile is ready, a <a href="https://www.liftmygrade.com/blogs/apply-this-year-or-wait-readiness-check" class="text-blue-600 underline font-medium hover:text-blue-800">readiness check before applying</a> can save a full application cycle.</p>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-10 mb-4">Study Abroad CV Checklist Before You Submit</h2>
+      <ul class="list-disc pl-6 mb-8 space-y-2 text-neutral-700">
+        <li>It follows the university's format and page limit.</li>
+        <li>Education and research appear before work experience.</li>
+        <li>Every entry says what you did, how, and what it produced.</li>
+        <li>Dates, grades and names match your transcripts and other documents.</li>
+        <li>Every publication and reference is real, current and verifiable.</li>
+        <li>It is consistent with your SOP and referees' letters.</li>
+        <li>Formatting, fonts and date styles are consistent throughout.</li>
+        <li>It has been proofread by someone else and saved as a PDF.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-10 mb-4">Frequently Asked Questions</h2>
+      <div class="space-y-4 mb-8">
+        <div>
+          <strong class="block mb-1 text-[#1C362B]">How long should an academic CV be for a Master's abroad?</strong>
+          <p class="text-neutral-700">One to two pages is usually enough, unless the university specifies a limit. Follow the programme's instructions over any general rule.</p>
+        </div>
+        <div>
+          <strong class="block mb-1 text-[#1C362B]">Can I write an academic CV with no publications?</strong>
+          <p class="text-neutral-700">Yes. Lead with education, projects, relevant coursework, internships, awards and technical skills, and describe each one precisely. Publications strengthen a CV, but they are not required for most Master's applications.</p>
+        </div>
+        <div>
+          <strong class="block mb-1 text-[#1C362B]">Should I use the same CV for every university?</strong>
+          <p class="text-neutral-700">Keep one master CV, then adapt the order, emphasis and length for each programme and country.</p>
+        </div>
+      </div>
+
+      <div class="bg-[#F6F8F7] p-6 rounded-2xl border border-[#EBEFEA]">
+        <h3 class="text-xl font-bold text-[#1C362B] mb-2">Get Your Academic CV Reviewed</h3>
+        <p class="mb-4 text-neutral-700">An academic CV for study abroad is easy to get almost right and still lose strength: the wrong order, vague entries or a mismatch with the SOP. LiftMyGrade's admissions team works on CVs alongside SOPs and LORs as part of a full application plan built around your target programmes.</p>
+        <p class="mb-4 text-neutral-700">Start with the <a href="https://www.liftmygrade.com/readiness-assessment" class="text-blue-600 underline font-medium hover:text-blue-800">free readiness assessment</a> to see where your profile stands, or read <a href="https://www.liftmygrade.com/how-we-work" class="text-blue-600 underline font-medium hover:text-blue-800">how we work</a> and browse <a href="https://www.liftmygrade.com/services" class="text-blue-600 underline font-medium hover:text-blue-800">all our services</a>.</p>
+        <p class="font-semibold text-[#1C362B]">We do not promise admission outcomes, only a clearer, stronger and honest application.</p>
+      </div>
     `
   },
   {
