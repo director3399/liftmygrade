@@ -71,6 +71,72 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://www.liftmygrade.com/#organization",
+    name: "LiftmyGrade",
+    alternateName: "LiftMyGrade LLP",
+    url: "https://www.liftmygrade.com",
+    logo: "https://www.liftmygrade.com/icon.webp",
+    description:
+      "Global academic ecosystem providing PhD-level thesis and dissertation mentorship, research publication guidance, and study abroad admissions support (SOP, LOR, CV).",
+    sameAs: [
+      "https://www.instagram.com/liftmygrade",
+      "https://www.linkedin.com/company/lift-my-grade/",
+      "https://www.facebook.com/share/1YvxK4wTn7/?mibextid=wwXIfr",
+      "https://www.youtube.com/@LiftMyGrade",
+    ],
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+91-9147720702",
+      contactType: "customer service",
+      availableLanguage: ["English", "Hindi"],
+    },
+  };
+
+  const sitewideNavSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SiteNavigationElement",
+        name: "Academic Services",
+        description: "Thesis help, dissertation guidance, publication support & admissions.",
+        url: "https://www.liftmygrade.com/services",
+      },
+      {
+        "@type": "SiteNavigationElement",
+        name: "Study Abroad Readiness Assessment",
+        description: "Free profile evaluation and strategic pathway roadmap.",
+        url: "https://www.liftmygrade.com/readiness-assessment",
+      },
+      {
+        "@type": "SiteNavigationElement",
+        name: "How We Work",
+        description: "Step-by-step milestone-based academic mentorship process.",
+        url: "https://www.liftmygrade.com/how-we-work",
+      },
+      {
+        "@type": "SiteNavigationElement",
+        name: "Professional & Career Services",
+        description: "Executive resumes, CV writing, and career branding.",
+        url: "https://www.liftmygrade.com/career-services",
+      },
+      {
+        "@type": "SiteNavigationElement",
+        name: "Academic Insights & Guides",
+        description: "Expert articles on SOPs, PhD proposals, and study abroad strategies.",
+        url: "https://www.liftmygrade.com/blogs",
+      },
+      {
+        "@type": "SiteNavigationElement",
+        name: "What to Expect",
+        description: "Transparent commitments and mentorship standards.",
+        url: "https://www.liftmygrade.com/what-to-expect",
+      },
+    ],
+  };
+
   return (
     <html
       lang="en"
@@ -78,6 +144,16 @@ export default function RootLayout({
       suppressHydrationWarning
       data-scroll-behavior="smooth"
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(sitewideNavSchema) }}
+        />
+      </head>
       <body suppressHydrationWarning>
         <ScrollRestorationFix />
         {children}
