@@ -244,22 +244,8 @@ export default function TestimonialsFAQ() {
                 </AnimatePresence>
               </div>
 
-              {/* Navigation controls: Prev & Next Arrows + Dots */}
-              <div className="flex items-center justify-between mt-5">
-                {/* Dots indicator */}
-                <div className="flex gap-1.5">
-                  {testimonials.map((_, i) => (
-                    <button
-                      key={i}
-                      onClick={() => setTIndex(i)}
-                      className={`h-2 rounded-full transition-all duration-300 ${
-                        i === tIndex ? "w-6 bg-[#171717]" : "w-2 bg-neutral-300"
-                      }`}
-                      aria-label={`Go to testimonial ${i + 1}`}
-                    />
-                  ))}
-                </div>
-
+              {/* Navigation controls: Prev & Next Arrows */}
+              <div className="flex items-center justify-end mt-5">
                 {/* Left & Right Clickable Arrows */}
                 <div className="flex items-center gap-2">
                   <button

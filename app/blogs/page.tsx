@@ -6,14 +6,14 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
 export const metadata = {
-  title: "Academic Insights, Research & Study Abroad Guides | LiftmyGrade",
+  title: "Academic Insights & Study Abroad Guides | LiftmyGrade",
   description:
     "Explore actionable guides, research publication strategies, and study abroad insights from academic mentors and PhD researchers at LiftmyGrade.",
   alternates: {
     canonical: "https://www.liftmygrade.com/blogs",
   },
   openGraph: {
-    title: "Academic Insights, Research & Study Abroad Guides | LiftmyGrade",
+    title: "Academic Insights & Study Abroad Guides | LiftmyGrade",
     description:
       "Explore actionable guides, research publication strategies, and study abroad insights from academic mentors and PhD researchers at LiftmyGrade.",
     url: "https://www.liftmygrade.com/blogs",

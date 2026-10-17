@@ -23,14 +23,14 @@ import Contact2 from "@/components/Contact2";
 import FounderNote from "@/components/FounderNote";
 
 export const metadata: Metadata = {
-  title: "Thesis Help, Dissertation Support & Admissions Mentorship | LiftmyGrade",
+  title: "Thesis, Dissertation & Publication Help | LiftmyGrade",
   description:
     "Expert academic guidance and PhD-level mentorship for thesis, dissertation, research publications, and study abroad admissions (SOP, LOR, CV).",
   alternates: {
     canonical: "https://www.liftmygrade.com",
   },
   openGraph: {
-    title: "Thesis Help, Dissertation Support & Admissions Mentorship | LiftmyGrade",
+    title: "Thesis, Dissertation & Publication Help | LiftmyGrade",
     description:
       "Expert academic guidance and PhD-level mentorship for thesis, dissertation, research publications, and study abroad admissions (SOP, LOR, CV).",
     url: "https://www.liftmygrade.com",

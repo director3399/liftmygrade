@@ -106,8 +106,8 @@ export default function PromoPopup() {
           transition={{ duration: 0.35, ease: "easeOut" }}
           className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6"
         >
-          {/* Backdrop — does NOT close the popup */}
-          <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
+          {/* Backdrop — lighter and minimal blur so underlying page content remains visible */}
+          <div className="absolute inset-0 bg-black/35 backdrop-blur-[2px]" />
 
           {/* Popup card — compact modal size on laptop/desktop, comfortable fit on mobile */}
           <motion.div

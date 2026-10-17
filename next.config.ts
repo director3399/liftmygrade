@@ -33,6 +33,17 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "liftmygrade.com",
+          },
+        ],
+        destination: "https://www.liftmygrade.com/:path*",
+        permanent: true,
+      },
+      {
         source: "/blog",
         destination: "/blogs",
         permanent: true,

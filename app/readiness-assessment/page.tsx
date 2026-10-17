@@ -5,14 +5,14 @@ import SectionLabel from "@/components/SectionLabel";
 import Image from "next/image";
 
 export const metadata = {
-  title: "Free Study Abroad & Research Readiness Assessment | LiftmyGrade",
+  title: "Free Study Abroad Readiness Assessment | LiftmyGrade",
   description:
     "Evaluate your academic profile and study abroad readiness. Get an honest, expert assessment and strategic roadmap from admissions mentors within 48 hours.",
   alternates: {
     canonical: "https://www.liftmygrade.com/readiness-assessment",
   },
   openGraph: {
-    title: "Free Study Abroad & Research Readiness Assessment | LiftmyGrade",
+    title: "Free Study Abroad Readiness Assessment | LiftmyGrade",
     description:
       "Evaluate your academic profile and study abroad readiness. Get an honest, expert assessment and strategic roadmap from admissions mentors within 48 hours.",
     url: "https://www.liftmygrade.com/readiness-assessment",

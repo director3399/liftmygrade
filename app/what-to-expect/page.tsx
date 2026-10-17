@@ -5,14 +5,14 @@ import { ArrowRight } from "@/components/Icons";
 import Link from "next/link";
 
 export const metadata = {
-  title: "What You Can Expect: Standards & Mentorship Guarantees | LiftmyGrade",
+  title: "What to Expect: Standards & Mentorship | LiftmyGrade",
   description:
     "Discover what happens after joining LiftmyGrade: zero-risk discovery, verified academic reports, subject-matched PhD mentorship, and unlimited revisions.",
   alternates: {
     canonical: "https://www.liftmygrade.com/what-to-expect",
   },
   openGraph: {
-    title: "What You Can Expect: Standards & Mentorship Guarantees | LiftmyGrade",
+    title: "What to Expect: Standards & Mentorship | LiftmyGrade",
     description:
       "Discover what happens after joining LiftmyGrade: zero-risk discovery, verified academic reports, subject-matched PhD mentorship, and unlimited revisions.",
     url: "https://www.liftmygrade.com/what-to-expect",
