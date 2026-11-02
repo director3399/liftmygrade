@@ -2463,4 +2463,180 @@ export const blogs: BlogPost[] = [
       <p class="mb-6">Start the readiness form at <a href="https://www.liftmygrade.com" class="text-emerald-700 underline font-medium">liftmygrade.com</a></p>
     `
   }
+,
+  {
+    id: "36",
+    slug: "study-abroad-application-deadlines-30-day-plan",
+    title: "30 Days Left Before the December Deadlines: The Order to Finish Your Application Documents",
+    excerpt: "Study abroad application deadlines 2027 are close. Follow this 30-day plan to finish your SOP, LOR and CV in the right order. Read the plan.",
+    author: "LiftmyGrade Editorial",
+    authorRole: "Admissions Strategy Team",
+    authorImage: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200",
+    category: "Application Strategy",
+    coverImage: "/blog/blog-36.webp",
+    date: "November 2, 2026",
+    content: `
+      <span class="inline-block bg-[#eaf8f1] text-[#117a52] text-xs font-bold font-sans px-3 py-1 rounded-full tracking-wide uppercase mb-4">STUDY ABROAD · APPLICATIONS</span>
+
+      <div class="border-l-4 border-[#e8a13a] bg-[#fff6e6] p-5 rounded-r-xl my-6 text-lg text-neutral-800 leading-relaxed font-serif">
+        <p><strong>Nobody misses a deadline on deadline day.</strong> They miss it 30 days earlier, on the afternoon they open a blank SOP first, while the recommender's letter, the transcript request and the score report are all sitting with other people who work on their own clock. If your Fall 2027 deadlines are weeks away and your documents are half-done, the question is not "how do I work faster?" It is "what do I finish first?" This post answers that.</p>
+      </div>
+
+      <div class="bg-[#eaf8f1] border border-[#1fa971] rounded-xl p-5 my-6 text-neutral-800">
+        <span class="block font-bold text-sm tracking-wide text-[#117a52] uppercase mb-1">Quick Answer</span>
+        <p>Finish documents in order of <strong>who controls them</strong>, not in order of how important they feel. Release everything other people control (recommendation letters, transcripts, score reports) in the first 10 days. Write the SOP in the middle. Keep polishing and extras for the last days. And decide now what you will <em>skip</em>.</p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-10 mb-4">Why "start early" is useless advice right now</h2>
+      <p class="mb-4 text-neutral-700 leading-relaxed">Every guide says "start early". It is true, and no help when you are already inside the last month. What you need is a triage plan. The trick is a simple rule: some documents depend on you alone, and some depend on other people. Other people are slow, busy and unpredictable. You can rewrite a paragraph at midnight, but you cannot make a professor write a letter at midnight.</p>
+
+      <figure class="my-8">
+        <img src="/blog/blog-36-1.webp" alt="30-day application plan: triage days 1–3, request LORs and transcripts days 4–10, write days 11–22, submit by day 30." class="w-full rounded-2xl shadow-sm border border-neutral-200 object-cover" />
+        <figcaption class="text-sm text-center mt-3 text-neutral-500">The 30-day plan: other people's tasks first, your own writing second.</figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-10 mb-4">Step 1 (Days 1–3): Triage before you type a single word</h2>
+      <p class="mb-4 text-neutral-700 leading-relaxed">Open a sheet and list every university, its deadline, and every document it asks for. Then cut the list. Five well-prepared applications beat nine <a href="https://www.liftmygrade.com/blogs/apply-this-year-or-wait-readiness-check" class="text-blue-600 underline font-medium hover:text-blue-800">rushed ones</a>. For each document, note who controls it and how long it can realistically take.</p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-left border-collapse border border-neutral-200 text-sm rounded-xl overflow-hidden">
+          <thead>
+            <tr class="bg-[#0f2a4a] text-white">
+              <th class="p-3.5 font-bold">Document</th>
+              <th class="p-3.5 font-bold">Who controls it</th>
+              <th class="p-3.5 font-bold">Typical wait</th>
+              <th class="p-3.5 font-bold">Risk if late</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-neutral-200 text-neutral-700">
+            <tr class="bg-white hover:bg-neutral-50">
+              <td class="p-3.5 font-medium"><a href="https://www.liftmygrade.com/blogs/how-to-get-strong-letters-of-recommendation" class="text-blue-600 underline hover:text-blue-800">Recommendation letters (LOR)</a></td>
+              <td class="p-3.5">Your recommenders</td>
+              <td class="p-3.5">2–4 weeks</td>
+              <td class="p-3.5"><span class="font-bold text-red-600">High</span></td>
+            </tr>
+            <tr class="bg-neutral-50/60 hover:bg-neutral-50">
+              <td class="p-3.5 font-medium">Transcripts / degree certificates</td>
+              <td class="p-3.5">Your university office</td>
+              <td class="p-3.5">1–3 weeks</td>
+              <td class="p-3.5"><span class="font-bold text-red-600">High</span></td>
+            </tr>
+            <tr class="bg-white hover:bg-neutral-50">
+              <td class="p-3.5 font-medium">English test or GRE score report</td>
+              <td class="p-3.5">Testing agency</td>
+              <td class="p-3.5">Days to 2 weeks</td>
+              <td class="p-3.5"><span class="font-bold text-amber-600">Medium</span></td>
+            </tr>
+            <tr class="bg-neutral-50/60 hover:bg-neutral-50">
+              <td class="p-3.5 font-medium"><a href="https://www.liftmygrade.com/blogs/winning-sop-structure-mistakes" class="text-blue-600 underline hover:text-blue-800">SOP / personal statement</a></td>
+              <td class="p-3.5">You</td>
+              <td class="p-3.5">1–2 weeks</td>
+              <td class="p-3.5"><span class="font-bold text-blue-600">You decide</span></td>
+            </tr>
+            <tr class="bg-white hover:bg-neutral-50">
+              <td class="p-3.5 font-medium"><a href="https://www.liftmygrade.com/blogs/building-an-academic-cv-for-study-abroad" class="text-blue-600 underline hover:text-blue-800">CV / resume</a></td>
+              <td class="p-3.5">You</td>
+              <td class="p-3.5">1–2 days</td>
+              <td class="p-3.5"><span class="font-bold text-emerald-600">Low</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-neutral-500 italic mb-6">Wait times are typical ranges, not promises. Check each office and each university's own page for exact timing.</p>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-10 mb-4">Step 2 (Days 4–10): Release what other people control</h2>
+      <p class="mb-4 text-neutral-700 leading-relaxed">This is the step students skip, and it is the one that sinks them. Send your <a href="https://www.liftmygrade.com/blogs/how-to-get-strong-letters-of-recommendation" class="text-blue-600 underline font-medium hover:text-blue-800">recommender requests</a> and transcript orders in the first ten days, before your SOP is anywhere near ready. Make it easy to say yes: send your CV, your target programs, each deadline, and a short note on what you hope the letter highlights.</p>
+      
+      <div class="bg-[#eef3fb] border border-[#2f5fb3] rounded-xl p-5 my-6 text-neutral-800">
+        <span class="block font-bold text-sm tracking-wide text-[#2f5fb3] uppercase mb-2">Copy-Paste Request for a Recommender</span>
+        <blockquote class="italic border-l-2 border-[#2f5fb3] pl-4 text-neutral-700 font-serif">
+          "Dear Professor, I am applying to [programs] for Fall 2027. The earliest deadline is [date]. Could you write a letter by [date, 10 days earlier]? I have attached my CV and a one-page note on the work we did together. I am happy to send reminders and links."
+        </blockquote>
+      </div>
+      <p class="mb-6 text-neutral-700 leading-relaxed">Also set a calendar reminder for day 14 to follow up politely. See our guide on <a href="https://www.liftmygrade.com/blogs/how-to-get-strong-letters-of-recommendation" class="text-blue-600 underline font-medium hover:text-blue-800">how to get strong letters of recommendation</a>.</p>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-10 mb-4">Step 3 (Days 11–22): Write the SOP once, then tailor it</h2>
+      <p class="mb-4 text-neutral-700 leading-relaxed">Write one strong master SOP first. A <a href="https://www.liftmygrade.com/blogs/winning-sop-structure-mistakes" class="text-blue-600 underline font-medium hover:text-blue-800">winning SOP</a> has one story with five clear jobs: a hook, your academic base, your work or research, why this program, and your future goals. The "why this program" paragraph is where <a href="https://www.liftmygrade.com/blogs/why-study-abroad-applications-get-rejected" class="text-blue-600 underline font-medium hover:text-blue-800">most applications fail</a>, so rewrite 30–40% of it for each university.</p>
+
+      <figure class="my-8">
+        <img src="/blog/blog-36-2.webp" alt="Of 12 writing days, spend 5 on the master SOP, 4 tailoring it per university, 2 on forms and 1 on the CV." class="w-full rounded-2xl shadow-sm border border-neutral-200 object-cover" />
+        <figcaption class="text-sm text-center mt-3 text-neutral-500">Spend almost as long tailoring as drafting.</figcaption>
+      </figure>
+
+      <p class="mb-6 text-neutral-700 leading-relaxed">Need the paragraph-by-paragraph structure? Read <a href="https://www.liftmygrade.com/blogs/winning-sop-structure-mistakes" class="text-blue-600 underline font-medium hover:text-blue-800">how to structure a winning SOP</a>, and build your CV with <a href="https://www.liftmygrade.com/blogs/building-an-academic-cv-for-study-abroad" class="text-blue-600 underline font-medium hover:text-blue-800">this academic CV guide</a>.</p>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-10 mb-4">The purple cow move: decide what to skip or delay</h2>
+      <p class="mb-4 text-neutral-700 leading-relaxed">Other guides tell you to do everything. With 30 days, that is a recipe for six average applications. A standout plan includes a <strong>not-to-do list</strong>. Sort every task into one of three boxes.</p>
+
+      <div class="grid md:grid-cols-3 gap-4 my-6">
+        <div class="bg-[#eaf8f1] border border-[#1fa971] p-4 rounded-xl">
+          <span class="block font-bold text-sm tracking-wide text-[#117a52] uppercase mb-1">Do Now</span>
+          <p class="text-sm text-neutral-700">Recommender requests, transcript orders, score reports, master SOP, deadline sheet.</p>
+        </div>
+        <div class="bg-[#fff6e6] border border-[#e8a13a] p-4 rounded-xl">
+          <span class="block font-bold text-sm tracking-wide text-[#a86d0a] uppercase mb-1">Delay</span>
+          <p class="text-sm text-neutral-700">Final polish on lower-priority universities, optional essays, CV design tweaks, scholarship add-ons after the main submit.</p>
+        </div>
+        <div class="bg-[#fdeeee] border border-[#d9534f] p-4 rounded-xl">
+          <span class="block font-bold text-sm tracking-wide text-[#b03a36] uppercase mb-1">Skip</span>
+          <p class="text-sm text-neutral-700">A seventh university, a third recommender nobody asked for, rewriting your SOP from zero, portfolio extras the program doesn't request.</p>
+        </div>
+      </div>
+
+      <figure class="my-8">
+        <img src="/blog/blog-36-3.webp" alt="Do now what others control, do next what you control, delay optional extras like scholarship essays, skip unneeded tasks." class="w-full rounded-2xl shadow-sm border border-neutral-200 object-cover" />
+        <figcaption class="text-sm text-center mt-3 text-neutral-500">Ask two questions of every task: is it required, and who controls it?</figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-10 mb-4">Step 4 (Days 23–30): Check, match, submit</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2 text-neutral-700">
+        <li>Match your name, date of birth and degree titles across every document and form.</li>
+        <li>Confirm each university's file formats, word limits and upload rules.</li>
+        <li>Check that each recommender has actually submitted.</li>
+        <li>Submit two days before the deadline. Portals slow down on the final day.</li>
+      </ul>
+
+      <div class="bg-[#fdeeee] border border-[#d9534f] rounded-xl p-5 my-6 text-neutral-800">
+        <span class="block font-bold text-sm tracking-wide text-[#d9534f] uppercase mb-1">Don't Do This</span>
+        <p>Don't pay application fees or submit before checking that the program's own page still lists the same deadline and documents. Requirements change, and your university's page is the only source that counts.</p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-10 mb-4">Frequently asked questions</h2>
+      <div class="space-y-4 mb-8">
+        <div>
+          <h3 class="font-bold text-[#1C362B] text-lg mb-1">How long does a study abroad application take?</h3>
+          <p class="text-neutral-700">For a single program, many students need two to four weeks, mostly because of waiting on letters and transcripts. Several programs in parallel is why a 30-day order matters.</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-[#1C362B] text-lg mb-1">Can I apply if my recommender is late?</h3>
+          <p class="text-neutral-700">Often you can submit your part and let the recommender submit separately, but each portal differs. Check the program page, and tell the admissions office early if a letter is delayed.</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-[#1C362B] text-lg mb-1">How many universities should I apply to in a month?</h3>
+          <p class="text-neutral-700">Three to five, chosen through <a href="https://www.liftmygrade.com/services" class="text-blue-600 underline font-medium hover:text-blue-800">country shortlisting</a>, with a mix of ambitious and realistic options. Quality of tailoring matters more than the count.</p>
+        </div>
+      </div>
+
+      <div class="bg-[#0f2a4a] text-white p-6 rounded-2xl border border-[#0f2a4a] my-8 shadow-sm">
+        <span class="block font-bold text-xs uppercase tracking-widest text-[#7ee0b4] mb-2">Not Sure What to Finish First?</span>
+        <p class="mb-4 text-white/90 leading-relaxed">Take the 5-minute <a href="https://www.liftmygrade.com/readiness-assessment" class="text-[#7ee0b4] underline font-medium hover:text-white">readiness form</a> to see where you stand, or <a href="https://www.liftmygrade.com/#contact" class="text-[#7ee0b4] underline font-medium hover:text-white">book a free consultation</a> and we will help you sequence your documents.</p>
+        <a href="https://www.liftmygrade.com/readiness-assessment" class="inline-block bg-[#1fa971] text-white px-5 py-2.5 rounded-lg font-bold text-sm hover:bg-[#168a5c] transition-colors">Start the readiness form</a>
+      </div>
+
+      <div class="bg-[#eaf8f1] border border-[#1fa971] p-5 rounded-xl my-6 text-sm">
+        <span class="block font-bold text-xs uppercase tracking-widest text-[#117a52] mb-2">Keep Reading</span>
+        <div class="flex flex-wrap gap-x-3 gap-y-2 text-neutral-800">
+          <a href="https://www.liftmygrade.com/blogs/winning-sop-structure-mistakes" class="text-blue-600 underline font-medium hover:text-blue-800">How to write a winning SOP</a>
+          <span>·</span>
+          <a href="https://www.liftmygrade.com/blogs/how-to-get-strong-letters-of-recommendation" class="text-blue-600 underline font-medium hover:text-blue-800">How to get strong letters of recommendation</a>
+          <span>·</span>
+          <a href="https://www.liftmygrade.com/blogs/building-an-academic-cv-for-study-abroad" class="text-blue-600 underline font-medium hover:text-blue-800">Building an academic CV</a>
+          <span>·</span>
+          <a href="https://www.liftmygrade.com/blogs/apply-this-year-or-wait-readiness-check" class="text-blue-600 underline font-medium hover:text-blue-800">Sometimes the honest answer is: not this year</a>
+          <span>·</span>
+          <a href="https://www.liftmygrade.com/services" class="text-blue-600 underline font-medium hover:text-blue-800">Explore all services</a>
+        </div>
+      </div>
+    `
+  }
 ];
