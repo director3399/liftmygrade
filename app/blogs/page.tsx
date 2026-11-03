@@ -20,6 +20,12 @@ export const metadata = {
   },
 };
 
+const sortedBlogs = [...blogs].sort((a, b) => {
+  const timeA = new Date(a.date).getTime() || 0;
+  const timeB = new Date(b.date).getTime() || 0;
+  return timeB - timeA;
+});
+
 export default function BlogsPage() {
   return (
     <>
@@ -36,7 +42,7 @@ export default function BlogsPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogs.map((blog) => (
+          {sortedBlogs.map((blog) => (
             <Link href={`/blogs/${blog.slug}`} key={blog.id} className="flex flex-col group">
               <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden mb-5 bg-neutral-100">
                 <Image 

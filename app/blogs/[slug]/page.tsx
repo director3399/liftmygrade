@@ -25,13 +25,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     : `https://www.liftmygrade.com${blog.coverImage}`;
 
   return {
-    title: `${blog.title} - LiftmyGrade`,
+    title: blog.metaTitle || `${blog.title} - LiftmyGrade`,
     description: blog.excerpt,
     alternates: {
       canonical: canonicalUrl,
     },
     openGraph: {
-      title: blog.title,
+      title: blog.metaTitle || blog.title,
       description: blog.excerpt,
       url: canonicalUrl,
       type: "article",
@@ -61,7 +61,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     notFound();
   }
 
-  const relatedBlogs = blogs.filter((b) => b.slug !== slug).slice(0, 3);
+  const sortedOtherBlogs = [...blogs]
+    .filter((b) => b.slug !== slug)
+    .sort((a, b) => (new Date(b.date).getTime() || 0) - (new Date(a.date).getTime() || 0));
+  const relatedBlogs = sortedOtherBlogs.slice(0, 3);
 
   const headings: Heading[] = [];
   let modifiedContent = blog.content;

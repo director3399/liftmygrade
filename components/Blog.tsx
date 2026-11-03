@@ -5,9 +5,15 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { blogs } from "@/data/blogs";
 
+const sortedBlogs = [...blogs].sort((a, b) => {
+  const timeA = new Date(a.date).getTime() || 0;
+  const timeB = new Date(b.date).getTime() || 0;
+  return timeB - timeA;
+});
+
 export default function BlogSection() {
-  const featuredBlog = blogs[0];
-  const otherBlogs = blogs.slice(1, 4);
+  const featuredBlog = sortedBlogs[0];
+  const otherBlogs = sortedBlogs.slice(1, 4);
 
   return (
     <section className="py-16 sm:py-24 px-6 md:px-12 lg:px-16 bg-white" id="blog">

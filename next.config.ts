@@ -44,6 +44,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/blogs/study-abroad-application-deadlines-30-day-plan",
+        destination: "/blogs/study-abroad-application-deadlines",
+        permanent: true,
+      },
+      {
         source: "/blog",
         destination: "/blogs",
         permanent: true,

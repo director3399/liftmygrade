@@ -2,6 +2,7 @@ export interface BlogPost {
   id: string;
   slug: string;
   title: string;
+  metaTitle?: string;
   excerpt: string;
   content: string; // HTML string
   author: string;
@@ -2466,8 +2467,9 @@ export const blogs: BlogPost[] = [
 ,
   {
     id: "36",
-    slug: "study-abroad-application-deadlines-30-day-plan",
+    slug: "study-abroad-application-deadlines",
     title: "30 Days Left Before the December Deadlines: The Order to Finish Your Application Documents",
+    metaTitle: "Study Abroad Application Deadlines 2027 | LiftmyGrade",
     excerpt: "Study abroad application deadlines 2027 are close. Follow this 30-day plan to finish your SOP, LOR and CV in the right order. Read the plan.",
     author: "LiftmyGrade Editorial",
     authorRole: "Admissions Strategy Team",
