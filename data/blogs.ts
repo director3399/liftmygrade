@@ -2801,4 +2801,174 @@ export const blogs: BlogPost[] = [
       </div>
     `
   }
+,
+  {
+    id: "39",
+    slug: "thesis-submission-checklist",
+    title: "Thesis Due Before the Winter Break? The Reverse-Calendar Method That Saves Your Last Six Weeks",
+    metaTitle: "Thesis Submission Checklist: Last 6 Weeks | LiftmyGrade",
+    excerpt: "Thesis submission checklist for your last six weeks: chapters, citations, formatting and supervisor sign-off, planned backward from your deadline.",
+    author: "LiftmyGrade Editorial",
+    authorRole: "Admissions Strategy Team",
+    authorImage: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200",
+    category: "Thesis & Dissertation",
+    coverImage: "/blog/blog-39.webp",
+    date: "November 16, 2026",
+    content: `
+      <span class="inline-block bg-[#eaf8f1] text-[#117a52] text-xs font-bold font-sans px-3 py-1 rounded-full tracking-wide uppercase mb-4">THESIS · DISSERTATION</span>
+
+      <div class="border-l-4 border-[#e8a13a] bg-[#fff6e6] p-5 rounded-r-xl my-6 text-lg text-neutral-800 leading-relaxed font-serif">
+        <p><strong>Most students plan a thesis forward: write, write, write, then panic.</strong> That plan has a hidden flaw. The last six weeks are not controlled by you. They are controlled by your supervisor's reading time, your university's formatting rules and the hours a final reference check really takes. If your submission date is before the winter break and a chapter is still empty, you do not need more hours. You need a calendar that starts at the end and works backward.</p>
+      </div>
+
+      <div class="bg-[#eaf8f1] border border-[#1fa971] rounded-xl p-5 my-6 text-neutral-800">
+        <span class="block font-bold text-sm tracking-wide text-[#117a52] uppercase mb-1">Quick Answer</span>
+        <p>Pick your submission day and call it <strong>Day 0</strong>. Work backward: lock your supervisor's review window first, then fit writing before it, and revisions, citations and formatting after it. Freeze your scope three weeks out, and submit two days early.</p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-10 mb-4">Why writing forward fails in the last six weeks</h2>
+      <p class="mb-4 text-neutral-700 leading-relaxed">Forward writing assumes every task takes as long as you hope. In real life, a supervisor needs time to read a full draft, comments take days to turn into changes, and references that looked fine in chapter two fall apart when you merge everything. These are the tasks that sink students who ask how to finish a thesis on time. The fix is not speed, it is order. If you are not sure how supervisors read your work, <a href="https://www.liftmygrade.com/blogs/research-proposal-structure-supervisors-read" class="text-blue-600 underline font-medium hover:text-blue-800">see how supervisors actually scan a document</a>.</p>
+
+      <figure class="my-8">
+        <img src="/blog/blog-39-1.webp" alt="Reverse calendar: freeze scope, finish writing, supervisor review, revise, format and cite, then submit on Day 0." class="w-full rounded-2xl shadow-sm border border-neutral-200 object-cover" />
+        <figcaption class="text-sm text-center mt-3 text-neutral-500">Start from Day 0 and plan backward.</figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-10 mb-4">Step 1 (Days 42–36): Freeze the scope and book the review</h2>
+      <p class="mb-4 text-neutral-700 leading-relaxed">Open your table of contents and mark every chapter as done, half-done or empty. Then decide what the final thesis will include, and stop adding. Now email your supervisor with a date for the full draft and ask when they can return comments. Many supervisors need a week or more, so ask yours. This is the thesis supervisor review window, and everything else is built around it.</p>
+
+      <div class="bg-[#eef3fb] border border-[#2f5fb3] rounded-xl p-5 my-6 text-neutral-800">
+        <span class="block font-bold text-sm tracking-wide text-[#2f5fb3] uppercase mb-2">Copy-Paste Message to Your Supervisor</span>
+        <blockquote class="italic border-l-2 border-[#2f5fb3] pl-4 text-neutral-700 font-serif">
+          "Dear Professor, my submission date is [date]. I plan to send the full draft by [date, three weeks earlier]. Could you tell me how many days you need to review it, so I can plan my revisions? I can send chapters as I finish them if that helps."
+        </blockquote>
+      </div>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-10 mb-4">Step 2 (Days 35–22): Finish writing in the right order</h2>
+      <p class="mb-4 text-neutral-700 leading-relaxed">A sound thesis writing schedule closes gaps by dependency, not by chapter number. Results and methods first, because other chapters depend on them. Then discussion, then literature review gaps, then the introduction and conclusion. Write the abstract last. If a literature review or methodology section is the stuck point, a <a href="https://www.liftmygrade.com/services" class="text-blue-600 underline font-medium hover:text-blue-800">literature review and methodology support session</a> can help you move past it.</p>
+
+      <figure class="my-8">
+        <img src="/blog/blog-39-2.webp" alt="Of 42 days: 14 writing, 7 supervisor review, 7 revisions, 5 references, 4 formatting, 5 final checks and submission." class="w-full rounded-2xl shadow-sm border border-neutral-200 object-cover" />
+        <figcaption class="text-sm text-center mt-3 text-neutral-500">The review window is the one block you cannot shorten.</figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-10 mb-4">Step 3 (Days 21–14): Send the draft, then audit your references</h2>
+      <p class="mb-4 text-neutral-700 leading-relaxed">Send your complete draft to your supervisor, not a pile of chapters. While you wait, do the thesis formatting and citation check you would otherwise leave until the night before: match every in-text citation to a reference entry, use one citation style throughout, and fix broken links and DOIs. This is the dull work that makes a thesis look finished.</p>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-10 mb-4">The purple cow move: Freeze, Fix, Format</h2>
+      <p class="mb-4 text-neutral-700 leading-relaxed">Every guide says "proofread carefully". Few say what you must <em>not</em> touch in the last three weeks. Use three rules, and keep this dissertation final draft checklist beside you.</p>
+
+      <div class="grid md:grid-cols-3 gap-4 my-6">
+        <div class="bg-[#fff6e6] border border-[#e8a13a] p-4 rounded-xl">
+          <span class="block font-bold text-sm tracking-wide text-[#a86d0a] uppercase mb-1">Freeze</span>
+          <p class="text-sm text-neutral-700">Research questions, chapter structure and scope. No new chapters, no new theories after Day 21.</p>
+        </div>
+        <div class="bg-[#eef3fb] border border-[#2f5fb3] p-4 rounded-xl">
+          <span class="block font-bold text-sm tracking-wide text-[#2f5fb3] uppercase mb-1">Fix</span>
+          <p class="text-sm text-neutral-700">Supervisor comments, citations, figure and table numbers, inconsistent terms.</p>
+        </div>
+        <div class="bg-[#eaf8f1] border border-[#1fa971] p-4 rounded-xl">
+          <span class="block font-bold text-sm tracking-wide text-[#117a52] uppercase mb-1">Format</span>
+          <p class="text-sm text-neutral-700">Margins, headings, page numbers, contents list and reference style, exactly as your university requires.</p>
+        </div>
+      </div>
+
+      <figure class="my-8">
+        <img src="/blog/blog-39-3.webp" alt="Last three weeks: freeze scope, fix comments and citations, format to university rules, and add no new material." class="w-full rounded-2xl shadow-sm border border-neutral-200 object-cover" />
+        <figcaption class="text-sm text-center mt-3 text-neutral-500">Three jobs only. Everything else waits.</figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-10 mb-4">The six-week thesis submission checklist</h2>
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-left border-collapse border border-neutral-200 text-sm rounded-xl overflow-hidden">
+          <thead>
+            <tr class="bg-[#0f2a4a] text-white">
+              <th class="p-3.5 font-bold">When</th>
+              <th class="p-3.5 font-bold">Task</th>
+              <th class="p-3.5 font-bold">Done when</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-neutral-200 text-neutral-700">
+            <tr class="bg-white hover:bg-neutral-50">
+              <td class="p-3.5 font-medium">Day 42–36</td>
+              <td class="p-3.5">Freeze scope, list empty chapters, book supervisor review</td>
+              <td class="p-3.5"><span class="font-bold text-[#117a52]">Review date confirmed in writing</span></td>
+            </tr>
+            <tr class="bg-neutral-50/60 hover:bg-neutral-50">
+              <td class="p-3.5 font-medium">Day 35–22</td>
+              <td class="p-3.5">Finish writing; abstract and introduction last</td>
+              <td class="p-3.5"><span class="font-bold text-[#117a52]">Every chapter has a full draft</span></td>
+            </tr>
+            <tr class="bg-white hover:bg-neutral-50">
+              <td class="p-3.5 font-medium">Day 21–14</td>
+              <td class="p-3.5">Send full draft; audit references while waiting</td>
+              <td class="p-3.5"><span class="font-bold text-[#117a52]">Every citation matches a reference</span></td>
+            </tr>
+            <tr class="bg-neutral-50/60 hover:bg-neutral-50">
+              <td class="p-3.5 font-medium">Day 13–8</td>
+              <td class="p-3.5">Revise on comments; no new material</td>
+              <td class="p-3.5"><span class="font-bold text-[#117a52]">Each comment answered or noted</span></td>
+            </tr>
+            <tr class="bg-white hover:bg-neutral-50">
+              <td class="p-3.5 font-medium">Day 7–3</td>
+              <td class="p-3.5">Format to university guidelines; contents, figures</td>
+              <td class="p-3.5"><span class="font-bold text-[#117a52]">Matches the official format sheet</span></td>
+            </tr>
+            <tr class="bg-neutral-50/60 hover:bg-neutral-50">
+              <td class="p-3.5 font-medium">Day 2–0</td>
+              <td class="p-3.5">Final read, forms, checks your university requires, submit</td>
+              <td class="p-3.5"><span class="font-bold text-[#117a52]">Submitted two days early</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="bg-[#fdeeee] border border-[#d9534f] rounded-xl p-5 my-6 text-neutral-800">
+        <span class="block font-bold text-sm tracking-wide text-[#d9534f] uppercase mb-1">Don't Do This</span>
+        <p>Don't add a new chapter or a new theory in the last three weeks, and don't leave formatting for the final night. Your university's own thesis guidelines decide the rules, so check them early. If you plan to turn your thesis into a paper later, <a href="https://www.liftmygrade.com/blogs/how-to-verify-journal-before-submitting" class="text-blue-600 underline font-medium hover:text-blue-800">verify the journal before you submit</a>.</p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-10 mb-4">Three mistakes that quietly eat your last week</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2 text-neutral-700">
+        <li><strong>Treating the supervisor's reply time as a guess.</strong> Ask for it in writing and plan around it, because a late review pushes every later step.</li>
+        <li><strong>Fixing references at the end.</strong> Do it while your supervisor reads, so you are not matching hundreds of citations on the final night.</li>
+        <li><strong>Reading the university's format sheet once.</strong> Open it on Day 42 and again on Day 7, because small rules such as margins, spacing and front-page order are easy to miss.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-[#1C362B] mt-10 mb-4">Frequently asked questions</h2>
+      <div class="space-y-4 mb-8">
+        <div>
+          <h3 class="font-bold text-[#1C362B] text-lg mb-1">How long does a supervisor need to review a thesis?</h3>
+          <p class="text-neutral-700">It varies. Often a week or more for a full draft, so ask early and build that block into your calendar before anything else.</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-[#1C362B] text-lg mb-1">What if I only have three weeks left?</h3>
+          <p class="text-neutral-700">Keep the order but compress: freeze scope on day one, finish writing in one week, send the draft, and revise while the supervisor reads. Be honest with your supervisor about the date.</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-[#1C362B] text-lg mb-1">When should I do the final formatting?</h3>
+          <p class="text-neutral-700">After revisions are done, about a week before submission. Formatting before revising means you will format twice.</p>
+        </div>
+      </div>
+
+      <div class="bg-[#0f2a4a] text-white p-6 rounded-2xl border border-[#0f2a4a] my-8 shadow-sm">
+        <span class="block font-bold text-xs uppercase tracking-widest text-[#7ee0b4] mb-2">Stuck on a Chapter with the Clock Running?</span>
+        <p class="mb-4 text-white/90 leading-relaxed">See how our <a href="https://www.liftmygrade.com/services" class="text-[#7ee0b4] underline font-medium hover:text-white">thesis and dissertation support</a> works, or <a href="https://www.liftmygrade.com/#contact" class="text-[#7ee0b4] underline font-medium hover:text-white">book a free consultation</a> and we will help you build your reverse calendar.</p>
+        <a href="https://www.liftmygrade.com/#contact" class="inline-block bg-[#1fa971] text-white px-5 py-2.5 rounded-lg font-bold text-sm hover:bg-[#168a5c] transition-colors">Book a free consultation</a>
+      </div>
+
+      <div class="bg-[#eaf8f1] border border-[#1fa971] p-5 rounded-xl my-6 text-sm">
+        <span class="block font-bold text-xs uppercase tracking-widest text-[#117a52] mb-2">Keep Reading</span>
+        <div class="flex flex-wrap gap-x-3 gap-y-2 text-neutral-800">
+          <a href="https://www.liftmygrade.com/blogs/research-proposal-structure-supervisors-read" class="text-blue-600 underline font-medium hover:text-blue-800">The research proposal structure supervisors actually scan</a>
+          <span>·</span>
+          <a href="https://www.liftmygrade.com/blogs/how-to-verify-journal-before-submitting" class="text-blue-600 underline font-medium hover:text-blue-800">How to verify a journal before submitting</a>
+          <span>·</span>
+          <a href="https://www.liftmygrade.com/what-to-expect" class="text-blue-600 underline font-medium hover:text-blue-800">What to expect from LiftmyGrade</a>
+          <span>·</span>
+          <a href="https://www.liftmygrade.com/services" class="text-blue-600 underline font-medium hover:text-blue-800">Explore all services</a>
+        </div>
+      </div>
+    `
+  }
 ];
